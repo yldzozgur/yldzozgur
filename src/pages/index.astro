@@ -1,0 +1,332 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 4);
+
+const featured = [
+  {
+    name: 'Ameza Smart Retail Platform',
+    role: 'Volunteer Full-Stack Developer',
+    period: '2025 — Present',
+    stack: 'TypeScript · React · Node · PostgreSQL',
+    note: '20+ merged PRs on a multi-tenant POS platform',
+    href: 'https://github.com/Ameza-Smart-Retail-Solutions',
+  },
+  {
+    name: 'Stock Management App',
+    role: 'Solo build',
+    period: '2025',
+    stack: 'MERN · JWT · Redux Toolkit · Recharts',
+    note: 'Full-stack inventory + sales dashboard with role-based auth',
+    href: 'https://ozguryildiz-stock.vercel.app',
+  },
+  {
+    name: 'Pizza API',
+    role: 'Solo build',
+    period: '2025',
+    stack: 'Express · MongoDB · Swagger · Vercel',
+    note: 'Production-style REST API with JWT and image upload',
+    href: 'https://ozguryildiz-pizza-api.vercel.app',
+  },
+];
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+---
+
+<BaseLayout>
+  <section class="hero container">
+    <div class="hero-meta mono">
+      <span>Austin, TX</span>
+      <span class="sep">/</span>
+      <span>Full-Stack Engineer</span>
+      <span class="sep">/</span>
+      <span class="status"><span class="dot"></span> Open to work</span>
+    </div>
+
+    <h1 class="hero-title">
+      I build software <em>and</em> write about<br />
+      what breaks while building it.
+    </h1>
+
+    <p class="hero-lede">
+      Junior full-stack engineer shipping production TypeScript / React / Node features at Ameza Solutions.
+      Six years of prior enterprise experience in Java and .NET, re-tooled around the modern JavaScript stack.
+      I write here about the gap between bootcamp code and real codebases — what the courses don't tell you.
+    </p>
+
+    <div class="hero-actions">
+      <a href="/writing" class="cta">Read the writing →</a>
+      <a href="/work" class="cta-secondary">See the work</a>
+    </div>
+  </section>
+
+  <section class="section container">
+    <header class="section-header">
+      <h2>Latest writing</h2>
+      <a href="/writing" class="mono section-link">All posts →</a>
+    </header>
+
+    {posts.length === 0 ? (
+      <p class="empty mono">No posts published yet. First one is on the way.</p>
+    ) : (
+      <ul class="post-list">
+        {posts.map((post) => (
+          <li class="post-row">
+            <a href={`/writing/${post.id}`} class="post-row-link">
+              <time class="mono post-row-date" datetime={post.data.pubDate.toISOString()}>
+                {formatDate(post.data.pubDate)}
+              </time>
+              <span class="post-row-title">{post.data.title}</span>
+              <span class="post-row-arrow">→</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )}
+  </section>
+
+  <section class="section container">
+    <header class="section-header">
+      <h2>Featured work</h2>
+      <a href="/work" class="mono section-link">All projects →</a>
+    </header>
+
+    <ul class="work-list">
+      {featured.map((p) => (
+        <li class="work-row">
+          <a href={p.href} target="_blank" rel="noopener" class="work-row-link">
+            <div class="work-row-main">
+              <span class="work-row-name">{p.name}</span>
+              <span class="mono work-row-period">{p.period}</span>
+            </div>
+            <div class="work-row-meta">
+              <span class="mono work-row-stack">{p.stack}</span>
+            </div>
+            <p class="work-row-note">{p.note}</p>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    max-width: 56rem;
+  }
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--ink-muted);
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+  }
+  .hero-meta .sep {
+    color: var(--ink-faint);
+  }
+  .hero-meta .status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--accent);
+  }
+  .hero-meta .dot {
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 0 4px var(--accent-glow);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  .hero-title {
+    font-size: clamp(2.25rem, 5.5vw, 4rem);
+    margin-bottom: 2rem;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--accent);
+    font-variation-settings: "WONK" 1, "opsz" 144;
+  }
+  .hero-lede {
+    font-size: 1.1875rem;
+    line-height: 1.6;
+    color: var(--ink-muted);
+    max-width: 38rem;
+    margin-bottom: 2.5rem;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .cta {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--bg);
+    padding: 0.75rem 1.25rem;
+    border-radius: 4px;
+    font-weight: 500;
+    border-bottom: none;
+    font-size: 0.9375rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .cta:hover {
+    background: var(--link);
+    border-bottom: none;
+    transform: translateY(-1px);
+  }
+  .cta-secondary {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--border-strong);
+    border-radius: 4px;
+    color: var(--ink);
+    font-size: 0.9375rem;
+    transition: border-color 0.2s ease;
+  }
+  .cta-secondary:hover {
+    border-color: var(--accent);
+    border-bottom: 1px solid var(--accent);
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-link {
+    color: var(--ink-muted);
+    border-bottom: none;
+  }
+  .section-link:hover {
+    color: var(--accent);
+  }
+  .empty {
+    color: var(--ink-faint);
+    padding: 2rem 0;
+  }
+
+  .post-list,
+  .work-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .post-row {
+    border-bottom: 1px solid var(--border);
+  }
+  .post-row:last-child {
+    border-bottom: none;
+  }
+  .post-row-link {
+    display: grid;
+    grid-template-columns: 7rem 1fr auto;
+    align-items: baseline;
+    gap: 1.5rem;
+    padding: 1.25rem 0;
+    color: var(--ink);
+    border-bottom: none;
+    transition: padding 0.2s ease;
+  }
+  .post-row-link:hover {
+    border-bottom: none;
+    padding-left: 0.5rem;
+  }
+  .post-row-link:hover .post-row-title {
+    color: var(--accent);
+  }
+  .post-row-link:hover .post-row-arrow {
+    transform: translateX(4px);
+    color: var(--accent);
+  }
+  .post-row-date {
+    color: var(--ink-faint);
+  }
+  .post-row-title {
+    font-family: var(--font-display);
+    font-size: 1.1875rem;
+    transition: color 0.2s ease;
+  }
+  .post-row-arrow {
+    color: var(--ink-faint);
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  .work-row {
+    border-bottom: 1px solid var(--border);
+  }
+  .work-row:last-child {
+    border-bottom: none;
+  }
+  .work-row-link {
+    display: block;
+    padding: 1.5rem 0;
+    color: var(--ink);
+    border-bottom: none;
+    transition: padding 0.2s ease;
+  }
+  .work-row-link:hover {
+    border-bottom: none;
+    padding-left: 0.5rem;
+  }
+  .work-row-link:hover .work-row-name {
+    color: var(--accent);
+  }
+  .work-row-main {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.4rem;
+  }
+  .work-row-name {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    transition: color 0.2s ease;
+  }
+  .work-row-period {
+    color: var(--ink-faint);
+  }
+  .work-row-meta {
+    margin-bottom: 0.5rem;
+  }
+  .work-row-stack {
+    color: var(--accent-dim);
+  }
+  .work-row-note {
+    color: var(--ink-muted);
+    font-size: 0.9375rem;
+  }
+
+  @media (max-width: 640px) {
+    .post-row-link {
+      grid-template-columns: 1fr;
+      gap: 0.3rem;
+    }
+    .post-row-arrow {
+      display: none;
+    }
+    .work-row-main {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+  }
+</style>

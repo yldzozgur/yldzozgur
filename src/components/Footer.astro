@@ -1,0 +1,53 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <span class="mono">© {year} — Özgür Yıldız</span>
+      <span class="mono dim">Austin, TX</span>
+    </div>
+    <div class="footer-col footer-links">
+      <a href="https://github.com/yldzozgur" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://linkedin.com/in/ozguryildiz0" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="mailto:ozguryildiz0@outlook.com">Email ↗</a>
+      <a href="/rss.xml">RSS</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--border);
+    margin-top: 6rem;
+    padding: 2.5rem 0;
+  }
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .footer-col {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+  .footer-col .dim {
+    color: var(--ink-faint);
+  }
+  .footer-links a {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    letter-spacing: 0.02em;
+    color: var(--ink-muted);
+    border-bottom: none;
+    text-transform: uppercase;
+  }
+  .footer-links a:hover {
+    color: var(--ink);
+  }
+</style>

@@ -1,0 +1,116 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  tags: string[];
+  readingTime?: string;
+}
+
+const { title, description, pubDate, updatedDate, tags, readingTime } = Astro.props;
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+
+<BaseLayout title={`${title} — Özgür Yıldız`} description={description} type="article">
+  <article class="post">
+    <header class="post-header container">
+      <div class="post-meta">
+        <time class="mono" datetime={pubDate.toISOString()}>{formatDate(pubDate)}</time>
+        {readingTime && <span class="mono dim">· {readingTime}</span>}
+      </div>
+      <h1>{title}</h1>
+      <p class="post-description">{description}</p>
+      {tags.length > 0 && (
+        <ul class="post-tags">
+          {tags.map((tag) => (
+            <li class="mono">#{tag}</li>
+          ))}
+        </ul>
+      )}
+    </header>
+
+    <div class="container">
+      <div class="prose post-content">
+        <slot />
+      </div>
+    </div>
+
+    {updatedDate && (
+      <div class="container post-updated">
+        <p class="mono dim">Last updated: {formatDate(updatedDate)}</p>
+      </div>
+    )}
+
+    <div class="container post-footer">
+      <a href="/writing" class="back-link mono">← All writing</a>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .post-header {
+    padding-top: 4rem;
+    padding-bottom: 2.5rem;
+    max-width: var(--reading-width);
+    margin: 0 auto;
+    border-bottom: 1px solid var(--border);
+  }
+  .post-meta {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--ink-muted);
+  }
+  .post-meta .dim {
+    color: var(--ink-faint);
+  }
+  .post-header h1 {
+    margin-bottom: 1rem;
+  }
+  .post-description {
+    font-family: var(--font-display);
+    font-size: 1.3125rem;
+    line-height: 1.45;
+    color: var(--ink-muted);
+    font-style: italic;
+  }
+  .post-tags {
+    list-style: none;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+  .post-tags li {
+    color: var(--accent-dim);
+  }
+  .post-content {
+    padding-top: 2.5rem;
+  }
+  .post-updated {
+    max-width: var(--reading-width);
+    margin: 0 auto;
+    padding-top: 2rem;
+  }
+  .post-updated .dim {
+    color: var(--ink-faint);
+  }
+  .post-footer {
+    max-width: var(--reading-width);
+    margin: 3rem auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+  .back-link {
+    color: var(--ink-muted);
+    border-bottom: none;
+  }
+  .back-link:hover {
+    color: var(--accent);
+  }
+</style>

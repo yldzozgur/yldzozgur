@@ -1,0 +1,244 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const projects = [
+  {
+    name: 'Ameza Smart Retail Platform',
+    type: 'Production · Volunteer',
+    period: 'Nov 2025 — Present',
+    stack: ['TypeScript', 'React', 'Node.js', 'Express', 'PostgreSQL'],
+    summary: 'Multi-tenant POS / smart retail platform. 20+ merged PRs across frontend and backend: store and employee management dashboards, validated forms with shared utilities, typed DTOs, role-catalog APIs, domain error-code discriminators, Swagger snapshot sync.',
+    links: [
+      { label: 'Org →', href: 'https://github.com/Ameza-Smart-Retail-Solutions' },
+    ],
+  },
+  {
+    name: 'Stock Management App',
+    type: 'Full-Stack · MERN',
+    period: 'Aug — Sep 2025',
+    stack: ['React', 'Redux Toolkit', 'Express', 'MongoDB', 'JWT'],
+    summary: 'Full-stack inventory + sales platform with JWT auth, role-based permissions, image upload, email verification, and Swagger / Redoc docs. Vite + React + Redux Toolkit dashboard with KPI cards and Recharts. Middleware suite for auth, error handling, logging, permissions, and queries.',
+    links: [
+      { label: 'Live demo →', href: 'https://ozguryildiz-stock.vercel.app' },
+      { label: 'API →', href: 'https://ozguryildiz-stock-api.vercel.app' },
+      { label: 'Code →', href: 'https://github.com/yldzozgur/stock-management-app' },
+    ],
+  },
+  {
+    name: 'Pizza API',
+    type: 'Backend · REST + Swagger',
+    period: 'Jun — Jul 2025',
+    stack: ['Express', 'MongoDB', 'JWT', 'Swagger', 'Vercel'],
+    summary: 'Production-style REST API for a pizza ordering system with JWT auth, image upload, and email verification. Pagination, sorting, and filtering middleware. Centralized error handling. CDN-hosted Swagger UI. Deployed serverless on Vercel with MongoDB Atlas.',
+    links: [
+      { label: 'Live API →', href: 'https://ozguryildiz-pizza-api.vercel.app' },
+      { label: 'Code →', href: 'https://github.com/yldzozgur/pizza-api' },
+    ],
+  },
+  {
+    name: 'Rent-A-Car API',
+    type: 'Backend · REST + Swagger',
+    period: 'May — Jun 2025',
+    stack: ['Express', 'MongoDB', 'JWT', 'Nodemailer'],
+    summary: 'REST API for a car rental platform with JWT auth, email notifications, and unique-field validation. Reservation logic with date-overlap detection and automatic amount calculation. Deployed serverless on Vercel.',
+    links: [
+      { label: 'Live API →', href: 'https://ozguryildiz-rentacar-api.vercel.app' },
+      { label: 'Code →', href: 'https://github.com/yldzozgur/rent-a-car-api' },
+    ],
+  },
+  {
+    name: 'Recipe App',
+    type: 'Frontend · React 19 SPA',
+    period: 'Sep — Oct 2025',
+    stack: ['React 19', 'Vite', 'Tailwind', 'React Router v7'],
+    summary: 'Recipe discovery SPA with debounced live search, category filtering, dark mode, and detail pages. Built with React 19, Vite, Tailwind, React Router v7, and Context API. Deployed via gh-pages.',
+    links: [
+      { label: 'Live →', href: 'https://yldzozgur.github.io/recipe-app/' },
+      { label: 'Code →', href: 'https://github.com/yldzozgur/recipe-app' },
+    ],
+  },
+  {
+    name: 'React Movie App',
+    type: 'Frontend · Firebase Auth',
+    period: 'Jul — Aug 2025',
+    stack: ['React', 'Firebase', 'TMDB API'],
+    summary: 'Movie discovery app with email/password and Google sign-in via Firebase. Consumes the TMDB REST API for movie data and search.',
+    links: [
+      { label: 'Live →', href: 'https://yldzozgur.github.io/react-movieapp/' },
+      { label: 'Code →', href: 'https://github.com/yldzozgur/react-movieapp' },
+    ],
+  },
+  {
+    name: 'DraftLift Scheduler',
+    type: 'Automation · Node',
+    period: 'Apr — Oct 2025',
+    stack: ['Node.js', 'Express', 'Cron'],
+    summary: 'Self-hosted Node + Express tool that schedules and auto-publishes local project folders to GitHub on cron intervals with end-to-end audit logging.',
+    links: [
+      { label: 'Code →', href: 'https://github.com/yldzozgur/draftlift-scheduler' },
+    ],
+  },
+];
+
+const demoNote = 'Demo credentials for all live API / full-stack demos: demo@demo.com / Demo1234!';
+---
+
+<BaseLayout
+  title="Work — Özgür Yıldız"
+  description="Selected projects: a multi-tenant retail platform, full-stack MERN dashboards, REST APIs, and a few small React apps."
+>
+  <section class="page-header container">
+    <span class="mono dim">/ work</span>
+    <h1>Work</h1>
+    <p class="page-lede">
+      A current production engagement at Ameza Solutions, plus a portfolio of
+      full-stack projects built during my bootcamp and after. Each one is live
+      or open source.
+    </p>
+    <p class="demo-note mono">{demoNote}</p>
+  </section>
+
+  <section class="container">
+    <ul class="projects">
+      {projects.map((p, i) => (
+        <li class="project">
+          <div class="project-index mono">{String(i + 1).padStart(2, '0')}</div>
+          <div class="project-body">
+            <header class="project-header">
+              <h2 class="project-name">{p.name}</h2>
+              <span class="mono project-period">{p.period}</span>
+            </header>
+            <p class="mono project-type">{p.type}</p>
+            <ul class="stack">
+              {p.stack.map((s) => <li class="mono stack-tag">{s}</li>)}
+            </ul>
+            <p class="project-summary">{p.summary}</p>
+            <ul class="project-links">
+              {p.links.map((l) => (
+                <li>
+                  <a href={l.href} target="_blank" rel="noopener" class="mono">{l.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding-top: 4rem;
+    padding-bottom: 2.5rem;
+    max-width: 48rem;
+  }
+  .page-header .dim {
+    color: var(--ink-faint);
+  }
+  .page-header h1 {
+    margin: 0.5rem 0 1.25rem;
+  }
+  .page-lede {
+    font-family: var(--font-display);
+    font-size: 1.3125rem;
+    line-height: 1.5;
+    color: var(--ink-muted);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+  .demo-note {
+    color: var(--accent-dim);
+    background: var(--bg-subtle);
+    padding: 0.75rem 1rem;
+    border-left: 2px solid var(--accent);
+    border-radius: 0 4px 4px 0;
+    font-size: 0.8125rem;
+    text-transform: none;
+  }
+
+  .projects {
+    list-style: none;
+    border-top: 1px solid var(--border);
+  }
+  .project {
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    gap: 1.5rem;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .project-index {
+    color: var(--ink-faint);
+    font-size: 0.9375rem;
+    padding-top: 0.4rem;
+  }
+  .project-body {
+    min-width: 0;
+  }
+  .project-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.4rem;
+    flex-wrap: wrap;
+  }
+  .project-name {
+    font-family: var(--font-display);
+    font-size: 1.625rem;
+    line-height: 1.2;
+  }
+  .project-period {
+    color: var(--ink-faint);
+    flex-shrink: 0;
+  }
+  .project-type {
+    color: var(--accent-dim);
+    margin-bottom: 1rem;
+  }
+  .stack {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+  }
+  .stack-tag {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    color: var(--ink-muted);
+    font-size: 0.75rem;
+    text-transform: none;
+  }
+  .project-summary {
+    color: var(--ink-muted);
+    margin-bottom: 1.25rem;
+    max-width: 40rem;
+  }
+  .project-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .project-links a {
+    color: var(--accent);
+    border-bottom: none;
+  }
+  .project-links a:hover {
+    color: var(--link);
+  }
+
+  @media (max-width: 640px) {
+    .project {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+    .project-index {
+      padding-top: 0;
+    }
+  }
+</style>

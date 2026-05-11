@@ -1,0 +1,336 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const skills = {
+  Languages: ['JavaScript (ES6+)', 'TypeScript', 'SQL', 'HTML5', 'CSS3'],
+  Frontend: ['React', 'Redux Toolkit', 'React Router', 'Vite', 'Tailwind CSS', 'MUI', 'Formik / Yup'],
+  Backend: ['Node.js', 'Express', 'REST APIs', 'JWT', 'Mongoose', 'Swagger / OpenAPI', 'Multer', 'Nodemailer'],
+  Databases: ['PostgreSQL', 'MongoDB', 'MySQL'],
+  'Cloud & DevOps': ['Vercel', 'Docker', 'GitHub Actions', 'MongoDB Atlas', 'Firebase Auth'],
+  Testing: ['Cypress (E2E)'],
+  'AI-Assisted Workflow': ['Claude Code', 'Cursor', 'GitHub Copilot'],
+};
+
+const experience = [
+  {
+    role: 'Volunteer Full-Stack Developer',
+    org: 'Ameza Solutions',
+    location: 'Austin, TX (Remote)',
+    period: 'Nov 2025 — Present',
+    summary: 'Multi-tenant smart retail / POS platform. 20+ merged PRs across React + TypeScript frontend and Node / Express + PostgreSQL backend. Code review in a small distributed team using feature-branch + GitHub workflow.',
+  },
+  {
+    role: 'Career Transition',
+    org: 'U.S. Relocation, MBA & JS Stack Re-tooling',
+    location: 'Boston → Austin',
+    period: 'Sep 2023 — Oct 2025',
+    summary: 'Relocated from Turkey. Completed online MBA (Marmara University), intensive ESL at Talk English Boston, and Clarusway Full Stack Bootcamp (Feb–Oct 2025).',
+  },
+  {
+    role: 'Software Engineer',
+    org: 'Ebebek',
+    location: 'Remote, Istanbul',
+    period: 'Jan 2022 — Sep 2023',
+    summary: 'Backend engineer on a high-traffic e-commerce platform. Maintained and refactored Java REST APIs and SQL data layers in a 10+ person remote Agile team.',
+  },
+  {
+    role: 'Software Developer',
+    org: 'Lactalis Group',
+    location: 'On-site, Istanbul',
+    period: 'Nov 2019 — Jan 2022',
+    summary: 'Built and maintained a web-based Enterprise Asset Management System (C# / .NET / MSSQL) tracking 1,000+ IT hardware units. Gathered requirements directly from internal stakeholders.',
+  },
+  {
+    role: 'Software Developer',
+    org: 'Gaga Software',
+    location: 'On-site, Sakarya',
+    period: 'Aug 2017 — Nov 2019',
+    summary: 'Built an Android (Java) CRM app deployed to 20+ retail businesses. Developed C# / .NET desktop tools to automate manual data entry workflows.',
+  },
+];
+---
+
+<BaseLayout
+  title="About — Özgür Yıldız"
+  description="Junior full-stack engineer based in Austin, TX. Six years of prior enterprise experience, re-tooled around the modern JavaScript stack."
+>
+  <section class="page-header container">
+    <span class="mono dim">/ about</span>
+    <h1>About</h1>
+  </section>
+
+  <section class="container">
+    <div class="prose about-prose">
+      <p class="lead">
+        I'm Özgür — a full-stack engineer based in Austin, Texas. I'm currently
+        contributing to a multi-tenant retail platform at Ameza Solutions, where
+        I ship TypeScript and React features alongside Node / PostgreSQL backend work.
+      </p>
+
+      <p>
+        Before re-tooling around the JavaScript stack, I spent six years writing
+        enterprise software in Java and C# / .NET — backend on high-traffic
+        e-commerce at Ebebek, an asset management system at Lactalis, and Android
+        + .NET tools at Gaga Software. That history matters because it means I've
+        already worked inside real teams, with real code review, real production
+        incidents, and real stakeholders who don't care about your framework choice.
+      </p>
+
+      <p>
+        In 2023 I relocated to the U.S. and spent the next two years doing three
+        things at once: an MBA, intensive English, and the Clarusway full-stack
+        bootcamp. The bootcamp re-trained me on Node, Express, React, TypeScript,
+        MongoDB, PostgreSQL, and Docker. The MBA gave me a way to talk about
+        software in business terms. The English program let me have those
+        conversations at all.
+      </p>
+
+      <p>
+        I write here because the gap between "I finished the bootcamp" and "I can
+        contribute to a production codebase" is wide, real, and badly documented.
+        Most of what I publish is something I wish someone had written for me six
+        months ago.
+      </p>
+
+      <p>
+        <strong>Work authorization:</strong> Authorized to work in the U.S. — no
+        sponsorship required, now or in the future. <strong>Availability:</strong> Open
+        to remote (US-wide) and hybrid (Greater Austin) Junior Full-Stack or Backend roles.
+      </p>
+    </div>
+  </section>
+
+  <section class="container section-block">
+    <h2 class="section-heading">Stack</h2>
+    <dl class="skills">
+      {Object.entries(skills).map(([category, items]) => (
+        <div class="skill-row">
+          <dt class="mono skill-cat">{category}</dt>
+          <dd>
+            <ul class="skill-list">
+              {items.map((item) => (
+                <li class="mono skill-item">{item}</li>
+              ))}
+            </ul>
+          </dd>
+        </div>
+      ))}
+    </dl>
+  </section>
+
+  <section class="container section-block">
+    <h2 class="section-heading">Experience</h2>
+    <ol class="timeline">
+      {experience.map((e) => (
+        <li class="timeline-item">
+          <div class="timeline-period mono">{e.period}</div>
+          <div class="timeline-body">
+            <h3 class="timeline-role">{e.role} <span class="timeline-org">· {e.org}</span></h3>
+            <p class="mono timeline-loc">{e.location}</p>
+            <p class="timeline-summary">{e.summary}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="container section-block">
+    <h2 class="section-heading">Education</h2>
+    <ul class="education">
+      <li>
+        <strong>MBA — Marmara University</strong> <span class="mono dim">2023 — 2025 · Online</span>
+      </li>
+      <li>
+        <strong>B.S. Computer Engineering — Cumhuriyet University</strong> <span class="mono dim">2013 — 2017 · Sivas, Turkey</span>
+      </li>
+      <li>
+        <strong>Full Stack Bootcamp — Clarusway</strong> <span class="mono dim">Feb — Oct 2025</span>
+      </li>
+      <li>
+        <strong>Intensive English — Talk English Boston</strong> <span class="mono dim">2023 — 2024</span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="container section-block contact">
+    <h2 class="section-heading">Get in touch</h2>
+    <p>
+      The fastest way to reach me is email — I check it every day.
+    </p>
+    <ul class="contact-list">
+      <li><a href="mailto:ozguryildiz0@outlook.com">ozguryildiz0@outlook.com</a></li>
+      <li><a href="https://linkedin.com/in/ozguryildiz0" target="_blank" rel="noopener">linkedin.com/in/ozguryildiz0 ↗</a></li>
+      <li><a href="https://github.com/yldzozgur" target="_blank" rel="noopener">github.com/yldzozgur ↗</a></li>
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding-top: 4rem;
+    padding-bottom: 1.5rem;
+    max-width: 48rem;
+  }
+  .page-header .dim {
+    color: var(--ink-faint);
+  }
+  .page-header h1 {
+    margin: 0.5rem 0 0;
+  }
+
+  .about-prose {
+    padding-top: 1rem;
+  }
+  .about-prose .lead {
+    font-family: var(--font-display);
+    font-size: 1.375rem;
+    line-height: 1.45;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+  }
+  .about-prose p {
+    color: var(--ink-muted);
+  }
+  .about-prose strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .section-block {
+    margin-top: 4rem;
+  }
+  .section-heading {
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1.75rem;
+    max-width: var(--reading-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .skills {
+    max-width: var(--reading-width);
+    margin: 0 auto;
+  }
+  .skill-row {
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .skill-row:last-child {
+    border-bottom: none;
+  }
+  .skill-cat {
+    color: var(--accent-dim);
+    padding-top: 0.2rem;
+  }
+  .skill-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .skill-item {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    color: var(--ink-muted);
+    font-size: 0.75rem;
+    text-transform: none;
+  }
+
+  .timeline {
+    list-style: none;
+    max-width: var(--reading-width);
+    margin: 0 auto;
+  }
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .timeline-item:last-child {
+    border-bottom: none;
+  }
+  .timeline-period {
+    color: var(--ink-faint);
+    padding-top: 0.3rem;
+  }
+  .timeline-role {
+    font-family: var(--font-display);
+    font-size: 1.1875rem;
+    margin-bottom: 0.25rem;
+  }
+  .timeline-org {
+    color: var(--ink-muted);
+    font-weight: 400;
+  }
+  .timeline-loc {
+    color: var(--ink-faint);
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+  }
+  .timeline-summary {
+    color: var(--ink-muted);
+    font-size: 0.9375rem;
+  }
+
+  .education {
+    list-style: none;
+    max-width: var(--reading-width);
+    margin: 0 auto;
+  }
+  .education li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--ink-muted);
+  }
+  .education li:last-child {
+    border-bottom: none;
+  }
+  .education strong {
+    color: var(--ink);
+    font-weight: 500;
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+  .education .dim {
+    color: var(--ink-faint);
+  }
+
+  .contact {
+    max-width: var(--reading-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact p {
+    color: var(--ink-muted);
+    margin-bottom: 1rem;
+  }
+  .contact-list {
+    list-style: none;
+  }
+  .contact-list li {
+    padding: 0.4rem 0;
+  }
+  .contact-list a {
+    color: var(--accent);
+  }
+
+  @media (max-width: 640px) {
+    .skill-row,
+    .timeline-item {
+      grid-template-columns: 1fr;
+      gap: 0.4rem;
+    }
+    .timeline-period {
+      padding-top: 0;
+    }
+  }
+</style>
