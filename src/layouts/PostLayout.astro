@@ -1,6 +1,11 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 
+interface PostNav {
+  slug: string;
+  title: string;
+}
+
 interface Props {
   title: string;
   description: string;
@@ -8,12 +13,20 @@ interface Props {
   updatedDate?: Date;
   tags: string[];
   readingTime?: string;
+  slug: string;
+  prev?: PostNav;
+  next?: PostNav;
 }
 
-const { title, description, pubDate, updatedDate, tags, readingTime } = Astro.props;
+const { title, description, pubDate, updatedDate, tags, readingTime, slug, prev, next } = Astro.props;
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const postUrl = `https://yldzozgur.com/writing/${slug}`;
+const shareText = `${title} — by Ozgur Yildiz`;
+const linkedinShare = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}`;
+const xShare = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(postUrl)}`;
 ---
 
 <BaseLayout title={`${title} — Ozgur Yildiz`} description={description} type="article">
@@ -44,6 +57,32 @@ const formatDate = (date: Date) =>
       <div class="container post-updated">
         <p class="mono dim">Last updated: {formatDate(updatedDate)}</p>
       </div>
+    )}
+
+    <div class="container post-share">
+      <p class="mono dim share-label">Found this useful?</p>
+      <div class="share-actions">
+        <a href={linkedinShare} target="_blank" rel="noopener" class="share-btn">Share on LinkedIn ↗</a>
+        <a href={xShare} target="_blank" rel="noopener" class="share-btn">Share on X ↗</a>
+        <a href="/rss.xml" class="share-btn">Subscribe via RSS</a>
+      </div>
+    </div>
+
+    {(prev || next) && (
+      <nav class="container post-nav" aria-label="Post navigation">
+        {prev ? (
+          <a href={`/writing/${prev.slug}`} class="post-nav-link prev">
+            <span class="mono dim">← Previous</span>
+            <span class="post-nav-title">{prev.title}</span>
+          </a>
+        ) : <span></span>}
+        {next ? (
+          <a href={`/writing/${next.slug}`} class="post-nav-link next">
+            <span class="mono dim">Next →</span>
+            <span class="post-nav-title">{next.title}</span>
+          </a>
+        ) : <span></span>}
+      </nav>
     )}
 
     <div class="container post-footer">
@@ -100,9 +139,81 @@ const formatDate = (date: Date) =>
   .post-updated .dim {
     color: var(--ink-faint);
   }
-  .post-footer {
+
+  .post-share {
     max-width: var(--reading-width);
     margin: 3rem auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+  .share-label {
+    color: var(--ink-faint);
+    margin-bottom: 0.75rem;
+  }
+  .share-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .share-btn {
+    display: inline-block;
+    padding: 0.5rem 0.875rem;
+    border: 1px solid var(--border-strong);
+    border-radius: 4px;
+    color: var(--ink);
+    font-size: 0.8125rem;
+    font-family: var(--font-mono);
+    border-bottom: 1px solid var(--border-strong);
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  .share-btn:hover {
+    border-color: var(--accent);
+    border-bottom-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .post-nav {
+    max-width: var(--reading-width);
+    margin: 2.5rem auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .post-nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--ink);
+    border-bottom: 1px solid var(--border);
+    transition: border-color 0.2s ease;
+  }
+  .post-nav-link:hover {
+    border-color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .post-nav-link:hover .post-nav-title {
+    color: var(--accent);
+  }
+  .post-nav-link.next {
+    text-align: right;
+  }
+  .post-nav-link .dim {
+    color: var(--ink-faint);
+    font-size: 0.75rem;
+  }
+  .post-nav-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    line-height: 1.3;
+    transition: color 0.2s ease;
+  }
+
+  .post-footer {
+    max-width: var(--reading-width);
+    margin: 2.5rem auto 0;
     padding-top: 2rem;
     border-top: 1px solid var(--border);
   }
@@ -112,5 +223,14 @@ const formatDate = (date: Date) =>
   }
   .back-link:hover {
     color: var(--accent);
+  }
+
+  @media (max-width: 640px) {
+    .post-nav {
+      grid-template-columns: 1fr;
+    }
+    .post-nav-link.next {
+      text-align: left;
+    }
   }
 </style>

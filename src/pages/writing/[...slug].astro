@@ -3,18 +3,30 @@ import { getCollection, render } from 'astro:content';
 import PostLayout from '@/layouts/PostLayout.astro';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog', ({ data }) => !data.draft);
-  return posts.map((post) => ({
-    params: { slug: post.id },
-    props: { post },
-  }));
+  const all = (await getCollection('blog', ({ data }) => !data.draft))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+  return all.map((post, i) => {
+    const next = i > 0 ? all[i - 1] : undefined;
+    const prev = i < all.length - 1 ? all[i + 1] : undefined;
+    return {
+      params: { slug: post.id },
+      props: {
+        post,
+        prev: prev ? { slug: prev.id, title: prev.data.title } : undefined,
+        next: next ? { slug: next.id, title: next.data.title } : undefined,
+      },
+    };
+  });
 }
 
-const { post } = Astro.props;
-const { Content, remarkPluginFrontmatter } = await render(post);
+const { post, prev, next } = Astro.props;
+const { Content } = await render(post);
 
-// Compute reading time if not provided
-const readingTime = post.data.readingTime ?? remarkPluginFrontmatter?.readingTime;
+const words = (post.body ?? '').trim().split(/\s+/).filter(Boolean).length;
+const minutes = Math.max(1, Math.round(words / 220));
+const computedReadingTime = `${minutes} min read`;
+const readingTime = post.data.readingTime ?? computedReadingTime;
 ---
 
 <PostLayout
@@ -24,6 +36,9 @@ const readingTime = post.data.readingTime ?? remarkPluginFrontmatter?.readingTim
   updatedDate={post.data.updatedDate}
   tags={post.data.tags}
   readingTime={readingTime}
+  slug={post.id}
+  prev={prev}
+  next={next}
 >
   <Content />
 </PostLayout>

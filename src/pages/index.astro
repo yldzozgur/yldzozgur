@@ -48,45 +48,25 @@ const formatDate = (date: Date) =>
     </div>
 
     <h1 class="hero-title">
-      I build software <em>and</em> write about<br />
-      what breaks while building it.
+      Full-stack engineer.<br />
+      <em>Six years</em> before TypeScript,<br />
+      still learning every week.
     </h1>
 
     <p class="hero-lede">
-      Junior full-stack engineer shipping production TypeScript / React / Node features at Ameza Solutions.
-      Six years of prior enterprise experience in Java and .NET, re-tooled around the modern JavaScript stack.
-      I write here about the gap between bootcamp code and real codebases — what the courses don't tell you.
+      Currently shipping production features at <strong>Ameza Solutions</strong> — a multi-tenant retail
+      platform in TypeScript, React, Node, and PostgreSQL. Before that: six years of Java
+      and .NET enterprise work, then an MBA and a JS-stack bootcamp on the way to the U.S.
+    </p>
+    <p class="hero-lede hero-lede-secondary">
+      I post twice a week here about the gap between bootcamp code and real codebases — what the
+      courses don't tell you.
     </p>
 
     <div class="hero-actions">
-      <a href="/writing" class="cta">Read the writing →</a>
-      <a href="/work" class="cta-secondary">See the work</a>
+      <a href="/work" class="cta">See the work →</a>
+      <a href="/writing" class="cta-secondary">Read the writing</a>
     </div>
-  </section>
-
-  <section class="section container">
-    <header class="section-header">
-      <h2>Latest writing</h2>
-      <a href="/writing" class="mono section-link">All posts →</a>
-    </header>
-
-    {posts.length === 0 ? (
-      <p class="empty mono">No posts published yet. First one is on the way.</p>
-    ) : (
-      <ul class="post-list">
-        {posts.map((post) => (
-          <li class="post-row">
-            <a href={`/writing/${post.id}`} class="post-row-link">
-              <time class="mono post-row-date" datetime={post.data.pubDate.toISOString()}>
-                {formatDate(post.data.pubDate)}
-              </time>
-              <span class="post-row-title">{post.data.title}</span>
-              <span class="post-row-arrow">→</span>
-            </a>
-          </li>
-        ))}
-      </ul>
-    )}
   </section>
 
   <section class="section container">
@@ -112,6 +92,28 @@ const formatDate = (date: Date) =>
       ))}
     </ul>
   </section>
+
+  {posts.length > 0 && (
+    <section class="section container">
+      <header class="section-header">
+        <h2>Latest writing</h2>
+        <a href="/writing" class="mono section-link">All posts →</a>
+      </header>
+      <ul class="post-list">
+        {posts.map((post) => (
+          <li class="post-row">
+            <a href={`/writing/${post.id}`} class="post-row-link">
+              <time class="mono post-row-date" datetime={post.data.pubDate.toISOString()}>
+                {formatDate(post.data.pubDate)}
+              </time>
+              <span class="post-row-title">{post.data.title}</span>
+              <span class="post-row-arrow">→</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
 </BaseLayout>
 
 <style>
@@ -164,6 +166,15 @@ const formatDate = (date: Date) =>
     line-height: 1.6;
     color: var(--ink-muted);
     max-width: 38rem;
+    margin-bottom: 1.25rem;
+  }
+  .hero-lede strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .hero-lede-secondary {
+    color: var(--ink-faint);
+    font-size: 1.0625rem;
     margin-bottom: 2.5rem;
   }
   .hero-actions {

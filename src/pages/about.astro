@@ -60,6 +60,29 @@ const experience = [
   </section>
 
   <section class="container">
+    <dl class="quick-stats">
+      <div class="quick-stat">
+        <dt class="mono">Currently</dt>
+        <dd>Full-Stack Developer @ Ameza Solutions</dd>
+      </div>
+      <div class="quick-stat">
+        <dt class="mono">Base</dt>
+        <dd>Austin, TX — open to remote (US-wide) &amp; hybrid (Greater Austin)</dd>
+      </div>
+      <div class="quick-stat">
+        <dt class="mono">Status</dt>
+        <dd>Available · U.S. work authorized, no sponsorship required</dd>
+      </div>
+      <div class="quick-stat">
+        <dt class="mono">Stack</dt>
+        <dd>TypeScript · React · Node · Express · PostgreSQL</dd>
+      </div>
+      <div class="quick-stat">
+        <dt class="mono">Background</dt>
+        <dd>6 yrs Java &amp; .NET enterprise → MBA → JS stack bootcamp</dd>
+      </div>
+    </dl>
+
     <div class="prose about-prose">
       <p class="lead">
         I'm Ozgur — a full-stack engineer based in Austin, Texas. I'm currently
@@ -176,6 +199,40 @@ const experience = [
   }
   .page-header h1 {
     margin: 0.5rem 0 0;
+  }
+
+  .quick-stats {
+    max-width: var(--reading-width);
+    margin: 0 auto 2.5rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg-subtle);
+    padding: 0.5rem 1rem;
+  }
+  .quick-stat {
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    gap: 1rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .quick-stat:last-child {
+    border-bottom: none;
+  }
+  .quick-stat dt {
+    color: var(--accent-dim);
+    font-size: 0.75rem;
+    padding-top: 0.15rem;
+  }
+  .quick-stat dd {
+    color: var(--ink);
+    font-size: 0.9375rem;
+  }
+  @media (max-width: 640px) {
+    .quick-stat {
+      grid-template-columns: 1fr;
+      gap: 0.15rem;
+    }
   }
 
   .about-prose {

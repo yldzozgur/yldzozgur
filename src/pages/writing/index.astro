@@ -27,18 +27,20 @@ const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
     <span class="mono dim">/ writing</span>
     <h1>Writing</h1>
     <p class="page-lede">
-      Notes from the trenches of learning to ship production software.
-      Mostly about TypeScript, Node, React, and the things that go wrong between
-      the bootcamp tutorial and the real pull request.
+      Two posts a week on shipping production software — TypeScript, Node, React,
+      and the unglamorous parts of moving from bootcamp code to a real codebase.
     </p>
   </section>
 
   <section class="container">
     {posts.length === 0 ? (
       <div class="empty-state">
-        <p class="mono dim">No posts yet — the first one is brewing.</p>
+        <p class="mono dim">No posts published yet — the queue is loaded.</p>
         <p class="empty-note">
-          Check back soon, or subscribe via <a href="/rss.xml">RSS</a>.
+          New posts every Tuesday and Thursday. Subscribe via
+          <a href="/rss.xml">RSS</a> or follow on
+          <a href="https://linkedin.com/in/ozguryildiz0" target="_blank" rel="noopener">LinkedIn ↗</a>
+          to catch the first one.
         </p>
       </div>
     ) : (
