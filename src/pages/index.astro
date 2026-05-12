@@ -4,506 +4,977 @@ import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 4);
-
-const featured = [
-  {
-    name: 'Ameza Smart Retail Platform',
-    role: 'Volunteer Full-Stack Developer',
-    period: '2025 — Present',
-    stack: 'TypeScript · React · Node · PostgreSQL',
-    note: '20+ merged PRs on a multi-tenant POS platform',
-    href: 'https://github.com/Ameza-Smart-Retail-Solutions',
-  },
-  {
-    name: 'Stock Management App',
-    role: 'Solo build',
-    period: '2025',
-    stack: 'MERN · JWT · Redux Toolkit · Recharts',
-    note: 'Full-stack inventory + sales dashboard with role-based auth',
-    href: 'https://ozguryildiz-stock.vercel.app',
-  },
-  {
-    name: 'Pizza API',
-    role: 'Solo build',
-    period: '2025',
-    stack: 'Express · MongoDB · Swagger · Vercel',
-    note: 'Production-style REST API with JWT and image upload',
-    href: 'https://ozguryildiz-pizza-api.vercel.app',
-  },
-];
+  .slice(0, 3);
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+
+const tsSnippet = `<span class="code-c">// domain error code as discriminated union</span>
+<span class="code-k">type</span> <span class="code-t">ApiError</span> =
+  | &#123; kind: <span class="code-s">'validation'</span>; field: <span class="code-t">string</span>; message: <span class="code-t">string</span> &#125;
+  | &#123; kind: <span class="code-s">'not-found'</span>; resource: <span class="code-t">string</span> &#125;
+  | &#123; kind: <span class="code-s">'unauthorized'</span> &#125;
+  | &#123; kind: <span class="code-s">'server'</span>; trace: <span class="code-t">string</span> &#125;;
+
+<span class="code-k">function</span> <span class="code-f">handle</span>(err: <span class="code-t">ApiError</span>) &#123;
+  <span class="code-k">switch</span> (err.kind) &#123;
+    <span class="code-k">case</span> <span class="code-s">'validation'</span>: <span class="code-k">return</span> <span class="code-f">badRequest</span>(err);
+    <span class="code-k">case</span> <span class="code-s">'not-found'</span>:  <span class="code-k">return</span> <span class="code-f">notFound</span>(err.resource);
+    <span class="code-k">case</span> <span class="code-s">'unauthorized'</span>: <span class="code-k">return</span> <span class="code-f">unauth</span>();
+    <span class="code-k">case</span> <span class="code-s">'server'</span>: <span class="code-k">return</span> <span class="code-f">serverError</span>(err.trace);
+  &#125;
+&#125;`;
 ---
 
 <BaseLayout>
-  <section class="hero container">
-    <div class="hero-meta mono">
-      <span>Austin, TX</span>
-      <span class="sep">/</span>
-      <span>Full-Stack Engineer</span>
-      <span class="sep">/</span>
-      <span class="status"><span class="dot"></span> Available</span>
-    </div>
+  <div class="spotlight" id="spotlight"></div>
 
-    <h1 class="hero-title">
-      Full-stack engineer.<br />
-      <em>Six years</em> before TypeScript,<br />
-      still learning every week.
-    </h1>
-
-    <p class="hero-lede">
-      Currently shipping production features at <strong>Ameza Solutions</strong> — a multi-tenant retail
-      platform in TypeScript, React, Node, and PostgreSQL. Before that: six years of Java
-      and .NET enterprise work, then an MBA and a JS-stack bootcamp on the way to the U.S.
-    </p>
-    <p class="hero-lede hero-lede-secondary">
-      I post twice a week here about the gap between bootcamp code and real codebases — what the
-      courses don't tell you.
-    </p>
-
-    <div class="hero-actions">
-      <a href="/work" class="cta">See the work →</a>
-      <a href="/writing" class="cta-secondary">Read the writing</a>
-    </div>
-  </section>
-
-  <section class="now-strip container" data-reveal-2>
-    <div class="terminal">
-      <div class="terminal-chrome">
-        <span class="dot dot-r"></span>
-        <span class="dot dot-y"></span>
-        <span class="dot dot-g"></span>
-        <span class="terminal-title mono">~/ozgur — status</span>
-      </div>
-      <pre class="terminal-body mono"><code><span class="t-prompt">$</span> ozgur --status
-<span class="t-key">NOW SHIPPING</span>   Multi-tenant retail platform <span class="t-mute">@</span> Ameza Solutions
-<span class="t-key">STACK</span>          TypeScript <span class="t-mute">·</span> React <span class="t-mute">·</span> Node <span class="t-mute">·</span> Express <span class="t-mute">·</span> PostgreSQL
-<span class="t-key">WRITING</span>        Two posts <span class="t-mute">/</span> week <span class="t-mute">·</span> Tuesday <span class="t-mute">+</span> Thursday
-<span class="t-key">AVAILABILITY</span>   Open to remote <span class="t-mute">(US)</span> <span class="t-mute">+</span> hybrid <span class="t-mute">(Austin)</span> <span class="t-mute">·</span> no sponsorship
-<span class="t-prompt">$</span> <span class="t-cursor">_</span></code></pre>
-    </div>
-  </section>
-
-  <section class="stats container" data-reveal-3>
-    <dl class="stats-grid">
-      <div class="stat">
-        <dt class="stat-num">6+</dt>
-        <dd class="mono stat-label">years prior</dd>
-        <dd class="stat-note">Java · .NET enterprise</dd>
-      </div>
-      <div class="stat">
-        <dt class="stat-num">20+</dt>
-        <dd class="mono stat-label">PRs merged</dd>
-        <dd class="stat-note">at Ameza, multi-tenant POS</dd>
-      </div>
-      <div class="stat">
-        <dt class="stat-num">7</dt>
-        <dd class="mono stat-label">projects</dd>
-        <dd class="stat-note">live demos &amp; APIs shipped</dd>
-      </div>
-      <div class="stat">
-        <dt class="stat-num">0</dt>
-        <dd class="mono stat-label">sponsorship</dd>
-        <dd class="stat-note">U.S. work authorized</dd>
-      </div>
-    </dl>
-  </section>
-
-  <section class="section container" data-reveal-3>
-    <header class="section-header">
-      <h2>Featured work</h2>
-      <a href="/work" class="mono section-link">All projects →</a>
-    </header>
-
-    <ul class="work-list">
-      {featured.map((p) => (
-        <li class="work-row">
-          <a href={p.href} target="_blank" rel="noopener" class="work-row-link">
-            <div class="work-row-main">
-              <span class="work-row-name">{p.name}</span>
-              <span class="mono work-row-period">{p.period}</span>
-            </div>
-            <div class="work-row-meta">
-              <span class="mono work-row-stack">{p.stack}</span>
-            </div>
-            <p class="work-row-note">{p.note}</p>
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-grid container">
+      <div class="hero-left">
+        <span class="kicker">
+          <span class="dot"></span>
+          Open to junior FS / backend roles
+        </span>
+        <h1 class="display">
+          Junior engineer.<br />
+          <span class="accent-text">Six years</span><br />
+          before this.
+        </h1>
+        <p class="hero-lede">
+          Hi, I'm <strong>Ozgur</strong> — full-stack developer in Austin shipping production
+          TypeScript at <a href="https://github.com/Ameza-Smart-Retail-Solutions" target="_blank" rel="noopener" class="link">Ameza Solutions</a>.
+          Before bootcamp, six years of Java &amp; .NET enterprise work.
+          I write twice a week about the gap between bootcamp code and real codebases.
+        </p>
+        <div class="hero-cta">
+          <a href="/work" class="btn btn-primary">
+            See my work
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
-        </li>
-      ))}
-    </ul>
+          <a href="/resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+            Resume
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span class="t-dot dr"></span>
+            <span class="t-dot dy"></span>
+            <span class="t-dot dg"></span>
+            <span class="t-name">ozgur@portfolio — zsh</span>
+          </div>
+          <pre class="t-body"><code><span class="t-c">~ </span><span class="t-prompt">$</span> whoami
+<span class="t-out">ozgur yildiz · full-stack engineer · austin tx</span>
+
+<span class="t-c">~ </span><span class="t-prompt">$</span> stack --primary
+<span class="t-out">typescript · react · node · express · postgres</span>
+
+<span class="t-c">~ </span><span class="t-prompt">$</span> background
+<span class="t-out">6 yrs java/.net → mba → bootcamp → ameza</span>
+
+<span class="t-c">~ </span><span class="t-prompt">$</span> availability
+<span class="t-out"><span class="t-ok">●</span> available · remote (us) + hybrid (austin)</span>
+<span class="t-out"><span class="t-ok">●</span> us work authorized · no sponsorship</span>
+
+<span class="t-c">~ </span><span class="t-prompt">$</span> <span class="t-cursor">█</span></code></pre>
+        </div>
+      </div>
+    </div>
   </section>
 
-  {posts.length > 0 && (
-    <section class="section container">
-      <header class="section-header">
-        <h2>Latest writing</h2>
-        <a href="/writing" class="mono section-link">All posts →</a>
-      </header>
-      <ul class="post-list">
-        {posts.map((post) => (
-          <li class="post-row">
-            <a href={`/writing/${post.id}`} class="post-row-link">
-              <time class="mono post-row-date" datetime={post.data.pubDate.toISOString()}>
-                {formatDate(post.data.pubDate)}
-              </time>
-              <span class="post-row-title">{post.data.title}</span>
-              <span class="post-row-arrow">→</span>
+  <!-- ============ ABOUT BENTO ============ -->
+  <section id="about" class="home-section">
+    <div class="container">
+      <div class="home-section-head">
+        <h2 class="home-section-title">Some facts.</h2>
+        <p class="home-section-sub">A bento of who I am and what I'm up to.</p>
+      </div>
+
+      <div class="bento">
+        <div class="bcard bcard-greeting bcard-span-2">
+          <p class="bcard-eyebrow">/ greeting</p>
+          <p class="bcard-greeting-text">
+            Hey 👋 I'm a <strong>full-stack engineer</strong> based in
+            <strong>Austin, Texas</strong>. Six years writing enterprise Java &amp; .NET,
+            then an MBA + bootcamp + a move to the U.S. Now I ship production
+            TypeScript and write twice a week about what bootcamps don't teach.
+          </p>
+        </div>
+
+        <div class="bcard bcard-now">
+          <p class="bcard-eyebrow">/ currently</p>
+          <p class="bcard-big">Ameza<br />Solutions</p>
+          <p class="bcard-small">Volunteer FS Developer · multi-tenant retail</p>
+        </div>
+
+        <div class="bcard bcard-loc">
+          <p class="bcard-eyebrow">/ base</p>
+          <p class="bcard-big">Austin, TX</p>
+          <p class="bcard-small">CST (UTC−6) · remote / hybrid</p>
+          <span class="map-dot"></span>
+        </div>
+
+        <div class="bcard bcard-span-2">
+          <p class="bcard-eyebrow">/ stack</p>
+          <ul class="chips">
+            <li>TypeScript</li><li>React</li><li>Node.js</li><li>Express</li>
+            <li>PostgreSQL</li><li>MongoDB</li><li>Redux Toolkit</li><li>Tailwind</li>
+            <li>Swagger</li><li>JWT</li><li>Docker</li><li>Vercel</li>
+            <li>Claude Code</li><li>Cypress</li>
+          </ul>
+        </div>
+
+        <div class="bcard">
+          <p class="bcard-eyebrow">/ shipped</p>
+          <p class="big-num">20<span>+</span></p>
+          <p class="bcard-small">PRs merged at Ameza</p>
+        </div>
+
+        <div class="bcard">
+          <p class="bcard-eyebrow">/ prior</p>
+          <p class="big-num">6<span>+</span></p>
+          <p class="bcard-small">years Java &amp; .NET</p>
+        </div>
+
+        <div class="bcard bcard-warm">
+          <p class="bcard-eyebrow">/ visa</p>
+          <p class="big-num">0</p>
+          <p class="bcard-small">sponsorship needed</p>
+        </div>
+
+        <a href="https://github.com/yldzozgur" target="_blank" rel="noopener" class="bcard bcard-link">
+          <p class="bcard-eyebrow">/ github</p>
+          <p class="bcard-big-link">@yldzozgur</p>
+          <p class="bcard-small">repositories, commits, contributions ↗</p>
+        </a>
+
+        <a href="https://linkedin.com/in/ozguryildiz0" target="_blank" rel="noopener" class="bcard bcard-link">
+          <p class="bcard-eyebrow">/ linkedin</p>
+          <p class="bcard-big-link">/ozguryildiz0</p>
+          <p class="bcard-small">history, posts, recommendations ↗</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WORK ============ -->
+  <section id="work" class="home-section home-section-alt">
+    <div class="container">
+      <div class="home-section-head">
+        <h2 class="home-section-title">Selected work.</h2>
+        <p class="home-section-sub">
+          Live demos &amp; open-source code. Demo creds for all live demos:
+          <code>demo@demo.com / Demo1234!</code>
+        </p>
+      </div>
+
+      <div class="work-bento">
+        <div class="work-feat">
+          <div class="work-feat-body">
+            <span class="work-badge">● Currently shipping</span>
+            <h3 class="work-feat-title">Ameza Smart Retail Platform</h3>
+            <p class="work-feat-meta">Production · TypeScript · React · Node · PostgreSQL · Nov 2025 — Present</p>
+            <p class="work-feat-desc">
+              Multi-tenant POS and smart retail platform. 20+ merged PRs across the stack:
+              store and employee management dashboards, validated forms, typed DTOs,
+              domain error-code discriminators, Swagger snapshot sync, role-catalog APIs.
+            </p>
+            <ul class="work-feat-chips">
+              <li>Multi-tenant</li><li>POS</li><li>Typed DTOs</li>
+              <li>Domain errors</li><li>Code review</li>
+            </ul>
+            <a href="https://github.com/Ameza-Smart-Retail-Solutions" target="_blank" rel="noopener" class="link-arrow">
+              View organization
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
             </a>
-          </li>
-        ))}
-      </ul>
-    </section>
-  )}
+          </div>
+          <div class="work-feat-visual">
+            <div class="visual-blob blob-1"></div>
+            <div class="visual-blob blob-2"></div>
+            <div class="visual-code">
+              <pre><code set:html={tsSnippet}></code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-grid">
+          <a href="https://ozguryildiz-stock.vercel.app" target="_blank" rel="noopener" class="work-tile">
+            <img src="/projects/stock-management.webp" alt="Stock Management" loading="lazy" />
+            <div class="work-tile-body">
+              <h4>Stock Management App</h4>
+              <p>MERN · JWT auth · KPI dashboard · Swagger / Redoc.</p>
+              <span class="tile-stack mono">React · Redux · MongoDB · JWT</span>
+            </div>
+          </a>
+
+          <a href="https://ozguryildiz-pizza-api.vercel.app" target="_blank" rel="noopener" class="work-tile">
+            <img src="/projects/pizza-api.webp" alt="Pizza API" loading="lazy" />
+            <div class="work-tile-body">
+              <h4>Pizza API</h4>
+              <p>Production REST · JWT · uploads · CDN Swagger UI.</p>
+              <span class="tile-stack mono">Express · MongoDB · Swagger</span>
+            </div>
+          </a>
+
+          <a href="https://ozguryildiz-rentacar-api.vercel.app" target="_blank" rel="noopener" class="work-tile">
+            <img src="/projects/rentacar-api.webp" alt="Rent-A-Car API" loading="lazy" />
+            <div class="work-tile-body">
+              <h4>Rent-A-Car API</h4>
+              <p>Reservation logic with date-overlap detection &amp; email.</p>
+              <span class="tile-stack mono">Express · MongoDB · Nodemailer</span>
+            </div>
+          </a>
+
+          <a href="https://yldzozgur.github.io/recipe-app/" target="_blank" rel="noopener" class="work-tile">
+            <img src="/projects/recipe-app.webp" alt="Recipe App" loading="lazy" />
+            <div class="work-tile-body">
+              <h4>Recipe App</h4>
+              <p>React 19 SPA · debounced search · categories · dark mode.</p>
+              <span class="tile-stack mono">React 19 · Vite · Tailwind</span>
+            </div>
+          </a>
+
+          <a href="https://yldzozgur.github.io/react-movieapp/" target="_blank" rel="noopener" class="work-tile">
+            <img src="/projects/react-movieapp.webp" alt="React Movie App" loading="lazy" />
+            <div class="work-tile-body">
+              <h4>React Movie App</h4>
+              <p>Firebase auth (email + Google) · TMDB integration.</p>
+              <span class="tile-stack mono">React · Firebase · TMDB</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/yldzozgur/draftlift-scheduler" target="_blank" rel="noopener" class="work-tile work-tile-text">
+            <div class="work-tile-body">
+              <span class="work-tile-icon">⏱</span>
+              <h4>DraftLift Scheduler</h4>
+              <p>Self-hosted Node tool to schedule local repos to GitHub on cron with audit logs.</p>
+              <span class="tile-stack mono">Node · Express · Cron</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="work-cta-row">
+        <a href="/work" class="link-arrow">
+          See all projects (7)
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WRITING ============ -->
+  <section id="writing" class="home-section">
+    <div class="container">
+      <div class="home-section-head">
+        <h2 class="home-section-title">Twice a week.</h2>
+        <p class="home-section-sub">
+          Tuesday and Thursday. Notes on TypeScript, code review, and what real codebases
+          are actually like.
+        </p>
+      </div>
+
+      {posts.length === 0 ? (
+        <div class="writing-empty">
+          <p class="we-headline">📬 First post drops shortly.</p>
+          <p class="we-body">
+            I'm queueing essays on Java→TypeScript transition, discriminated unions in
+            error handling, and reading a multi-tenant codebase for the first time.
+          </p>
+          <div class="we-cta">
+            <a href="/rss.xml" class="link-arrow">Subscribe via RSS</a>
+            <span class="dim">·</span>
+            <a href="https://linkedin.com/in/ozguryildiz0" target="_blank" rel="noopener" class="link-arrow">Follow on LinkedIn ↗</a>
+          </div>
+        </div>
+      ) : (
+        <ul class="writing-list">
+          {posts.map((post) => (
+            <li>
+              <a href={`/writing/${post.id}`} class="writing-row">
+                <time class="mono" datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time>
+                <div>
+                  <h3>{post.data.title}</h3>
+                  <p>{post.data.description}</p>
+                </div>
+                <span class="writing-arrow">→</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <p class="bcard-eyebrow">/ ready when you are</p>
+        <h2 class="cta-title">Let's talk.</h2>
+        <p class="cta-text">
+          Open to junior <strong>full-stack</strong> or <strong>backend</strong> roles —
+          remote (US-wide) or hybrid (Greater Austin). I reply the same day.
+        </p>
+        <div class="cta-actions">
+          <a href="mailto:ozguryildiz0@outlook.com" class="btn btn-primary">
+            Email me
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/ozguryildiz0" target="_blank" rel="noopener" class="btn btn-cta-ghost">LinkedIn ↗</a>
+          <a href="https://github.com/yldzozgur" target="_blank" rel="noopener" class="btn btn-cta-ghost">GitHub ↗</a>
+          <a href="/resume.pdf" target="_blank" rel="noopener" class="btn btn-cta-ghost">Resume ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    const sp = document.getElementById('spotlight');
+    if (sp && window.matchMedia('(min-width: 720px)').matches) {
+      document.addEventListener('mousemove', (e) => {
+        sp.style.setProperty('--mx', e.clientX + 'px');
+        sp.style.setProperty('--my', e.clientY + 'px');
+      });
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+    document.querySelectorAll('.bcard, .work-tile, .work-feat, .writing-row, .cta-card').forEach(el => io.observe(el));
+  </script>
 </BaseLayout>
 
 <style>
-  .hero {
-    padding-top: 5rem;
-    padding-bottom: 4rem;
-    max-width: 56rem;
+  /* spotlight */
+  .spotlight {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background: radial-gradient(560px circle at var(--mx, 50%) var(--my, 50%), rgba(99, 102, 241, 0.08), transparent 60%);
+    opacity: 0.7;
   }
-  .hero-meta {
+
+  /* hero */
+  .hero { padding: 4rem 0 3rem; position: relative; z-index: 2; }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    background: rgba(16, 185, 129, 0.1);
+    color: #047857;
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+  }
+  .kicker .dot {
+    width: 6px;
+    height: 6px;
+    background: var(--success);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+    animation: dot-pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes dot-pulse { 50% { opacity: 0.45; } }
+
+  .display {
+    font-size: clamp(2.5rem, 6vw, 4.75rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    margin-bottom: 1.75rem;
+  }
+  .display .accent-text {
+    background: var(--grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .hero-lede {
+    font-size: 1.0625rem;
+    color: var(--ink-muted);
+    max-width: 32rem;
+    margin-bottom: 2rem;
+    line-height: 1.65;
+  }
+  .hero-lede strong { color: var(--ink); font-weight: 600; }
+  .link {
+    color: var(--primary);
+    font-weight: 500;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+  }
+  .link:hover { color: var(--ink); border-color: var(--ink); }
+  .hero-cta { display: flex; gap: 0.65rem; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.1rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    border-bottom: none;
+  }
+  .btn-primary {
+    background: var(--ink);
+    color: var(--bg);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    border-bottom: none;
+  }
+  .btn-ghost {
+    background: var(--bg-card);
+    color: var(--ink);
+    border: 1px solid var(--border);
+  }
+  .btn-ghost:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-strong);
+    transform: translateY(-1px);
+    border-bottom: 1px solid var(--border-strong);
+  }
+
+  /* terminal */
+  .terminal {
+    background: #18181b;
+    color: #e4e4e7;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px -20px rgba(24, 24, 27, 0.25), 0 0 0 1px rgba(24, 24, 27, 0.06);
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    line-height: 1.7;
+  }
+  .terminal-bar {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.4rem;
+    padding: 0.65rem 0.9rem;
+    background: #27272a;
+    border-bottom: 1px solid #3f3f46;
+  }
+  .t-dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+  .dr { background: #ff5f57; }
+  .dy { background: #febc2e; }
+  .dg { background: #28c840; }
+  .t-name { margin-left: 0.75rem; color: #a1a1aa; font-size: 0.7rem; }
+  .t-body { padding: 1rem 1.25rem 1.25rem; margin: 0; overflow-x: auto; }
+  .t-body code { background: none; color: inherit; padding: 0; font-size: inherit; border: none; }
+  .t-prompt { color: #34d399; }
+  .t-c { color: #a78bfa; }
+  .t-out { color: #d4d4d8; }
+  .t-ok { color: #34d399; }
+  .t-cursor { color: #fbbf24; animation: blink 1s steps(2, start) infinite; }
+  @keyframes blink { to { visibility: hidden; } }
+
+  /* sections */
+  .home-section { padding: 4.5rem 0; position: relative; z-index: 2; }
+  .home-section-alt { background: var(--bg-soft); }
+  .home-section-head { margin-bottom: 2.5rem; }
+  .home-section-title {
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.5rem;
+  }
+  .home-section-sub {
     color: var(--ink-muted);
-    margin-bottom: 2.5rem;
-    flex-wrap: wrap;
+    font-size: 1rem;
+    max-width: 38rem;
   }
-  .hero-meta .sep {
+  .home-section-sub code {
+    font-size: 0.8125rem;
+  }
+
+  /* bento */
+  .bento {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(170px, auto);
+    gap: 1rem;
+  }
+  .bcard {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    opacity: 0;
+    transform: translateY(8px);
+    color: var(--ink);
+    border-bottom: 1px solid var(--border);
+  }
+  .bcard.in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .bcard { opacity: 1; transform: none; transition: none; }
+  }
+  .bcard:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+    border-color: var(--border-strong);
+    border-bottom-color: var(--border-strong);
+  }
+  .bcard-span-2 { grid-column: span 2; }
+  .bcard-greeting { background: var(--ink); color: var(--bg); }
+  .bcard-greeting .bcard-eyebrow { color: rgba(255, 255, 255, 0.5); }
+  .bcard-greeting-text {
+    font-size: 1.0625rem;
+    line-height: 1.55;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+  }
+  .bcard-greeting-text strong { color: white; font-weight: 600; }
+  .bcard-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
     color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.65rem;
   }
-  .hero-meta .status {
+  .bcard-big {
+    font-family: var(--font-display);
+    font-size: 1.625rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin-bottom: 0.5rem;
+    color: var(--ink);
+  }
+  .bcard-big-link {
+    font-family: var(--font-mono);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+  }
+  .bcard-link:hover .bcard-big-link { color: var(--ink); }
+  .bcard-small {
+    color: var(--ink-muted);
+    font-size: 0.8125rem;
+  }
+  .bcard-now {
+    background: linear-gradient(135deg, var(--primary-soft), rgba(238, 242, 255, 0.4));
+    border-color: rgba(99, 102, 241, 0.25);
+  }
+  .bcard-loc { position: relative; }
+  .map-dot {
+    position: absolute;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--warm);
+    box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.2), 0 0 0 12px rgba(249, 115, 22, 0.08);
+    animation: dot-pulse 2.4s ease-in-out infinite;
+  }
+  .chips {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+  }
+  .chips li {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    padding: 0.25rem 0.55rem;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    color: var(--ink-muted);
+  }
+  .big-num {
+    font-family: var(--font-display);
+    font-size: 3.25rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .big-num span { font-size: 0.55em; vertical-align: top; }
+  .bcard-warm .big-num {
+    background: linear-gradient(135deg, #f97316, #ef4444);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bcard-link { display: block; }
+
+  /* work */
+  .work-bento { display: grid; gap: 1rem; }
+  .work-feat {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+    transform: translateY(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  .work-feat.in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  @media (prefers-reduced-motion: reduce) { .work-feat { opacity: 1; transform: none; } }
+  .work-feat:hover { box-shadow: var(--shadow-lg); }
+  .work-feat-body { padding: 2rem 2.25rem; }
+  .work-badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    background: rgba(16, 185, 129, 0.1);
+    color: #047857;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+  }
+  .work-feat-title {
+    font-size: 1.875rem;
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+  }
+  .work-feat-meta {
+    font-family: var(--font-mono);
+    color: var(--ink-faint);
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .work-feat-desc {
+    color: var(--ink-muted);
+    margin-bottom: 1.25rem;
+    font-size: 0.9375rem;
+  }
+  .work-feat-chips {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+  }
+  .work-feat-chips li {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    padding: 0.25rem 0.55rem;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    color: var(--ink-muted);
+  }
+  .link-arrow {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    color: var(--accent);
-  }
-  .hero-meta .dot {
-    width: 6px;
-    height: 6px;
-    background: var(--accent);
-    border-radius: 50%;
-    display: inline-block;
-    box-shadow: 0 0 0 4px var(--accent-glow);
-    animation: pulse 2.4s ease-in-out infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
-  }
-  .hero-title {
-    font-size: clamp(2.25rem, 5.5vw, 4rem);
-    margin-bottom: 2rem;
-  }
-  .hero-title em {
-    font-style: italic;
-    color: var(--accent);
-    font-variation-settings: "WONK" 1, "opsz" 144;
-  }
-  .hero-lede {
-    font-size: 1.1875rem;
-    line-height: 1.6;
-    color: var(--ink-muted);
-    max-width: 38rem;
-    margin-bottom: 1.25rem;
-  }
-  .hero-lede strong {
-    color: var(--ink);
-    font-weight: 500;
-  }
-  .hero-lede-secondary {
-    color: var(--ink-faint);
-    font-size: 1.0625rem;
-    margin-bottom: 2.5rem;
-  }
-  .hero-actions {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  .cta {
-    display: inline-block;
-    background: var(--accent);
-    color: var(--bg);
-    padding: 0.75rem 1.25rem;
-    border-radius: 4px;
-    font-weight: 500;
-    border-bottom: none;
+    color: var(--primary);
+    font-weight: 600;
     font-size: 0.9375rem;
-    transition: background 0.2s ease, transform 0.2s ease;
-  }
-  .cta:hover {
-    background: var(--link);
     border-bottom: none;
-    transform: translateY(-1px);
+    transition: gap 0.2s ease;
   }
-  .cta-secondary {
-    display: inline-block;
-    padding: 0.75rem 1.25rem;
-    border: 1px solid var(--border-strong);
-    border-radius: 4px;
-    color: var(--ink);
-    font-size: 0.9375rem;
-    transition: border-color 0.2s ease;
+  .link-arrow:hover {
+    gap: 0.65rem;
+    border-bottom: none;
   }
-  .cta-secondary:hover {
-    border-color: var(--accent);
-    border-bottom: 1px solid var(--accent);
-  }
-
-  .now-strip {
-    padding: 2.5rem 0 1.25rem;
-  }
-  .terminal {
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background: #0a0c10;
-    overflow: hidden;
-    box-shadow: 0 0 0 1px rgba(232, 168, 56, 0.04), 0 16px 40px -16px rgba(0, 0, 0, 0.6);
+  .work-feat-visual {
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
     position: relative;
-  }
-  .terminal::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: radial-gradient(ellipse at top, rgba(232, 168, 56, 0.04), transparent 60%);
-  }
-  .terminal-chrome {
+    overflow: hidden;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.65rem 1rem;
-    background: rgba(255, 255, 255, 0.025);
-    border-bottom: 1px solid var(--border);
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    min-height: 340px;
   }
-  .terminal-chrome .dot {
-    width: 10px;
-    height: 10px;
+  .visual-blob {
+    position: absolute;
     border-radius: 50%;
-    display: inline-block;
+    filter: blur(60px);
+    pointer-events: none;
   }
-  .dot-r { background: #ff5f57; }
-  .dot-y { background: #febc2e; }
-  .dot-g { background: #28c840; }
-  .terminal-title {
-    margin-left: 0.75rem;
-    color: var(--ink-faint);
-    font-size: 0.75rem;
-  }
-  .terminal-body {
-    margin: 0;
-    padding: 1.1rem 1.25rem;
-    color: var(--ink-muted);
-    font-size: 0.875rem;
-    line-height: 1.7;
+  .blob-1 { width: 220px; height: 220px; background: #ec4899; top: -40px; right: -40px; opacity: 0.3; }
+  .blob-2 { width: 200px; height: 200px; background: #22d3ee; bottom: -50px; left: -40px; opacity: 0.3; }
+  .visual-code {
+    position: relative;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    max-width: 100%;
     overflow-x: auto;
-    white-space: pre;
   }
-  .terminal-body code {
-    color: inherit;
+  .visual-code pre { margin: 0; background: none; padding: 0; }
+  .visual-code code {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: #e4e4e7;
     background: none;
     padding: 0;
-    font-family: inherit;
+    line-height: 1.7;
+    white-space: pre;
+    border: none;
   }
-  .t-prompt { color: var(--accent); }
-  .t-key { color: var(--accent-dim); }
-  .t-mute { color: var(--ink-faint); }
-  .t-cursor {
-    display: inline-block;
-    width: 0.55em;
-    color: var(--accent);
-    animation: blink 1.1s steps(2, start) infinite;
-  }
-  @keyframes blink {
-    to { visibility: hidden; }
-  }
+  .code-c { color: #71717a; font-style: italic; }
+  .code-k { color: #c084fc; }
+  .code-t { color: #5eead4; }
+  .code-s { color: #fbbf24; }
+  .code-f { color: #93c5fd; }
 
-  .stats {
-    padding: 1.5rem 0 1rem;
-  }
-  .stats-grid {
+  .work-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-  }
-  .stat {
-    padding: 1.25rem 1rem;
-    border-right: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-  }
-  .stat:last-child {
-    border-right: none;
-  }
-  .stat-num {
-    font-family: var(--font-display);
-    font-size: 2.25rem;
-    font-weight: 300;
-    color: var(--accent);
-    line-height: 1;
-    margin-bottom: 0.35rem;
-  }
-  .stat-label {
-    color: var(--ink);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .stat-note {
-    color: var(--ink-faint);
-    font-size: 0.75rem;
-  }
-  @media (max-width: 720px) {
-    .stats-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .stat {
-      border-right: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-    .stat:nth-child(2n) { border-right: none; }
-    .stat:nth-child(n+3) { border-bottom: none; }
-  }
-  @media (max-width: 640px) {
-    .terminal-body {
-      font-size: 0.8125rem;
-      padding: 1rem;
-    }
-  }
-
-  .section {
-    padding: 3rem 0;
-  }
-  .section-header {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .section-link {
-    color: var(--ink-muted);
-    border-bottom: none;
-  }
-  .section-link:hover {
-    color: var(--accent);
-  }
-  .empty {
-    color: var(--ink-faint);
-    padding: 2rem 0;
-  }
-
-  .post-list,
-  .work-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-  }
-  .post-row {
-    border-bottom: 1px solid var(--border);
-  }
-  .post-row:last-child {
-    border-bottom: none;
-  }
-  .post-row-link {
-    display: grid;
-    grid-template-columns: 7rem 1fr auto;
-    align-items: baseline;
-    gap: 1.5rem;
-    padding: 1.25rem 0;
-    color: var(--ink);
-    border-bottom: none;
-    transition: padding 0.2s ease;
-  }
-  .post-row-link:hover {
-    border-bottom: none;
-    padding-left: 0.5rem;
-  }
-  .post-row-link:hover .post-row-title {
-    color: var(--accent);
-  }
-  .post-row-link:hover .post-row-arrow {
-    transform: translateX(4px);
-    color: var(--accent);
-  }
-  .post-row-date {
-    color: var(--ink-faint);
-  }
-  .post-row-title {
-    font-family: var(--font-display);
-    font-size: 1.1875rem;
-    transition: color 0.2s ease;
-  }
-  .post-row-arrow {
-    color: var(--ink-faint);
-    transition: transform 0.2s ease, color 0.2s ease;
-  }
-
-  .work-row {
-    border-bottom: 1px solid var(--border);
-  }
-  .work-row:last-child {
-    border-bottom: none;
-  }
-  .work-row-link {
-    display: block;
-    padding: 1.5rem 0;
-    color: var(--ink);
-    border-bottom: none;
-    transition: padding 0.2s ease;
-  }
-  .work-row-link:hover {
-    border-bottom: none;
-    padding-left: 0.5rem;
-  }
-  .work-row-link:hover .work-row-name {
-    color: var(--accent);
-  }
-  .work-row-main {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    margin-bottom: 0.4rem;
   }
-  .work-row-name {
-    font-family: var(--font-display);
-    font-size: 1.25rem;
-    transition: color 0.2s ease;
+  .work-tile {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    opacity: 0;
+    transform: translateY(8px);
+    color: var(--ink);
+    border-bottom: 1px solid var(--border);
   }
-  .work-row-period {
-    color: var(--ink-faint);
+  .work-tile.in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   }
-  .work-row-meta {
-    margin-bottom: 0.5rem;
+  .work-tile:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--border-strong);
+    border-bottom-color: var(--border-strong);
   }
-  .work-row-stack {
-    color: var(--accent-dim);
+  .work-tile img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: top;
+    border-bottom: 1px solid var(--border);
+    display: block;
   }
-  .work-row-note {
+  .work-tile-body {
+    padding: 1.1rem 1.25rem 1.25rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .work-tile-body h4 { margin-bottom: 0.4rem; color: var(--ink); }
+  .work-tile-body p {
     color: var(--ink-muted);
+    font-size: 0.8125rem;
+    margin-bottom: 0.75rem;
+    flex: 1;
+  }
+  .tile-stack { color: var(--ink-faint); }
+  .work-tile-text { padding-top: 1.5rem; }
+  .work-tile-text .work-tile-body { padding-top: 0; }
+  .work-tile-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+    display: inline-block;
+  }
+  .work-cta-row { margin-top: 2rem; text-align: center; }
+
+  /* writing */
+  .writing-empty {
+    background: var(--bg-card);
+    border: 1px dashed var(--border-strong);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    max-width: 40rem;
+  }
+  .we-headline {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.85rem;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  .we-body { color: var(--ink-muted); margin-bottom: 1.25rem; }
+  .we-cta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
     font-size: 0.9375rem;
   }
+  .dim { color: var(--ink-faint); }
+  .writing-list { list-style: none; }
+  .writing-row {
+    display: grid;
+    grid-template-columns: 7rem 1fr auto;
+    gap: 1.5rem;
+    padding: 1.25rem 1.25rem;
+    border-radius: var(--radius-sm);
+    align-items: center;
+    transition: background 0.2s ease, padding 0.2s ease;
+    opacity: 0;
+    transform: translateY(8px);
+    color: var(--ink);
+    border-bottom: none;
+  }
+  .writing-row.in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease, background 0.2s ease, padding 0.2s ease;
+  }
+  .writing-row:hover { background: var(--bg-card); }
+  .writing-row time { color: var(--ink-faint); padding-top: 0.2rem; }
+  .writing-row h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+  }
+  .writing-row p { color: var(--ink-muted); font-size: 0.875rem; }
+  .writing-arrow { color: var(--primary); font-size: 1.25rem; }
 
-  @media (max-width: 640px) {
-    .post-row-link {
-      grid-template-columns: 1fr;
-      gap: 0.3rem;
-    }
-    .post-row-arrow {
-      display: none;
-    }
-    .work-row-main {
-      flex-direction: column;
-      gap: 0.25rem;
-    }
+  /* cta */
+  .cta-section { padding: 4.5rem 0; position: relative; z-index: 2; }
+  .cta-card {
+    background: var(--ink);
+    color: var(--bg);
+    border-radius: 24px;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    max-width: 56rem;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  .cta-card.in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .cta-card::before,
+  .cta-card::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+  }
+  .cta-card::before {
+    width: 300px; height: 300px;
+    background: #6366f1;
+    top: -100px; left: -80px;
+    opacity: 0.35;
+  }
+  .cta-card::after {
+    width: 320px; height: 320px;
+    background: #ec4899;
+    bottom: -120px; right: -100px;
+    opacity: 0.3;
+  }
+  .cta-card .bcard-eyebrow {
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    z-index: 1;
+  }
+  .cta-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    letter-spacing: -0.035em;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+    color: var(--bg);
+  }
+  .cta-text {
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 32rem;
+    margin: 0 auto 2rem;
+    position: relative;
+    z-index: 1;
+    font-size: 1rem;
+  }
+  .cta-text strong { color: white; }
+  .cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+  .cta-actions .btn-primary {
+    background: white;
+    color: var(--ink);
+  }
+  .btn-cta-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.1rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
+  .btn-cta-ghost:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.4);
+    border-bottom-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-1px);
+  }
+
+  /* responsive */
+  @media (max-width: 940px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .bento { grid-template-columns: repeat(2, 1fr); }
+    .bcard-span-2 { grid-column: span 2; }
+    .work-feat { grid-template-columns: 1fr; }
+    .work-feat-visual { min-height: 240px; }
+    .work-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 540px) {
+    .bento { grid-template-columns: 1fr; }
+    .bcard-span-2 { grid-column: span 1; }
+    .work-grid { grid-template-columns: 1fr; }
   }
 </style>

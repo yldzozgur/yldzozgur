@@ -5,7 +5,10 @@ const year = new Date().getFullYear();
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-col">
-      <span class="mono">© {year} — Ozgur Yildiz</span>
+      <span class="brand-mini">
+        <span class="mini-mark">OY</span>
+        <span>ozgur yildiz</span>
+      </span>
       <span class="mono dim">Austin, TX</span>
     </div>
     <div class="footer-col footer-links">
@@ -16,13 +19,16 @@ const year = new Date().getFullYear();
       <a href="/rss.xml">RSS</a>
     </div>
   </div>
+  <div class="container footer-meta">
+    <span class="mono dim">© {year} — ozgur yildiz. all rights reserved.</span>
+  </div>
 </footer>
 
 <style>
   .site-footer {
     border-top: 1px solid var(--border);
-    margin-top: 6rem;
-    padding: 2.5rem 0;
+    margin-top: 5rem;
+    padding: 3rem 0 2rem;
   }
   .footer-inner {
     display: flex;
@@ -30,6 +36,8 @@ const year = new Date().getFullYear();
     justify-content: space-between;
     gap: 1.5rem;
     flex-wrap: wrap;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
   }
   .footer-col {
     display: flex;
@@ -37,18 +45,37 @@ const year = new Date().getFullYear();
     gap: 1.25rem;
     flex-wrap: wrap;
   }
-  .footer-col .dim {
-    color: var(--ink-faint);
+  .brand-mini {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--ink);
   }
+  .mini-mark {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: var(--grad);
+    color: white;
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+  .dim { color: var(--ink-faint); }
   .footer-links a {
     font-family: var(--font-mono);
     font-size: 0.8125rem;
-    letter-spacing: 0.02em;
     color: var(--ink-muted);
     border-bottom: none;
-    text-transform: uppercase;
+    transition: color 0.15s ease;
   }
-  .footer-links a:hover {
-    color: var(--ink);
+  .footer-links a:hover { color: var(--ink); }
+  .footer-meta {
+    padding-top: 1.25rem;
   }
 </style>
