@@ -5,88 +5,6 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3);
 
-const projects = [
-  {
-    name: 'Ameza Smart Retail Platform',
-    type: 'Production · Volunteer',
-    period: 'Nov 2025 — Present',
-    stack: ['TypeScript', 'React', 'Node', 'PostgreSQL'],
-    summary: 'Multi-tenant POS platform. 20+ merged PRs across the stack.',
-    thumb: null,
-    primary: 'https://github.com/Ameza-Smart-Retail-Solutions',
-    code: null,
-    primaryLabel: 'View org',
-    badge: 'Currently shipping',
-  },
-  {
-    name: 'Stock Management',
-    type: 'Full-Stack · MERN',
-    period: '2025',
-    stack: ['React', 'Redux', 'Express', 'MongoDB'],
-    summary: 'Inventory + sales dashboard with role-based auth, KPIs, and Swagger docs.',
-    thumb: '/projects/stock-management.webp',
-    primary: 'https://ozguryildiz-stock.vercel.app',
-    code: 'https://github.com/yldzozgur/stock-management-app',
-    primaryLabel: 'Open live',
-    badge: null,
-  },
-  {
-    name: 'Pizza API',
-    type: 'Backend · REST',
-    period: '2025',
-    stack: ['Express', 'MongoDB', 'JWT', 'Swagger'],
-    summary: 'Production-style REST API with auth, uploads, pagination, and Swagger UI.',
-    thumb: '/projects/pizza-api.webp',
-    primary: 'https://ozguryildiz-pizza-api.vercel.app',
-    code: 'https://github.com/yldzozgur/pizza-api',
-    primaryLabel: 'Open live',
-    badge: null,
-  },
-  {
-    name: 'Rent-A-Car API',
-    type: 'Backend · REST',
-    period: '2025',
-    stack: ['Express', 'MongoDB', 'JWT', 'Nodemailer'],
-    summary: 'Car rental REST with date-overlap detection, unique-field validation, email.',
-    thumb: '/projects/rentacar-api.webp',
-    primary: 'https://ozguryildiz-rentacar-api.vercel.app',
-    code: 'https://github.com/yldzozgur/rent-a-car-api',
-    primaryLabel: 'Open live',
-    badge: null,
-  },
-  {
-    name: 'Recipe App',
-    type: 'Frontend · React 19',
-    period: '2025',
-    stack: ['React 19', 'Vite', 'Tailwind'],
-    summary: 'Recipe discovery SPA with live search, category filters, and dark mode.',
-    thumb: '/projects/recipe-app.webp',
-    primary: 'https://yldzozgur.github.io/recipe-app/',
-    code: 'https://github.com/yldzozgur/recipe-app',
-    primaryLabel: 'Open live',
-    badge: null,
-  },
-  {
-    name: 'React Movie App',
-    type: 'Frontend · Firebase',
-    period: '2025',
-    stack: ['React', 'Firebase', 'TMDB API'],
-    summary: 'Movie discovery with Firebase auth (email + Google) and TMDB integration.',
-    thumb: '/projects/react-movieapp.webp',
-    primary: 'https://yldzozgur.github.io/react-movieapp/',
-    code: 'https://github.com/yldzozgur/react-movieapp',
-    primaryLabel: 'Open live',
-    badge: null,
-  },
-];
-
-const stats = [
-  { num: '6+', label: 'years prior', note: 'Java · .NET enterprise' },
-  { num: '20+', label: 'PRs merged', note: 'multi-tenant retail platform' },
-  { num: '7', label: 'projects', note: 'live demos & APIs' },
-  { num: '0', label: 'sponsorship', note: 'U.S. work authorized' },
-];
-
 const formatDate = (date: Date) =>
   date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 ---
@@ -99,227 +17,316 @@ const formatDate = (date: Date) =>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
-    />
-    <title>Ozgur Yildiz — Full-Stack Engineer (preview v2)</title>
-    <meta name="description" content="Junior full-stack engineer based in Austin, TX. TypeScript · React · Node · PostgreSQL." />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Onest:wght@400;500;600;700;800;900&display=swap" />
+    <title>Ozgur Yildiz — Full-Stack Engineer (preview)</title>
     <meta name="robots" content="noindex,nofollow" />
   </head>
   <body>
+    <div class="spotlight" id="spotlight"></div>
+
     <header class="nav">
       <div class="nav-inner">
         <a href="/preview" class="brand">
           <span class="brand-mark">OY</span>
-          <span class="brand-name">Ozgur Yildiz</span>
+          <span class="brand-name">ozgur.</span>
         </a>
         <nav class="nav-links">
-          <a href="#work">Work</a>
-          <a href="#writing">Writing</a>
-          <a href="#about">About</a>
+          <a href="#about">about</a>
+          <a href="#work">work</a>
+          <a href="#writing">writing</a>
+          <a href="#contact">contact</a>
         </nav>
-        <a href="/resume.pdf" class="nav-cta" target="_blank" rel="noopener">Resume</a>
+        <a href="mailto:ozguryildiz0@outlook.com" class="nav-cta">say hi →</a>
       </div>
     </header>
 
     <main>
+      <!-- ============ HERO ============ -->
       <section class="hero">
-        <div class="hero-glow hero-glow-1"></div>
-        <div class="hero-glow hero-glow-2"></div>
-        <div class="hero-inner">
-          <span class="status-pill">
-            <span class="status-dot"></span>
-            Available · open to remote (US) &amp; hybrid (Austin)
-          </span>
-          <p class="overline">Ozgur Yildiz · Austin, TX</p>
-          <h1 class="hero-title">
-            I build production<br />
-            software in <span class="gradient-text">TypeScript</span>,<br />
-            React &amp; Node.
-          </h1>
-          <p class="hero-sub">
-            Currently shipping features at <strong>Ameza Solutions</strong> — a multi-tenant
-            retail platform. Six years of prior Java &amp; .NET enterprise experience,
-            re-tooled around the modern JS stack via an MBA and the Clarusway full-stack bootcamp.
-          </p>
-          <div class="hero-ctas">
-            <a href="#work" class="btn btn-primary">
-              See my work
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-            </a>
-            <a href="#writing" class="btn btn-ghost">Read writing</a>
-          </div>
-          <ul class="hero-meta mono">
-            <li>TypeScript</li>
-            <li>·</li>
-            <li>React</li>
-            <li>·</li>
-            <li>Node</li>
-            <li>·</li>
-            <li>Express</li>
-            <li>·</li>
-            <li>PostgreSQL</li>
-            <li>·</li>
-            <li>MongoDB</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="stats-section">
-        <div class="container">
-          <ul class="stats-grid">
-            {stats.map((s) => (
-              <li class="stat-card">
-                <div class="stat-num">{s.num}</div>
-                <div class="stat-label mono">{s.label}</div>
-                <div class="stat-note">{s.note}</div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section id="work" class="section">
-        <div class="container">
-          <header class="section-head">
-            <div>
-              <p class="section-eyebrow mono">/ work</p>
-              <h2>Selected projects</h2>
-            </div>
-            <p class="section-lede">
-              Live demos and open-source code from the past 18 months.
-              Demo credentials: <code>demo@demo.com</code> / <code>Demo1234!</code>
+        <div class="hero-grid">
+          <div class="hero-left">
+            <span class="kicker">
+              <span class="dot"></span>
+              Open to junior FS / backend roles
+            </span>
+            <h1 class="display">
+              Junior engineer.<br />
+              <span class="accent">Six years</span><br />
+              before this.
+            </h1>
+            <p class="hero-lede">
+              Hi, I'm <strong>Ozgur</strong> — full-stack developer in Austin shipping production
+              TypeScript at <a href="https://github.com/Ameza-Smart-Retail-Solutions" target="_blank" rel="noopener" class="link">Ameza Solutions</a>.
+              Before bootcamp, six years of Java &amp; .NET enterprise work.
+              I write twice a week about the gap between bootcamp code and real codebases.
             </p>
-          </header>
+            <div class="hero-cta">
+              <a href="#work" class="btn btn-primary">
+                See my work
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </a>
+              <a href="/resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+                Resume
+              </a>
+            </div>
+          </div>
 
-          <ul class="work-grid">
-            {projects.map((p) => (
-              <li class="work-card">
-                {p.thumb ? (
-                  <a href={p.primary} target="_blank" rel="noopener" class="work-thumb">
-                    <img src={p.thumb} alt={`${p.name} preview`} loading="lazy" decoding="async" width="1200" height="800" />
-                    <span class="work-thumb-glow"></span>
-                  </a>
-                ) : (
-                  <div class="work-thumb work-thumb-placeholder">
-                    <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.5">
-                      <rect x="10" y="20" width="60" height="40" rx="4" />
-                      <circle cx="40" cy="40" r="6" />
-                      <path d="M20 50 L36 38 L48 46 L60 30" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <span class="mono">private repository</span>
-                  </div>
-                )}
-                <div class="work-body">
-                  <div class="work-head">
-                    <h3 class="work-name">{p.name}</h3>
-                    {p.badge && <span class="work-badge">{p.badge}</span>}
-                  </div>
-                  <p class="work-type mono">{p.type} · {p.period}</p>
-                  <p class="work-summary">{p.summary}</p>
-                  <ul class="work-stack">
-                    {p.stack.map((s) => <li class="mono">{s}</li>)}
-                  </ul>
-                  <div class="work-links">
-                    <a href={p.primary} target="_blank" rel="noopener" class="work-link mono">
-                      {p.primaryLabel}
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
-                    </a>
-                    {p.code && (
-                      <a href={p.code} target="_blank" rel="noopener" class="work-link mono dim">
-                        Code
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
+          <div class="hero-right">
+            <div class="terminal">
+              <div class="terminal-bar">
+                <span class="t-dot dr"></span>
+                <span class="t-dot dy"></span>
+                <span class="t-dot dg"></span>
+                <span class="t-name">ozgur@portfolio — zsh</span>
+              </div>
+              <pre class="t-body"><code><span class="t-c">~ </span><span class="t-prompt">$</span> whoami
+<span class="t-out">ozgur yildiz · full-stack engineer · austin tx</span>
+
+<span class="t-c">~ </span><span class="t-prompt">$</span> stack --primary
+<span class="t-out">typescript · react · node · express · postgres</span>
+
+<span class="t-c">~ </span><span class="t-prompt">$</span> background
+<span class="t-out">6 yrs java/.net → mba → bootcamp → ameza</span>
+
+<span class="t-c">~ </span><span class="t-prompt">$</span> availability
+<span class="t-out"><span class="t-ok">●</span> available · remote (us) + hybrid (austin)</span>
+<span class="t-out"><span class="t-ok">●</span> us work authorized · no sponsorship</span>
+
+<span class="t-c">~ </span><span class="t-prompt">$</span> <span class="t-cursor">█</span></code></pre>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="about" class="section section-alt">
+      <!-- ============ ABOUT BENTO ============ -->
+      <section id="about" class="section">
         <div class="container">
-          <div class="about-grid">
-            <div>
-              <p class="section-eyebrow mono">/ about</p>
-              <h2>Engineer first.<br/>Writer second.</h2>
-              <div class="about-prose">
-                <p>
-                  I'm a junior full-stack engineer with an unusual background. Before bootcamp
-                  I spent six years writing enterprise software in Java and .NET — high-traffic
-                  e-commerce at Ebebek, an asset management system at Lactalis, and Android &amp;
-                  .NET tools at Gaga Software. Real teams, real code review, real production
-                  incidents.
-                </p>
-                <p>
-                  In 2023 I relocated to the U.S. and spent two years doing three things at
-                  once: an MBA, intensive English, and the Clarusway full-stack bootcamp. Today
-                  I'm shipping TypeScript and React features at Ameza Solutions and writing
-                  twice a week about the gap between bootcamp code and real codebases.
-                </p>
-              </div>
+          <div class="section-head">
+            <h2 class="section-title">Some facts.</h2>
+            <p class="section-sub">A bento of who I am and what I'm up to.</p>
+          </div>
+
+          <div class="bento">
+            <div class="card card-greeting card-span-2">
+              <p class="card-eyebrow">/ greeting</p>
+              <p class="card-greeting-text">
+                Hey 👋 I'm a <strong>full-stack engineer</strong> based in
+                <strong>Austin, Texas</strong>. Six years writing enterprise Java &amp; .NET,
+                then an MBA + bootcamp + a move to the U.S. Now I ship production
+                TypeScript and write twice a week about what bootcamps don't teach.
+              </p>
             </div>
-            <div class="about-side">
-              <div class="info-card">
-                <p class="info-label mono">Currently</p>
-                <p>Full-Stack Developer @ <strong>Ameza Solutions</strong></p>
-              </div>
-              <div class="info-card">
-                <p class="info-label mono">Authorized for</p>
-                <p>U.S. work — no sponsorship now or in the future</p>
-              </div>
-              <div class="info-card">
-                <p class="info-label mono">Looking for</p>
-                <p>Junior full-stack or backend · remote (US) or hybrid (Austin)</p>
-              </div>
-              <div class="info-card info-card-cta">
-                <p class="info-label mono">Get in touch</p>
-                <a href="mailto:ozguryildiz0@outlook.com" class="info-link">
-                  ozguryildiz0@outlook.com
+
+            <div class="card card-now">
+              <p class="card-eyebrow">/ currently</p>
+              <p class="card-big">
+                Ameza<br />Solutions
+              </p>
+              <p class="card-small">Volunteer FS Developer · multi-tenant retail platform</p>
+            </div>
+
+            <div class="card card-loc">
+              <p class="card-eyebrow">/ base</p>
+              <p class="card-big">Austin, TX</p>
+              <p class="card-small">CST (UTC−6) · remote / hybrid</p>
+              <span class="map-dot"></span>
+            </div>
+
+            <div class="card card-stack card-span-2">
+              <p class="card-eyebrow">/ stack</p>
+              <ul class="chips">
+                <li>TypeScript</li><li>React</li><li>Node.js</li><li>Express</li>
+                <li>PostgreSQL</li><li>MongoDB</li><li>Redux Toolkit</li><li>Tailwind</li>
+                <li>Swagger</li><li>JWT</li><li>Docker</li><li>Vercel</li>
+                <li>Claude Code</li><li>Cypress</li>
+              </ul>
+            </div>
+
+            <div class="card card-stat">
+              <p class="card-eyebrow">/ shipped</p>
+              <p class="big-num">20<span>+</span></p>
+              <p class="card-small">PRs merged at Ameza</p>
+            </div>
+
+            <div class="card card-stat">
+              <p class="card-eyebrow">/ prior</p>
+              <p class="big-num">6<span>+</span></p>
+              <p class="card-small">years Java &amp; .NET enterprise</p>
+            </div>
+
+            <div class="card card-stat card-accent-warm">
+              <p class="card-eyebrow">/ visa</p>
+              <p class="big-num">0</p>
+              <p class="card-small">sponsorship needed</p>
+            </div>
+
+            <a href="https://github.com/yldzozgur" target="_blank" rel="noopener" class="card card-link">
+              <p class="card-eyebrow">/ github</p>
+              <p class="card-big-link">@yldzozgur</p>
+              <p class="card-small">repositories, commits, recipes ↗</p>
+            </a>
+
+            <a href="https://linkedin.com/in/ozguryildiz0" target="_blank" rel="noopener" class="card card-link">
+              <p class="card-eyebrow">/ linkedin</p>
+              <p class="card-big-link">/ozguryildiz0</p>
+              <p class="card-small">history, posts, recommendations ↗</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ WORK ============ -->
+      <section id="work" class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Selected work.</h2>
+            <p class="section-sub">
+              Live demos &amp; open-source code. Demo creds for all:
+              <code>demo@demo.com / Demo1234!</code>
+            </p>
+          </div>
+
+          <div class="work-bento">
+            <!-- featured: Ameza -->
+            <div class="work-feat">
+              <div class="work-feat-body">
+                <span class="work-badge">● Currently shipping</span>
+                <h3 class="work-feat-title">Ameza Smart Retail Platform</h3>
+                <p class="work-feat-meta">Production · TypeScript · React · Node · PostgreSQL · Nov 2025 — Present</p>
+                <p class="work-feat-desc">
+                  Multi-tenant POS and smart retail platform. 20+ merged PRs across the stack:
+                  store and employee management dashboards, validated forms, typed DTOs,
+                  domain error-code discriminators, Swagger snapshot sync, role-catalog APIs.
+                  Code review in a small distributed team.
+                </p>
+                <ul class="work-feat-chips">
+                  <li>Multi-tenant</li><li>POS</li><li>Typed DTOs</li>
+                  <li>Domain errors</li><li>Code review</li>
+                </ul>
+                <a href="https://github.com/Ameza-Smart-Retail-Solutions" target="_blank" rel="noopener" class="link-arrow">
+                  View organization
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
                 </a>
               </div>
+              <div class="work-feat-visual">
+                <div class="visual-blob blob-1"></div>
+                <div class="visual-blob blob-2"></div>
+                <div class="visual-code">
+                  <pre><code><span class="code-c">// domain error code as discriminated union</span>
+<span class="code-k">type</span> <span class="code-t">ApiError</span> =
+  | { kind: <span class="code-s">'validation'</span>; field: <span class="code-t">string</span>; message: <span class="code-t">string</span> }
+  | { kind: <span class="code-s">'not-found'</span>; resource: <span class="code-t">string</span> }
+  | { kind: <span class="code-s">'unauthorized'</span> }
+  | { kind: <span class="code-s">'server'</span>; trace: <span class="code-t">string</span> };
+
+<span class="code-k">function</span> <span class="code-f">handle</span>(err: <span class="code-t">ApiError</span>) {
+  <span class="code-k">switch</span> (err.kind) {
+    <span class="code-k">case</span> <span class="code-s">'validation'</span>: <span class="code-k">return</span> <span class="code-f">badRequest</span>(err);
+    <span class="code-k">case</span> <span class="code-s">'not-found'</span>:  <span class="code-k">return</span> <span class="code-f">notFound</span>(err.resource);
+    <span class="code-k">case</span> <span class="code-s">'unauthorized'</span>: <span class="code-k">return</span> <span class="code-f">unauth</span>();
+    <span class="code-k">case</span> <span class="code-s">'server'</span>: <span class="code-k">return</span> <span class="code-f">serverError</span>(err.trace);
+  }
+}</code></pre>
+                </div>
+              </div>
+            </div>
+
+            <!-- grid of others -->
+            <div class="work-grid">
+              <a href="https://ozguryildiz-stock.vercel.app" target="_blank" rel="noopener" class="work-tile">
+                <img src="/projects/stock-management.webp" alt="Stock Management" loading="lazy" />
+                <div class="work-tile-body">
+                  <h4>Stock Management App</h4>
+                  <p>MERN · JWT auth · KPI dashboard · Swagger / Redoc.</p>
+                  <span class="tile-stack mono">React · Redux · MongoDB · JWT</span>
+                </div>
+              </a>
+
+              <a href="https://ozguryildiz-pizza-api.vercel.app" target="_blank" rel="noopener" class="work-tile">
+                <img src="/projects/pizza-api.webp" alt="Pizza API" loading="lazy" />
+                <div class="work-tile-body">
+                  <h4>Pizza API</h4>
+                  <p>Production REST · JWT · uploads · CDN Swagger UI.</p>
+                  <span class="tile-stack mono">Express · MongoDB · Swagger</span>
+                </div>
+              </a>
+
+              <a href="https://ozguryildiz-rentacar-api.vercel.app" target="_blank" rel="noopener" class="work-tile">
+                <img src="/projects/rentacar-api.webp" alt="Rent-A-Car API" loading="lazy" />
+                <div class="work-tile-body">
+                  <h4>Rent-A-Car API</h4>
+                  <p>Reservation logic with date-overlap detection &amp; email.</p>
+                  <span class="tile-stack mono">Express · MongoDB · Nodemailer</span>
+                </div>
+              </a>
+
+              <a href="https://yldzozgur.github.io/recipe-app/" target="_blank" rel="noopener" class="work-tile">
+                <img src="/projects/recipe-app.webp" alt="Recipe App" loading="lazy" />
+                <div class="work-tile-body">
+                  <h4>Recipe App</h4>
+                  <p>React 19 SPA · debounced search · categories · dark mode.</p>
+                  <span class="tile-stack mono">React 19 · Vite · Tailwind</span>
+                </div>
+              </a>
+
+              <a href="https://yldzozgur.github.io/react-movieapp/" target="_blank" rel="noopener" class="work-tile">
+                <img src="/projects/react-movieapp.webp" alt="React Movie App" loading="lazy" />
+                <div class="work-tile-body">
+                  <h4>React Movie App</h4>
+                  <p>Firebase auth (email + Google) · TMDB integration.</p>
+                  <span class="tile-stack mono">React · Firebase · TMDB</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/yldzozgur/draftlift-scheduler" target="_blank" rel="noopener" class="work-tile work-tile-text">
+                <div class="work-tile-body">
+                  <span class="work-tile-icon">⏱</span>
+                  <h4>DraftLift Scheduler</h4>
+                  <p>Self-hosted Node tool to schedule local repos to GitHub on cron with audit logs.</p>
+                  <span class="tile-stack mono">Node · Express · Cron</span>
+                </div>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- ============ WRITING ============ -->
       <section id="writing" class="section">
         <div class="container">
-          <header class="section-head">
-            <div>
-              <p class="section-eyebrow mono">/ writing</p>
-              <h2>Posts twice a week</h2>
-            </div>
-            <p class="section-lede">
-              Tuesday and Thursday. Notes on TypeScript, code review, and the unglamorous
-              parts of shipping production software.
+          <div class="section-head">
+            <h2 class="section-title">Twice a week.</h2>
+            <p class="section-sub">
+              Tuesday and Thursday. Notes on TypeScript, code review, and what real codebases
+              are actually like.
             </p>
-          </header>
+          </div>
 
           {posts.length === 0 ? (
             <div class="writing-empty">
-              <p class="writing-empty-headline">The queue is loaded.</p>
-              <p class="writing-empty-note">
-                First post lands shortly. Subscribe via
-                <a href="/rss.xml">RSS</a>
-                or follow on
-                <a href="https://linkedin.com/in/ozguryildiz0" target="_blank" rel="noopener">LinkedIn ↗</a>
-                to catch it.
+              <p class="we-headline">📬 First post drops shortly.</p>
+              <p class="we-body">
+                I'm queueing essays on Java→TypeScript transition, discriminated unions in
+                error handling, and reading a multi-tenant codebase for the first time.
               </p>
+              <div class="we-cta">
+                <a href="/rss.xml" class="link-arrow">Subscribe via RSS</a>
+                <span class="dim">·</span>
+                <a href="https://linkedin.com/in/ozguryildiz0" target="_blank" rel="noopener" class="link-arrow">Follow on LinkedIn ↗</a>
+              </div>
             </div>
           ) : (
-            <ul class="writing-grid">
+            <ul class="writing-list">
               {posts.map((post) => (
-                <li class="writing-card">
-                  <a href={`/writing/${post.id}`}>
-                    <time class="mono dim" datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time>
-                    <h3>{post.data.title}</h3>
-                    <p>{post.data.description}</p>
-                    <span class="writing-arrow">Read →</span>
+                <li>
+                  <a href={`/writing/${post.id}`} class="writing-row">
+                    <time class="mono" datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time>
+                    <div>
+                      <h3>{post.data.title}</h3>
+                      <p>{post.data.description}</p>
+                    </div>
+                    <span class="writing-arrow">→</span>
                   </a>
                 </li>
               ))}
@@ -328,484 +335,585 @@ const formatDate = (date: Date) =>
         </div>
       </section>
 
-      <section class="cta-section">
-        <div class="container cta-inner">
-          <h2>Want to talk?</h2>
-          <p>
-            Open to remote (US-wide) and hybrid (Greater Austin) Junior Full-Stack
-            or Backend roles. Reply same day.
-          </p>
-          <div class="cta-buttons">
-            <a href="mailto:ozguryildiz0@outlook.com" class="btn btn-primary">Email me →</a>
-            <a href="https://linkedin.com/in/ozguryildiz0" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
-            <a href="https://github.com/yldzozgur" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+      <!-- ============ CTA ============ -->
+      <section id="contact" class="cta-section">
+        <div class="container">
+          <div class="cta-card">
+            <p class="card-eyebrow">/ ready when you are</p>
+            <h2 class="cta-title">Let's talk.</h2>
+            <p class="cta-text">
+              Open to junior <strong>full-stack</strong> or <strong>backend</strong> roles —
+              remote (US-wide) or hybrid (Greater Austin). I reply the same day.
+            </p>
+            <div class="cta-actions">
+              <a href="mailto:ozguryildiz0@outlook.com" class="btn btn-primary">
+                Email me
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+              </a>
+              <a href="https://linkedin.com/in/ozguryildiz0" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn ↗</a>
+              <a href="https://github.com/yldzozgur" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
+              <a href="/resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Resume ↗</a>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container footer-inner">
-        <div class="footer-brand">
-          <span class="brand-mark small">OY</span>
-          <span>Ozgur Yildiz · Austin, TX</span>
-        </div>
-        <p class="mono footer-note">
-          Preview v2 · <a href="/">view current site</a>
-        </p>
+    <footer class="foot">
+      <div class="container foot-inner">
+        <p class="mono">© 2026 — ozgur yildiz · austin, tx</p>
+        <p class="mono"><a href="/">view current site →</a></p>
       </div>
     </footer>
 
+    <script is:inline>
+      // mouse spotlight (subtle)
+      const sp = document.getElementById('spotlight');
+      if (sp && window.matchMedia('(min-width: 720px)').matches) {
+        document.addEventListener('mousemove', (e) => {
+          sp.style.setProperty('--mx', e.clientX + 'px');
+          sp.style.setProperty('--my', e.clientY + 'px');
+        });
+      }
+      // simple reveal on scroll (initial state always visible — only enhances)
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('in'); });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+      document.querySelectorAll('.card, .work-tile, .work-feat, .writing-row, .cta-card').forEach(el => io.observe(el));
+    </script>
+
     <style is:global>
       :root {
-        --bg: #0a0e16;
-        --bg-elev: #131822;
-        --bg-card: #161b27;
-        --bg-card-hover: #1a2030;
-        --border: #1f2937;
-        --border-strong: #334155;
-        --text: #f1f5f9;
-        --text-muted: #94a3b8;
-        --text-faint: #64748b;
-        --c1: #22d3ee;
-        --c2: #a78bfa;
-        --c3: #f97316;
+        --bg: #fafaf6;
+        --bg-soft: #f4f3ed;
+        --bg-card: #ffffff;
+        --bg-card-hover: #fafaf6;
+        --border: #e8e6df;
+        --border-strong: #d4d1c8;
+        --ink: #18181b;
+        --ink-mute: #52525b;
+        --ink-faint: #a1a1aa;
+        --primary: #4f46e5;
+        --primary-soft: #eef2ff;
+        --warm: #f97316;
+        --warm-soft: #fff7ed;
         --success: #10b981;
-        --grad: linear-gradient(135deg, #22d3ee 0%, #a78bfa 100%);
-        --grad-soft: linear-gradient(135deg, rgba(34, 211, 238, 0.12), rgba(167, 139, 250, 0.12));
+        --grad: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
         --font: 'Inter', system-ui, -apple-system, sans-serif;
+        --display: 'Onest', 'Inter', system-ui, sans-serif;
         --mono: 'JetBrains Mono', monospace;
+        --radius: 16px;
+        --radius-sm: 10px;
+        --shadow-sm: 0 1px 2px rgba(24, 24, 27, 0.04);
+        --shadow: 0 6px 24px -8px rgba(24, 24, 27, 0.08);
+        --shadow-lg: 0 24px 60px -20px rgba(24, 24, 27, 0.12);
       }
       * { box-sizing: border-box; margin: 0; padding: 0; }
       html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
       body {
         background: var(--bg);
-        color: var(--text);
+        color: var(--ink);
         font-family: var(--font);
         font-size: 16px;
         line-height: 1.55;
-        font-weight: 400;
         overflow-x: hidden;
+        position: relative;
       }
-      .container { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; }
-      .mono { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.02em; }
-      .dim { color: var(--text-faint); }
       a { color: inherit; text-decoration: none; }
+      .container { max-width: 1240px; margin: 0 auto; padding: 0 1.5rem; }
+      .mono { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.01em; }
+      .dim { color: var(--ink-faint); }
+      .accent { color: var(--primary); }
+      .link {
+        color: var(--primary);
+        font-weight: 500;
+        border-bottom: 1px solid currentColor;
+        padding-bottom: 1px;
+      }
+      .link:hover { color: var(--ink); border-color: var(--ink); }
+      code { font-family: var(--mono); font-size: 0.85em; background: var(--bg-soft); padding: 0.1rem 0.35rem; border-radius: 4px; color: var(--primary); }
+      strong { font-weight: 600; color: var(--ink); }
 
-      h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
-      h2 { font-size: clamp(2rem, 4vw, 3rem); }
-      h3 { font-size: 1.1875rem; }
-      code {
-        font-family: var(--mono);
-        font-size: 0.85em;
-        background: rgba(255, 255, 255, 0.05);
-        padding: 0.1rem 0.4rem;
-        border-radius: 3px;
-        color: var(--c1);
+      h1, h2, h3, h4 { font-family: var(--display); letter-spacing: -0.025em; line-height: 1.05; font-weight: 800; }
+      h3 { font-size: 1.0625rem; letter-spacing: -0.01em; }
+      h4 { font-size: 1rem; letter-spacing: -0.01em; }
+
+      /* ===== spotlight ===== */
+      .spotlight {
+        position: fixed; inset: 0;
+        pointer-events: none;
+        z-index: 1;
+        background: radial-gradient(560px circle at var(--mx, 50%) var(--my, 50%), rgba(99, 102, 241, 0.08), transparent 60%);
+        opacity: 0.7;
+        transition: background 0.05s linear;
       }
 
-      /* ---------- nav ---------- */
+      /* ===== nav ===== */
       .nav {
         position: sticky; top: 0; z-index: 50;
-        background: rgba(10, 14, 22, 0.7);
+        background: rgba(250, 250, 246, 0.7);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
         border-bottom: 1px solid var(--border);
       }
       .nav-inner {
-        max-width: 1180px;
-        margin: 0 auto;
-        padding: 0.875rem 1.5rem;
-        display: flex; align-items: center; justify-content: space-between;
-        gap: 1.5rem;
+        max-width: 1240px; margin: 0 auto;
+        padding: 0.9rem 1.5rem;
+        display: flex; justify-content: space-between; align-items: center;
+        gap: 1rem;
       }
-      .brand { display: flex; align-items: center; gap: 0.75rem; font-weight: 600; }
+      .brand { display: flex; align-items: center; gap: 0.65rem; font-weight: 700; }
       .brand-mark {
-        width: 2.25rem; height: 2.25rem;
+        width: 1.75rem; height: 1.75rem;
         background: var(--grad);
-        color: var(--bg);
-        display: inline-flex; align-items: center; justify-content: center;
+        color: white;
         font-family: var(--mono);
-        font-size: 0.8125rem;
+        font-size: 0.6875rem;
         font-weight: 700;
-        border-radius: 8px;
-      }
-      .brand-mark.small { width: 1.75rem; height: 1.75rem; font-size: 0.6875rem; border-radius: 6px; }
-      .brand-name { color: var(--text); }
-      .nav-links { display: flex; gap: 2rem; font-size: 0.9375rem; }
-      .nav-links a { color: var(--text-muted); transition: color 0.15s; }
-      .nav-links a:hover { color: var(--text); }
-      .nav-cta {
-        padding: 0.5rem 1rem;
-        border: 1px solid var(--border-strong);
+        display: inline-flex; align-items: center; justify-content: center;
         border-radius: 6px;
-        color: var(--text);
-        font-size: 0.875rem;
-        font-weight: 500;
-        transition: border-color 0.2s, transform 0.2s;
       }
-      .nav-cta:hover { border-color: var(--c1); transform: translateY(-1px); }
-      @media (max-width: 720px) {
-        .nav-links { display: none; }
+      .brand-name { font-family: var(--display); font-size: 1.0625rem; }
+      .nav-links { display: flex; gap: 1.75rem; font-family: var(--mono); font-size: 0.8125rem; }
+      .nav-links a { color: var(--ink-mute); transition: color 0.15s; }
+      .nav-links a:hover { color: var(--ink); }
+      .nav-cta {
+        padding: 0.5rem 0.875rem;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        background: var(--ink);
+        color: var(--bg);
+        border-radius: 999px;
+        transition: transform 0.2s, opacity 0.2s;
       }
+      .nav-cta:hover { transform: translateY(-1px); opacity: 0.92; }
+      @media (max-width: 720px) { .nav-links { display: none; } }
 
-      /* ---------- hero ---------- */
-      .hero {
-        position: relative;
-        padding: 7rem 1.5rem 6rem;
-        overflow: hidden;
+      /* ===== hero ===== */
+      .hero { padding: 5rem 1.5rem 4rem; position: relative; z-index: 2; }
+      .hero-grid {
+        max-width: 1240px; margin: 0 auto;
+        display: grid; grid-template-columns: 1.05fr 1fr;
+        gap: 4rem; align-items: center;
       }
-      .hero-glow {
-        position: absolute;
-        width: 600px; height: 600px;
-        border-radius: 50%;
-        filter: blur(120px);
-        opacity: 0.15;
-        pointer-events: none;
-      }
-      .hero-glow-1 { background: var(--c1); top: -200px; left: -200px; }
-      .hero-glow-2 { background: var(--c2); top: -150px; right: -150px; }
-      .hero-inner {
-        max-width: 880px;
-        margin: 0 auto;
-        position: relative;
-        text-align: left;
-      }
-      .status-pill {
+      .kicker {
         display: inline-flex; align-items: center; gap: 0.55rem;
-        padding: 0.4rem 0.875rem;
         background: rgba(16, 185, 129, 0.1);
-        border: 1px solid rgba(16, 185, 129, 0.3);
-        color: var(--success);
+        color: #047857;
+        padding: 0.4rem 0.85rem;
         border-radius: 999px;
         font-size: 0.8125rem;
         font-weight: 500;
         margin-bottom: 2rem;
+        border: 1px solid rgba(16, 185, 129, 0.2);
       }
-      .status-dot {
+      .kicker .dot {
         width: 6px; height: 6px;
         background: var(--success);
         border-radius: 50%;
         box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
         animation: pulse 2.4s ease-in-out infinite;
       }
-      @keyframes pulse { 50% { opacity: 0.5; } }
-      .overline {
-        font-family: var(--mono);
-        font-size: 0.75rem;
-        color: var(--text-faint);
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        margin-bottom: 1.5rem;
-      }
-      .hero-title {
-        font-size: clamp(2.75rem, 6.5vw, 5rem);
-        font-weight: 800;
-        letter-spacing: -0.035em;
-        line-height: 1.02;
+      @keyframes pulse { 50% { opacity: 0.45; } }
+
+      .display {
+        font-size: clamp(2.75rem, 6vw, 4.75rem);
+        font-weight: 900;
+        letter-spacing: -0.04em;
         margin-bottom: 1.75rem;
       }
-      .gradient-text {
+      .display .accent {
         background: var(--grad);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
       }
-      .hero-sub {
-        font-size: 1.125rem;
-        color: var(--text-muted);
-        max-width: 38rem;
-        margin-bottom: 2.5rem;
+      .hero-lede {
+        font-size: 1.0625rem;
+        color: var(--ink-mute);
+        max-width: 32rem;
+        margin-bottom: 2rem;
       }
-      .hero-sub strong { color: var(--text); font-weight: 600; }
-      .hero-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2.25rem; }
+      .hero-cta { display: flex; gap: 0.65rem; flex-wrap: wrap; }
       .btn {
         display: inline-flex; align-items: center; gap: 0.5rem;
-        padding: 0.75rem 1.25rem;
-        border-radius: 8px;
+        padding: 0.7rem 1.1rem;
         font-size: 0.9375rem;
-        font-weight: 500;
-        transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+        font-weight: 600;
+        border-radius: 10px;
+        transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s, background 0.2s;
       }
       .btn-primary {
-        background: var(--grad);
+        background: var(--ink);
         color: var(--bg);
-        border: 1px solid transparent;
-        box-shadow: 0 6px 20px -4px rgba(34, 211, 238, 0.25);
       }
-      .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 28px -4px rgba(34, 211, 238, 0.4);
-      }
+      .btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
       .btn-ghost {
-        background: transparent;
-        color: var(--text);
-        border: 1px solid var(--border-strong);
+        background: var(--bg-card);
+        color: var(--ink);
+        border: 1px solid var(--border);
       }
-      .btn-ghost:hover { border-color: var(--c1); transform: translateY(-1px); }
-      .hero-meta {
-        list-style: none;
-        display: flex;
-        gap: 0.625rem;
-        flex-wrap: wrap;
-        color: var(--text-faint);
-        font-size: 0.75rem;
-      }
+      .btn-ghost:hover { background: var(--bg-card-hover); border-color: var(--border-strong); transform: translateY(-1px); }
 
-      /* ---------- stats ---------- */
-      .stats-section { padding: 1.5rem 0 4rem; }
-      .stats-grid {
-        list-style: none;
+      /* terminal */
+      .terminal {
+        background: #18181b;
+        color: #e4e4e7;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 24px 60px -20px rgba(24, 24, 27, 0.25), 0 0 0 1px rgba(24, 24, 27, 0.06);
+        font-family: var(--mono);
+        font-size: 0.8125rem;
+        line-height: 1.7;
+      }
+      .terminal-bar {
+        display: flex; align-items: center; gap: 0.4rem;
+        padding: 0.65rem 0.9rem;
+        background: #27272a;
+        border-bottom: 1px solid #3f3f46;
+      }
+      .t-dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+      .dr { background: #ff5f57; } .dy { background: #febc2e; } .dg { background: #28c840; }
+      .t-name { margin-left: 0.75rem; color: #a1a1aa; font-size: 0.7rem; }
+      .t-body { padding: 1rem 1.25rem 1.25rem; margin: 0; overflow-x: auto; }
+      .t-body code { background: none; color: inherit; padding: 0; font-size: inherit; }
+      .t-prompt { color: #34d399; }
+      .t-c { color: #a78bfa; }
+      .t-out { color: #d4d4d8; }
+      .t-ok { color: #34d399; }
+      .t-cursor { color: #fbbf24; animation: blink 1s steps(2, start) infinite; }
+      @keyframes blink { to { visibility: hidden; } }
+
+      /* ===== sections ===== */
+      .section { padding: 5rem 1.5rem; position: relative; z-index: 2; }
+      .section-alt { background: var(--bg-soft); }
+      .section-head { margin-bottom: 2.5rem; }
+      .section-title {
+        font-size: clamp(2rem, 4vw, 3.25rem);
+        font-weight: 900;
+        letter-spacing: -0.03em;
+        margin-bottom: 0.5rem;
+      }
+      .section-sub { color: var(--ink-mute); font-size: 1rem; max-width: 38rem; }
+
+      /* ===== BENTO ===== */
+      .bento {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(170px, auto);
         gap: 1rem;
       }
-      .stat-card {
-        padding: 1.5rem 1.25rem;
+      .card {
         background: var(--bg-card);
         border: 1px solid var(--border);
-        border-radius: 12px;
+        border-radius: var(--radius);
+        padding: 1.5rem;
         position: relative;
         overflow: hidden;
-        transition: border-color 0.2s, transform 0.2s;
+        transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+        opacity: 0;
+        transform: translateY(8px);
       }
-      .stat-card::before {
-        content: ''; position: absolute; inset: 0 0 auto 0; height: 2px;
-        background: var(--grad);
-        opacity: 0.5;
+      .card.in { opacity: 1; transform: translateY(0); transition: opacity 0.5s, transform 0.5s, box-shadow 0.25s, border-color 0.25s; }
+      @media (prefers-reduced-motion: reduce) {
+        .card { opacity: 1; transform: none; transition: none; }
       }
-      .stat-card:hover { border-color: var(--border-strong); transform: translateY(-2px); }
-      .stat-num {
-        font-size: 2.25rem;
-        font-weight: 700;
+      .card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow);
+        border-color: var(--border-strong);
+      }
+      .card-span-2 { grid-column: span 2; }
+      .card-greeting { background: var(--ink); color: var(--bg); }
+      .card-greeting .card-eyebrow { color: rgba(255, 255, 255, 0.5); }
+      .card-greeting-text { font-size: 1.0625rem; line-height: 1.55; font-weight: 400; }
+      .card-greeting-text strong { color: white; font-weight: 600; }
+      .card-eyebrow {
+        font-family: var(--mono);
+        font-size: 0.6875rem;
+        color: var(--ink-faint);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin-bottom: 0.65rem;
+      }
+      .card-big {
+        font-family: var(--display);
+        font-size: 1.625rem;
+        font-weight: 800;
         letter-spacing: -0.02em;
+        line-height: 1.05;
+        margin-bottom: 0.5rem;
+      }
+      .card-big-link {
+        font-family: var(--mono);
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--primary);
+        margin-bottom: 0.25rem;
+      }
+      .card-link:hover .card-big-link { color: var(--ink); }
+      .card-small { color: var(--ink-mute); font-size: 0.8125rem; }
+      .card-now { background: linear-gradient(135deg, var(--primary-soft), rgba(238, 242, 255, 0.4)); border-color: rgba(99, 102, 241, 0.25); }
+      .card-loc { position: relative; }
+      .map-dot {
+        position: absolute; right: 1.25rem; bottom: 1.25rem;
+        width: 14px; height: 14px;
+        border-radius: 50%;
+        background: var(--warm);
+        box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.2), 0 0 0 12px rgba(249, 115, 22, 0.08);
+        animation: pulse 2.4s ease-in-out infinite;
+      }
+      .chips { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+      .chips li {
+        font-family: var(--mono);
+        font-size: 0.7rem;
+        padding: 0.25rem 0.55rem;
+        background: var(--bg-soft);
+        border: 1px solid var(--border);
+        border-radius: 5px;
+        color: var(--ink-mute);
+      }
+      .big-num {
+        font-family: var(--display);
+        font-size: 3.25rem;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        line-height: 1;
+        margin-bottom: 0.5rem;
         background: var(--grad);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
-        line-height: 1;
-        margin-bottom: 0.625rem;
       }
-      .stat-label {
-        color: var(--text);
-        text-transform: uppercase;
-        font-size: 0.6875rem;
-        margin-bottom: 0.25rem;
+      .big-num span { font-size: 0.55em; vertical-align: top; }
+      .card-accent-warm .big-num { background: linear-gradient(135deg, #f97316, #ef4444); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .card-link { display: block; }
+
+      @media (max-width: 940px) {
+        .bento { grid-template-columns: repeat(2, 1fr); }
+        .card-span-2 { grid-column: span 2; }
       }
-      .stat-note { color: var(--text-faint); font-size: 0.8125rem; }
-      @media (max-width: 720px) {
-        .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      @media (max-width: 540px) {
+        .bento { grid-template-columns: 1fr; }
+        .card-span-2 { grid-column: span 1; }
       }
 
-      /* ---------- sections ---------- */
-      .section { padding: 5rem 0; }
-      .section-alt {
-        background: linear-gradient(180deg, transparent, var(--bg-elev) 30%, var(--bg-elev) 70%, transparent);
-      }
-      .section-head {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        gap: 2rem;
-        margin-bottom: 2.5rem;
-        flex-wrap: wrap;
-      }
-      .section-eyebrow {
-        color: var(--c1);
-        text-transform: uppercase;
-        font-size: 0.75rem;
-        margin-bottom: 0.5rem;
-      }
-      .section-lede {
-        color: var(--text-muted);
-        font-size: 0.9375rem;
-        max-width: 24rem;
-      }
-
-      /* ---------- work ---------- */
-      .work-grid {
-        list-style: none;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.25rem;
-      }
-      .work-card {
+      /* ===== WORK ===== */
+      .work-bento { display: grid; gap: 1rem; }
+      .work-feat {
         background: var(--bg-card);
         border: 1px solid var(--border);
-        border-radius: 14px;
+        border-radius: var(--radius);
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1.05fr;
         overflow: hidden;
-        transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
         position: relative;
+        opacity: 0; transform: translateY(8px);
       }
-      .work-card:hover {
-        transform: translateY(-4px);
-        border-color: var(--border-strong);
-        box-shadow: 0 24px 48px -16px rgba(0, 0, 0, 0.45);
-      }
-      .work-thumb {
-        display: block;
-        position: relative;
-        aspect-ratio: 16 / 9;
-        overflow: hidden;
-        background: var(--bg-elev);
-        border-bottom: 1px solid var(--border);
-      }
-      .work-thumb img {
-        width: 100%; height: 100%; object-fit: cover; object-position: top;
-        transition: transform 0.45s ease;
-      }
-      .work-card:hover .work-thumb img { transform: scale(1.03); }
-      .work-thumb-glow {
-        position: absolute; inset: 0;
-        background: var(--grad-soft);
-        opacity: 0;
-        transition: opacity 0.3s;
-        pointer-events: none;
-      }
-      .work-card:hover .work-thumb-glow { opacity: 1; }
-      .work-thumb-placeholder {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        color: var(--text-faint);
-      }
-      .work-thumb-placeholder svg { width: 56px; height: 56px; opacity: 0.4; }
-      .work-body { padding: 1.25rem 1.375rem 1.5rem; }
-      .work-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.4rem; }
-      .work-name { font-size: 1.1875rem; }
+      .work-feat.in { opacity: 1; transform: translateY(0); transition: opacity 0.5s, transform 0.5s; }
+      @media (prefers-reduced-motion: reduce) { .work-feat { opacity: 1; transform: none; } }
+      .work-feat:hover { box-shadow: var(--shadow-lg); }
+      .work-feat-body { padding: 2rem 2.25rem; }
       .work-badge {
-        padding: 0.2rem 0.55rem;
+        display: inline-block;
         font-family: var(--mono);
-        font-size: 0.6875rem;
-        background: rgba(34, 211, 238, 0.1);
-        color: var(--c1);
-        border: 1px solid rgba(34, 211, 238, 0.25);
+        font-size: 0.7rem;
+        background: rgba(16, 185, 129, 0.1);
+        color: #047857;
+        padding: 0.25rem 0.6rem;
         border-radius: 999px;
-        white-space: nowrap;
+        margin-bottom: 1rem;
       }
-      .work-type { color: var(--text-faint); margin-bottom: 0.75rem; text-transform: uppercase; font-size: 0.6875rem; }
-      .work-summary { color: var(--text-muted); font-size: 0.9375rem; margin-bottom: 1rem; }
-      .work-stack {
-        list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem;
-        margin-bottom: 1.25rem;
-      }
-      .work-stack li {
-        padding: 0.2rem 0.55rem;
-        background: rgba(255, 255, 255, 0.04);
+      .work-feat-title { font-size: 1.875rem; margin-bottom: 0.4rem; }
+      .work-feat-meta { font-family: var(--mono); color: var(--ink-faint); font-size: 0.75rem; margin-bottom: 1rem; }
+      .work-feat-desc { color: var(--ink-mute); margin-bottom: 1.25rem; }
+      .work-feat-chips { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
+      .work-feat-chips li {
+        font-family: var(--mono);
+        font-size: 0.7rem;
+        padding: 0.25rem 0.55rem;
+        background: var(--bg-soft);
         border: 1px solid var(--border);
         border-radius: 5px;
-        color: var(--text-muted);
+        color: var(--ink-mute);
+      }
+      .link-arrow {
+        display: inline-flex; align-items: center; gap: 0.4rem;
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 0.9375rem;
+        transition: gap 0.2s;
+      }
+      .link-arrow:hover { gap: 0.65rem; }
+      .work-feat-visual {
+        background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+        position: relative;
+        overflow: hidden;
+        display: flex; align-items: center; justify-content: center;
+        padding: 2rem 1.5rem;
+        min-height: 340px;
+      }
+      .visual-blob {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(60px);
+        pointer-events: none;
+      }
+      .blob-1 { width: 220px; height: 220px; background: #ec4899; top: -40px; right: -40px; opacity: 0.3; }
+      .blob-2 { width: 200px; height: 200px; background: #22d3ee; bottom: -50px; left: -40px; opacity: 0.3; }
+      .visual-code {
+        position: relative;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        padding: 1rem 1.1rem;
+        max-width: 100%;
+        overflow-x: auto;
+      }
+      .visual-code pre { margin: 0; }
+      .visual-code code {
+        font-family: var(--mono);
         font-size: 0.7rem;
+        color: #e4e4e7;
+        background: none;
+        padding: 0;
+        line-height: 1.7;
+        white-space: pre;
       }
-      .work-links { display: flex; gap: 1rem; align-items: center; }
-      .work-link {
-        display: inline-flex; align-items: center; gap: 0.3rem;
-        color: var(--c1);
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        transition: gap 0.2s, color 0.15s;
+      .code-c { color: #71717a; font-style: italic; }
+      .code-k { color: #c084fc; }
+      .code-t { color: #5eead4; }
+      .code-s { color: #fbbf24; }
+      .code-f { color: #93c5fd; }
+
+      .work-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
       }
-      .work-link:hover { gap: 0.5rem; }
-      .work-link.dim { color: var(--text-muted); }
-      .work-link.dim:hover { color: var(--text); }
-      @media (max-width: 720px) {
+      .work-tile {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        overflow: hidden;
+        display: flex; flex-direction: column;
+        transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+        opacity: 0; transform: translateY(8px);
+      }
+      .work-tile.in { opacity: 1; transform: translateY(0); transition: opacity 0.5s, transform 0.5s, box-shadow 0.25s, border-color 0.25s; }
+      .work-tile:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--border-strong); }
+      .work-tile img {
+        width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top;
+        border-bottom: 1px solid var(--border);
+      }
+      .work-tile-body { padding: 1.1rem 1.25rem 1.25rem; flex: 1; display: flex; flex-direction: column; }
+      .work-tile-body h4 { margin-bottom: 0.4rem; }
+      .work-tile-body p { color: var(--ink-mute); font-size: 0.8125rem; margin-bottom: 0.75rem; flex: 1; }
+      .tile-stack { color: var(--ink-faint); }
+      .work-tile-text { padding-top: 1.5rem; }
+      .work-tile-text .work-tile-body { padding-top: 0; }
+      .work-tile-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.6rem;
+        display: inline-block;
+      }
+
+      @media (max-width: 940px) {
+        .work-feat { grid-template-columns: 1fr; }
+        .work-feat-visual { min-height: 240px; }
+        .work-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 540px) {
         .work-grid { grid-template-columns: 1fr; }
       }
 
-      /* ---------- about ---------- */
-      .about-grid {
-        display: grid;
-        grid-template-columns: 1.4fr 1fr;
-        gap: 3rem;
-        align-items: start;
-      }
-      .about-prose { margin-top: 1.5rem; color: var(--text-muted); }
-      .about-prose p { margin-bottom: 1.125rem; font-size: 1rem; }
-      .about-side { display: flex; flex-direction: column; gap: 0.75rem; }
-      .info-card {
-        padding: 1rem 1.125rem;
-        background: var(--bg-card);
-        border: 1px solid var(--border);
-        border-radius: 10px;
-      }
-      .info-card p { color: var(--text); font-size: 0.9375rem; }
-      .info-card strong { color: var(--c1); font-weight: 600; }
-      .info-label {
-        color: var(--text-faint);
-        text-transform: uppercase;
-        font-size: 0.6875rem;
-        margin-bottom: 0.3rem;
-      }
-      .info-card-cta {
-        background: var(--grad-soft);
-        border-color: rgba(34, 211, 238, 0.3);
-      }
-      .info-link {
-        display: inline-flex; align-items: center; gap: 0.4rem;
-        color: var(--c1);
-        font-weight: 600;
-      }
-      .info-link:hover { gap: 0.6rem; }
-      @media (max-width: 720px) {
-        .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-      }
-
-      /* ---------- writing ---------- */
+      /* ===== writing ===== */
       .writing-empty {
-        padding: 2.5rem;
         background: var(--bg-card);
         border: 1px dashed var(--border-strong);
-        border-radius: 12px;
-        max-width: 36rem;
+        border-radius: var(--radius);
+        padding: 2.5rem;
+        max-width: 40rem;
       }
-      .writing-empty-headline {
-        font-family: var(--mono);
-        color: var(--c1);
-        font-size: 0.875rem;
-        margin-bottom: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
+      .we-headline {
+        font-family: var(--display);
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin-bottom: 0.85rem;
+        letter-spacing: -0.02em;
       }
-      .writing-empty-note { color: var(--text-muted); font-size: 1rem; }
-      .writing-empty-note a { color: var(--c1); border-bottom: 1px solid currentColor; margin: 0 0.2rem; }
-      .writing-grid {
-        list-style: none;
+      .we-body { color: var(--ink-mute); margin-bottom: 1.25rem; }
+      .we-cta { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; font-size: 0.9375rem; }
+      .writing-list { list-style: none; }
+      .writing-row {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.25rem;
+        grid-template-columns: 7rem 1fr auto;
+        gap: 1.5rem;
+        padding: 1.25rem 1.25rem;
+        border-radius: var(--radius-sm);
+        align-items: center;
+        transition: background 0.2s, padding 0.2s;
+        opacity: 0; transform: translateY(8px);
       }
-      .writing-card {
-        background: var(--bg-card);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 1.5rem;
-        transition: border-color 0.2s, transform 0.2s;
+      .writing-row.in { opacity: 1; transform: translateY(0); transition: opacity 0.5s, transform 0.5s, background 0.2s, padding 0.2s; }
+      .writing-row:hover { background: var(--bg-card); }
+      .writing-row time { color: var(--ink-faint); padding-top: 0.2rem; }
+      .writing-row h3 { font-size: 1.125rem; margin-bottom: 0.25rem; }
+      .writing-row p { color: var(--ink-mute); font-size: 0.875rem; }
+      .writing-arrow { color: var(--primary); font-size: 1.25rem; }
+
+      /* ===== cta ===== */
+      .cta-section { padding: 5rem 1.5rem; position: relative; z-index: 2; }
+      .cta-card {
+        background: var(--ink);
+        color: var(--bg);
+        border-radius: 24px;
+        padding: 4rem 2rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        max-width: 56rem;
+        margin: 0 auto;
+        opacity: 0; transform: translateY(8px);
       }
-      .writing-card:hover { border-color: var(--border-strong); transform: translateY(-2px); }
-      .writing-card h3 { margin: 0.6rem 0 0.5rem; }
-      .writing-card p { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1rem; }
-      .writing-arrow { color: var(--c1); font-size: 0.8125rem; }
-      @media (max-width: 720px) { .writing-grid { grid-template-columns: 1fr; } }
-
-      /* ---------- cta ---------- */
-      .cta-section { padding: 6rem 0; text-align: center; position: relative; }
-      .cta-inner h2 { margin-bottom: 1rem; }
-      .cta-inner p { color: var(--text-muted); max-width: 32rem; margin: 0 auto 2rem; }
-      .cta-buttons { display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
-
-      /* ---------- footer ---------- */
-      .footer { border-top: 1px solid var(--border); padding: 2rem 0; }
-      .footer-inner {
-        display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+      .cta-card.in { opacity: 1; transform: translateY(0); transition: opacity 0.5s, transform 0.5s; }
+      .cta-card::before, .cta-card::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
       }
-      .footer-brand { display: flex; align-items: center; gap: 0.75rem; color: var(--text-muted); font-size: 0.875rem; }
-      .footer-note { color: var(--text-faint); }
-      .footer-note a { color: var(--c1); border-bottom: 1px dotted currentColor; }
+      .cta-card::before { width: 300px; height: 300px; background: #6366f1; top: -100px; left: -80px; opacity: 0.35; }
+      .cta-card::after { width: 320px; height: 320px; background: #ec4899; bottom: -120px; right: -100px; opacity: 0.3; }
+      .cta-card .card-eyebrow { color: rgba(255, 255, 255, 0.5); position: relative; z-index: 1; }
+      .cta-title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 900;
+        letter-spacing: -0.035em;
+        margin-bottom: 1rem;
+        position: relative; z-index: 1;
+      }
+      .cta-text { color: rgba(255, 255, 255, 0.8); max-width: 32rem; margin: 0 auto 2rem; position: relative; z-index: 1; }
+      .cta-text strong { color: white; }
+      .cta-actions { display: flex; justify-content: center; gap: 0.65rem; flex-wrap: wrap; position: relative; z-index: 1; }
+      .cta-actions .btn-primary { background: white; color: var(--ink); }
+      .cta-actions .btn-ghost { background: transparent; color: white; border-color: rgba(255, 255, 255, 0.25); }
+      .cta-actions .btn-ghost:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.4); }
 
-      @media (prefers-reduced-motion: reduce) {
-        *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+      /* ===== footer ===== */
+      .foot { padding: 2rem 0; border-top: 1px solid var(--border); position: relative; z-index: 2; }
+      .foot-inner {
+        display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+        color: var(--ink-faint);
+      }
+      .foot a { color: var(--primary); border-bottom: 1px dotted currentColor; }
+
+      @media (max-width: 940px) {
+        .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+        .hero { padding-top: 3rem; }
       }
     </style>
   </body>
