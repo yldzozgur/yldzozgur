@@ -27,9 +27,31 @@ const postUrl = `https://yldzozgur.com/writing/${slug}`;
 const shareText = `${title} — by Ozgur Yildiz`;
 const linkedinShare = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}`;
 const xShare = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(postUrl)}`;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description,
+  datePublished: pubDate.toISOString(),
+  dateModified: (updatedDate ?? pubDate).toISOString(),
+  author: {
+    '@type': 'Person',
+    name: 'Ozgur Yildiz',
+    url: 'https://yldzozgur.com',
+  },
+  publisher: {
+    '@type': 'Person',
+    name: 'Ozgur Yildiz',
+  },
+  url: postUrl,
+  mainEntityOfPage: postUrl,
+  keywords: tags.join(', '),
+  image: 'https://yldzozgur.com/og-default.png',
+};
 ---
 
-<BaseLayout title={`${title} — Ozgur Yildiz`} description={description} type="article">
+<BaseLayout title={`${title} — Ozgur Yildiz`} description={description} type="article" jsonLd={articleLd}>
   <article class="post">
     <header class="post-header container">
       <div class="post-meta">
@@ -41,7 +63,7 @@ const xShare = `https://twitter.com/intent/tweet?text=${encodeURIComponent(share
       {tags.length > 0 && (
         <ul class="post-tags">
           {tags.map((tag) => (
-            <li class="mono">#{tag}</li>
+            <li><a class="mono tag-link" href={`/writing/tags/${tag}`}>#{tag}</a></li>
           ))}
         </ul>
       )}
@@ -127,6 +149,14 @@ const xShare = `https://twitter.com/intent/tweet?text=${encodeURIComponent(share
   }
   .post-tags li {
     color: var(--accent-dim);
+  }
+  .tag-link {
+    color: var(--accent-dim);
+    border-bottom: none;
+  }
+  .tag-link:hover {
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent);
   }
   .post-content {
     padding-top: 2.5rem;

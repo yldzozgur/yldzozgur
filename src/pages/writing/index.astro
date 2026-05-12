@@ -30,6 +30,7 @@ const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
       Two posts a week on shipping production software — TypeScript, Node, React,
       and the unglamorous parts of moving from bootcamp code to a real codebase.
     </p>
+    <p class="page-meta mono"><a href="/writing/tags">→ Browse by tag</a> · <a href="/rss.xml">RSS feed</a></p>
   </section>
 
   <section class="container">
@@ -93,6 +94,18 @@ const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
     line-height: 1.5;
     color: var(--ink-muted);
     font-style: italic;
+  }
+  .page-meta {
+    margin-top: 1.25rem;
+    color: var(--ink-faint);
+    font-size: 0.8125rem;
+  }
+  .page-meta a {
+    color: var(--ink-muted);
+    border-bottom: none;
+  }
+  .page-meta a:hover {
+    color: var(--accent);
   }
   .empty-state {
     padding: 3rem 0;

@@ -69,7 +69,18 @@ const formatDate = (date: Date) =>
     </div>
   </section>
 
-  <section class="section container">
+  <section class="now-strip container" data-reveal>
+    <div class="now-card">
+      <span class="mono now-label">Now</span>
+      <ul class="now-list">
+        <li><span class="mono now-key">Shipping</span> features at Ameza on the multi-tenant retail platform</li>
+        <li><span class="mono now-key">Stack</span> TypeScript · React · Node · PostgreSQL</li>
+        <li><span class="mono now-key">Writing</span> two posts a week on bootcamp-to-production gap</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section container" data-reveal>
     <header class="section-header">
       <h2>Featured work</h2>
       <a href="/work" class="mono section-link">All projects →</a>
@@ -94,7 +105,7 @@ const formatDate = (date: Date) =>
   </section>
 
   {posts.length > 0 && (
-    <section class="section container">
+    <section class="section container" data-reveal>
       <header class="section-header">
         <h2>Latest writing</h2>
         <a href="/writing" class="mono section-link">All posts →</a>
@@ -210,6 +221,59 @@ const formatDate = (date: Date) =>
   .cta-secondary:hover {
     border-color: var(--accent);
     border-bottom: 1px solid var(--accent);
+  }
+
+  .now-strip {
+    padding: 2.5rem 0 1rem;
+  }
+  .now-card {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: linear-gradient(180deg, var(--bg-elevated), var(--bg-subtle));
+    padding: 1.25rem 1.5rem;
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    position: relative;
+    overflow: hidden;
+  }
+  .now-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--accent);
+  }
+  .now-label {
+    color: var(--accent);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding-top: 0.15rem;
+  }
+  .now-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--ink-muted);
+    font-size: 0.9375rem;
+  }
+  .now-key {
+    color: var(--accent-dim);
+    font-size: 0.75rem;
+    margin-right: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  @media (max-width: 640px) {
+    .now-card {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
   }
 
   .section {

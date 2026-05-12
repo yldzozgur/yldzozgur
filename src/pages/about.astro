@@ -175,6 +175,32 @@ const experience = [
     </ul>
   </section>
 
+  <section class="container section-block activity">
+    <h2 class="section-heading">Recent activity</h2>
+    <div class="activity-grid">
+      <a href="https://github.com/yldzozgur" target="_blank" rel="noopener" class="activity-card">
+        <span class="mono activity-label">GitHub</span>
+        <span class="activity-title">github.com/yldzozgur ↗</span>
+        <span class="activity-note">Public repositories, commits, and contribution graph.</span>
+      </a>
+      <a href="https://github.com/Ameza-Smart-Retail-Solutions" target="_blank" rel="noopener" class="activity-card">
+        <span class="mono activity-label">Ameza Org</span>
+        <span class="activity-title">github.com/Ameza-Smart-Retail-Solutions ↗</span>
+        <span class="activity-note">The retail platform I currently ship features on.</span>
+      </a>
+      <a href="https://linkedin.com/in/ozguryildiz0" target="_blank" rel="noopener" class="activity-card">
+        <span class="mono activity-label">LinkedIn</span>
+        <span class="activity-title">linkedin.com/in/ozguryildiz0 ↗</span>
+        <span class="activity-note">Career history, posts, and recommendations.</span>
+      </a>
+      <a href="/writing" class="activity-card">
+        <span class="mono activity-label">Writing</span>
+        <span class="activity-title">/writing →</span>
+        <span class="activity-note">Two posts a week — Tuesday and Thursday.</span>
+      </a>
+    </div>
+  </section>
+
   <section class="container section-block contact">
     <h2 class="section-heading">Get in touch</h2>
     <p>
@@ -359,6 +385,54 @@ const experience = [
   }
   .education .dim {
     color: var(--ink-faint);
+  }
+
+  .activity-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    max-width: var(--reading-width);
+    margin: 0 auto;
+  }
+  .activity-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: var(--bg-subtle);
+    color: var(--ink);
+    border-bottom: 1px solid var(--border);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .activity-card:hover {
+    border-color: var(--accent);
+    border-bottom-color: var(--accent);
+    transform: translateY(-1px);
+  }
+  .activity-label {
+    color: var(--accent-dim);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .activity-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    color: var(--ink);
+  }
+  .activity-card:hover .activity-title {
+    color: var(--accent);
+  }
+  .activity-note {
+    color: var(--ink-muted);
+    font-size: 0.8125rem;
+  }
+  @media (max-width: 640px) {
+    .activity-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   .contact {

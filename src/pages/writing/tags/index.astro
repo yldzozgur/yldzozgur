@@ -1,0 +1,79 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog', ({ data }) => !data.draft);
+
+const counts = new Map<string, number>();
+for (const post of posts) {
+  for (const tag of post.data.tags) {
+    counts.set(tag, (counts.get(tag) ?? 0) + 1);
+  }
+}
+
+const tags = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+---
+
+<BaseLayout
+  title="Tags — Ozgur Yildiz"
+  description="All topics covered on the Ozgur Yildiz writing archive."
+>
+  <section class="page-header container">
+    <span class="mono dim">/ writing / tags</span>
+    <h1>Tags</h1>
+    <p class="page-lede">
+      Browse posts by topic. {posts.length} {posts.length === 1 ? 'post' : 'posts'} across {tags.length} {tags.length === 1 ? 'tag' : 'tags'}.
+    </p>
+  </section>
+
+  <section class="container">
+    {tags.length === 0 ? (
+      <p class="mono dim empty">No tags yet — first posts incoming Tuesday and Thursday.</p>
+    ) : (
+      <ul class="tag-list">
+        {tags.map(([tag, count]) => (
+          <li>
+            <a href={`/writing/tags/${tag}`} class="tag-row">
+              <span class="mono tag-name">#{tag}</span>
+              <span class="mono tag-count">{count} {count === 1 ? 'post' : 'posts'}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )}
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding-top: 4rem;
+    padding-bottom: 2.5rem;
+    max-width: 48rem;
+  }
+  .page-header .dim { color: var(--ink-faint); }
+  .page-header h1 { margin: 0.5rem 0 1.25rem; }
+  .page-lede {
+    font-family: var(--font-display);
+    font-size: 1.1875rem;
+    color: var(--ink-muted);
+    font-style: italic;
+  }
+  .empty { padding: 2rem 0; color: var(--ink-faint); }
+  .tag-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; max-width: 38rem; }
+  .tag-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--ink);
+    border-bottom: 1px solid var(--border);
+    transition: border-color 0.2s ease;
+  }
+  .tag-row:hover {
+    border-color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .tag-name { color: var(--accent); }
+  .tag-count { color: var(--ink-faint); font-size: 0.8125rem; }
+</style>

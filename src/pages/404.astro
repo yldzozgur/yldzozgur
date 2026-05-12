@@ -1,0 +1,66 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Not found — Ozgur Yildiz"
+  description="The page you were looking for could not be found."
+>
+  <section class="container notfound">
+    <span class="mono dim">404 / not found</span>
+    <h1 class="notfound-title">
+      This page <em>doesn't</em> exist —<br />
+      but the writing does.
+    </h1>
+    <p class="notfound-lede">
+      The URL you followed is broken, expired, or never existed. No drama, no
+      apology page. Just three useful links:
+    </p>
+    <ul class="notfound-links">
+      <li><a href="/" class="mono">→ Home</a></li>
+      <li><a href="/writing" class="mono">→ Writing — two posts a week</a></li>
+      <li><a href="/work" class="mono">→ Work — projects and current role</a></li>
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  .notfound {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    max-width: 42rem;
+  }
+  .notfound .dim {
+    color: var(--ink-faint);
+  }
+  .notfound-title {
+    margin: 0.75rem 0 1.5rem;
+    font-size: clamp(2rem, 5vw, 3.25rem);
+  }
+  .notfound-title em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .notfound-lede {
+    color: var(--ink-muted);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  .notfound-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .notfound-links a {
+    color: var(--ink);
+    border-bottom: 1px solid var(--border);
+    padding: 0.5rem 0;
+    display: inline-block;
+  }
+  .notfound-links a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+</style>
