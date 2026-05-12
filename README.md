@@ -1,96 +1,64 @@
-# yldzozgur.com
+<h1 align="center">Hi, I'm Ozgur 👋</h1>
 
-Personal site + blog. Built with [Astro](https://astro.build), deployed to GitHub Pages.
+<p align="center">
+  Full-stack engineer in <strong>Austin, TX</strong> · shipping production TypeScript at
+  <a href="https://github.com/Ameza-Smart-Retail-Solutions">Ameza Solutions</a>
+</p>
 
-## Local development
+<p align="center">
+  <a href="https://yldzozgur.com"><img alt="Website" src="https://img.shields.io/badge/yldzozgur.com-18181b?style=flat-square&logo=safari&logoColor=white"></a>
+  <a href="https://linkedin.com/in/yldzozgur"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0a66c2?style=flat-square&logo=linkedin&logoColor=white"></a>
+  <a href="mailto:ozguryildiz0@outlook.com"><img alt="Email" src="https://img.shields.io/badge/Email-ea4335?style=flat-square&logo=gmail&logoColor=white"></a>
+  <img alt="Available" src="https://img.shields.io/badge/status-available-10b981?style=flat-square">
+</p>
 
-```bash
-npm install
-npm run dev      # http://localhost:4321
-npm run build    # production build → ./dist
-npm run preview  # preview the production build
-```
+---
 
-Requires Node 18+ (Node 20 recommended).
+### About
 
-## Writing a new blog post
+Six years of prior Java &amp; .NET enterprise experience — e-commerce backend at **Ebebek**, an asset management system at **Lactalis**, and Android + .NET tools at **Gaga Software**. Relocated from Turkey to the U.S. in 2023; spent the next two years on an MBA, intensive English, and the Clarusway full-stack bootcamp. Now writing TypeScript every day.
 
-1. Create a new markdown file in `src/content/blog/`. The filename becomes the URL slug:
+🟢 **Open to** Junior Full-Stack / Backend roles — remote (US-wide) or hybrid (Greater Austin)
+🇺🇸 **U.S. work authorized** — no sponsorship required, now or in the future
 
-   `src/content/blog/my-new-post.md` → `yldzozgur.com/writing/my-new-post`
+### What I'm up to
 
-2. Add the frontmatter:
+- 🛠 **Shipping** features at Ameza on a multi-tenant retail platform (20+ merged PRs)
+- ✍️ **Writing** twice a week at [**yldzozgur.com/writing**](https://yldzozgur.com/writing) — Tuesday + Thursday
+- 📚 **Reading** the kinds of things that show up in code review three months later
 
-   ```markdown
-   ---
-   title: "The post title"
-   description: "Short summary, used for SEO and the listing page."
-   pubDate: 2026-05-15
-   tags: ["typescript", "career"]
-   draft: false
-   ---
-
-   Your content here, in markdown.
-   ```
-
-3. Set `draft: true` while writing — draft posts won't be published.
-
-4. Commit and push to `main`. The GitHub Action will build and deploy automatically.
-
-## Project structure
+### Stack
 
 ```
-src/
-├── components/      # Header, Footer
-├── content/blog/    # Markdown blog posts
-├── content.config.ts # Blog schema (frontmatter shape)
-├── layouts/         # BaseLayout, PostLayout
-├── pages/           # Routes
-│   ├── index.astro
-│   ├── about.astro
-│   ├── work.astro
-│   ├── writing/
-│   │   ├── index.astro
-│   │   └── [...slug].astro
-│   └── rss.xml.js
-└── styles/global.css
-
-public/              # Static assets — favicon, CNAME, robots.txt
-.github/workflows/   # CI/CD to GitHub Pages
+Languages    TypeScript · JavaScript (ES6+) · SQL
+Frontend     React · Redux Toolkit · Vite · Tailwind · MUI · Formik / Yup
+Backend      Node.js · Express · REST · JWT · Mongoose · Swagger / OpenAPI
+Databases    PostgreSQL · MongoDB · MySQL
+Cloud        Vercel · Cloudflare Workers · Docker · GitHub Actions
+AI-assisted  Claude Code · Cursor · GitHub Copilot
+Testing      Cypress (E2E)
 ```
 
-## Deploy
+### Selected work
 
-Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site
-and publishes it to GitHub Pages.
+| Project | Stack | Live |
+|---|---|---|
+| 🚀 **[Ameza Smart Retail Platform](https://github.com/Ameza-Smart-Retail-Solutions)** | TypeScript · React · Node · PostgreSQL | currently shipping |
+| [Stock Management App](https://github.com/yldzozgur/stock-management-app) | React · Redux · Express · MongoDB | [demo ↗](https://ozguryildiz-stock.vercel.app) |
+| [Pizza API](https://github.com/yldzozgur/pizza-api) | Express · MongoDB · JWT · Swagger | [api ↗](https://ozguryildiz-pizza-api.vercel.app) |
+| [Rent-A-Car API](https://github.com/yldzozgur/rent-a-car-api) | Express · MongoDB · JWT | [api ↗](https://ozguryildiz-rentacar-api.vercel.app) |
+| [Recipe App](https://github.com/yldzozgur/recipe-app) | React 19 · Vite · Tailwind | [live ↗](https://yldzozgur.github.io/recipe-app/) |
+| [React Movie App](https://github.com/yldzozgur/react-movieapp) | React · Firebase · TMDB | [live ↗](https://yldzozgur.github.io/react-movieapp/) |
+| [DraftLift Scheduler](https://github.com/yldzozgur/draftlift-scheduler) | Node · Express · Cron | self-hosted |
 
-### One-time setup
+Full portfolio with screenshots → [**yldzozgur.com/work**](https://yldzozgur.com/work)
 
-1. **Repo settings → Pages → Source**: set to "GitHub Actions".
-2. **Repo settings → Pages → Custom domain**: enter `yldzozgur.com`.
-3. **DNS at your registrar**: see DNS setup below.
-4. Enable "Enforce HTTPS" once the certificate provisions (can take ~15 min).
+### Get in touch
 
-### DNS records (at your domain registrar)
+- 🌐 [yldzozgur.com](https://yldzozgur.com)
+- 💼 [linkedin.com/in/yldzozgur](https://linkedin.com/in/yldzozgur)
+- ✉️ [ozguryildiz0@outlook.com](mailto:ozguryildiz0@outlook.com)
 
-For an apex domain `yldzozgur.com`, add four `A` records pointing to GitHub Pages:
+---
 
-```
-@   A   185.199.108.153
-@   A   185.199.109.153
-@   A   185.199.110.153
-@   A   185.199.111.153
-```
-
-Plus a `CNAME` for the `www` subdomain:
-
-```
-www CNAME yldzozgur.github.io
-```
-
-The `public/CNAME` file in this repo tells GitHub Pages which custom domain to serve.
-
-## License
-
-Content (blog posts, `/about` text) — all rights reserved.
-Code (templates, components, styles) — MIT.
+<sub>This repository powers [yldzozgur.com](https://yldzozgur.com) — built with <a href="https://astro.build">Astro</a>, deployed to Cloudflare Workers. See <a href="DEVELOPMENT.md">DEVELOPMENT.md</a> for local setup.</sub>
