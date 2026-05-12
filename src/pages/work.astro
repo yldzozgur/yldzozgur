@@ -8,6 +8,7 @@ const projects = [
     period: 'Nov 2025 — Present',
     stack: ['TypeScript', 'React', 'Node.js', 'Express', 'PostgreSQL'],
     summary: 'Multi-tenant POS / smart retail platform. 20+ merged PRs across frontend and backend: store and employee management dashboards, validated forms with shared utilities, typed DTOs, role-catalog APIs, domain error-code discriminators, Swagger snapshot sync.',
+    thumb: null,
     links: [
       { label: 'Org →', href: 'https://github.com/Ameza-Smart-Retail-Solutions' },
     ],
@@ -18,6 +19,7 @@ const projects = [
     period: 'Aug — Sep 2025',
     stack: ['React', 'Redux Toolkit', 'Express', 'MongoDB', 'JWT'],
     summary: 'Full-stack inventory + sales platform with JWT auth, role-based permissions, image upload, email verification, and Swagger / Redoc docs. Vite + React + Redux Toolkit dashboard with KPI cards and Recharts. Middleware suite for auth, error handling, logging, permissions, and queries.',
+    thumb: '/projects/stock-management.webp',
     links: [
       { label: 'Live demo →', href: 'https://ozguryildiz-stock.vercel.app' },
       { label: 'API →', href: 'https://ozguryildiz-stock-api.vercel.app' },
@@ -30,6 +32,7 @@ const projects = [
     period: 'Jun — Jul 2025',
     stack: ['Express', 'MongoDB', 'JWT', 'Swagger', 'Vercel'],
     summary: 'Production-style REST API for a pizza ordering system with JWT auth, image upload, and email verification. Pagination, sorting, and filtering middleware. Centralized error handling. CDN-hosted Swagger UI. Deployed serverless on Vercel with MongoDB Atlas.',
+    thumb: '/projects/pizza-api.webp',
     links: [
       { label: 'Live API →', href: 'https://ozguryildiz-pizza-api.vercel.app' },
       { label: 'Code →', href: 'https://github.com/yldzozgur/pizza-api' },
@@ -41,6 +44,7 @@ const projects = [
     period: 'May — Jun 2025',
     stack: ['Express', 'MongoDB', 'JWT', 'Nodemailer'],
     summary: 'REST API for a car rental platform with JWT auth, email notifications, and unique-field validation. Reservation logic with date-overlap detection and automatic amount calculation. Deployed serverless on Vercel.',
+    thumb: '/projects/rentacar-api.webp',
     links: [
       { label: 'Live API →', href: 'https://ozguryildiz-rentacar-api.vercel.app' },
       { label: 'Code →', href: 'https://github.com/yldzozgur/rent-a-car-api' },
@@ -52,6 +56,7 @@ const projects = [
     period: 'Sep — Oct 2025',
     stack: ['React 19', 'Vite', 'Tailwind', 'React Router v7'],
     summary: 'Recipe discovery SPA with debounced live search, category filtering, dark mode, and detail pages. Built with React 19, Vite, Tailwind, React Router v7, and Context API. Deployed via gh-pages.',
+    thumb: '/projects/recipe-app.webp',
     links: [
       { label: 'Live →', href: 'https://yldzozgur.github.io/recipe-app/' },
       { label: 'Code →', href: 'https://github.com/yldzozgur/recipe-app' },
@@ -63,6 +68,7 @@ const projects = [
     period: 'Jul — Aug 2025',
     stack: ['React', 'Firebase', 'TMDB API'],
     summary: 'Movie discovery app with email/password and Google sign-in via Firebase. Consumes the TMDB REST API for movie data and search.',
+    thumb: '/projects/react-movieapp.webp',
     links: [
       { label: 'Live →', href: 'https://yldzozgur.github.io/react-movieapp/' },
       { label: 'Code →', href: 'https://github.com/yldzozgur/react-movieapp' },
@@ -74,6 +80,7 @@ const projects = [
     period: 'Apr — Oct 2025',
     stack: ['Node.js', 'Express', 'Cron'],
     summary: 'Self-hosted Node + Express tool that schedules and auto-publishes local project folders to GitHub on cron intervals with end-to-end audit logging.',
+    thumb: null,
     links: [
       { label: 'Code →', href: 'https://github.com/yldzozgur/draftlift-scheduler' },
     ],
@@ -113,6 +120,12 @@ const demoNote = 'Demo credentials for all live API / full-stack demos: demo@dem
               {p.stack.map((s) => <li class="mono stack-tag">{s}</li>)}
             </ul>
             <p class="project-summary">{p.summary}</p>
+            {p.thumb && (
+              <a class="project-thumb" href={p.links[0].href} target="_blank" rel="noopener" aria-label={`${p.name} live preview`}>
+                <img src={p.thumb} alt={`${p.name} screenshot`} loading="lazy" decoding="async" width="1200" height="800" />
+                <span class="project-thumb-overlay mono">Open live →</span>
+              </a>
+            )}
             <ul class="project-links">
               {p.links.map((l) => (
                 <li>
@@ -217,6 +230,56 @@ const demoNote = 'Demo credentials for all live API / full-stack demos: demo@dem
     color: var(--ink-muted);
     margin-bottom: 1.25rem;
     max-width: 40rem;
+  }
+  .project-thumb {
+    display: block;
+    position: relative;
+    max-width: 36rem;
+    margin: 0 0 1.25rem;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    transition: border-color 0.25s ease, transform 0.25s ease;
+  }
+  .project-thumb img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: top;
+    filter: saturate(0.92);
+    transition: filter 0.3s ease, transform 0.4s ease;
+  }
+  .project-thumb:hover {
+    border-color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .project-thumb:hover img {
+    filter: saturate(1.05);
+    transform: scale(1.02);
+  }
+  .project-thumb-overlay {
+    position: absolute;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    padding: 0.35rem 0.6rem;
+    background: rgba(14, 17, 22, 0.85);
+    color: var(--accent);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 3px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+  .project-thumb:hover .project-thumb-overlay {
+    opacity: 1;
+    transform: translateY(0);
   }
   .project-links {
     list-style: none;
