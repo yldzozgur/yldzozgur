@@ -1,0 +1,816 @@
+[2026-05-12 20:59:51] === session start, log file: /home/x/Desktop/blog-site/yldzozgur/scripts/unfollowed_pages.log ===
+[2026-05-12 20:59:51] allow-list (kept): ['ameza', 'mindful']
+[2026-05-12 21:00:15] following page loaded
+[2026-05-12 21:00:15] DIAG: {'buttonCount': 13, 'sample': [{'text': 'Following', 'aria': ''}, {'text': 'Followers', 'aria': ''}, {'text': 'Following', 'aria': 'Click to stop following Şeyma Yılmaz Yeşil'}, {'text': 'Following', 'aria': 'Click to stop following Muhammed Yıldız'}, {'text': 'Following', 'aria': 'Click to stop following Brittany Chiang'}, {'text': 'Following', 'aria': 'Click to stop following Berkay Orhan'}, {'text': 'Following', 'aria': 'Click to stop following Joe Bull'}, {'text': 'Following', 'aria': 'Click to stop following Joshua Comeau'}, {'text': 'Following', 'aria': 'Click to stop following Ali Paşa Yıldırım'}, {'text': 'Following', 'aria': 'Click to stop following Onyenaturuchi Ijioma'}, {'text': 'Following', 'aria': 'Click to stop following Emre Kose'}, {'text': 'Following', 'aria': 'Click to stop following Alper Mutlu TOKSOZ'}, {'text': 'Show more results', 'aria': ''}]}
+[2026-05-12 21:00:16] DIAG: {'buttonCount': 23, 'sample': [{'text': 'Following', 'aria': ''}, {'text': 'Followers', 'aria': ''}, {'text': 'Following', 'aria': 'Click to stop following Şeyma Yılmaz Yeşil'}, {'text': 'Following', 'aria': 'Click to stop following Muhammed Yıldız'}, {'text': 'Following', 'aria': 'Click to stop following Brittany Chiang'}, {'text': 'Following', 'aria': 'Click to stop following Berkay Orhan'}, {'text': 'Following', 'aria': 'Click to stop following Joe Bull'}, {'text': 'Following', 'aria': 'Click to stop following Joshua Comeau'}, {'text': 'Following', 'aria': 'Click to stop following Ali Paşa Yıldırım'}, {'text': 'Following', 'aria': 'Click to stop following Onyenaturuchi Ijioma'}, {'text': 'Following', 'aria': 'Click to stop following Emre Kose'}, {'text': 'Following', 'aria': 'Click to stop following Alper Mutlu TOKSOZ'}, {'text': 'Following', 'aria': 'Click to stop following Ahmet Suat PINAR'}, {'text': 'Following', 'aria': 'Click to stop following Sena Şeremet'}, {'text': 'Following', 'aria': 'Click to stop following Fatih ATLI'}, {'text': 'Following', 'aria': 'Click to stop following Hira Ekin Sürcan'}, {'text': 'Following', 'aria': 'Click to stop following Dr. Sonya Butler'}, {'text': 'Following', 'aria': 'Click to stop following Gözde Koçer'}, {'text': 'Following', 'aria': 'Click to stop following Aydın Burak Kuyumcu'}, {'text': 'Following', 'aria': 'Click to stop following Dan St. Peter'}]}
+[2026-05-12 21:00:17] DIAG: {'buttonCount': 33, 'sample': [{'text': 'Following', 'aria': ''}, {'text': 'Followers', 'aria': ''}, {'text': 'Following', 'aria': 'Click to stop following Şeyma Yılmaz Yeşil'}, {'text': 'Following', 'aria': 'Click to stop following Muhammed Yıldız'}, {'text': 'Following', 'aria': 'Click to stop following Brittany Chiang'}, {'text': 'Following', 'aria': 'Click to stop following Berkay Orhan'}, {'text': 'Following', 'aria': 'Click to stop following Joe Bull'}, {'text': 'Following', 'aria': 'Click to stop following Joshua Comeau'}, {'text': 'Following', 'aria': 'Click to stop following Ali Paşa Yıldırım'}, {'text': 'Following', 'aria': 'Click to stop following Onyenaturuchi Ijioma'}, {'text': 'Following', 'aria': 'Click to stop following Emre Kose'}, {'text': 'Following', 'aria': 'Click to stop following Alper Mutlu TOKSOZ'}, {'text': 'Following', 'aria': 'Click to stop following Ahmet Suat PINAR'}, {'text': 'Following', 'aria': 'Click to stop following Sena Şeremet'}, {'text': 'Following', 'aria': 'Click to stop following Fatih ATLI'}, {'text': 'Following', 'aria': 'Click to stop following Hira Ekin Sürcan'}, {'text': 'Following', 'aria': 'Click to stop following Dr. Sonya Butler'}, {'text': 'Following', 'aria': 'Click to stop following Gözde Koçer'}, {'text': 'Following', 'aria': 'Click to stop following Aydın Burak Kuyumcu'}, {'text': 'Following', 'aria': 'Click to stop following Dan St. Peter'}]}
+[2026-05-12 21:00:17] DIAG: {'buttonCount': 43, 'sample': [{'text': 'Following', 'aria': ''}, {'text': 'Followers', 'aria': ''}, {'text': 'Following', 'aria': 'Click to stop following Şeyma Yılmaz Yeşil'}, {'text': 'Following', 'aria': 'Click to stop following Muhammed Yıldız'}, {'text': 'Following', 'aria': 'Click to stop following Brittany Chiang'}, {'text': 'Following', 'aria': 'Click to stop following Berkay Orhan'}, {'text': 'Following', 'aria': 'Click to stop following Joe Bull'}, {'text': 'Following', 'aria': 'Click to stop following Joshua Comeau'}, {'text': 'Following', 'aria': 'Click to stop following Ali Paşa Yıldırım'}, {'text': 'Following', 'aria': 'Click to stop following Onyenaturuchi Ijioma'}, {'text': 'Following', 'aria': 'Click to stop following Emre Kose'}, {'text': 'Following', 'aria': 'Click to stop following Alper Mutlu TOKSOZ'}, {'text': 'Following', 'aria': 'Click to stop following Ahmet Suat PINAR'}, {'text': 'Following', 'aria': 'Click to stop following Sena Şeremet'}, {'text': 'Following', 'aria': 'Click to stop following Fatih ATLI'}, {'text': 'Following', 'aria': 'Click to stop following Hira Ekin Sürcan'}, {'text': 'Following', 'aria': 'Click to stop following Dr. Sonya Butler'}, {'text': 'Following', 'aria': 'Click to stop following Gözde Koçer'}, {'text': 'Following', 'aria': 'Click to stop following Aydın Burak Kuyumcu'}, {'text': 'Following', 'aria': 'Click to stop following Dan St. Peter'}]}
+[2026-05-12 21:00:18] DIAG: {'buttonCount': 53, 'sample': [{'text': 'Following', 'aria': ''}, {'text': 'Followers', 'aria': ''}, {'text': 'Following', 'aria': 'Click to stop following Şeyma Yılmaz Yeşil'}, {'text': 'Following', 'aria': 'Click to stop following Muhammed Yıldız'}, {'text': 'Following', 'aria': 'Click to stop following Brittany Chiang'}, {'text': 'Following', 'aria': 'Click to stop following Berkay Orhan'}, {'text': 'Following', 'aria': 'Click to stop following Joe Bull'}, {'text': 'Following', 'aria': 'Click to stop following Joshua Comeau'}, {'text': 'Following', 'aria': 'Click to stop following Ali Paşa Yıldırım'}, {'text': 'Following', 'aria': 'Click to stop following Onyenaturuchi Ijioma'}, {'text': 'Following', 'aria': 'Click to stop following Emre Kose'}, {'text': 'Following', 'aria': 'Click to stop following Alper Mutlu TOKSOZ'}, {'text': 'Following', 'aria': 'Click to stop following Ahmet Suat PINAR'}, {'text': 'Following', 'aria': 'Click to stop following Sena Şeremet'}, {'text': 'Following', 'aria': 'Click to stop following Fatih ATLI'}, {'text': 'Following', 'aria': 'Click to stop following Hira Ekin Sürcan'}, {'text': 'Following', 'aria': 'Click to stop following Dr. Sonya Butler'}, {'text': 'Following', 'aria': 'Click to stop following Gözde Koçer'}, {'text': 'Following', 'aria': 'Click to stop following Aydın Burak Kuyumcu'}, {'text': 'Following', 'aria': 'Click to stop following Dan St. Peter'}]}
+[2026-05-12 21:00:19] DIAG: {'buttonCount': 63, 'sample': [{'text': 'Following', 'aria': ''}, {'text': 'Followers', 'aria': ''}, {'text': 'Following', 'aria': 'Click to stop following Şeyma Yılmaz Yeşil'}, {'text': 'Following', 'aria': 'Click to stop following Muhammed Yıldız'}, {'text': 'Following', 'aria': 'Click to stop following Brittany Chiang'}, {'text': 'Following', 'aria': 'Click to stop following Berkay Orhan'}, {'text': 'Following', 'aria': 'Click to stop following Joe Bull'}, {'text': 'Following', 'aria': 'Click to stop following Joshua Comeau'}, {'text': 'Following', 'aria': 'Click to stop following Ali Paşa Yıldırım'}, {'text': 'Following', 'aria': 'Click to stop following Onyenaturuchi Ijioma'}, {'text': 'Following', 'aria': 'Click to stop following Emre Kose'}, {'text': 'Following', 'aria': 'Click to stop following Alper Mutlu TOKSOZ'}, {'text': 'Following', 'aria': 'Click to stop following Ahmet Suat PINAR'}, {'text': 'Following', 'aria': 'Click to stop following Sena Şeremet'}, {'text': 'Following', 'aria': 'Click to stop following Fatih ATLI'}, {'text': 'Following', 'aria': 'Click to stop following Hira Ekin Sürcan'}, {'text': 'Following', 'aria': 'Click to stop following Dr. Sonya Butler'}, {'text': 'Following', 'aria': 'Click to stop following Gözde Koçer'}, {'text': 'Following', 'aria': 'Click to stop following Aydın Burak Kuyumcu'}, {'text': 'Following', 'aria': 'Click to stop following Dan St. Peter'}]}
+[2026-05-12 21:00:20] DIAG: {'buttonCount': 71, 'sample': [{'text': 'Following', 'aria': ''}, {'text': 'Followers', 'aria': ''}, {'text': 'Following', 'aria': 'Click to stop following Şeyma Yılmaz Yeşil'}, {'text': 'Following', 'aria': 'Click to stop following Muhammed Yıldız'}, {'text': 'Following', 'aria': 'Click to stop following Brittany Chiang'}, {'text': 'Following', 'aria': 'Click to stop following Berkay Orhan'}, {'text': 'Following', 'aria': 'Click to stop following Joe Bull'}, {'text': 'Following', 'aria': 'Click to stop following Joshua Comeau'}, {'text': 'Following', 'aria': 'Click to stop following Ali Paşa Yıldırım'}, {'text': 'Following', 'aria': 'Click to stop following Onyenaturuchi Ijioma'}, {'text': 'Following', 'aria': 'Click to stop following Emre Kose'}, {'text': 'Following', 'aria': 'Click to stop following Alper Mutlu TOKSOZ'}, {'text': 'Following', 'aria': 'Click to stop following Ahmet Suat PINAR'}, {'text': 'Following', 'aria': 'Click to stop following Sena Şeremet'}, {'text': 'Following', 'aria': 'Click to stop following Fatih ATLI'}, {'text': 'Following', 'aria': 'Click to stop following Hira Ekin Sürcan'}, {'text': 'Following', 'aria': 'Click to stop following Dr. Sonya Butler'}, {'text': 'Following', 'aria': 'Click to stop following Gözde Koçer'}, {'text': 'Following', 'aria': 'Click to stop following Aydın Burak Kuyumcu'}, {'text': 'Following', 'aria': 'Click to stop following Dan St. Peter'}]}
+[2026-05-12 21:00:21] DIAG: {'buttonCount': 71, 'sample': [{'text': 'Following', 'aria': ''}, {'text': 'Followers', 'aria': ''}, {'text': 'Following', 'aria': 'Click to stop following Şeyma Yılmaz Yeşil'}, {'text': 'Following', 'aria': 'Click to stop following Muhammed Yıldız'}, {'text': 'Following', 'aria': 'Click to stop following Brittany Chiang'}, {'text': 'Following', 'aria': 'Click to stop following Berkay Orhan'}, {'text': 'Following', 'aria': 'Click to stop following Joe Bull'}, {'text': 'Following', 'aria': 'Click to stop following Joshua Comeau'}, {'text': 'Following', 'aria': 'Click to stop following Ali Paşa Yıldırım'}, {'text': 'Following', 'aria': 'Click to stop following Onyenaturuchi Ijioma'}, {'text': 'Following', 'aria': 'Click to stop following Emre Kose'}, {'text': 'Following', 'aria': 'Click to stop following Alper Mutlu TOKSOZ'}, {'text': 'Following', 'aria': 'Click to stop following Ahmet Suat PINAR'}, {'text': 'Following', 'aria': 'Click to stop following Sena Şeremet'}, {'text': 'Following', 'aria': 'Click to stop following Fatih ATLI'}, {'text': 'Following', 'aria': 'Click to stop following Hira Ekin Sürcan'}, {'text': 'Following', 'aria': 'Click to stop following Dr. Sonya Butler'}, {'text': 'Following', 'aria': 'Click to stop following Gözde Koçer'}, {'text': 'Following', 'aria': 'Click to stop following Aydın Burak Kuyumcu'}, {'text': 'Following', 'aria': 'Click to stop following Dan St. Peter'}]}
+[2026-05-12 21:00:22] DIAG: {'buttonCount': 71, 'sample': [{'text': 'Following', 'aria': ''}, {'text': 'Followers', 'aria': ''}, {'text': 'Following', 'aria': 'Click to stop following Şeyma Yılmaz Yeşil'}, {'text': 'Following', 'aria': 'Click to stop following Muhammed Yıldız'}, {'text': 'Following', 'aria': 'Click to stop following Brittany Chiang'}, {'text': 'Following', 'aria': 'Click to stop following Berkay Orhan'}, {'text': 'Following', 'aria': 'Click to stop following Joe Bull'}, {'text': 'Following', 'aria': 'Click to stop following Joshua Comeau'}, {'text': 'Following', 'aria': 'Click to stop following Ali Paşa Yıldırım'}, {'text': 'Following', 'aria': 'Click to stop following Onyenaturuchi Ijioma'}, {'text': 'Following', 'aria': 'Click to stop following Emre Kose'}, {'text': 'Following', 'aria': 'Click to stop following Alper Mutlu TOKSOZ'}, {'text': 'Following', 'aria': 'Click to stop following Ahmet Suat PINAR'}, {'text': 'Following', 'aria': 'Click to stop following Sena Şeremet'}, {'text': 'Following', 'aria': 'Click to stop following Fatih ATLI'}, {'text': 'Following', 'aria': 'Click to stop following Hira Ekin Sürcan'}, {'text': 'Following', 'aria': 'Click to stop following Dr. Sonya Butler'}, {'text': 'Following', 'aria': 'Click to stop following Gözde Koçer'}, {'text': 'Following', 'aria': 'Click to stop following Aydın Burak Kuyumcu'}, {'text': 'Following', 'aria': 'Click to stop following Dan St. Peter'}]}
+[2026-05-12 21:00:23] DIAG: {'buttonCount': 71, 'sample': [{'text': 'Following', 'aria': ''}, {'text': 'Followers', 'aria': ''}, {'text': 'Following', 'aria': 'Click to stop following Şeyma Yılmaz Yeşil'}, {'text': 'Following', 'aria': 'Click to stop following Muhammed Yıldız'}, {'text': 'Following', 'aria': 'Click to stop following Brittany Chiang'}, {'text': 'Following', 'aria': 'Click to stop following Berkay Orhan'}, {'text': 'Following', 'aria': 'Click to stop following Joe Bull'}, {'text': 'Following', 'aria': 'Click to stop following Joshua Comeau'}, {'text': 'Following', 'aria': 'Click to stop following Ali Paşa Yıldırım'}, {'text': 'Following', 'aria': 'Click to stop following Onyenaturuchi Ijioma'}, {'text': 'Following', 'aria': 'Click to stop following Emre Kose'}, {'text': 'Following', 'aria': 'Click to stop following Alper Mutlu TOKSOZ'}, {'text': 'Following', 'aria': 'Click to stop following Ahmet Suat PINAR'}, {'text': 'Following', 'aria': 'Click to stop following Sena Şeremet'}, {'text': 'Following', 'aria': 'Click to stop following Fatih ATLI'}, {'text': 'Following', 'aria': 'Click to stop following Hira Ekin Sürcan'}, {'text': 'Following', 'aria': 'Click to stop following Dr. Sonya Butler'}, {'text': 'Following', 'aria': 'Click to stop following Gözde Koçer'}, {'text': 'Following', 'aria': 'Click to stop following Aydın Burak Kuyumcu'}, {'text': 'Following', 'aria': 'Click to stop following Dan St. Peter'}]}
+[2026-05-12 21:00:24] done. processed=0 unfollowed=0 kept=0
+[2026-05-12 21:02:46] === session start, log file: /home/x/Desktop/blog-site/yldzozgur/scripts/unfollowed_pages.log ===
+[2026-05-12 21:02:46] allow-list (kept): ['ameza', 'mindful']
+[2026-05-12 21:03:19] following page loaded
+[2026-05-12 21:03:19] DIAG: {'buttonCount': 21, 'sample': [{'text': 'Following', 'aria': 'Click to stop following MindfulTime'}, {'text': 'Following', 'aria': 'Click to stop following Ameza Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Hyundai Motor Company'}, {'text': 'Following', 'aria': 'Click to stop following principal33'}, {'text': 'Following', 'aria': 'Click to stop following Insource Services, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Salient'}, {'text': 'Following', 'aria': 'Click to stop following XRHealth'}, {'text': 'Following', 'aria': 'Click to stop following Modern Dental Laboratory USA'}, {'text': 'Following', 'aria': 'Click to stop following Visionaire Partners'}, {'text': 'Following', 'aria': 'Click to stop following Foxys IT Services'}, {'text': 'Following', 'aria': 'Click to stop following Karanix'}, {'text': 'Following', 'aria': 'Click to stop following Prodware Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Merge IT'}, {'text': 'Following', 'aria': 'Click to stop following ForTec Medical, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Security 101'}, {'text': 'Following', 'aria': 'Click to stop following MResult'}, {'text': 'Following', 'aria': 'Click to stop following Sun Gro Horticulture'}, {'text': 'Following', 'aria': 'Click to stop following Imtra'}, {'text': 'Following', 'aria': 'Click to stop following Summit Advantage'}, {'text': 'Following', 'aria': 'Click to stop following Liberty'}]}
+[2026-05-12 21:03:20] DIAG: {'buttonCount': 31, 'sample': [{'text': 'Following', 'aria': 'Click to stop following MindfulTime'}, {'text': 'Following', 'aria': 'Click to stop following Ameza Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Hyundai Motor Company'}, {'text': 'Following', 'aria': 'Click to stop following principal33'}, {'text': 'Following', 'aria': 'Click to stop following Insource Services, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Salient'}, {'text': 'Following', 'aria': 'Click to stop following XRHealth'}, {'text': 'Following', 'aria': 'Click to stop following Modern Dental Laboratory USA'}, {'text': 'Following', 'aria': 'Click to stop following Visionaire Partners'}, {'text': 'Following', 'aria': 'Click to stop following Foxys IT Services'}, {'text': 'Following', 'aria': 'Click to stop following Karanix'}, {'text': 'Following', 'aria': 'Click to stop following Prodware Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Merge IT'}, {'text': 'Following', 'aria': 'Click to stop following ForTec Medical, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Security 101'}, {'text': 'Following', 'aria': 'Click to stop following MResult'}, {'text': 'Following', 'aria': 'Click to stop following Sun Gro Horticulture'}, {'text': 'Following', 'aria': 'Click to stop following Imtra'}, {'text': 'Following', 'aria': 'Click to stop following Summit Advantage'}, {'text': 'Following', 'aria': 'Click to stop following Liberty'}]}
+[2026-05-12 21:03:21] DIAG: {'buttonCount': 41, 'sample': [{'text': 'Following', 'aria': 'Click to stop following MindfulTime'}, {'text': 'Following', 'aria': 'Click to stop following Ameza Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Hyundai Motor Company'}, {'text': 'Following', 'aria': 'Click to stop following principal33'}, {'text': 'Following', 'aria': 'Click to stop following Insource Services, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Salient'}, {'text': 'Following', 'aria': 'Click to stop following XRHealth'}, {'text': 'Following', 'aria': 'Click to stop following Modern Dental Laboratory USA'}, {'text': 'Following', 'aria': 'Click to stop following Visionaire Partners'}, {'text': 'Following', 'aria': 'Click to stop following Foxys IT Services'}, {'text': 'Following', 'aria': 'Click to stop following Karanix'}, {'text': 'Following', 'aria': 'Click to stop following Prodware Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Merge IT'}, {'text': 'Following', 'aria': 'Click to stop following ForTec Medical, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Security 101'}, {'text': 'Following', 'aria': 'Click to stop following MResult'}, {'text': 'Following', 'aria': 'Click to stop following Sun Gro Horticulture'}, {'text': 'Following', 'aria': 'Click to stop following Imtra'}, {'text': 'Following', 'aria': 'Click to stop following Summit Advantage'}, {'text': 'Following', 'aria': 'Click to stop following Liberty'}]}
+[2026-05-12 21:03:22] DIAG: {'buttonCount': 51, 'sample': [{'text': 'Following', 'aria': 'Click to stop following MindfulTime'}, {'text': 'Following', 'aria': 'Click to stop following Ameza Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Hyundai Motor Company'}, {'text': 'Following', 'aria': 'Click to stop following principal33'}, {'text': 'Following', 'aria': 'Click to stop following Insource Services, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Salient'}, {'text': 'Following', 'aria': 'Click to stop following XRHealth'}, {'text': 'Following', 'aria': 'Click to stop following Modern Dental Laboratory USA'}, {'text': 'Following', 'aria': 'Click to stop following Visionaire Partners'}, {'text': 'Following', 'aria': 'Click to stop following Foxys IT Services'}, {'text': 'Following', 'aria': 'Click to stop following Karanix'}, {'text': 'Following', 'aria': 'Click to stop following Prodware Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Merge IT'}, {'text': 'Following', 'aria': 'Click to stop following ForTec Medical, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Security 101'}, {'text': 'Following', 'aria': 'Click to stop following MResult'}, {'text': 'Following', 'aria': 'Click to stop following Sun Gro Horticulture'}, {'text': 'Following', 'aria': 'Click to stop following Imtra'}, {'text': 'Following', 'aria': 'Click to stop following Summit Advantage'}, {'text': 'Following', 'aria': 'Click to stop following Liberty'}]}
+[2026-05-12 21:03:22] DIAG: {'buttonCount': 61, 'sample': [{'text': 'Following', 'aria': 'Click to stop following MindfulTime'}, {'text': 'Following', 'aria': 'Click to stop following Ameza Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Hyundai Motor Company'}, {'text': 'Following', 'aria': 'Click to stop following principal33'}, {'text': 'Following', 'aria': 'Click to stop following Insource Services, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Salient'}, {'text': 'Following', 'aria': 'Click to stop following XRHealth'}, {'text': 'Following', 'aria': 'Click to stop following Modern Dental Laboratory USA'}, {'text': 'Following', 'aria': 'Click to stop following Visionaire Partners'}, {'text': 'Following', 'aria': 'Click to stop following Foxys IT Services'}, {'text': 'Following', 'aria': 'Click to stop following Karanix'}, {'text': 'Following', 'aria': 'Click to stop following Prodware Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Merge IT'}, {'text': 'Following', 'aria': 'Click to stop following ForTec Medical, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Security 101'}, {'text': 'Following', 'aria': 'Click to stop following MResult'}, {'text': 'Following', 'aria': 'Click to stop following Sun Gro Horticulture'}, {'text': 'Following', 'aria': 'Click to stop following Imtra'}, {'text': 'Following', 'aria': 'Click to stop following Summit Advantage'}, {'text': 'Following', 'aria': 'Click to stop following Liberty'}]}
+[2026-05-12 21:03:23] DIAG: {'buttonCount': 71, 'sample': [{'text': 'Following', 'aria': 'Click to stop following MindfulTime'}, {'text': 'Following', 'aria': 'Click to stop following Ameza Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Hyundai Motor Company'}, {'text': 'Following', 'aria': 'Click to stop following principal33'}, {'text': 'Following', 'aria': 'Click to stop following Insource Services, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Salient'}, {'text': 'Following', 'aria': 'Click to stop following XRHealth'}, {'text': 'Following', 'aria': 'Click to stop following Modern Dental Laboratory USA'}, {'text': 'Following', 'aria': 'Click to stop following Visionaire Partners'}, {'text': 'Following', 'aria': 'Click to stop following Foxys IT Services'}, {'text': 'Following', 'aria': 'Click to stop following Karanix'}, {'text': 'Following', 'aria': 'Click to stop following Prodware Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Merge IT'}, {'text': 'Following', 'aria': 'Click to stop following ForTec Medical, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Security 101'}, {'text': 'Following', 'aria': 'Click to stop following MResult'}, {'text': 'Following', 'aria': 'Click to stop following Sun Gro Horticulture'}, {'text': 'Following', 'aria': 'Click to stop following Imtra'}, {'text': 'Following', 'aria': 'Click to stop following Summit Advantage'}, {'text': 'Following', 'aria': 'Click to stop following Liberty'}]}
+[2026-05-12 21:03:24] DIAG: {'buttonCount': 81, 'sample': [{'text': 'Following', 'aria': 'Click to stop following MindfulTime'}, {'text': 'Following', 'aria': 'Click to stop following Ameza Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Hyundai Motor Company'}, {'text': 'Following', 'aria': 'Click to stop following principal33'}, {'text': 'Following', 'aria': 'Click to stop following Insource Services, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Salient'}, {'text': 'Following', 'aria': 'Click to stop following XRHealth'}, {'text': 'Following', 'aria': 'Click to stop following Modern Dental Laboratory USA'}, {'text': 'Following', 'aria': 'Click to stop following Visionaire Partners'}, {'text': 'Following', 'aria': 'Click to stop following Foxys IT Services'}, {'text': 'Following', 'aria': 'Click to stop following Karanix'}, {'text': 'Following', 'aria': 'Click to stop following Prodware Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Merge IT'}, {'text': 'Following', 'aria': 'Click to stop following ForTec Medical, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Security 101'}, {'text': 'Following', 'aria': 'Click to stop following MResult'}, {'text': 'Following', 'aria': 'Click to stop following Sun Gro Horticulture'}, {'text': 'Following', 'aria': 'Click to stop following Imtra'}, {'text': 'Following', 'aria': 'Click to stop following Summit Advantage'}, {'text': 'Following', 'aria': 'Click to stop following Liberty'}]}
+[2026-05-12 21:03:25] DIAG: {'buttonCount': 91, 'sample': [{'text': 'Following', 'aria': 'Click to stop following MindfulTime'}, {'text': 'Following', 'aria': 'Click to stop following Ameza Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Hyundai Motor Company'}, {'text': 'Following', 'aria': 'Click to stop following principal33'}, {'text': 'Following', 'aria': 'Click to stop following Insource Services, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Salient'}, {'text': 'Following', 'aria': 'Click to stop following XRHealth'}, {'text': 'Following', 'aria': 'Click to stop following Modern Dental Laboratory USA'}, {'text': 'Following', 'aria': 'Click to stop following Visionaire Partners'}, {'text': 'Following', 'aria': 'Click to stop following Foxys IT Services'}, {'text': 'Following', 'aria': 'Click to stop following Karanix'}, {'text': 'Following', 'aria': 'Click to stop following Prodware Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Merge IT'}, {'text': 'Following', 'aria': 'Click to stop following ForTec Medical, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Security 101'}, {'text': 'Following', 'aria': 'Click to stop following MResult'}, {'text': 'Following', 'aria': 'Click to stop following Sun Gro Horticulture'}, {'text': 'Following', 'aria': 'Click to stop following Imtra'}, {'text': 'Following', 'aria': 'Click to stop following Summit Advantage'}, {'text': 'Following', 'aria': 'Click to stop following Liberty'}]}
+[2026-05-12 21:03:26] DIAG: {'buttonCount': 101, 'sample': [{'text': 'Following', 'aria': 'Click to stop following MindfulTime'}, {'text': 'Following', 'aria': 'Click to stop following Ameza Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Hyundai Motor Company'}, {'text': 'Following', 'aria': 'Click to stop following principal33'}, {'text': 'Following', 'aria': 'Click to stop following Insource Services, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Salient'}, {'text': 'Following', 'aria': 'Click to stop following XRHealth'}, {'text': 'Following', 'aria': 'Click to stop following Modern Dental Laboratory USA'}, {'text': 'Following', 'aria': 'Click to stop following Visionaire Partners'}, {'text': 'Following', 'aria': 'Click to stop following Foxys IT Services'}, {'text': 'Following', 'aria': 'Click to stop following Karanix'}, {'text': 'Following', 'aria': 'Click to stop following Prodware Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Merge IT'}, {'text': 'Following', 'aria': 'Click to stop following ForTec Medical, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Security 101'}, {'text': 'Following', 'aria': 'Click to stop following MResult'}, {'text': 'Following', 'aria': 'Click to stop following Sun Gro Horticulture'}, {'text': 'Following', 'aria': 'Click to stop following Imtra'}, {'text': 'Following', 'aria': 'Click to stop following Summit Advantage'}, {'text': 'Following', 'aria': 'Click to stop following Liberty'}]}
+[2026-05-12 21:03:27] DIAG: {'buttonCount': 111, 'sample': [{'text': 'Following', 'aria': 'Click to stop following MindfulTime'}, {'text': 'Following', 'aria': 'Click to stop following Ameza Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Hyundai Motor Company'}, {'text': 'Following', 'aria': 'Click to stop following principal33'}, {'text': 'Following', 'aria': 'Click to stop following Insource Services, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Salient'}, {'text': 'Following', 'aria': 'Click to stop following XRHealth'}, {'text': 'Following', 'aria': 'Click to stop following Modern Dental Laboratory USA'}, {'text': 'Following', 'aria': 'Click to stop following Visionaire Partners'}, {'text': 'Following', 'aria': 'Click to stop following Foxys IT Services'}, {'text': 'Following', 'aria': 'Click to stop following Karanix'}, {'text': 'Following', 'aria': 'Click to stop following Prodware Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Merge IT'}, {'text': 'Following', 'aria': 'Click to stop following ForTec Medical, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Security 101'}, {'text': 'Following', 'aria': 'Click to stop following MResult'}, {'text': 'Following', 'aria': 'Click to stop following Sun Gro Horticulture'}, {'text': 'Following', 'aria': 'Click to stop following Imtra'}, {'text': 'Following', 'aria': 'Click to stop following Summit Advantage'}, {'text': 'Following', 'aria': 'Click to stop following Liberty'}]}
+[2026-05-12 21:03:28] DIAG: {'buttonCount': 121, 'sample': [{'text': 'Following', 'aria': 'Click to stop following MindfulTime'}, {'text': 'Following', 'aria': 'Click to stop following Ameza Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Hyundai Motor Company'}, {'text': 'Following', 'aria': 'Click to stop following principal33'}, {'text': 'Following', 'aria': 'Click to stop following Insource Services, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Salient'}, {'text': 'Following', 'aria': 'Click to stop following XRHealth'}, {'text': 'Following', 'aria': 'Click to stop following Modern Dental Laboratory USA'}, {'text': 'Following', 'aria': 'Click to stop following Visionaire Partners'}, {'text': 'Following', 'aria': 'Click to stop following Foxys IT Services'}, {'text': 'Following', 'aria': 'Click to stop following Karanix'}, {'text': 'Following', 'aria': 'Click to stop following Prodware Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Merge IT'}, {'text': 'Following', 'aria': 'Click to stop following ForTec Medical, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Security 101'}, {'text': 'Following', 'aria': 'Click to stop following MResult'}, {'text': 'Following', 'aria': 'Click to stop following Sun Gro Horticulture'}, {'text': 'Following', 'aria': 'Click to stop following Imtra'}, {'text': 'Following', 'aria': 'Click to stop following Summit Advantage'}, {'text': 'Following', 'aria': 'Click to stop following Liberty'}]}
+[2026-05-12 21:03:29] DIAG: {'buttonCount': 131, 'sample': [{'text': 'Following', 'aria': 'Click to stop following MindfulTime'}, {'text': 'Following', 'aria': 'Click to stop following Ameza Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Hyundai Motor Company'}, {'text': 'Following', 'aria': 'Click to stop following principal33'}, {'text': 'Following', 'aria': 'Click to stop following Insource Services, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Salient'}, {'text': 'Following', 'aria': 'Click to stop following XRHealth'}, {'text': 'Following', 'aria': 'Click to stop following Modern Dental Laboratory USA'}, {'text': 'Following', 'aria': 'Click to stop following Visionaire Partners'}, {'text': 'Following', 'aria': 'Click to stop following Foxys IT Services'}, {'text': 'Following', 'aria': 'Click to stop following Karanix'}, {'text': 'Following', 'aria': 'Click to stop following Prodware Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Merge IT'}, {'text': 'Following', 'aria': 'Click to stop following ForTec Medical, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Security 101'}, {'text': 'Following', 'aria': 'Click to stop following MResult'}, {'text': 'Following', 'aria': 'Click to stop following Sun Gro Horticulture'}, {'text': 'Following', 'aria': 'Click to stop following Imtra'}, {'text': 'Following', 'aria': 'Click to stop following Summit Advantage'}, {'text': 'Following', 'aria': 'Click to stop following Liberty'}]}
+[2026-05-12 21:03:30] DIAG: {'buttonCount': 141, 'sample': [{'text': 'Following', 'aria': 'Click to stop following MindfulTime'}, {'text': 'Following', 'aria': 'Click to stop following Ameza Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Hyundai Motor Company'}, {'text': 'Following', 'aria': 'Click to stop following principal33'}, {'text': 'Following', 'aria': 'Click to stop following Insource Services, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Salient'}, {'text': 'Following', 'aria': 'Click to stop following XRHealth'}, {'text': 'Following', 'aria': 'Click to stop following Modern Dental Laboratory USA'}, {'text': 'Following', 'aria': 'Click to stop following Visionaire Partners'}, {'text': 'Following', 'aria': 'Click to stop following Foxys IT Services'}, {'text': 'Following', 'aria': 'Click to stop following Karanix'}, {'text': 'Following', 'aria': 'Click to stop following Prodware Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Merge IT'}, {'text': 'Following', 'aria': 'Click to stop following ForTec Medical, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Security 101'}, {'text': 'Following', 'aria': 'Click to stop following MResult'}, {'text': 'Following', 'aria': 'Click to stop following Sun Gro Horticulture'}, {'text': 'Following', 'aria': 'Click to stop following Imtra'}, {'text': 'Following', 'aria': 'Click to stop following Summit Advantage'}, {'text': 'Following', 'aria': 'Click to stop following Liberty'}]}
+[2026-05-12 21:03:31] DIAG: {'buttonCount': 151, 'sample': [{'text': 'Following', 'aria': 'Click to stop following MindfulTime'}, {'text': 'Following', 'aria': 'Click to stop following Ameza Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Hyundai Motor Company'}, {'text': 'Following', 'aria': 'Click to stop following principal33'}, {'text': 'Following', 'aria': 'Click to stop following Insource Services, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Salient'}, {'text': 'Following', 'aria': 'Click to stop following XRHealth'}, {'text': 'Following', 'aria': 'Click to stop following Modern Dental Laboratory USA'}, {'text': 'Following', 'aria': 'Click to stop following Visionaire Partners'}, {'text': 'Following', 'aria': 'Click to stop following Foxys IT Services'}, {'text': 'Following', 'aria': 'Click to stop following Karanix'}, {'text': 'Following', 'aria': 'Click to stop following Prodware Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Merge IT'}, {'text': 'Following', 'aria': 'Click to stop following ForTec Medical, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Security 101'}, {'text': 'Following', 'aria': 'Click to stop following MResult'}, {'text': 'Following', 'aria': 'Click to stop following Sun Gro Horticulture'}, {'text': 'Following', 'aria': 'Click to stop following Imtra'}, {'text': 'Following', 'aria': 'Click to stop following Summit Advantage'}, {'text': 'Following', 'aria': 'Click to stop following Liberty'}]}
+[2026-05-12 21:03:32] DIAG: {'buttonCount': 161, 'sample': [{'text': 'Following', 'aria': 'Click to stop following MindfulTime'}, {'text': 'Following', 'aria': 'Click to stop following Ameza Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Hyundai Motor Company'}, {'text': 'Following', 'aria': 'Click to stop following principal33'}, {'text': 'Following', 'aria': 'Click to stop following Insource Services, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Salient'}, {'text': 'Following', 'aria': 'Click to stop following XRHealth'}, {'text': 'Following', 'aria': 'Click to stop following Modern Dental Laboratory USA'}, {'text': 'Following', 'aria': 'Click to stop following Visionaire Partners'}, {'text': 'Following', 'aria': 'Click to stop following Foxys IT Services'}, {'text': 'Following', 'aria': 'Click to stop following Karanix'}, {'text': 'Following', 'aria': 'Click to stop following Prodware Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Merge IT'}, {'text': 'Following', 'aria': 'Click to stop following ForTec Medical, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Security 101'}, {'text': 'Following', 'aria': 'Click to stop following MResult'}, {'text': 'Following', 'aria': 'Click to stop following Sun Gro Horticulture'}, {'text': 'Following', 'aria': 'Click to stop following Imtra'}, {'text': 'Following', 'aria': 'Click to stop following Summit Advantage'}, {'text': 'Following', 'aria': 'Click to stop following Liberty'}]}
+[2026-05-12 21:03:32] DIAG: {'buttonCount': 11, 'sample': [{'text': 'Skip to search', 'aria': ''}, {'text': 'Skip to main content', 'aria': ''}, {'text': 'Keyboard shortcuts', 'aria': ''}, {'text': 'Close jump menu', 'aria': ''}, {'text': 'Search', 'aria': 'Click to start a search'}, {'text': 'Me', 'aria': ''}, {'text': 'For Business', 'aria': ''}, {'text': 'Messaging\nYou are on the messaging overl', 'aria': ''}, {'text': '', 'aria': ''}, {'text': 'Compose message', 'aria': ''}, {'text': 'You are on the messaging overlay. Press ', 'aria': ''}]}
+[2026-05-12 21:03:33] DIAG: {'buttonCount': 30, 'sample': [{'text': 'Subscribed to page notifications from pe', 'aria': ''}, {'text': 'Message', 'aria': 'Message BOND'}, {'text': 'Following', 'aria': 'Following'}, {'text': '', 'aria': ''}, {'text': 'All', 'aria': ''}, {'text': 'Images', 'aria': ''}, {'text': 'Videos', 'aria': ''}, {'text': 'Articles', 'aria': ''}, {'text': 'Documents', 'aria': ''}, {'text': 'Sort by:\xa0\nTop', 'aria': ''}, {'text': '', 'aria': 'Open control menu for post by BOND'}, {'text': 'Activate to view larger image,', 'aria': ''}, {'text': '74', 'aria': '74 reactions'}, {'text': '8 comments', 'aria': '8 comments on BOND’s post'}, {'text': 'Like', 'aria': 'React Like'}, {'text': '', 'aria': 'Open reactions menu'}, {'text': 'Comment', 'aria': 'Comment'}, {'text': 'Repost', 'aria': ''}, {'text': 'Send', 'aria': 'Send in a private message'}, {'text': '', 'aria': 'Open control menu'}]}
+[2026-05-12 21:03:34] DIAG: {'buttonCount': 94, 'sample': [{'text': 'Subscribed to page notifications from pe', 'aria': ''}, {'text': 'Message', 'aria': 'Message BOND'}, {'text': 'Following', 'aria': 'Following'}, {'text': '', 'aria': ''}, {'text': 'All', 'aria': ''}, {'text': 'Images', 'aria': ''}, {'text': 'Videos', 'aria': ''}, {'text': 'Articles', 'aria': ''}, {'text': 'Documents', 'aria': ''}, {'text': 'Sort by:\xa0\nTop', 'aria': ''}, {'text': '', 'aria': 'Open control menu for post by BOND'}, {'text': 'Activate to view larger image,', 'aria': ''}, {'text': '74', 'aria': '74 reactions'}, {'text': '8 comments', 'aria': '8 comments on BOND’s post'}, {'text': 'Like', 'aria': 'React Like'}, {'text': '', 'aria': 'Open reactions menu'}, {'text': 'Comment', 'aria': 'Comment'}, {'text': 'Repost', 'aria': ''}, {'text': 'Send', 'aria': 'Send in a private message'}, {'text': '', 'aria': 'Open control menu'}]}
+[2026-05-12 21:03:35] DIAG: {'buttonCount': 170, 'sample': [{'text': 'Subscribed to page notifications from pe', 'aria': ''}, {'text': 'Message', 'aria': 'Message BOND'}, {'text': 'Following', 'aria': 'Following'}, {'text': '', 'aria': ''}, {'text': 'All', 'aria': ''}, {'text': 'Images', 'aria': ''}, {'text': 'Videos', 'aria': ''}, {'text': 'Articles', 'aria': ''}, {'text': 'Documents', 'aria': ''}, {'text': 'Sort by:\xa0\nTop', 'aria': ''}, {'text': '', 'aria': 'Open control menu for post by BOND'}, {'text': 'Activate to view larger image,', 'aria': ''}, {'text': '74', 'aria': '74 reactions'}, {'text': '8 comments', 'aria': '8 comments on BOND’s post'}, {'text': 'Like', 'aria': 'React Like'}, {'text': '', 'aria': 'Open reactions menu'}, {'text': 'Comment', 'aria': 'Comment'}, {'text': 'Repost', 'aria': ''}, {'text': 'Send', 'aria': 'Send in a private message'}, {'text': '', 'aria': 'Open control menu'}]}
+[2026-05-12 21:03:36] DIAG: {'buttonCount': 264, 'sample': [{'text': 'Subscribed to page notifications from pe', 'aria': ''}, {'text': 'Message', 'aria': 'Message BOND'}, {'text': 'Following', 'aria': 'Following'}, {'text': '', 'aria': ''}, {'text': 'All', 'aria': ''}, {'text': 'Images', 'aria': ''}, {'text': 'Videos', 'aria': ''}, {'text': 'Articles', 'aria': ''}, {'text': 'Documents', 'aria': ''}, {'text': 'Sort by:\xa0\nTop', 'aria': ''}, {'text': '', 'aria': 'Open control menu for post by BOND'}, {'text': 'Activate to view larger image,', 'aria': ''}, {'text': '74', 'aria': '74 reactions'}, {'text': '8 comments', 'aria': '8 comments on BOND’s post'}, {'text': 'Like', 'aria': 'React Like'}, {'text': '', 'aria': 'Open reactions menu'}, {'text': 'Comment', 'aria': 'Comment'}, {'text': 'Repost', 'aria': ''}, {'text': 'Send', 'aria': 'Send in a private message'}, {'text': '', 'aria': 'Open control menu'}]}
+[2026-05-12 21:03:37] DIAG: {'buttonCount': 319, 'sample': [{'text': 'Subscribed to page notifications from pe', 'aria': ''}, {'text': 'Message', 'aria': 'Message BOND'}, {'text': 'Following', 'aria': 'Following'}, {'text': '', 'aria': ''}, {'text': 'All', 'aria': ''}, {'text': 'Images', 'aria': ''}, {'text': 'Videos', 'aria': ''}, {'text': 'Articles', 'aria': ''}, {'text': 'Documents', 'aria': ''}, {'text': 'Sort by:\xa0\nTop', 'aria': ''}, {'text': '', 'aria': 'Open control menu for post by BOND'}, {'text': 'Activate to view larger image,', 'aria': ''}, {'text': '74', 'aria': '74 reactions'}, {'text': '8 comments', 'aria': '8 comments on BOND’s post'}, {'text': 'Like', 'aria': 'React Like'}, {'text': '', 'aria': 'Open reactions menu'}, {'text': 'Comment', 'aria': 'Comment'}, {'text': 'Repost', 'aria': ''}, {'text': 'Send', 'aria': 'Send in a private message'}, {'text': '', 'aria': 'Open control menu'}]}
+[2026-05-12 21:03:38] DIAG: {'buttonCount': 407, 'sample': [{'text': 'Subscribed to page notifications from pe', 'aria': ''}, {'text': 'Message', 'aria': 'Message BOND'}, {'text': 'Following', 'aria': 'Following'}, {'text': '', 'aria': ''}, {'text': 'All', 'aria': ''}, {'text': 'Images', 'aria': ''}, {'text': 'Videos', 'aria': ''}, {'text': 'Articles', 'aria': ''}, {'text': 'Documents', 'aria': ''}, {'text': 'Sort by:\xa0\nTop', 'aria': ''}, {'text': '', 'aria': 'Open control menu for post by BOND'}, {'text': 'Activate to view larger image,', 'aria': ''}, {'text': '74', 'aria': '74 reactions'}, {'text': '8 comments', 'aria': '8 comments on BOND’s post'}, {'text': 'Like', 'aria': 'React Like'}, {'text': '', 'aria': 'Open reactions menu'}, {'text': 'Comment', 'aria': 'Comment'}, {'text': 'Repost', 'aria': ''}, {'text': 'Send', 'aria': 'Send in a private message'}, {'text': '', 'aria': 'Open control menu'}]}
+[2026-05-12 21:03:39] DIAG: {'buttonCount': 10, 'sample': [{'text': 'Following', 'aria': 'Click to stop following MindfulTime'}, {'text': 'Following', 'aria': 'Click to stop following Ameza Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Hyundai Motor Company'}, {'text': 'Following', 'aria': 'Click to stop following principal33'}, {'text': 'Following', 'aria': 'Click to stop following Insource Services, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Salient'}, {'text': 'Following', 'aria': 'Click to stop following XRHealth'}, {'text': 'Following', 'aria': 'Click to stop following Modern Dental Laboratory USA'}, {'text': 'Following', 'aria': 'Click to stop following Visionaire Partners'}, {'text': 'Following', 'aria': 'Click to stop following Foxys IT Services'}]}
+[2026-05-12 21:03:40] DIAG: {'buttonCount': 21, 'sample': [{'text': 'Following', 'aria': 'Click to stop following MindfulTime'}, {'text': 'Following', 'aria': 'Click to stop following Ameza Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Hyundai Motor Company'}, {'text': 'Following', 'aria': 'Click to stop following principal33'}, {'text': 'Following', 'aria': 'Click to stop following Insource Services, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Salient'}, {'text': 'Following', 'aria': 'Click to stop following XRHealth'}, {'text': 'Following', 'aria': 'Click to stop following Modern Dental Laboratory USA'}, {'text': 'Following', 'aria': 'Click to stop following Visionaire Partners'}, {'text': 'Following', 'aria': 'Click to stop following Foxys IT Services'}, {'text': 'Following', 'aria': 'Click to stop following Karanix'}, {'text': 'Following', 'aria': 'Click to stop following Prodware Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Merge IT'}, {'text': 'Following', 'aria': 'Click to stop following ForTec Medical, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Security 101'}, {'text': 'Following', 'aria': 'Click to stop following MResult'}, {'text': 'Following', 'aria': 'Click to stop following Sun Gro Horticulture'}, {'text': 'Following', 'aria': 'Click to stop following Imtra'}, {'text': 'Following', 'aria': 'Click to stop following Summit Advantage'}, {'text': 'Following', 'aria': 'Click to stop following Liberty'}]}
+[2026-05-12 21:03:41] DIAG: {'buttonCount': 31, 'sample': [{'text': 'Following', 'aria': 'Click to stop following MindfulTime'}, {'text': 'Following', 'aria': 'Click to stop following Ameza Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Hyundai Motor Company'}, {'text': 'Following', 'aria': 'Click to stop following principal33'}, {'text': 'Following', 'aria': 'Click to stop following Insource Services, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Salient'}, {'text': 'Following', 'aria': 'Click to stop following XRHealth'}, {'text': 'Following', 'aria': 'Click to stop following Modern Dental Laboratory USA'}, {'text': 'Following', 'aria': 'Click to stop following Visionaire Partners'}, {'text': 'Following', 'aria': 'Click to stop following Foxys IT Services'}, {'text': 'Following', 'aria': 'Click to stop following Karanix'}, {'text': 'Following', 'aria': 'Click to stop following Prodware Solutions'}, {'text': 'Following', 'aria': 'Click to stop following Merge IT'}, {'text': 'Following', 'aria': 'Click to stop following ForTec Medical, Inc.'}, {'text': 'Following', 'aria': 'Click to stop following Security 101'}, {'text': 'Following', 'aria': 'Click to stop following MResult'}, {'text': 'Following', 'aria': 'Click to stop following Sun Gro Horticulture'}, {'text': 'Following', 'aria': 'Click to stop following Imtra'}, {'text': 'Following', 'aria': 'Click to stop following Summit Advantage'}, {'text': 'Following', 'aria': 'Click to stop following Liberty'}]}
+[2026-05-12 21:05:03] === session start, log file: /home/x/Desktop/blog-site/yldzozgur/scripts/unfollowed_pages.log ===
+[2026-05-12 21:05:03] allow-list (kept): ['ameza', 'mindful']
+[2026-05-12 21:05:26] following page loaded
+[2026-05-12 21:05:26] KEEP [1]: MindfulTime
+[2026-05-12 21:05:26] KEEP [2]: Ameza Solutions
+[2026-05-12 21:05:26] UNFOLLOW [3]: Hyundai Motor Company
+[2026-05-12 21:05:26] DONE (1): Hyundai Motor Company
+[2026-05-12 21:05:27] UNFOLLOW [4]: principal33
+[2026-05-12 21:05:27] DONE (2): principal33
+[2026-05-12 21:05:28] UNFOLLOW [5]: Insource Services, Inc.
+[2026-05-12 21:05:28] DONE (3): Insource Services, Inc.
+[2026-05-12 21:05:29] UNFOLLOW [6]: Salient
+[2026-05-12 21:05:29] DONE (4): Salient
+[2026-05-12 21:05:30] UNFOLLOW [7]: XRHealth
+[2026-05-12 21:05:30] DONE (5): XRHealth
+[2026-05-12 21:05:31] UNFOLLOW [8]: Modern Dental Laboratory USA
+[2026-05-12 21:05:31] DONE (6): Modern Dental Laboratory USA
+[2026-05-12 21:05:32] UNFOLLOW [9]: Visionaire Partners
+[2026-05-12 21:05:32] DONE (7): Visionaire Partners
+[2026-05-12 21:05:33] UNFOLLOW [10]: Foxys IT Services
+[2026-05-12 21:05:33] DONE (8): Foxys IT Services
+[2026-05-12 21:05:34] UNFOLLOW [11]: Karanix
+[2026-05-12 21:05:34] DONE (9): Karanix
+[2026-05-12 21:05:35] UNFOLLOW [12]: Prodware Solutions
+[2026-05-12 21:05:35] DONE (10): Prodware Solutions
+[2026-05-12 21:05:36] UNFOLLOW [13]: Merge IT
+[2026-05-12 21:05:36] DONE (11): Merge IT
+[2026-05-12 21:05:37] UNFOLLOW [14]: ForTec Medical, Inc.
+[2026-05-12 21:05:37] DONE (12): ForTec Medical, Inc.
+[2026-05-12 21:05:38] UNFOLLOW [15]: Security 101
+[2026-05-12 21:05:38] DONE (13): Security 101
+[2026-05-12 21:05:39] UNFOLLOW [16]: MResult
+[2026-05-12 21:05:39] DONE (14): MResult
+[2026-05-12 21:05:40] UNFOLLOW [17]: Sun Gro Horticulture
+[2026-05-12 21:05:40] DONE (15): Sun Gro Horticulture
+[2026-05-12 21:05:41] UNFOLLOW [18]: Imtra
+[2026-05-12 21:05:41] DONE (16): Imtra
+[2026-05-12 21:05:42] UNFOLLOW [19]: Summit Advantage
+[2026-05-12 21:05:42] DONE (17): Summit Advantage
+[2026-05-12 21:05:43] UNFOLLOW [20]: Liberty
+[2026-05-12 21:05:44] DONE (18): Liberty
+[2026-05-12 21:05:45] UNFOLLOW [21]: Acara Solutions, An Aleron Company
+[2026-05-12 21:05:45] DONE (19): Acara Solutions, An Aleron Company
+[2026-05-12 21:05:46] UNFOLLOW [22]: Freelance Insider
+[2026-05-12 21:05:47] DONE (20): Freelance Insider
+[2026-05-12 21:05:48] UNFOLLOW [23]: Medasource
+[2026-05-12 21:05:48] DONE (21): Medasource
+[2026-05-12 21:05:48] UNFOLLOW [24]: F2Onsite
+[2026-05-12 21:05:49] DONE (22): F2Onsite
+[2026-05-12 21:05:50] UNFOLLOW [25]: ECLARO
+[2026-05-12 21:05:50] DONE (23): ECLARO
+[2026-05-12 21:05:51] UNFOLLOW [26]: First Advantage
+[2026-05-12 21:05:51] DONE (24): First Advantage
+[2026-05-12 21:05:52] UNFOLLOW [27]: WinnCompanies
+[2026-05-12 21:05:52] DONE (25): WinnCompanies
+[2026-05-12 21:05:53] UNFOLLOW [28]: Nouria
+[2026-05-12 21:05:53] DONE (26): Nouria
+[2026-05-12 21:05:54] UNFOLLOW [29]: ScaleDesk
+[2026-05-12 21:05:54] DONE (27): ScaleDesk
+[2026-05-12 21:05:55] UNFOLLOW [30]: MDAEdge
+[2026-05-12 21:05:55] DONE (28): MDAEdge
+[2026-05-12 21:05:56] UNFOLLOW [31]: Metasys Technologies
+[2026-05-12 21:05:56] DONE (29): Metasys Technologies
+[2026-05-12 21:05:57] UNFOLLOW [32]: TÜV SÜD
+[2026-05-12 21:05:57] DONE (30): TÜV SÜD
+[2026-05-12 21:05:58] UNFOLLOW [33]: BioAgilytix
+[2026-05-12 21:05:58] DONE (31): BioAgilytix
+[2026-05-12 21:05:59] UNFOLLOW [34]: Mount Auburn Cemetery
+[2026-05-12 21:05:59] DONE (32): Mount Auburn Cemetery
+[2026-05-12 21:06:00] UNFOLLOW [35]: CCA Global Partners
+[2026-05-12 21:06:01] DONE (33): CCA Global Partners
+[2026-05-12 21:06:01] UNFOLLOW [36]: Alexander Technology Group
+[2026-05-12 21:06:02] DONE (34): Alexander Technology Group
+[2026-05-12 21:06:02] UNFOLLOW [37]: Express Employment International
+[2026-05-12 21:06:03] DONE (35): Express Employment International
+[2026-05-12 21:06:03] UNFOLLOW [38]: YER
+[2026-05-12 21:06:04] DONE (36): YER
+[2026-05-12 21:06:04] UNFOLLOW [39]: SISL Global
+[2026-05-12 21:06:05] DONE (37): SISL Global
+[2026-05-12 21:06:05] UNFOLLOW [40]: Solugenix
+[2026-05-12 21:06:06] DONE (38): Solugenix
+[2026-05-12 21:06:07] UNFOLLOW [41]: AKINROBOTICS
+[2026-05-12 21:06:08] DONE (39): AKINROBOTICS
+[2026-05-12 21:06:08] UNFOLLOW [42]: Beacon Hill
+[2026-05-12 21:06:09] DONE (40): Beacon Hill
+[2026-05-12 21:06:09] UNFOLLOW [43]: Gr8ttek
+[2026-05-12 21:06:10] DONE (41): Gr8ttek
+[2026-05-12 21:06:10] UNFOLLOW [44]: Proven Recruiting
+[2026-05-12 21:06:11] DONE (42): Proven Recruiting
+[2026-05-12 21:06:11] UNFOLLOW [45]: Top Prospect Group
+[2026-05-12 21:06:12] DONE (43): Top Prospect Group
+[2026-05-12 21:06:12] UNFOLLOW [46]: Rise Technical
+[2026-05-12 21:06:13] DONE (44): Rise Technical
+[2026-05-12 21:06:14] UNFOLLOW [47]: Getronics
+[2026-05-12 21:06:14] DONE (45): Getronics
+[2026-05-12 21:06:15] UNFOLLOW [48]: Indotronix Avani Group
+[2026-05-12 21:06:15] DONE (46): Indotronix Avani Group
+[2026-05-12 21:06:16] UNFOLLOW [49]: Keytel Systems
+[2026-05-12 21:06:16] DONE (47): Keytel Systems
+[2026-05-12 21:06:17] UNFOLLOW [50]: Planet Pharma
+[2026-05-12 21:06:17] DONE (48): Planet Pharma
+[2026-05-12 21:06:18] UNFOLLOW [51]: Amtec Staffing
+[2026-05-12 21:06:18] DONE (49): Amtec Staffing
+[2026-05-12 21:06:19] UNFOLLOW [52]: RightTalents LLC
+[2026-05-12 21:06:19] DONE (50): RightTalents LLC
+[2026-05-12 21:06:20] UNFOLLOW [53]: LIFT
+[2026-05-12 21:06:20] DONE (51): LIFT
+[2026-05-12 21:06:21] UNFOLLOW [54]: Compunnel Inc.
+[2026-05-12 21:06:21] DONE (52): Compunnel Inc.
+[2026-05-12 21:06:22] UNFOLLOW [55]: AMS Staffing Inc.
+[2026-05-12 21:06:22] DONE (53): AMS Staffing Inc.
+[2026-05-12 21:06:23] UNFOLLOW [56]: NEEDS Center
+[2026-05-12 21:06:23] DONE (54): NEEDS Center
+[2026-05-12 21:06:24] UNFOLLOW [57]: SysTechCorp Inc
+[2026-05-12 21:06:25] DONE (55): SysTechCorp Inc
+[2026-05-12 21:06:25] UNFOLLOW [58]: firstPRO, Inc
+[2026-05-12 21:06:26] DONE (56): firstPRO, Inc
+[2026-05-12 21:06:26] UNFOLLOW [59]: Albano Systems, Inc.
+[2026-05-12 21:06:27] DONE (57): Albano Systems, Inc.
+[2026-05-12 21:06:27] UNFOLLOW [60]: Hub Technology Group
+[2026-05-12 21:06:27] DONE (58): Hub Technology Group
+[2026-05-12 21:06:29] UNFOLLOW [61]: Customer Support
+[2026-05-12 21:06:29] DONE (59): Customer Support
+[2026-05-12 21:06:30] UNFOLLOW [62]: Ateeca Inc
+[2026-05-12 21:06:30] DONE (60): Ateeca Inc
+[2026-05-12 21:06:31] UNFOLLOW [63]: Nuvento Inc
+[2026-05-12 21:06:32] DONE (61): Nuvento Inc
+[2026-05-12 21:06:32] UNFOLLOW [64]: TALENT Software Services
+[2026-05-12 21:06:33] DONE (62): TALENT Software Services
+[2026-05-12 21:06:33] UNFOLLOW [65]: The Siegel Group
+[2026-05-12 21:06:34] DONE (63): The Siegel Group
+[2026-05-12 21:06:34] UNFOLLOW [66]: CD PROJEKT RED
+[2026-05-12 21:06:35] DONE (64): CD PROJEKT RED
+[2026-05-12 21:06:36] UNFOLLOW [67]: iboss
+[2026-05-12 21:06:36] DONE (65): iboss
+[2026-05-12 21:06:37] UNFOLLOW [68]: QCIC
+[2026-05-12 21:06:37] DONE (66): QCIC
+[2026-05-12 21:06:38] UNFOLLOW [69]: CyberCoders
+[2026-05-12 21:06:38] DONE (67): CyberCoders
+[2026-05-12 21:06:39] UNFOLLOW [70]: JAMIS Software Corporation
+[2026-05-12 21:06:39] DONE (68): JAMIS Software Corporation
+[2026-05-12 21:06:40] UNFOLLOW [71]: Kanz
+[2026-05-12 21:06:40] DONE (69): Kanz
+[2026-05-12 21:06:41] UNFOLLOW [72]: TekJobs
+[2026-05-12 21:06:41] DONE (70): TekJobs
+[2026-05-12 21:06:42] UNFOLLOW [73]: BridgeView
+[2026-05-12 21:06:42] DONE (71): BridgeView
+[2026-05-12 21:06:43] UNFOLLOW [74]: WHOOP
+[2026-05-12 21:06:43] DONE (72): WHOOP
+[2026-05-12 21:06:44] UNFOLLOW [75]: Infotree Global Solutions
+[2026-05-12 21:06:45] DONE (73): Infotree Global Solutions
+[2026-05-12 21:06:45] UNFOLLOW [76]: LIDP Consulting Services, Inc.
+[2026-05-12 21:06:46] DONE (74): LIDP Consulting Services, Inc.
+[2026-05-12 21:06:46] UNFOLLOW [77]: Vernovis
+[2026-05-12 21:06:47] DONE (75): Vernovis
+[2026-05-12 21:06:48] UNFOLLOW [78]: The Intersect Group
+[2026-05-12 21:06:48] DONE (76): The Intersect Group
+[2026-05-12 21:06:49] UNFOLLOW [79]: Addison Group
+[2026-05-12 21:06:49] DONE (77): Addison Group
+[2026-05-12 21:06:50] UNFOLLOW [80]: Biote
+[2026-05-12 21:06:50] DONE (78): Biote
+[2026-05-12 21:06:51] UNFOLLOW [81]: Motion Recruitment
+[2026-05-12 21:06:52] DONE (79): Motion Recruitment
+[2026-05-12 21:06:53] UNFOLLOW [82]: ACL Digital
+[2026-05-12 21:06:53] DONE (80): ACL Digital
+[2026-05-12 21:06:54] UNFOLLOW [83]: Conexess Group
+[2026-05-12 21:06:54] DONE (81): Conexess Group
+[2026-05-12 21:06:55] UNFOLLOW [84]: Crystal Clinic Orthopaedic Center
+[2026-05-12 21:06:55] DONE (82): Crystal Clinic Orthopaedic Center
+[2026-05-12 21:06:56] UNFOLLOW [85]: NextStep Networking
+[2026-05-12 21:06:56] DONE (83): NextStep Networking
+[2026-05-12 21:06:57] UNFOLLOW [86]: Empigo Technologies
+[2026-05-12 21:06:57] DONE (84): Empigo Technologies
+[2026-05-12 21:06:58] UNFOLLOW [87]: Conforcus Bilişim
+[2026-05-12 21:06:58] DONE (85): Conforcus Bilişim
+[2026-05-12 21:06:59] UNFOLLOW [88]: Hogan Technology, Inc.
+[2026-05-12 21:06:59] DONE (86): Hogan Technology, Inc.
+[2026-05-12 21:07:00] UNFOLLOW [89]: V Technology Solutions LLC
+[2026-05-12 21:07:01] DONE (87): V Technology Solutions LLC
+[2026-05-12 21:07:01] UNFOLLOW [90]: Domino Technologies, Inc.
+[2026-05-12 21:07:02] DONE (88): Domino Technologies, Inc.
+[2026-05-12 21:07:02] UNFOLLOW [91]: Incustech Solutions LLC
+[2026-05-12 21:07:03] DONE (89): Incustech Solutions LLC
+[2026-05-12 21:07:03] UNFOLLOW [92]: Revolution Technologies
+[2026-05-12 21:07:04] DONE (90): Revolution Technologies
+[2026-05-12 21:07:04] UNFOLLOW [93]: WAVELYNX CORP
+[2026-05-12 21:07:05] DONE (91): WAVELYNX CORP
+[2026-05-12 21:07:06] UNFOLLOW [94]: Robert Half
+[2026-05-12 21:07:06] DONE (92): Robert Half
+[2026-05-12 21:07:07] UNFOLLOW [95]: Apt
+[2026-05-12 21:07:07] DONE (93): Apt
+[2026-05-12 21:07:08] UNFOLLOW [96]: Talent Groups
+[2026-05-12 21:07:08] DONE (94): Talent Groups
+[2026-05-12 21:07:08] UNFOLLOW [97]: BCA IT, Inc.
+[2026-05-12 21:07:09] DONE (95): BCA IT, Inc.
+[2026-05-12 21:07:10] UNFOLLOW [98]: MakeMake
+[2026-05-12 21:07:10] DONE (96): MakeMake
+[2026-05-12 21:07:11] UNFOLLOW [99]: ZYBRA
+[2026-05-12 21:07:11] DONE (97): ZYBRA
+[2026-05-12 21:07:12] UNFOLLOW [100]: Insight Global
+[2026-05-12 21:07:12] DONE (98): Insight Global
+[2026-05-12 21:07:14] UNFOLLOW [101]: Saxon Global
+[2026-05-12 21:07:14] DONE (99): Saxon Global
+[2026-05-12 21:07:15] UNFOLLOW [102]: Agility Partners
+[2026-05-12 21:07:15] DONE (100): Agility Partners
+[2026-05-12 21:07:16] UNFOLLOW [103]: HireKeyz Inc
+[2026-05-12 21:07:16] DONE (101): HireKeyz Inc
+[2026-05-12 21:07:17] UNFOLLOW [104]: NTT DATA Business Solutions
+[2026-05-12 21:07:18] DONE (102): NTT DATA Business Solutions
+[2026-05-12 21:07:18] UNFOLLOW [105]: Expert SAP Business Consultant Group
+[2026-05-12 21:07:19] DONE (103): Expert SAP Business Consultant Group
+[2026-05-12 21:07:20] UNFOLLOW [106]: Colberta
+[2026-05-12 21:07:20] DONE (104): Colberta
+[2026-05-12 21:07:20] UNFOLLOW [107]: Yetiş+ Çarşı
+[2026-05-12 21:07:21] DONE (105): Yetiş+ Çarşı
+[2026-05-12 21:07:22] UNFOLLOW [108]: orkoSOFT
+[2026-05-12 21:07:22] DONE (106): orkoSOFT
+[2026-05-12 21:07:23] UNFOLLOW [109]: GenAI Works
+[2026-05-12 21:07:23] DONE (107): GenAI Works
+[2026-05-12 21:07:24] UNFOLLOW [110]: Son Gelişme
+[2026-05-12 21:07:24] DONE (108): Son Gelişme
+[2026-05-12 21:07:25] UNFOLLOW [111]: Vakko
+[2026-05-12 21:07:25] DONE (109): Vakko
+[2026-05-12 21:07:26] UNFOLLOW [112]: Hepsiburada (NASDAQ: HEPS)
+[2026-05-12 21:07:26] DONE (110): Hepsiburada (NASDAQ: HEPS)
+[2026-05-12 21:07:27] UNFOLLOW [113]: VitrA Karo
+[2026-05-12 21:07:28] DONE (111): VitrA Karo
+[2026-05-12 21:07:28] UNFOLLOW [114]: NISH Business Solutions
+[2026-05-12 21:07:29] DONE (112): NISH Business Solutions
+[2026-05-12 21:07:30] UNFOLLOW [115]: Şekerbank T.A.Ş.
+[2026-05-12 21:07:30] DONE (113): Şekerbank T.A.Ş.
+[2026-05-12 21:07:31] UNFOLLOW [116]: ITU Robotics Club
+[2026-05-12 21:07:31] DONE (114): ITU Robotics Club
+[2026-05-12 21:07:32] UNFOLLOW [117]: Evyap
+[2026-05-12 21:07:32] DONE (115): Evyap
+[2026-05-12 21:07:33] UNFOLLOW [118]: Rast Yazılım
+[2026-05-12 21:07:33] DONE (116): Rast Yazılım
+[2026-05-12 21:07:34] UNFOLLOW [119]: Turkish Technology
+[2026-05-12 21:07:34] DONE (117): Turkish Technology
+[2026-05-12 21:07:35] UNFOLLOW [120]: Finartz
+[2026-05-12 21:07:36] DONE (118): Finartz
+[2026-05-12 21:07:37] UNFOLLOW [121]: Farmasi
+[2026-05-12 21:07:38] DONE (119): Farmasi
+[2026-05-12 21:07:38] UNFOLLOW [122]: RÖNESANS HOLDİNG
+[2026-05-12 21:07:39] DONE (120): RÖNESANS HOLDİNG
+[2026-05-12 21:07:39] UNFOLLOW [123]: Turkcell Global Bilgi
+[2026-05-12 21:07:40] DONE (121): Turkcell Global Bilgi
+[2026-05-12 21:07:41] UNFOLLOW [124]: EXECUTAS - HR and Business Solutions
+[2026-05-12 21:07:41] DONE (122): EXECUTAS - HR and Business Solutions
+[2026-05-12 21:07:42] UNFOLLOW [125]: Yapay Zeka Kafası
+[2026-05-12 21:07:42] DONE (123): Yapay Zeka Kafası
+[2026-05-12 21:07:43] UNFOLLOW [126]: Eti Soda
+[2026-05-12 21:07:43] DONE (124): Eti Soda
+[2026-05-12 21:07:44] UNFOLLOW [127]: Hitit
+[2026-05-12 21:07:44] DONE (125): Hitit
+[2026-05-12 21:07:45] UNFOLLOW [128]: KoçSistem
+[2026-05-12 21:07:45] DONE (126): KoçSistem
+[2026-05-12 21:07:46] UNFOLLOW [129]: NTT DATA
+[2026-05-12 21:07:46] DONE (127): NTT DATA
+[2026-05-12 21:07:47] UNFOLLOW [130]: Kansai Altan
+[2026-05-12 21:07:47] DONE (128): Kansai Altan
+[2026-05-12 21:07:48] UNFOLLOW [131]: ROCKETLEAD
+[2026-05-12 21:07:49] DONE (129): ROCKETLEAD
+[2026-05-12 21:07:49] UNFOLLOW [132]: Yazılım Karavanı
+[2026-05-12 21:07:49] DONE (130): Yazılım Karavanı
+[2026-05-12 21:07:50] UNFOLLOW [133]: MİSBAŞAK
+[2026-05-12 21:07:51] DONE (131): MİSBAŞAK
+[2026-05-12 21:07:52] UNFOLLOW [134]: Marmara Üniversitesi
+[2026-05-12 21:07:52] DONE (132): Marmara Üniversitesi
+[2026-05-12 21:07:53] UNFOLLOW [135]: Work in Germany
+[2026-05-12 21:07:53] DONE (133): Work in Germany
+[2026-05-12 21:07:54] UNFOLLOW [136]: Topper&#39;s Academy
+[2026-05-12 21:07:54] DONE (134): Topper&#39;s Academy
+[2026-05-12 21:07:55] UNFOLLOW [137]: TheHinduZone
+[2026-05-12 21:07:55] DONE (135): TheHinduZone
+[2026-05-12 21:07:56] UNFOLLOW [138]: Altuntaş Machinery
+[2026-05-12 21:07:57] DONE (136): Altuntaş Machinery
+[2026-05-12 21:07:57] UNFOLLOW [139]: 5T5 Yapay Zekâ Topluluğu
+[2026-05-12 21:07:58] DONE (137): 5T5 Yapay Zekâ Topluluğu
+[2026-05-12 21:07:58] UNFOLLOW [140]: Nom Oto | Renault Yedek Parça
+[2026-05-12 21:07:59] DONE (138): Nom Oto | Renault Yedek Parça
+[2026-05-12 21:08:00] UNFOLLOW [141]: Business Network İstanbul
+[2026-05-12 21:08:01] DONE (139): Business Network İstanbul
+[2026-05-12 21:08:01] UNFOLLOW [142]: 100sClub
+[2026-05-12 21:08:02] DONE (140): 100sClub
+[2026-05-12 21:08:03] UNFOLLOW [143]: GoLive Yazılım A.Ş
+[2026-05-12 21:08:03] DONE (141): GoLive Yazılım A.Ş
+[2026-05-12 21:08:04] UNFOLLOW [144]: Vektora
+[2026-05-12 21:08:04] DONE (142): Vektora
+[2026-05-12 21:08:05] UNFOLLOW [145]: Para Dergisi
+[2026-05-12 21:08:05] DONE (143): Para Dergisi
+[2026-05-12 21:08:06] UNFOLLOW [146]: SOA PEOPLE TÜRKİYE
+[2026-05-12 21:08:06] DONE (144): SOA PEOPLE TÜRKİYE
+[2026-05-12 21:08:07] UNFOLLOW [147]: Renova Consulting
+[2026-05-12 21:08:07] DONE (145): Renova Consulting
+[2026-05-12 21:08:08] UNFOLLOW [148]: Detaysoft
+[2026-05-12 21:08:08] DONE (146): Detaysoft
+[2026-05-12 21:08:09] UNFOLLOW [149]: Webrazzi
+[2026-05-12 21:08:09] DONE (147): Webrazzi
+[2026-05-12 21:08:10] UNFOLLOW [150]: Webtekno
+[2026-05-12 21:08:11] DONE (148): Webtekno
+[2026-05-12 21:08:11] UNFOLLOW [151]: Technopat
+[2026-05-12 21:08:12] DONE (149): Technopat
+[2026-05-12 21:08:12] UNFOLLOW [152]: BGA Cyber Security
+[2026-05-12 21:08:13] DONE (150): BGA Cyber Security
+[2026-05-12 21:08:13] UNFOLLOW [153]: ÇözümPark Bilişim Portalı
+[2026-05-12 21:08:14] DONE (151): ÇözümPark Bilişim Portalı
+[2026-05-12 21:08:14] UNFOLLOW [154]: Machine Learning Turkiye
+[2026-05-12 21:08:15] DONE (152): Machine Learning Turkiye
+[2026-05-12 21:08:16] UNFOLLOW [155]: BTK Akademi
+[2026-05-12 21:08:16] DONE (153): BTK Akademi
+[2026-05-12 21:08:17] UNFOLLOW [156]: GlassHouse
+[2026-05-12 21:08:17] DONE (154): GlassHouse
+[2026-05-12 21:08:18] UNFOLLOW [157]: Goldfinch Business Solutions
+[2026-05-12 21:08:18] DONE (155): Goldfinch Business Solutions
+[2026-05-12 21:08:19] UNFOLLOW [158]: ÇAMSAN ORDU A.Ş.
+[2026-05-12 21:08:19] DONE (156): ÇAMSAN ORDU A.Ş.
+[2026-05-12 21:08:21] UNFOLLOW [159]: Crossover
+[2026-05-12 21:08:21] DONE (157): Crossover
+[2026-05-12 21:08:22] UNFOLLOW [160]: Özka Lastik
+[2026-05-12 21:08:22] DONE (158): Özka Lastik
+[2026-05-12 21:08:23] UNFOLLOW [161]: Studio Yazılım Teknoloji
+[2026-05-12 21:08:23] DONE (159): Studio Yazılım Teknoloji
+[2026-05-12 21:08:24] UNFOLLOW [162]: NetBT Danışmanlık Hizmetleri
+[2026-05-12 21:08:25] DONE (160): NetBT Danışmanlık Hizmetleri
+[2026-05-12 21:08:25] UNFOLLOW [163]: AntaForce
+[2026-05-12 21:08:26] DONE (161): AntaForce
+[2026-05-12 21:08:26] UNFOLLOW [164]: SNI
+[2026-05-12 21:08:27] DONE (162): SNI
+[2026-05-12 21:08:28] UNFOLLOW [165]: Vestel
+[2026-05-12 21:08:28] DONE (163): Vestel
+[2026-05-12 21:08:29] UNFOLLOW [166]: DigiSoft
+[2026-05-12 21:08:29] DONE (164): DigiSoft
+[2026-05-12 21:08:30] UNFOLLOW [167]: Doğanlar Mobilya Grubu
+[2026-05-12 21:08:30] DONE (165): Doğanlar Mobilya Grubu
+[2026-05-12 21:08:31] UNFOLLOW [168]: Gratis
+[2026-05-12 21:08:31] DONE (166): Gratis
+[2026-05-12 21:08:32] UNFOLLOW [169]: D-CAT Technologies
+[2026-05-12 21:08:33] DONE (167): D-CAT Technologies
+[2026-05-12 21:08:33] UNFOLLOW [170]: Modern Karton
+[2026-05-12 21:08:34] DONE (168): Modern Karton
+[2026-05-12 21:08:35] UNFOLLOW [171]: ATU Duty Free
+[2026-05-12 21:08:35] DONE (169): ATU Duty Free
+[2026-05-12 21:08:36] UNFOLLOW [172]: Koçtaş
+[2026-05-12 21:08:36] DONE (170): Koçtaş
+[2026-05-12 21:08:37] UNFOLLOW [173]: Yaşar Bilgi
+[2026-05-12 21:08:37] DONE (171): Yaşar Bilgi
+[2026-05-12 21:08:38] UNFOLLOW [174]: Hadron Talent -Hadronfinsys
+[2026-05-12 21:08:39] DONE (172): Hadron Talent -Hadronfinsys
+[2026-05-12 21:08:39] UNFOLLOW [175]: SOLVOLOJI CONSULTING
+[2026-05-12 21:08:40] DONE (173): SOLVOLOJI CONSULTING
+[2026-05-12 21:08:41] UNFOLLOW [176]: Yıldızlar Yatırım Holding
+[2026-05-12 21:08:41] DONE (174): Yıldızlar Yatırım Holding
+[2026-05-12 21:08:42] UNFOLLOW [177]: Luxoft
+[2026-05-12 21:08:42] DONE (175): Luxoft
+[2026-05-12 21:08:43] UNFOLLOW [178]: Solvia Digital Solutions
+[2026-05-12 21:08:44] DONE (176): Solvia Digital Solutions
+[2026-05-12 21:08:44] UNFOLLOW [179]: SARAR
+[2026-05-12 21:08:45] DONE (177): SARAR
+[2026-05-12 21:08:46] UNFOLLOW [180]: Frimpeks
+[2026-05-12 21:08:46] DONE (178): Frimpeks
+[2026-05-12 21:08:47] UNFOLLOW [181]: NETAŞ
+[2026-05-12 21:08:47] DONE (179): NETAŞ
+[2026-05-12 21:08:47] UNFOLLOW [182]: HUMANERA
+[2026-05-12 21:08:48] DONE (180): HUMANERA
+[2026-05-12 21:08:49] UNFOLLOW [183]: Birgi Mefar Group
+[2026-05-12 21:08:49] DONE (181): Birgi Mefar Group
+[2026-05-12 21:08:50] UNFOLLOW [184]: INDEX GRUP
+[2026-05-12 21:08:50] DONE (182): INDEX GRUP
+[2026-05-12 21:08:51] UNFOLLOW [185]: Umur Printing Company
+[2026-05-12 21:08:51] DONE (183): Umur Printing Company
+[2026-05-12 21:08:52] UNFOLLOW [186]: LC Waikiki
+[2026-05-12 21:08:52] DONE (184): LC Waikiki
+[2026-05-12 21:08:53] UNFOLLOW [187]: Turkcell
+[2026-05-12 21:08:54] DONE (185): Turkcell
+[2026-05-12 21:08:54] UNFOLLOW [188]: Ledgent Technology
+[2026-05-12 21:08:55] DONE (186): Ledgent Technology
+[2026-05-12 21:08:56] UNFOLLOW [189]: Tırsan Treyler A.Ş.
+[2026-05-12 21:08:56] DONE (187): Tırsan Treyler A.Ş.
+[2026-05-12 21:08:57] UNFOLLOW [190]: Ak Gıda
+[2026-05-12 21:08:57] DONE (188): Ak Gıda
+[2026-05-12 21:08:58] UNFOLLOW [191]: OTOKAR Otomotiv ve Savunma Sanayi A.Ş.
+[2026-05-12 21:08:58] DONE (189): OTOKAR Otomotiv ve Savunma Sanayi A.Ş.
+[2026-05-12 21:08:59] UNFOLLOW [192]: Aselsan
+[2026-05-12 21:08:59] DONE (190): Aselsan
+[2026-05-12 21:09:00] UNFOLLOW [193]: Bilişim Personeli
+[2026-05-12 21:09:01] DONE (191): Bilişim Personeli
+[2026-05-12 21:09:01] UNFOLLOW [194]: TED Conferences
+[2026-05-12 21:09:02] DONE (192): TED Conferences
+[2026-05-12 21:09:02] UNFOLLOW [195]: Microsoft
+[2026-05-12 21:09:03] DONE (193): Microsoft
+[2026-05-12 21:09:03] UNFOLLOW [196]: NASA - National Aeronautics and Space Administration
+[2026-05-12 21:09:04] DONE (194): NASA - National Aeronautics and Space Administration
+[2026-05-12 21:09:09] done. processed=196 unfollowed=194 kept=2
+[2026-05-12 21:12:27] === session start, log file: /home/x/Desktop/blog-site/yldzozgur/scripts/unfollowed_pages.log ===
+[2026-05-12 21:12:27] allow-list (kept): ['ameza', 'mindful']
+[2026-05-12 21:13:13] following page loaded
+[2026-05-12 21:13:13] KEEP [1]: MindfulTime
+[2026-05-12 21:13:13] KEEP [2]: Ameza Solutions
+[2026-05-12 21:13:13] UNFOLLOW [3]: Lactalis Türkiye
+[2026-05-12 21:13:13] DONE (1): Lactalis Türkiye
+[2026-05-12 21:13:14] UNFOLLOW [4]: Runna
+[2026-05-12 21:13:14] DONE (2): Runna
+[2026-05-12 21:13:15] UNFOLLOW [5]: BetasharpInc
+[2026-05-12 21:13:15] DONE (3): BetasharpInc
+[2026-05-12 21:13:16] UNFOLLOW [6]: Alpha Global Search LLC
+[2026-05-12 21:13:17] DONE (4): Alpha Global Search LLC
+[2026-05-12 21:13:17] UNFOLLOW [7]: Candela Medical
+[2026-05-12 21:13:17] DONE (5): Candela Medical
+[2026-05-12 21:13:18] UNFOLLOW [8]: SThree
+[2026-05-12 21:13:18] DONE (6): SThree
+[2026-05-12 21:13:19] UNFOLLOW [9]: Westborough Behavioral Healthcare Hospital
+[2026-05-12 21:13:19] DONE (7): Westborough Behavioral Healthcare Hospital
+[2026-05-12 21:13:20] UNFOLLOW [10]: Yellow Bloom Solutions
+[2026-05-12 21:13:20] DONE (8): Yellow Bloom Solutions
+[2026-05-12 21:13:21] UNFOLLOW [11]: Ampstek
+[2026-05-12 21:13:21] DONE (9): Ampstek
+[2026-05-12 21:13:22] UNFOLLOW [12]: CyberArk
+[2026-05-12 21:13:22] DONE (10): CyberArk
+[2026-05-12 21:13:23] UNFOLLOW [13]: James Search Group
+[2026-05-12 21:13:23] DONE (11): James Search Group
+[2026-05-12 21:13:24] UNFOLLOW [14]: ERG
+[2026-05-12 21:13:24] DONE (12): ERG
+[2026-05-12 21:13:25] UNFOLLOW [15]: The Phoenix Group
+[2026-05-12 21:13:25] DONE (13): The Phoenix Group
+[2026-05-12 21:13:26] UNFOLLOW [16]: Busek
+[2026-05-12 21:13:26] DONE (14): Busek
+[2026-05-12 21:13:27] UNFOLLOW [17]: Lightmatter
+[2026-05-12 21:13:27] DONE (15): Lightmatter
+[2026-05-12 21:13:28] UNFOLLOW [18]: The Davis Companies
+[2026-05-12 21:13:28] DONE (16): The Davis Companies
+[2026-05-12 21:13:29] UNFOLLOW [19]: Entyre Care
+[2026-05-12 21:13:30] DONE (17): Entyre Care
+[2026-05-12 21:13:30] UNFOLLOW [20]: Pomeroy
+[2026-05-12 21:13:31] DONE (18): Pomeroy
+[2026-05-12 21:13:32] UNFOLLOW [21]: Centraprise
+[2026-05-12 21:13:33] DONE (19): Centraprise
+[2026-05-12 21:13:34] UNFOLLOW [22]: Bridgewater State University
+[2026-05-12 21:13:34] DONE (20): Bridgewater State University
+[2026-05-12 21:13:35] UNFOLLOW [23]: The Planet Group
+[2026-05-12 21:13:35] DONE (21): The Planet Group
+[2026-05-12 21:13:35] UNFOLLOW [24]: Forward News
+[2026-05-12 21:13:36] DONE (22): Forward News
+[2026-05-12 21:13:37] UNFOLLOW [25]: Boston Metal
+[2026-05-12 21:13:37] DONE (23): Boston Metal
+[2026-05-12 21:13:38] UNFOLLOW [26]: CIRCOR International, Inc.
+[2026-05-12 21:13:38] DONE (24): CIRCOR International, Inc.
+[2026-05-12 21:13:39] UNFOLLOW [27]: Vinebrook Technology
+[2026-05-12 21:13:39] DONE (25): Vinebrook Technology
+[2026-05-12 21:13:40] UNFOLLOW [28]: Electrified Garage
+[2026-05-12 21:13:40] DONE (26): Electrified Garage
+[2026-05-12 21:13:41] UNFOLLOW [29]: Raas Infotek
+[2026-05-12 21:13:41] DONE (27): Raas Infotek
+[2026-05-12 21:13:42] UNFOLLOW [30]: PathAI
+[2026-05-12 21:13:42] DONE (28): PathAI
+[2026-05-12 21:13:43] UNFOLLOW [31]: TekWissen ®
+[2026-05-12 21:13:43] DONE (29): TekWissen ®
+[2026-05-12 21:13:44] UNFOLLOW [32]: Cohere Health
+[2026-05-12 21:13:44] DONE (30): Cohere Health
+[2026-05-12 21:13:45] UNFOLLOW [33]: Buckley Associates
+[2026-05-12 21:13:45] DONE (31): Buckley Associates
+[2026-05-12 21:13:46] UNFOLLOW [34]: USA Tech Recruit
+[2026-05-12 21:13:46] DONE (32): USA Tech Recruit
+[2026-05-12 21:13:46] UNFOLLOW [35]: European Tech Recruit
+[2026-05-12 21:13:47] DONE (33): European Tech Recruit
+[2026-05-12 21:13:48] UNFOLLOW [36]: Akkodis
+[2026-05-12 21:13:48] DONE (34): Akkodis
+[2026-05-12 21:13:49] UNFOLLOW [37]: Franklin Fitch
+[2026-05-12 21:13:49] DONE (35): Franklin Fitch
+[2026-05-12 21:13:50] UNFOLLOW [38]: ACS Consultancy Services, Inc
+[2026-05-12 21:13:50] DONE (36): ACS Consultancy Services, Inc
+[2026-05-12 21:13:51] UNFOLLOW [39]: MashPoint - Technology &amp; Staffing- merged with HuMetis group Inc
+[2026-05-12 21:13:51] DONE (37): MashPoint - Technology &amp; Staffing- merged with HuMetis group Inc
+[2026-05-12 21:13:52] UNFOLLOW [40]: FEI Systems
+[2026-05-12 21:13:52] DONE (38): FEI Systems
+[2026-05-12 21:13:54] UNFOLLOW [41]: RightClick
+[2026-05-12 21:13:54] DONE (39): RightClick
+[2026-05-12 21:13:55] UNFOLLOW [42]: Quantum World Technologies Inc.
+[2026-05-12 21:13:55] DONE (40): Quantum World Technologies Inc.
+[2026-05-12 21:13:56] UNFOLLOW [43]: EnIn Systems
+[2026-05-12 21:13:56] DONE (41): EnIn Systems
+[2026-05-12 21:13:57] UNFOLLOW [44]: APRIORI - business solutions AG
+[2026-05-12 21:13:57] DONE (42): APRIORI - business solutions AG
+[2026-05-12 21:13:58] UNFOLLOW [45]: Energize Group
+[2026-05-12 21:13:58] DONE (43): Energize Group
+[2026-05-12 21:13:59] UNFOLLOW [46]: Ubique Systems
+[2026-05-12 21:13:59] DONE (44): Ubique Systems
+[2026-05-12 21:14:00] UNFOLLOW [47]: Delta System &amp; Software, Inc.
+[2026-05-12 21:14:00] DONE (45): Delta System &amp; Software, Inc.
+[2026-05-12 21:14:01] UNFOLLOW [48]: Colonial Metals Group
+[2026-05-12 21:14:01] DONE (46): Colonial Metals Group
+[2026-05-12 21:14:02] UNFOLLOW [49]: Dialing Innovations
+[2026-05-12 21:14:03] DONE (47): Dialing Innovations
+[2026-05-12 21:14:03] UNFOLLOW [50]: AVASO Technology Solutions
+[2026-05-12 21:14:03] DONE (48): AVASO Technology Solutions
+[2026-05-12 21:14:04] UNFOLLOW [51]: Quantic
+[2026-05-12 21:14:05] DONE (49): Quantic
+[2026-05-12 21:14:06] UNFOLLOW [52]: Trustpar
+[2026-05-12 21:14:06] DONE (50): Trustpar
+[2026-05-12 21:14:07] UNFOLLOW [53]: HCLTech
+[2026-05-12 21:14:07] DONE (51): HCLTech
+[2026-05-12 21:14:08] UNFOLLOW [54]: Weston Technology Solutions
+[2026-05-12 21:14:08] DONE (52): Weston Technology Solutions
+[2026-05-12 21:14:09] UNFOLLOW [55]: Seneca Resources
+[2026-05-12 21:14:09] DONE (53): Seneca Resources
+[2026-05-12 21:14:10] UNFOLLOW [56]: Logistics Plus Inc.
+[2026-05-12 21:14:10] DONE (54): Logistics Plus Inc.
+[2026-05-12 21:14:11] UNFOLLOW [57]: Loyality
+[2026-05-12 21:14:11] DONE (55): Loyality
+[2026-05-12 21:14:12] UNFOLLOW [58]: Ategrity Specialty Insurance Company
+[2026-05-12 21:14:12] DONE (56): Ategrity Specialty Insurance Company
+[2026-05-12 21:14:13] UNFOLLOW [59]: Webtegram
+[2026-05-12 21:14:13] DONE (57): Webtegram
+[2026-05-12 21:14:15] UNFOLLOW [60]: MobileAction
+[2026-05-12 21:14:15] DONE (58): MobileAction
+[2026-05-12 21:14:16] UNFOLLOW [61]: Anatolia
+[2026-05-12 21:14:16] DONE (59): Anatolia
+[2026-05-12 21:14:17] UNFOLLOW [62]: Çimsa
+[2026-05-12 21:14:17] DONE (60): Çimsa
+[2026-05-12 21:14:18] UNFOLLOW [63]: Talentown Recruitment Agency - IT
+[2026-05-12 21:14:18] DONE (61): Talentown Recruitment Agency - IT
+[2026-05-12 21:14:19] UNFOLLOW [64]: TEI - TUSAŞ Motor Sanayii A.Ş.
+[2026-05-12 21:14:19] DONE (62): TEI - TUSAŞ Motor Sanayii A.Ş.
+[2026-05-12 21:14:20] UNFOLLOW [65]: Arkas Holding
+[2026-05-12 21:14:20] DONE (63): Arkas Holding
+[2026-05-12 21:14:21] UNFOLLOW [66]: Brand Planet
+[2026-05-12 21:14:21] DONE (64): Brand Planet
+[2026-05-12 21:14:22] UNFOLLOW [67]: ARMOYU - Topluluğu Ve Grupları
+[2026-05-12 21:14:22] DONE (65): ARMOYU - Topluluğu Ve Grupları
+[2026-05-12 21:14:23] UNFOLLOW [68]: SAP ABAP Online Training
+[2026-05-12 21:14:23] DONE (66): SAP ABAP Online Training
+[2026-05-12 21:14:24] UNFOLLOW [69]: ERP College - ABAP
+[2026-05-12 21:14:24] DONE (67): ERP College - ABAP
+[2026-05-12 21:14:25] UNFOLLOW [70]: TeamPro Technology
+[2026-05-12 21:14:25] DONE (68): TeamPro Technology
+[2026-05-12 21:14:26] UNFOLLOW [71]: SAP Community
+[2026-05-12 21:14:27] DONE (69): SAP Community
+[2026-05-12 21:14:27] UNFOLLOW [72]: BTC Bilişim Hizmetleri
+[2026-05-12 21:14:28] DONE (70): BTC Bilişim Hizmetleri
+[2026-05-12 21:14:29] UNFOLLOW [73]: Improva
+[2026-05-12 21:14:29] DONE (71): Improva
+[2026-05-12 21:14:30] UNFOLLOW [74]: Türkiye Yapay Zeka İnisiyatifi (TRAI)
+[2026-05-12 21:14:30] DONE (72): Türkiye Yapay Zeka İnisiyatifi (TRAI)
+[2026-05-12 21:14:31] UNFOLLOW [75]: Sağlık ve Yaşam
+[2026-05-12 21:14:31] DONE (73): Sağlık ve Yaşam
+[2026-05-12 21:14:32] UNFOLLOW [76]: BrainPark Incubation
+[2026-05-12 21:14:32] DONE (74): BrainPark Incubation
+[2026-05-12 21:14:33] UNFOLLOW [77]: Knowledge, Ambition, Action &amp; Network
+[2026-05-12 21:14:33] DONE (75): Knowledge, Ambition, Action &amp; Network
+[2026-05-12 21:14:34] UNFOLLOW [78]: Matematiksel
+[2026-05-12 21:14:34] DONE (76): Matematiksel
+[2026-05-12 21:14:35] UNFOLLOW [79]: Yazılım Köyü
+[2026-05-12 21:14:35] DONE (77): Yazılım Köyü
+[2026-05-12 21:14:37] UNFOLLOW [80]: Novadsa
+[2026-05-12 21:14:37] DONE (78): Novadsa
+[2026-05-12 21:14:38] UNFOLLOW [81]: SPRO Teknoloji A.Ş.
+[2026-05-12 21:14:38] DONE (79): SPRO Teknoloji A.Ş.
+[2026-05-12 21:14:39] UNFOLLOW [82]: İnnova Bilişim
+[2026-05-12 21:14:39] DONE (80): İnnova Bilişim
+[2026-05-12 21:14:40] UNFOLLOW [83]: Kariyer Hedefim
+[2026-05-12 21:14:40] DONE (81): Kariyer Hedefim
+[2026-05-12 21:14:41] UNFOLLOW [84]: Savunma Sanayi Sistemleri
+[2026-05-12 21:14:42] DONE (82): Savunma Sanayi Sistemleri
+[2026-05-12 21:14:42] UNFOLLOW [85]: Nagarro + MBIS
+[2026-05-12 21:14:43] DONE (83): Nagarro + MBIS
+[2026-05-12 21:14:43] UNFOLLOW [86]: V-Count
+[2026-05-12 21:14:44] DONE (84): V-Count
+[2026-05-12 21:14:44] UNFOLLOW [87]: Playable Factory
+[2026-05-12 21:14:45] DONE (85): Playable Factory
+[2026-05-12 21:14:45] UNFOLLOW [88]: BilgeAdam Teknoloji
+[2026-05-12 21:14:46] DONE (86): BilgeAdam Teknoloji
+[2026-05-12 21:14:46] UNFOLLOW [89]: Freelance | Self-Employed
+[2026-05-12 21:14:47] DONE (87): Freelance | Self-Employed
+[2026-05-12 21:14:48] UNFOLLOW [90]: Girişimci Kafası
+[2026-05-12 21:14:48] DONE (88): Girişimci Kafası
+[2026-05-12 21:14:49] UNFOLLOW [91]: Tomorrow
+[2026-05-12 21:14:49] DONE (89): Tomorrow
+[2026-05-12 21:14:50] UNFOLLOW [92]: MARTUR FOMPAK International
+[2026-05-12 21:14:50] DONE (90): MARTUR FOMPAK International
+[2026-05-12 21:14:51] UNFOLLOW [93]: Assystem
+[2026-05-12 21:14:51] DONE (91): Assystem
+[2026-05-12 21:14:52] UNFOLLOW [94]: Ithinka IT and IoT Technologies
+[2026-05-12 21:14:52] DONE (92): Ithinka IT and IoT Technologies
+[2026-05-12 21:14:53] UNFOLLOW [95]: Yataş Grup
+[2026-05-12 21:14:53] DONE (93): Yataş Grup
+[2026-05-12 21:14:54] UNFOLLOW [96]: HAVELSAN
+[2026-05-12 21:14:54] DONE (94): HAVELSAN
+[2026-05-12 21:14:55] UNFOLLOW [97]: Borusan Makina ve Güç Sistemleri / Caterpillar
+[2026-05-12 21:14:56] DONE (95): Borusan Makina ve Güç Sistemleri / Caterpillar
+[2026-05-12 21:15:01] done. processed=97 unfollowed=95 kept=2
+[2026-05-12 21:15:22] === session start, log file: /home/x/Desktop/blog-site/yldzozgur/scripts/unfollowed_pages.log ===
+[2026-05-12 21:15:22] allow-list (kept): ['ameza', 'mindful']
+[2026-05-12 21:15:47] following page loaded
+[2026-05-12 21:15:47] KEEP [1]: MindfulTime
+[2026-05-12 21:15:47] KEEP [2]: Ameza Solutions
+[2026-05-12 21:15:47] UNFOLLOW [3]: Myticas Consulting
+[2026-05-12 21:15:47] DONE (1): Myticas Consulting
+[2026-05-12 21:15:48] UNFOLLOW [4]: Labsphere, Inc.
+[2026-05-12 21:15:48] DONE (2): Labsphere, Inc.
+[2026-05-12 21:15:49] UNFOLLOW [5]: Cervello
+[2026-05-12 21:15:49] DONE (3): Cervello
+[2026-05-12 21:15:50] UNFOLLOW [6]: The Dignify Solutions, LLC
+[2026-05-12 21:15:50] DONE (4): The Dignify Solutions, LLC
+[2026-05-12 21:15:51] UNFOLLOW [7]: FinfoNet, Inc.
+[2026-05-12 21:15:51] DONE (5): FinfoNet, Inc.
+[2026-05-12 21:15:52] UNFOLLOW [8]: Washington Frank International
+[2026-05-12 21:15:52] DONE (6): Washington Frank International
+[2026-05-12 21:15:53] UNFOLLOW [9]: US Tech Solutions
+[2026-05-12 21:15:53] DONE (7): US Tech Solutions
+[2026-05-12 21:15:54] UNFOLLOW [10]: Tata Consultancy Services
+[2026-05-12 21:15:54] DONE (8): Tata Consultancy Services
+[2026-05-12 21:15:55] UNFOLLOW [11]: eTeam
+[2026-05-12 21:15:55] DONE (9): eTeam
+[2026-05-12 21:15:56] UNFOLLOW [12]: Vortex Consulting
+[2026-05-12 21:15:56] DONE (10): Vortex Consulting
+[2026-05-12 21:15:57] UNFOLLOW [13]: MSRcosmos Group
+[2026-05-12 21:15:57] DONE (11): MSRcosmos Group
+[2026-05-12 21:15:58] UNFOLLOW [14]: CCS Global Tech
+[2026-05-12 21:15:58] DONE (12): CCS Global Tech
+[2026-05-12 21:15:59] UNFOLLOW [15]: AppleOne Technical Staffing
+[2026-05-12 21:15:59] DONE (13): AppleOne Technical Staffing
+[2026-05-12 21:16:00] UNFOLLOW [16]: Stockell Consulting
+[2026-05-12 21:16:00] DONE (14): Stockell Consulting
+[2026-05-12 21:16:01] UNFOLLOW [17]: CGS Federal (Contact Government Services)
+[2026-05-12 21:16:01] DONE (15): CGS Federal (Contact Government Services)
+[2026-05-12 21:16:02] UNFOLLOW [18]: Wayne J. Griffin Electric, Inc.
+[2026-05-12 21:16:02] DONE (16): Wayne J. Griffin Electric, Inc.
+[2026-05-12 21:16:03] UNFOLLOW [19]: TekOne IT Services Pvt. Ltd.
+[2026-05-12 21:16:03] DONE (17): TekOne IT Services Pvt. Ltd.
+[2026-05-12 21:16:04] UNFOLLOW [20]: Proactive Technology Management
+[2026-05-12 21:16:04] DONE (18): Proactive Technology Management
+[2026-05-12 21:16:06] UNFOLLOW [21]: J &amp; J Staffing Resources
+[2026-05-12 21:16:06] DONE (19): J &amp; J Staffing Resources
+[2026-05-12 21:16:07] UNFOLLOW [22]: Atlantic Group
+[2026-05-12 21:16:07] DONE (20): Atlantic Group
+[2026-05-12 21:16:08] UNFOLLOW [23]: Multi Image Group (MIG)
+[2026-05-12 21:16:09] DONE (21): Multi Image Group (MIG)
+[2026-05-12 21:16:09] UNFOLLOW [24]: PCS Florida
+[2026-05-12 21:16:10] DONE (22): PCS Florida
+[2026-05-12 21:16:10] UNFOLLOW [25]: TECEZE
+[2026-05-12 21:16:11] DONE (23): TECEZE
+[2026-05-12 21:16:12] UNFOLLOW [26]: On-Demand Group
+[2026-05-12 21:16:12] DONE (24): On-Demand Group
+[2026-05-12 21:16:13] UNFOLLOW [27]: Confidential Careers
+[2026-05-12 21:16:13] DONE (25): Confidential Careers
+[2026-05-12 21:16:14] UNFOLLOW [28]: ozeldersim
+[2026-05-12 21:16:14] DONE (26): ozeldersim
+[2026-05-12 21:16:15] UNFOLLOW [29]: Aya
+[2026-05-12 21:16:15] DONE (27): Aya
+[2026-05-12 21:16:16] UNFOLLOW [30]: OBSS
+[2026-05-12 21:16:16] DONE (28): OBSS
+[2026-05-12 21:16:17] UNFOLLOW [31]: ERA RF Technologies
+[2026-05-12 21:16:17] DONE (29): ERA RF Technologies
+[2026-05-12 21:16:18] UNFOLLOW [32]: Albert Health
+[2026-05-12 21:16:18] DONE (30): Albert Health
+[2026-05-12 21:16:19] UNFOLLOW [33]: Dalgakıran Kompresör
+[2026-05-12 21:16:19] DONE (31): Dalgakıran Kompresör
+[2026-05-12 21:16:20] UNFOLLOW [34]: Uplift People Consulting
+[2026-05-12 21:16:20] DONE (32): Uplift People Consulting
+[2026-05-12 21:16:21] UNFOLLOW [35]: Jubatus
+[2026-05-12 21:16:21] DONE (33): Jubatus
+[2026-05-12 21:16:22] UNFOLLOW [36]: BGTS International
+[2026-05-12 21:16:22] DONE (34): BGTS International
+[2026-05-12 21:16:23] UNFOLLOW [37]: Innovance Consultancy
+[2026-05-12 21:16:23] DONE (35): Innovance Consultancy
+[2026-05-12 21:16:24] UNFOLLOW [38]: SAP Cloud ERP
+[2026-05-12 21:16:24] DONE (36): SAP Cloud ERP
+[2026-05-12 21:16:25] UNFOLLOW [39]: SAP Business Technology Platform
+[2026-05-12 21:16:25] DONE (37): SAP Business Technology Platform
+[2026-05-12 21:16:27] UNFOLLOW [40]: Turkish Fuel Services
+[2026-05-12 21:16:27] DONE (38): Turkish Fuel Services
+[2026-05-12 21:16:28] UNFOLLOW [41]: Kafein Technology Solutions
+[2026-05-12 21:16:28] DONE (39): Kafein Technology Solutions
+[2026-05-12 21:16:29] UNFOLLOW [42]: BitaVita
+[2026-05-12 21:16:30] DONE (40): BitaVita
+[2026-05-12 21:16:30] UNFOLLOW [43]: Fineros Technology
+[2026-05-12 21:16:31] DONE (41): Fineros Technology
+[2026-05-12 21:16:31] UNFOLLOW [44]: EPAM Systems
+[2026-05-12 21:16:32] DONE (42): EPAM Systems
+[2026-05-12 21:16:33] UNFOLLOW [45]: Assan Bilişim
+[2026-05-12 21:16:33] DONE (43): Assan Bilişim
+[2026-05-12 21:16:34] UNFOLLOW [46]: Tesla
+[2026-05-12 21:16:34] DONE (44): Tesla
+[2026-05-12 21:16:39] done. processed=46 unfollowed=44 kept=2
+[2026-05-12 21:17:05] === session start, log file: /home/x/Desktop/blog-site/yldzozgur/scripts/unfollowed_pages.log ===
+[2026-05-12 21:17:05] allow-list (kept): ['ameza', 'mindful']
+[2026-05-12 21:17:31] following page loaded
+[2026-05-12 21:17:31] KEEP [1]: MindfulTime
+[2026-05-12 21:17:31] KEEP [2]: Ameza Solutions
+[2026-05-12 21:17:31] UNFOLLOW [3]: Syntricate Technologies
+[2026-05-12 21:17:31] DONE (1): Syntricate Technologies
+[2026-05-12 21:17:32] UNFOLLOW [4]: LanceSoft, Inc.
+[2026-05-12 21:17:32] DONE (2): LanceSoft, Inc.
+[2026-05-12 21:17:33] UNFOLLOW [5]: LMK Recruiting Solutions
+[2026-05-12 21:17:33] DONE (3): LMK Recruiting Solutions
+[2026-05-12 21:17:34] UNFOLLOW [6]: ConsultUSA
+[2026-05-12 21:17:34] DONE (4): ConsultUSA
+[2026-05-12 21:17:35] UNFOLLOW [7]: BOND
+[2026-05-12 21:17:36] DONE (5): BOND
+[2026-05-12 21:17:36] UNFOLLOW [8]: GTN Technical Staffing
+[2026-05-12 21:17:37] DONE (6): GTN Technical Staffing
+[2026-05-12 21:17:37] UNFOLLOW [9]: MS Shift, Inc.
+[2026-05-12 21:17:38] DONE (7): MS Shift, Inc.
+[2026-05-12 21:17:38] UNFOLLOW [10]: KTek Resourcing
+[2026-05-12 21:17:38] DONE (8): KTek Resourcing
+[2026-05-12 21:17:39] UNFOLLOW [11]: BG Staffing
+[2026-05-12 21:17:39] DONE (9): BG Staffing
+[2026-05-12 21:17:40] UNFOLLOW [12]: Cottey College
+[2026-05-12 21:17:40] DONE (10): Cottey College
+[2026-05-12 21:17:41] UNFOLLOW [13]: Pyramid Consulting, Inc
+[2026-05-12 21:17:41] DONE (11): Pyramid Consulting, Inc
+[2026-05-12 21:17:42] UNFOLLOW [14]: adesso Turkey
+[2026-05-12 21:17:42] DONE (12): adesso Turkey
+[2026-05-12 21:17:43] UNFOLLOW [15]: adesso SmartShore - powered by adesso
+[2026-05-12 21:17:43] DONE (13): adesso SmartShore - powered by adesso
+[2026-05-12 21:17:44] UNFOLLOW [16]: ICterra Information and Communication Technologies
+[2026-05-12 21:17:44] DONE (14): ICterra Information and Communication Technologies
+[2026-05-12 21:17:45] UNFOLLOW [17]: TAV Technologies
+[2026-05-12 21:17:45] DONE (15): TAV Technologies
+[2026-05-12 21:17:46] UNFOLLOW [18]: Mirsis Bilgi Teknolojileri
+[2026-05-12 21:17:46] DONE (16): Mirsis Bilgi Teknolojileri
+[2026-05-12 21:17:47] UNFOLLOW [19]: n11
+[2026-05-12 21:17:47] DONE (17): n11
+[2026-05-12 21:17:49] UNFOLLOW [20]: Prodea Bilgi Teknolojileri (Prodea Consulting)
+[2026-05-12 21:17:49] DONE (18): Prodea Bilgi Teknolojileri (Prodea Consulting)
+[2026-05-12 21:17:50] UNFOLLOW [21]: MDP Group
+[2026-05-12 21:17:50] DONE (19): MDP Group
+[2026-05-12 21:17:51] UNFOLLOW [22]: ebebek
+[2026-05-12 21:17:51] DONE (20): ebebek
+[2026-05-12 21:17:52] UNFOLLOW [23]: Norm Digital
+[2026-05-12 21:17:52] DONE (21): Norm Digital
+[2026-05-12 21:17:53] UNFOLLOW [24]: PwC Türkiye
+[2026-05-12 21:17:53] DONE (22): PwC Türkiye
+[2026-05-12 21:17:54] UNFOLLOW [25]: ScaleneWorks INC
+[2026-05-12 21:17:54] DONE (23): ScaleneWorks INC
+[2026-05-12 21:17:59] done. processed=25 unfollowed=23 kept=2
+[2026-05-12 21:21:40] === session start, log file: /home/x/Desktop/blog-site/yldzozgur/scripts/unfollowed_pages.log ===
+[2026-05-12 21:21:40] allow-list (kept): ['ameza', 'mindful']
+[2026-05-12 21:22:05] following page loaded
+[2026-05-12 21:22:05] KEEP [1]: MindfulTime
+[2026-05-12 21:22:05] KEEP [2]: Ameza Solutions
+[2026-05-12 21:22:06] UNFOLLOW [3]: Marti Technologies (NYSE: MRT)
+[2026-05-12 21:22:06] DONE (1): Marti Technologies (NYSE: MRT)
+[2026-05-12 21:22:07] UNFOLLOW [4]: Morgan McKinley
+[2026-05-12 21:22:07] DONE (2): Morgan McKinley
+[2026-05-12 21:22:08] UNFOLLOW [5]: Exelixis
+[2026-05-12 21:22:08] DONE (3): Exelixis
+[2026-05-12 21:22:09] UNFOLLOW [6]: Apple
+[2026-05-12 21:22:09] DONE (4): Apple
+[2026-05-12 21:22:13] idle scroll 1/8 — total processed so far 6
+[2026-05-12 21:22:15] idle scroll 2/8 — total processed so far 6
+[2026-05-12 21:22:16] idle scroll 3/8 — total processed so far 6
+[2026-05-12 21:22:18] idle scroll 4/8 — total processed so far 6
+[2026-05-12 21:22:19] idle scroll 5/8 — total processed so far 6
+[2026-05-12 21:22:21] idle scroll 6/8 — total processed so far 6
+[2026-05-12 21:22:23] idle scroll 7/8 — total processed so far 6
+[2026-05-12 21:22:24] idle scroll 8/8 — total processed so far 6
+[2026-05-12 21:22:24] done. processed=6 unfollowed=4 kept=2
+[2026-05-12 21:24:35] === session start, log file: /home/x/Desktop/blog-site/yldzozgur/scripts/unfollowed_pages.log ===
+[2026-05-12 21:24:35] allow-list (kept): ['ameza', 'mindful']
+[2026-05-12 21:25:03] following page loaded
+[2026-05-12 21:25:03] KEEP [1]: MindfulTime
+[2026-05-12 21:25:03] KEEP [2]: Ameza Solutions
+[2026-05-12 21:25:06] idle scroll 1/8 — total processed so far 2
+[2026-05-12 21:25:08] idle scroll 2/8 — total processed so far 2
+[2026-05-12 21:25:09] idle scroll 3/8 — total processed so far 2
+[2026-05-12 21:25:11] idle scroll 4/8 — total processed so far 2
+[2026-05-12 21:25:13] idle scroll 5/8 — total processed so far 2
+[2026-05-12 21:25:14] idle scroll 6/8 — total processed so far 2
+[2026-05-12 21:25:16] idle scroll 7/8 — total processed so far 2
+[2026-05-12 21:25:18] idle scroll 8/8 — total processed so far 2
+[2026-05-12 21:25:18] done. processed=2 unfollowed=0 kept=2
+[2026-05-12 21:25:31] === session start, log file: /home/x/Desktop/blog-site/yldzozgur/scripts/unfollowed_pages.log ===
+[2026-05-12 21:25:31] allow-list (kept): ['ameza', 'mindful']

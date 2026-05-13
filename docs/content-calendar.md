@@ -21,6 +21,7 @@
 7. **Closing** — "What I'd do differently" or a trade-off to be aware of.
 8. **Length** — 800–1500 words.
 9. **Forbidden** — "Top 5", "Ultimate guide", generic intro, listicle, AI-slop.
+10. **Confidentiality** — **NEVER** reference Ameza Solutions, its codebase, architecture, internal patterns, specific PRs, team practices, or business specifics. Anchor everything in: solo projects (Stock Mgmt, Pizza API, Rent-A-Car, Recipe App, Movie App, DraftLift), Clarusway bootcamp work, prior Java / .NET enterprise experience (Ebebek / Lactalis / Gaga — also speak about these in generic terms), or general engineering observations.
 
 ### Track B — "Engineer's Lens" (Thursday)
 
@@ -35,6 +36,7 @@
 7. **Tone** — skeptical-but-fair. The engineer who reads the actual docs.
 8. **Closing** — "Would I use this at Ameza? Why / why not?"
 9. **Forbidden** — AI-slop summary, marketing recap, pure rage, headline-only takes.
+10. **Confidentiality** — Same rule as Track A. **NEVER** reference Ameza Solutions or anything internal to it. The "Would I use this in production?" close should reference a *hypothetical* production system or a solo project instead.
 
 ### Universal rules
 
@@ -53,21 +55,21 @@
 
 | Day | Track | Slug | Title | Notes |
 |---|---|---|---|---|
-| Tue May 19 | A | `reading-multi-tenant-codebase` | Reading a multi-tenant codebase for the first time | First-contact map of Ameza's structure. The mental model I drew. |
+| Tue May 19 | A | `six-years-java-to-typescript` | From six years of Java to TypeScript — what transferred, what didn't | Transition narrative. Anchor in Ebebek/Lactalis/Gaga era + solo Stock Mgmt / Pizza API. **No Ameza.** |
 | Thu May 21 | B | `cursor-vs-claude-code` | Cursor vs Claude Code in a real PR — actual differences | `[SWAP]` if a different AI tool dominates that week. |
 
 ### Week 2 — May 26 + 28
 
 | Day | Track | Slug | Title | Notes |
 |---|---|---|---|---|
-| Tue May 26 | A | `discriminated-unions-typescript` | Discriminated unions: the TS pattern I missed in bootcamp | The error-code refactor that clicked. Real before/after. |
+| Tue May 26 | A | `discriminated-unions-typescript` | Discriminated unions — the TS pattern I missed in bootcamp | Refactor Pizza API or Stock Mgmt error responses as the example. **No Ameza.** |
 | Thu May 28 | B | `ai-replacing-juniors-panic` | The "AI will replace juniors" panic — what I actually see at work | Use real anecdotes from Ameza code review. |
 
 ### Week 3 — Jun 2 + 4
 
 | Day | Track | Slug | Title | Notes |
 |---|---|---|---|---|
-| Tue Jun 2 | A | `splitting-large-pr` | Why I split my first 200-line PR into five | The review feedback that taught me atomic PRs. |
+| Tue Jun 2 | A | `splitting-large-pr` | Why I split my first 200-line PR into five | Use a solo-project refactor example or a generic principle. **No Ameza review specifics.** |
 | Thu Jun 4 | B | `[SWAP-framework-release]` | `[SWAP]` — building a real thing to see if it lives up | Pick the week's framework / library release. |
 
 ### Week 4 — Jun 9 + 11
@@ -81,28 +83,28 @@
 
 | Day | Track | Slug | Title | Notes |
 |---|---|---|---|---|
-| Tue Jun 16 | A | `express-middleware-order` | Express middleware order — what catches you in production | Real middleware suite from Stock Mgmt API: auth → errors → logging → permissions → queries. |
-| Thu Jun 18 | B | `bun-vs-node-production` | Bun vs Node in production — would I ship it at Ameza? | Run a real Ameza-like service on both, measure, decide. |
+| Tue Jun 16 | A | `express-middleware-order` | Express middleware order — what catches you in production | Real middleware suite from Stock Mgmt API: auth → errors → logging → permissions → queries. **No Ameza.** |
+| Thu Jun 18 | B | `bun-vs-node-production` | Bun vs Node in production — would I ship it on a side project? | Run Pizza API or Stock Mgmt API on both, measure, decide. **No Ameza.** |
 
 ### Week 6 — Jun 23 + 25
 
 | Day | Track | Slug | Title | Notes |
 |---|---|---|---|---|
-| Tue Jun 23 | A | `swagger-snapshot-sync` | Swagger snapshot sync — the trick that catches API drift before deploy | Real workflow from Ameza. |
-| Thu Jun 25 | B | `[SWAP-ai-agent]-real-ticket` | `[SWAP]` — I gave it a real Ameza ticket. Here's what it produced. | Pick the week's hyped autonomous agent. |
+| Tue Jun 23 | A | `swagger-snapshot-sync` | Swagger snapshot sync — the trick that catches API drift before deploy | Build the example fresh on top of Pizza API or DraftLift. **No Ameza.** |
+| Thu Jun 25 | B | `[SWAP-ai-agent]-real-ticket` | `[SWAP]` — I gave it a real ticket from one of my own repos. Here's what it produced. | Pick the week's hyped autonomous agent. Use Pizza API / Stock Mgmt as the target. **No Ameza.** |
 
 ### Week 7 — Jun 30 + Jul 2
 
 | Day | Track | Slug | Title | Notes |
 |---|---|---|---|---|
-| Tue Jun 30 | A | `jwt-refresh-token-ux` | JWT refresh tokens — the UX trade-off no tutorial mentions | The silent-refresh implementation from Stock Mgmt. |
+| Tue Jun 30 | A | `jwt-refresh-token-ux` | JWT refresh tokens — the UX trade-off no tutorial mentions | The silent-refresh implementation from Stock Mgmt. **No Ameza.** |
 | Thu Jul 2 | B | `vibe-coding-reality` | "Vibe coding" — real engineering practice or burnout speedrun? | Honest take after using AI-first workflows for 6 months. |
 
 ### Week 8 — Jul 7 + 9
 
 | Day | Track | Slug | Title | Notes |
 |---|---|---|---|---|
-| Tue Jul 7 | A | `cypress-e2e-worth-it` | Cypress E2E — what's worth testing vs. unit tests | Pizza API + Stock Mgmt E2E experience. |
+| Tue Jul 7 | A | `cypress-e2e-worth-it` | Cypress E2E — what's worth testing vs. unit tests | Pizza API + Stock Mgmt E2E experience. **No Ameza.** |
 | Thu Jul 9 | B | `two-months-writing-retro` | Two months of writing weekly — did it help me get interviews? | Meta-post. Honest metrics: traffic, interviews, LinkedIn follows. Closes the loop. |
 
 ---
