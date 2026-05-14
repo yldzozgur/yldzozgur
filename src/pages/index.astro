@@ -39,13 +39,12 @@ const tsSnippet = `<span class="code-c">// domain error code as discriminated un
         </span>
         <h1 class="display">
           Hi, I'm Ozgur.<br />
-          <span class="accent-text">Software engineer</span><br />
-          who loves building.
+          <span class="accent-text">Software engineer.</span><br />
+          I build &amp; write.
         </h1>
         <p class="hero-lede">
-          I love writing code and learning what real codebases teach you. Computer
-          engineering background; these days I write TypeScript every day and publish
-          notes twice a week about the messy reality of shipping software.
+          Welcome in. Projects live in <a href="/work" class="link">/work</a>, essays go up in
+          <a href="/writing" class="link">/writing</a>, and the kettle is always on for an email.
         </p>
         <div class="hero-cta">
           <a href="/work" class="btn btn-primary">
@@ -67,17 +66,17 @@ const tsSnippet = `<span class="code-c">// domain error code as discriminated un
             <span class="t-dot dg"></span>
             <span class="t-name">ozgur@portfolio — zsh</span>
           </div>
-          <pre class="t-body"><code><span class="t-c">~ </span><span class="t-prompt">$</span> whoami
-<span class="t-out">ozgur · software engineer</span>
+          <pre class="t-body"><code><span class="t-c">~ </span><span class="t-prompt">$</span> uname -a
+<span class="t-out">ozgur · software engineer · v∞</span>
 
 <span class="t-c">~ </span><span class="t-prompt">$</span> stack --primary
 <span class="t-out">typescript · react · node · express · postgres</span>
 
-<span class="t-c">~ </span><span class="t-prompt">$</span> mindset
-<span class="t-out">curious · eager to learn · build things</span>
+<span class="t-c">~ </span><span class="t-prompt">$</span> ps -e | head
+<span class="t-out">read · break · fix · ship · repeat</span>
 
-<span class="t-c">~ </span><span class="t-prompt">$</span> writing
-<span class="t-out"><span class="t-ok">●</span> tuesdays + thursdays @ /writing</span>
+<span class="t-c">~ </span><span class="t-prompt">$</span> coffee --status
+<span class="t-out"><span class="t-ok">●</span> always brewing</span>
 
 <span class="t-c">~ </span><span class="t-prompt">$</span> <span class="t-cursor">█</span></code></pre>
         </div>
@@ -97,16 +96,15 @@ const tsSnippet = `<span class="code-c">// domain error code as discriminated un
         <div class="bcard bcard-greeting bcard-span-2">
           <p class="bcard-eyebrow">/ greeting</p>
           <p class="bcard-greeting-text">
-            Hey 👋 Curious about how software gets built. <strong>Computer engineering
-            background</strong>; lately working with TypeScript, Node, and React — and
-            writing here about what I learn along the way.
+            Hey 👋 I read more code than I write — and write more code than I commit.
+            <strong>Computer engineering</strong> by training; full-stack by habit.
           </p>
         </div>
 
         <div class="bcard bcard-now">
-          <p class="bcard-eyebrow">/ writing</p>
-          <p class="bcard-big">2×<br />week</p>
-          <p class="bcard-small">Tuesdays + Thursdays · TypeScript &amp; code review</p>
+          <p class="bcard-eyebrow">/ rhythm</p>
+          <p class="bcard-big">Tue · Thu</p>
+          <p class="bcard-small">I show up twice a week with a new essay.</p>
         </div>
 
         <div class="bcard bcard-span-2">
@@ -222,19 +220,17 @@ const tsSnippet = `<span class="code-c">// domain error code as discriminated un
   <section id="writing" class="home-section">
     <div class="container">
       <div class="home-section-head">
-        <h2 class="home-section-title">Twice a week.</h2>
+        <h2 class="home-section-title">From the desk.</h2>
         <p class="home-section-sub">
-          Tuesday and Thursday. Notes on TypeScript, code review, and what I'm learning
-          while working in a team codebase.
+          Latest essays. <a href="/writing">Browse all →</a> · <a href="/rss.xml">RSS</a>
         </p>
       </div>
 
       {posts.length === 0 ? (
         <div class="writing-empty">
-          <p class="we-headline">📬 First post drops shortly.</p>
+          <p class="we-headline">📬 Stand by — the first post is on its way.</p>
           <p class="we-body">
-            I'm queueing essays on Java→TypeScript transition, discriminated unions in
-            error handling, and reading a multi-tenant codebase for the first time.
+            A few drafts are simmering. Hook into the RSS so you don't miss the first one out of the kitchen.
           </p>
           <div class="we-cta">
             <a href="/rss.xml" class="link-arrow">Subscribe via RSS</a>
@@ -265,11 +261,11 @@ const tsSnippet = `<span class="code-c">// domain error code as discriminated un
   <section class="cta-section">
     <div class="container">
       <div class="cta-card">
-        <p class="bcard-eyebrow">/ get in touch</p>
-        <h2 class="cta-title">Say hi.</h2>
+        <p class="bcard-eyebrow">/ door's open</p>
+        <h2 class="cta-title">Drop a line.</h2>
         <p class="cta-text">
-          The best way to reach me is email. For roles &amp; career conversations,
-          LinkedIn has the full story.
+          Whichever channel works for you — email lands fastest. LinkedIn has the
+          long-form career story, GitHub has the receipts.
         </p>
         <div class="cta-actions">
           <a href="mailto:ozguryildiz0@outlook.com" class="btn btn-primary">

@@ -21,14 +21,14 @@ const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
 
 <BaseLayout
   title="Writing — Ozgur Yildiz"
-  description="Essays on TypeScript, Node.js, React, and what bootcamps don't teach you about real codebases."
+  description="An archive of essays — browsable by date and tag, syndicated via RSS."
 >
   <section class="page-header container">
     <span class="mono dim">/ writing</span>
     <h1>Writing</h1>
     <p class="page-lede">
-      Two posts a week on shipping production software — TypeScript, Node, React,
-      and the unglamorous parts of moving from bootcamp code to a real codebase.
+      Most posts here started as a note I wish someone had handed me earlier.
+      Browse by tag or scroll the years.
     </p>
     <p class="page-meta mono"><a href="/writing/tags">→ Browse by tag</a> · <a href="/rss.xml">RSS feed</a></p>
   </section>
@@ -36,12 +36,10 @@ const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
   <section class="container">
     {posts.length === 0 ? (
       <div class="empty-state">
-        <p class="mono dim">No posts published yet — the queue is loaded.</p>
+        <p class="mono dim">Queue loaded — first post drops soon.</p>
         <p class="empty-note">
-          New posts every Tuesday and Thursday. Subscribe via
-          <a href="/rss.xml">RSS</a> or follow on
-          <a href="https://linkedin.com/in/yldzozgur" target="_blank" rel="noopener">LinkedIn ↗</a>
-          to catch the first one.
+          Catch the first via <a href="/rss.xml">RSS</a> or on
+          <a href="https://linkedin.com/in/yldzozgur" target="_blank" rel="noopener">LinkedIn ↗</a>.
         </p>
       </div>
     ) : (

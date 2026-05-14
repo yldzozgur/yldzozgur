@@ -14,7 +14,7 @@ const skills = {
 
 <BaseLayout
   title="About — Ozgur Yildiz"
-  description="Software engineer who loves building things with code and writing about what real codebases teach."
+  description="An engineer's notes on reading code, writing small PRs, and the slow parts of software."
 >
   <section class="page-header container">
     <span class="mono dim">/ about</span>
@@ -24,28 +24,32 @@ const skills = {
   <section class="container">
     <div class="prose about-prose">
       <p class="lead">
-        Hi, I'm Ozgur — a software engineer who loves building things with code.
+        I like the slow parts of software.
       </p>
 
       <p>
-        I'm endlessly curious about how things are built. Computer engineering
-        background; I write TypeScript every day and spend most of my time
-        learning what real codebases teach you that tutorials can't — how to
-        read someone else's code, how to write a pull request a reviewer will
-        actually understand, and why production almost always disagrees with
-        your local machine.
+        Reading the code that's already there before writing new code. Asking
+        <em>why</em> before <em>how</em>. Finishing things — including the boring
+        bits, the docs, the error messages no one reads until they need them.
       </p>
 
       <p>
-        I write here twice a week about the messy reality of shipping software —
-        the gap between "I finished the bootcamp" and "I can contribute to a
-        production codebase." Most of what I publish is something I wish someone
-        had written for me six months ago.
+        What I value in engineering: small pull requests you can review in ten
+        minutes, error messages that point at the cause and not the symptom, and
+        tests that fail loudly when they should. I'd rather understand a system
+        slowly than ship something I can't defend in code review.
       </p>
 
       <p>
-        For role conversations and full career history → reach me on
-        <a href="https://linkedin.com/in/yldzozgur">LinkedIn</a> or via
+        I write here mostly to think out loud — explaining something forces me
+        to actually understand it. This site itself was built in an afternoon
+        with Astro and Cloudflare Workers; the unglamorous parts of that are
+        already in <a href="/writing">/writing</a>'s backlog.
+      </p>
+
+      <p>
+        For role conversations and full career history →
+        <a href="https://linkedin.com/in/yldzozgur">LinkedIn</a> or
         <a href="mailto:ozguryildiz0@outlook.com">email</a>.
       </p>
     </div>
@@ -75,37 +79,26 @@ const skills = {
       <a href="https://github.com/yldzozgur" target="_blank" rel="noopener" class="activity-card">
         <span class="mono activity-label">GitHub</span>
         <span class="activity-title">github.com/yldzozgur ↗</span>
-        <span class="activity-note">Public repositories, commits, and contribution graph.</span>
+        <span class="activity-note">Where the code lives.</span>
       </a>
       <a href="https://linkedin.com/in/yldzozgur" target="_blank" rel="noopener" class="activity-card">
         <span class="mono activity-label">LinkedIn</span>
         <span class="activity-title">linkedin.com/in/yldzozgur ↗</span>
-        <span class="activity-note">Career history, posts, and recommendations.</span>
+        <span class="activity-note">The long-form career story.</span>
       </a>
       <a href="/writing" class="activity-card">
         <span class="mono activity-label">Writing</span>
         <span class="activity-title">/writing →</span>
-        <span class="activity-note">Two posts a week — Tuesday and Thursday.</span>
+        <span class="activity-note">Words I've left lying around.</span>
       </a>
       <a href="/work" class="activity-card">
         <span class="mono activity-label">Work</span>
         <span class="activity-title">/work →</span>
-        <span class="activity-note">Portfolio of projects with live demos.</span>
+        <span class="activity-note">Things I've shipped, mostly live.</span>
       </a>
     </div>
   </section>
 
-  <section class="container section-block contact">
-    <h2 class="section-heading">Get in touch</h2>
-    <p>
-      Email is the fastest way to reach me — I check it every day.
-    </p>
-    <ul class="contact-list">
-      <li><a href="mailto:ozguryildiz0@outlook.com">ozguryildiz0@outlook.com</a></li>
-      <li><a href="https://linkedin.com/in/yldzozgur" target="_blank" rel="noopener">linkedin.com/in/yldzozgur ↗</a></li>
-      <li><a href="https://github.com/yldzozgur" target="_blank" rel="noopener">github.com/yldzozgur ↗</a></li>
-    </ul>
-  </section>
 </BaseLayout>
 
 <style>
