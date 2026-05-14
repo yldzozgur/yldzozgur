@@ -18,5 +18,6 @@ export async function GET(context) {
         categories: post.data.tags,
       })),
     customData: `<language>en-us</language>`,
+    stylesheet: '/rss.xsl',
   });
 }

@@ -1,18 +1,20 @@
 ---
-title: "Static typing in Java vs TypeScript — a beginner's side-by-side"
-description: "Both languages catch bugs before you run the code, but they do it differently. A simple walkthrough using a small payment example."
+title: "Static typing in Java vs TypeScript, a beginner's side by side"
+description: "Both languages catch bugs before you run the code, but they handle it differently. A simple walkthrough using a small payment example."
 pubDate: 2026-05-14
 tags: ["typescript", "code-review", "tooling"]
 draft: false
 ---
 
-If you read Java code first and then TypeScript code, the two can look very similar. `List<User>` in Java becomes `User[]` in TypeScript. `Map<K, V>` looks the same. But the moment you try to model something with **more than one shape** — like a payment that can be a card charge, a bank transfer, or a refund — the two type systems start to behave very differently.
+If you read some Java first and then read some TypeScript, the two can feel pretty similar. `List<User>` becomes `User[]`. `Map<K, V>` is `Map<K, V>` in both. So far so good.
 
-This post takes one tiny example and writes it in both languages. The goal is not to pick a winner. The goal is to see *what each language asks you to write down*, and what it does in return.
+But the moment you try to model something with more than one shape, like a payment that could be a card charge, a bank transfer, or a refund, the two type systems stop looking alike. That's where they start showing what they actually believe about correctness.
+
+I want to take one small example and write it in both languages. Not to pick a winner. Both languages ship to production every day. I just want to see what each one asks you to write down, and what it gives you back.
 
 ## The example
 
-Let's say we want to handle a payment. A payment can be one of three things:
+A payment can be one of three things:
 
 | Variant | Common fields | Unique field |
 |---|---|---|
@@ -20,11 +22,11 @@ Let's say we want to handle a payment. A payment can be one of three things:
 | Bank transfer | `id`, `amount` | `iban` |
 | Refund | `id`, `amount` | `originalId` (the payment being refunded) |
 
-That's it. Three shapes that share two fields and add one.
+Three shapes. Two shared fields. One unique field each. Nothing fancy.
 
 ## In Java
 
-Modern Java (17+) lets us write this with **sealed interfaces** and **records**:
+Modern Java (17 and up) gives you sealed interfaces and records:
 
 ```java
 public sealed interface Payment
@@ -35,10 +37,11 @@ public record BankTransfer(String id, BigDecimal amount, String iban)     implem
 public record Refund(String id, BigDecimal amount, String originalId)     implements Payment {}
 ```
 
-Two things to notice:
+Two things going on here.
 
-1. **`sealed interface`** means: "the *complete* list of payments is right here." Nobody else can add a fourth variant from another file.
-2. **`record`** is a short way to say "this is a small immutable data class." Java generates the constructor, getters, and `equals` for free.
+The word `sealed` is the important one. It tells the compiler "the full list of payments is right here. Nobody else can sneak in a fourth variant from another file."
+
+The other word is `record`. Think of it as a shortcut for a small immutable data class. Java fills in the constructor, the getters, and `equals` for you.
 
 Now we can describe any payment:
 
@@ -52,13 +55,13 @@ String describe(Payment p) {
 }
 ```
 
-The cool part: if you **forget a case**, the compiler refuses to build. And if someone adds a fourth variant later, every `switch` like this becomes an error pointing exactly where you need to add a branch.
+The nice thing: forget a case and the compiler refuses to build. Add a fourth variant later and every `switch` like this becomes an error that points exactly where you need a new branch. That's a strong promise.
 
-That's a strong promise. The cost is verbosity — three separate `record` declarations to describe one concept.
+The cost is verbosity. Three separate record declarations for one idea.
 
 ## In TypeScript
 
-The same example with a **discriminated union**:
+Same example, written as a discriminated union:
 
 ```ts
 type Payment =
@@ -67,7 +70,7 @@ type Payment =
   | { kind: "refund"; id: string; amount: number; originalId: string };
 ```
 
-The trick is the `kind` field. It's a string that tells the compiler *which variant we're looking at*. Now we can describe a payment the same way:
+The trick is that `kind` field. It's just a string, but the compiler uses it to figure out which variant you're looking at right now.
 
 ```ts
 function describe(p: Payment): string {
@@ -79,9 +82,9 @@ function describe(p: Payment): string {
 }
 ```
 
-Inside `case "card"`, TypeScript knows for sure that `p.last4` exists. Inside `case "bank"`, it knows `p.iban` exists. You don't have to cast or check — the compiler narrows the type for you based on `kind`.
+Inside `case "card"`, TypeScript knows `p.last4` is there. Inside `case "bank"`, it knows `p.iban` is there. You don't cast, you don't double-check. The compiler narrows the type based on the `kind` value.
 
-But what about the "you forgot a case" guarantee? TypeScript doesn't give it automatically. You get it by writing a tiny helper:
+What about the "you forgot a case" guarantee? TypeScript doesn't give it for free. You opt in with a tiny helper:
 
 ```ts
 function assertNever(x: never): never {
@@ -98,31 +101,33 @@ function describe(p: Payment): string {
 }
 ```
 
-The trick: in the `default` branch, `p` should be **`never`** (no variants left). If you add a fourth variant to the union and forget to handle it, `p` isn't `never` anymore — and `assertNever(p)` becomes a compile error.
+In the `default` branch, `p` should be `never`. No variants left. If you add a fourth one to the union and forget to handle it, suddenly `p` isn't `never` anymore, and `assertNever(p)` becomes a compile error.
 
-So you get the same safety, just opt-in.
+Same safety as Java's exhaustive switch. You just have to ask for it.
 
-## What carries over
+## What carries across
 
-If you know one type system, here is what reads almost the same in the other:
+Some patterns map almost one to one between the two:
 
 | Concept | Java | TypeScript |
 |---|---|---|
-| Set of fixed variants | `sealed interface` | discriminated union |
+| Closed set of variants | `sealed interface` | discriminated union |
 | Small data class | `record` | `type` or `interface` |
-| "Maybe missing" | `Optional<T>` | `T \| undefined` |
+| Maybe missing | `Optional<T>` | `T \| undefined` |
 | Generic with a bound | `<T extends Foo>` | `<T extends Foo>` |
 | Anything iterable | `Iterable<T>` | `Iterable<T>` |
 
-The intuitions are the same. If you can read `Map<String, List<Order>>` in Java, you can read `Map<string, Order[]>` in TypeScript without help.
+If you can read `Map<String, List<Order>>` in Java, `Map<string, Order[]>` reads itself.
 
-## What does *not* carry over
+## What doesn't carry across
 
-Three things look similar but behave differently. These are where most bugs cross the language boundary.
+A few things look familiar but behave differently. These are usually where bugs slip when someone moves between the two.
 
-### 1. Exceptions
+### Exceptions
 
-Java has **checked exceptions** — the compiler forces you to declare or handle them. TypeScript has none. Idiomatic TypeScript usually models errors as values:
+Java has checked exceptions. The compiler makes you declare or catch them. TypeScript has none.
+
+So idiomatic TypeScript codebases lean on error values:
 
 ```ts
 type Result<T, E> =
@@ -134,52 +139,52 @@ async function getUser(id: string): Promise<Result<User, "not-found" | "db-error
 }
 ```
 
-It's the same discriminated-union trick again. That's why you see it everywhere in TypeScript codebases — it's the language's answer to "how do I represent failure."
+That's the same discriminated union trick again. You see it everywhere in TypeScript because it's the language's answer to "how do I represent failure without throwing."
 
-### 2. Numbers
+### Numbers
 
-Java has many: `int`, `long`, `double`, `BigDecimal`. TypeScript has just one: `number` (and `bigint` for huge integers). Storing **money** as `number` in TypeScript will quietly lose cents to floating-point math.
+Java distinguishes between `int`, `long`, `double`, and `BigDecimal`. TypeScript has one number type. It's an IEEE-754 double, which is fine for most things and quietly wrong for money.
 
-The TypeScript answer is to use a decimal library (like `decimal.js`) or store amounts as **integer cents** and format them at the display layer.
+If you store cents as `number` in TypeScript, you'll eventually have a bug like `0.1 + 0.2 = 0.30000000000000004`. The usual fix is either a decimal library, or store the amount as an integer (in cents) and format it for display.
 
-### 3. Same shape, different meaning
+### Same shape, different meaning
 
-This is the deepest difference.
-
-Java is **nominal**: two classes with identical fields are still different types.
+This one is deeper. Java is nominal. Two classes with the same fields are still different types.
 
 ```java
 class UserId { String value; }
 class OrderId { String value; }
 
 UserId u = new UserId(...);
-OrderId o = u; // ❌ won't compile
+OrderId o = u; // won't compile
 ```
 
-TypeScript is **structural**: any object with the right shape is assignable.
+TypeScript is structural. Any object with the right shape is assignable, full stop.
 
 ```ts
 type UserId = string;
 type OrderId = string;
 
 const u: UserId = "abc";
-const o: OrderId = u; // ✅ compiles fine 😬
+const o: OrderId = u; // compiles, ouch
 ```
 
-That's useful sometimes (no boilerplate) and dangerous others (a `userId` ends up where an `orderId` should be). The fix is a **branded type**:
+Sometimes that's a feature (less boilerplate). Sometimes it's a footgun (a user id ends up where an order id should be). The workaround is what people call a "branded type":
 
 ```ts
 type UserId  = string & { readonly __brand: "UserId" };
 type OrderId = string & { readonly __brand: "OrderId" };
 ```
 
-Now `UserId` and `OrderId` are different types at compile time, even though they're both strings at runtime. You get some of Java's nominal safety back, but you have to ask for it.
+Now `UserId` and `OrderId` are incompatible at compile time, even though they're both just strings at runtime. You get some of Java's nominal safety back, but you have to ask for it.
 
 ## The runtime question
 
-There is one last thing that matters in practice. Java keeps some type information at runtime (you can `instanceof` a `Payment`). TypeScript erases all type information when it compiles to JavaScript. After `tsc` runs, **the types are gone**.
+Here's the last thing that matters in practice.
 
-So how do you validate a JSON request body in a TypeScript backend? You can't ask "is this a `Payment`?" at runtime — the answer is meaningless. You use a **schema library** like [zod](https://zod.dev) or [valibot](https://valibot.dev):
+Java keeps some type info around at runtime. You can do `obj instanceof Payment` and get a real answer. TypeScript erases all the types when it compiles to JavaScript. After `tsc` runs, the types are completely gone.
+
+So how do you check a JSON request body in a TypeScript backend? You can't ask "is this a `Payment`?" because at runtime, that question is meaningless. The usual answer is a schema library like [zod](https://zod.dev):
 
 ```ts
 import { z } from "zod";
@@ -193,15 +198,14 @@ const PaymentSchema = z.discriminatedUnion("kind", [
 type Payment = z.infer<typeof PaymentSchema>;
 ```
 
-Now `Payment` is the type *and* `PaymentSchema.parse(req.body)` is the runtime check. Same source, two outputs.
+Now `Payment` is the static type, and `PaymentSchema.parse(req.body)` does the runtime check. Same source. Two outputs.
 
-This split — types at compile time, schemas at runtime — is the part most people don't realize when they move from a JVM stack to Node. The compiler isn't doing less. It's doing **exactly as much**, on exactly the part of the program where you control the source of truth. The boundary (input from network, database, user) is where you, the developer, layer in validation.
+This split (types at compile time, schemas at runtime) is the part most people miss when they switch from a JVM backend to a Node one. The compiler isn't doing less work. It's doing the same amount, just on a different surface. The boundary, where untyped JSON enters your code, is on you.
 
-## Takeaway
+## The takeaway
 
-Both languages catch bugs before they run. They just charge for the catch differently.
+Both languages catch bugs before they run. They just charge for it differently.
 
-- **Java** asks for more code upfront (`sealed interface`, `record`, exception declarations) and gives you compile-time *and* runtime guarantees in return.
-- **TypeScript** asks for less code upfront (one union, one helper) and gives you compile-time guarantees only — runtime validation is your job, but it's deliberate and explicit.
+Java asks for more code upfront (sealed interface, record, exception declarations) and gives you compile-time and runtime guarantees in return. TypeScript asks for less code upfront (one union, one helper) and gives you compile-time guarantees only. The runtime layer is your job, but it's explicit, and the schema doubles as the type.
 
-The smaller lesson is portable: when you cross stacks, **look for the pattern, not the syntax**. A sealed interface and a discriminated union are the same idea wearing different uniforms. Once you see that, every new language stops being a fresh start.
+The bigger lesson is portable. When you cross between languages, look for the pattern, not the syntax. A sealed interface and a discriminated union are the same idea in different uniforms. Once you start seeing that, every new language stops feeling like a fresh start.
