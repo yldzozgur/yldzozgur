@@ -1,7 +1,7 @@
 <h1 align="center">Hi, I'm Ozgur 👋</h1>
 
 <p align="center">
-  Full-stack engineer in <strong>Austin, TX</strong> · shipping production TypeScript at
+  Junior full-stack developer in <strong>Austin, TX</strong> · volunteering on TypeScript at
   <a href="https://github.com/Ameza-Smart-Retail-Solutions">Ameza Solutions</a>
 </p>
 
@@ -16,14 +16,14 @@
 
 ### About
 
-Six years of prior Java &amp; .NET enterprise experience — e-commerce backend at **Ebebek**, an asset management system at **Lactalis**, and Android + .NET tools at **Gaga Software**. Relocated from Turkey to the U.S. in 2023; spent the next two years on an MBA, intensive English, and the Clarusway full-stack bootcamp. Now writing TypeScript every day.
+Earlier Java &amp; .NET enterprise experience in Turkey (2017–2023) — e-commerce backend at **Ebebek**, an asset management system at **Lactalis**, and Android + .NET tools at **Gaga Software**. Relocated to the U.S. in 2023; spent the next two years on an MBA, intensive English, and the Clarusway full-stack bootcamp. Now writing TypeScript every day, eager to learn and contribute.
 
 🟢 **Open to** Junior Full-Stack / Backend roles — remote (US-wide) or hybrid (Greater Austin)
 🇺🇸 **U.S. work authorized** — no sponsorship required, now or in the future
 
 ### What I'm up to
 
-- 🛠 **Shipping** features at Ameza on a multi-tenant retail platform (20+ merged PRs)
+- 🛠 **Contributing** at Ameza on a multi-tenant retail platform (20+ merged PRs)
 - ✍️ **Writing** twice a week at [**yldzozgur.com/writing**](https://yldzozgur.com/writing) — Tuesday + Thursday
 - 📚 **Reading** the kinds of things that show up in code review three months later
 
@@ -43,7 +43,7 @@ Testing      Cypress (E2E)
 
 | Project | Stack | Live |
 |---|---|---|
-| 🚀 **[Ameza Smart Retail Platform](https://github.com/Ameza-Smart-Retail-Solutions)** | TypeScript · React · Node · PostgreSQL | currently shipping |
+| 🚀 **[Ameza Smart Retail Platform](https://github.com/Ameza-Smart-Retail-Solutions)** | TypeScript · React · Node · PostgreSQL | volunteer · current |
 | [Stock Management App](https://github.com/yldzozgur/stock-management-app) | React · Redux · Express · MongoDB | [demo ↗](https://ozguryildiz-stock.vercel.app) |
 | [Pizza API](https://github.com/yldzozgur/pizza-api) | Express · MongoDB · JWT · Swagger | [api ↗](https://ozguryildiz-pizza-api.vercel.app) |
 | [Rent-A-Car API](https://github.com/yldzozgur/rent-a-car-api) | Express · MongoDB · JWT | [api ↗](https://ozguryildiz-rentacar-api.vercel.app) |
