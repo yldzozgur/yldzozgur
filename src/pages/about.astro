@@ -3,56 +3,18 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 
 const skills = {
   Languages: ['JavaScript (ES6+)', 'TypeScript', 'SQL', 'HTML5', 'CSS3'],
-  Frontend: ['React', 'Redux Toolkit', 'React Router', 'Vite', 'Tailwind CSS', 'MUI', 'Formik / Yup'],
-  Backend: ['Node.js', 'Express', 'REST APIs', 'JWT', 'Mongoose', 'Swagger / OpenAPI', 'Multer', 'Nodemailer'],
+  Frontend: ['React', 'Redux Toolkit', 'React Router', 'Vite', 'Tailwind CSS', 'MUI'],
+  Backend: ['Node.js', 'Express', 'REST APIs', 'JWT', 'Mongoose', 'Swagger / OpenAPI'],
   Databases: ['PostgreSQL', 'MongoDB', 'MySQL'],
-  'Cloud & DevOps': ['Vercel', 'Docker', 'GitHub Actions', 'MongoDB Atlas', 'Firebase Auth'],
+  'Cloud & DevOps': ['Vercel', 'Docker', 'GitHub Actions'],
   Testing: ['Cypress (E2E)'],
   'AI-Assisted Workflow': ['Claude Code', 'Cursor', 'GitHub Copilot'],
 };
-
-const experience = [
-  {
-    role: 'Volunteer Full-Stack Developer',
-    org: 'Ameza Solutions',
-    location: 'Austin, TX (Remote)',
-    period: 'Nov 2025 — Present',
-    summary: 'Multi-tenant smart retail / POS platform. 20+ merged PRs across React + TypeScript frontend and Node / Express + PostgreSQL backend. Code review in a small distributed team using feature-branch + GitHub workflow.',
-  },
-  {
-    role: 'Career Transition',
-    org: 'U.S. Relocation, MBA & JS Stack Re-tooling',
-    location: 'Boston → Austin',
-    period: 'Sep 2023 — Oct 2025',
-    summary: 'Relocated from Turkey. Completed online MBA (Marmara University), intensive ESL at Talk English Boston, and Clarusway Full Stack Bootcamp (Feb–Oct 2025).',
-  },
-  {
-    role: 'Software Engineer',
-    org: 'Ebebek',
-    location: 'Remote, Istanbul',
-    period: 'Jan 2022 — Sep 2023',
-    summary: 'Backend engineer on a high-traffic e-commerce platform. Maintained and refactored Java REST APIs and SQL data layers in a 10+ person remote Agile team.',
-  },
-  {
-    role: 'Software Developer',
-    org: 'Lactalis Group',
-    location: 'On-site, Istanbul',
-    period: 'Nov 2019 — Jan 2022',
-    summary: 'Built and maintained a web-based Enterprise Asset Management System (C# / .NET / MSSQL) tracking 1,000+ IT hardware units. Gathered requirements directly from internal stakeholders.',
-  },
-  {
-    role: 'Software Developer',
-    org: 'Gaga Software',
-    location: 'On-site, Sakarya',
-    period: 'Aug 2017 — Nov 2019',
-    summary: 'Built an Android (Java) CRM app deployed to 20+ retail businesses. Developed C# / .NET desktop tools to automate manual data entry workflows.',
-  },
-];
 ---
 
 <BaseLayout
   title="About — Ozgur Yildiz"
-  description="Junior full-stack engineer based in Austin, TX. Earlier enterprise software experience, re-tooled around the modern JavaScript stack."
+  description="Software engineer who loves building things with code and writing about what real codebases teach."
 >
   <section class="page-header container">
     <span class="mono dim">/ about</span>
@@ -60,66 +22,31 @@ const experience = [
   </section>
 
   <section class="container">
-    <dl class="quick-stats">
-      <div class="quick-stat">
-        <dt class="mono">Currently</dt>
-        <dd>Full-Stack Developer @ Ameza Solutions</dd>
-      </div>
-      <div class="quick-stat">
-        <dt class="mono">Base</dt>
-        <dd>Austin, TX — open to remote (US-wide) &amp; hybrid (Greater Austin)</dd>
-      </div>
-      <div class="quick-stat">
-        <dt class="mono">Status</dt>
-        <dd>Available · U.S. work authorized, no sponsorship required</dd>
-      </div>
-      <div class="quick-stat">
-        <dt class="mono">Stack</dt>
-        <dd>TypeScript · React · Node · Express · PostgreSQL</dd>
-      </div>
-      <div class="quick-stat">
-        <dt class="mono">Background</dt>
-        <dd>Java &amp; .NET enterprise (2017-2023) → MBA → JS stack bootcamp</dd>
-      </div>
-    </dl>
-
     <div class="prose about-prose">
       <p class="lead">
-        I'm Ozgur — a full-stack engineer based in Austin, Texas. I'm currently
-        contributing to a multi-tenant retail platform at Ameza Solutions, where
-        I ship TypeScript and React features alongside Node / PostgreSQL backend work.
+        Hi, I'm Ozgur — a software engineer who loves building things with code.
       </p>
 
       <p>
-        Before re-tooling around the JavaScript stack, I worked in
-        enterprise software (Java and C# / .NET) from 2017 to 2023 — backend on a
-        high-traffic e-commerce platform at Ebebek, an asset management system at
-        Lactalis, and Android + .NET tools at Gaga Software. That background means
-        I've worked in teams with code review, production releases, and
-        stakeholders — context I bring to junior roles while I'm still learning
-        the modern JS stack.
+        I'm endlessly curious about how things are built. Computer engineering
+        background; I write TypeScript every day and spend most of my time
+        learning what real codebases teach you that tutorials can't — how to
+        read someone else's code, how to write a pull request a reviewer will
+        actually understand, and why production almost always disagrees with
+        your local machine.
       </p>
 
       <p>
-        In 2023 I relocated to the U.S. and spent the next two years doing three
-        things at once: an MBA, intensive English, and the Clarusway full-stack
-        bootcamp. The bootcamp re-trained me on Node, Express, React, TypeScript,
-        MongoDB, PostgreSQL, and Docker. The MBA gave me a way to talk about
-        software in business terms. The English program let me have those
-        conversations at all.
+        I write here twice a week about the messy reality of shipping software —
+        the gap between "I finished the bootcamp" and "I can contribute to a
+        production codebase." Most of what I publish is something I wish someone
+        had written for me six months ago.
       </p>
 
       <p>
-        I write here because the gap between "I finished the bootcamp" and "I can
-        contribute to a production codebase" is wide, real, and badly documented.
-        Most of what I publish is something I wish someone had written for me six
-        months ago.
-      </p>
-
-      <p>
-        <strong>Work authorization:</strong> Authorized to work in the U.S. — no
-        sponsorship required, now or in the future. <strong>Availability:</strong> Open
-        to remote (US-wide) and hybrid (Greater Austin) Junior Full-Stack or Backend roles.
+        For role conversations and full career history → reach me on
+        <a href="https://linkedin.com/in/yldzozgur">LinkedIn</a> or via
+        <a href="mailto:ozguryildiz0@outlook.com">email</a>.
       </p>
     </div>
   </section>
@@ -143,51 +70,12 @@ const experience = [
   </section>
 
   <section class="container section-block">
-    <h2 class="section-heading">Experience</h2>
-    <ol class="timeline">
-      {experience.map((e) => (
-        <li class="timeline-item">
-          <div class="timeline-period mono">{e.period}</div>
-          <div class="timeline-body">
-            <h3 class="timeline-role">{e.role} <span class="timeline-org">· {e.org}</span></h3>
-            <p class="mono timeline-loc">{e.location}</p>
-            <p class="timeline-summary">{e.summary}</p>
-          </div>
-        </li>
-      ))}
-    </ol>
-  </section>
-
-  <section class="container section-block">
-    <h2 class="section-heading">Education</h2>
-    <ul class="education">
-      <li>
-        <strong>MBA — Marmara University</strong> <span class="mono dim">2023 — 2025 · Online</span>
-      </li>
-      <li>
-        <strong>B.S. Computer Engineering — Cumhuriyet University</strong> <span class="mono dim">2013 — 2017 · Sivas, Turkey</span>
-      </li>
-      <li>
-        <strong>Full Stack Bootcamp — Clarusway</strong> <span class="mono dim">Feb — Oct 2025</span>
-      </li>
-      <li>
-        <strong>Intensive English — Talk English Boston</strong> <span class="mono dim">2023 — 2024</span>
-      </li>
-    </ul>
-  </section>
-
-  <section class="container section-block activity">
-    <h2 class="section-heading">Recent activity</h2>
+    <h2 class="section-heading">Find me</h2>
     <div class="activity-grid">
       <a href="https://github.com/yldzozgur" target="_blank" rel="noopener" class="activity-card">
         <span class="mono activity-label">GitHub</span>
         <span class="activity-title">github.com/yldzozgur ↗</span>
         <span class="activity-note">Public repositories, commits, and contribution graph.</span>
-      </a>
-      <a href="https://github.com/Ameza-Smart-Retail-Solutions" target="_blank" rel="noopener" class="activity-card">
-        <span class="mono activity-label">Ameza Org</span>
-        <span class="activity-title">github.com/Ameza-Smart-Retail-Solutions ↗</span>
-        <span class="activity-note">The retail platform I currently ship features on.</span>
       </a>
       <a href="https://linkedin.com/in/yldzozgur" target="_blank" rel="noopener" class="activity-card">
         <span class="mono activity-label">LinkedIn</span>
@@ -199,13 +87,18 @@ const experience = [
         <span class="activity-title">/writing →</span>
         <span class="activity-note">Two posts a week — Tuesday and Thursday.</span>
       </a>
+      <a href="/work" class="activity-card">
+        <span class="mono activity-label">Work</span>
+        <span class="activity-title">/work →</span>
+        <span class="activity-note">Portfolio of projects with live demos.</span>
+      </a>
     </div>
   </section>
 
   <section class="container section-block contact">
     <h2 class="section-heading">Get in touch</h2>
     <p>
-      The fastest way to reach me is email — I check it every day.
+      Email is the fastest way to reach me — I check it every day.
     </p>
     <ul class="contact-list">
       <li><a href="mailto:ozguryildiz0@outlook.com">ozguryildiz0@outlook.com</a></li>
@@ -226,40 +119,6 @@ const experience = [
   }
   .page-header h1 {
     margin: 0.5rem 0 0;
-  }
-
-  .quick-stats {
-    max-width: var(--reading-width);
-    margin: 0 auto 2.5rem;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    background: var(--bg-subtle);
-    padding: 0.5rem 1rem;
-  }
-  .quick-stat {
-    display: grid;
-    grid-template-columns: 8rem 1fr;
-    gap: 1rem;
-    padding: 0.6rem 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .quick-stat:last-child {
-    border-bottom: none;
-  }
-  .quick-stat dt {
-    color: var(--accent-dim);
-    font-size: 0.75rem;
-    padding-top: 0.15rem;
-  }
-  .quick-stat dd {
-    color: var(--ink);
-    font-size: 0.9375rem;
-  }
-  @media (max-width: 640px) {
-    .quick-stat {
-      grid-template-columns: 1fr;
-      gap: 0.15rem;
-    }
   }
 
   .about-prose {
@@ -327,67 +186,6 @@ const experience = [
     text-transform: none;
   }
 
-  .timeline {
-    list-style: none;
-    max-width: var(--reading-width);
-    margin: 0 auto;
-  }
-  .timeline-item {
-    display: grid;
-    grid-template-columns: 8rem 1fr;
-    gap: 1.5rem;
-    padding: 1.5rem 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .timeline-item:last-child {
-    border-bottom: none;
-  }
-  .timeline-period {
-    color: var(--ink-faint);
-    padding-top: 0.3rem;
-  }
-  .timeline-role {
-    font-family: var(--font-display);
-    font-size: 1.1875rem;
-    margin-bottom: 0.25rem;
-  }
-  .timeline-org {
-    color: var(--ink-muted);
-    font-weight: 400;
-  }
-  .timeline-loc {
-    color: var(--ink-faint);
-    margin-bottom: 0.5rem;
-    font-size: 0.75rem;
-  }
-  .timeline-summary {
-    color: var(--ink-muted);
-    font-size: 0.9375rem;
-  }
-
-  .education {
-    list-style: none;
-    max-width: var(--reading-width);
-    margin: 0 auto;
-  }
-  .education li {
-    padding: 0.75rem 0;
-    border-bottom: 1px solid var(--border);
-    color: var(--ink-muted);
-  }
-  .education li:last-child {
-    border-bottom: none;
-  }
-  .education strong {
-    color: var(--ink);
-    font-weight: 500;
-    display: inline-block;
-    margin-right: 0.5rem;
-  }
-  .education .dim {
-    color: var(--ink-faint);
-  }
-
   .activity-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -404,12 +202,10 @@ const experience = [
     border-radius: 5px;
     background: var(--bg-subtle);
     color: var(--ink);
-    border-bottom: 1px solid var(--border);
     transition: border-color 0.2s ease, transform 0.2s ease;
   }
   .activity-card:hover {
     border-color: var(--accent);
-    border-bottom-color: var(--accent);
     transform: translateY(-1px);
   }
   .activity-label {
@@ -434,6 +230,10 @@ const experience = [
     .activity-grid {
       grid-template-columns: 1fr;
     }
+    .skill-row {
+      grid-template-columns: 1fr;
+      gap: 0.4rem;
+    }
   }
 
   .contact {
@@ -453,16 +253,5 @@ const experience = [
   }
   .contact-list a {
     color: var(--accent);
-  }
-
-  @media (max-width: 640px) {
-    .skill-row,
-    .timeline-item {
-      grid-template-columns: 1fr;
-      gap: 0.4rem;
-    }
-    .timeline-period {
-      padding-top: 0;
-    }
   }
 </style>
