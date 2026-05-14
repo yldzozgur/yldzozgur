@@ -215,7 +215,9 @@ const articleLd = {
     flex-wrap: wrap;
   }
   .share-btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     padding: 0.5rem 0.875rem;
     border: 1px solid var(--border-strong);
     border-radius: 4px;
@@ -225,13 +227,23 @@ const articleLd = {
     background: transparent;
     cursor: pointer;
     border-bottom: 1px solid var(--border-strong);
-    transition: border-color 0.2s ease, color 0.2s ease;
+    transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
   }
+  .share-btn svg {
+    flex-shrink: 0;
+    transition: color 0.2s ease;
+  }
+  .share-linkedin svg { color: #0A66C2; }
+  .share-x svg { color: #000; }
+  .share-rss svg { color: #EE802F; }
   .share-btn:hover {
     border-color: var(--accent);
     border-bottom-color: var(--accent);
     color: var(--accent);
   }
+  .share-linkedin:hover { border-color: #0A66C2; border-bottom-color: #0A66C2; color: #0A66C2; }
+  .share-x:hover { border-color: #000; border-bottom-color: #000; color: #000; }
+  .share-rss:hover { border-color: #EE802F; border-bottom-color: #EE802F; color: #EE802F; }
 
   .post-nav {
     max-width: var(--reading-width);
