@@ -14,7 +14,7 @@
 
 ### About
 
-I love building things with software. Computer engineering background; now writing TypeScript every day and learning what real codebases teach that bootcamps can't.
+Curious about how software gets built. Computer engineering background; lately working with TypeScript, Node, and React — and writing about what I learn along the way.
 
 For roles & full career history → [LinkedIn](https://linkedin.com/in/yldzozgur) or email.
 
