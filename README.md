@@ -58,7 +58,3 @@ Full portfolio with screenshots → [**yldzozgur.com/work**](https://yldzozgur.c
 - 🌐 [yldzozgur.com](https://yldzozgur.com)
 - 💼 [linkedin.com/in/yldzozgur](https://linkedin.com/in/yldzozgur)
 - ✉️ [ozguryildiz0@outlook.com](mailto:ozguryildiz0@outlook.com)
-
----
-
-<sub>This repository powers [yldzozgur.com](https://yldzozgur.com) — built with <a href="https://astro.build">Astro</a>, deployed to Cloudflare Workers. See <a href="DEVELOPMENT.md">DEVELOPMENT.md</a> for local setup.</sub>
