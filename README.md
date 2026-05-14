@@ -1,7 +1,7 @@
 <h1 align="center">Hi, I'm Ozgur 👋</h1>
 
 <p align="center">
-  Junior full-stack developer in <strong>Austin, TX</strong> · volunteering on TypeScript at
+  Junior full-stack developer in <strong>Austin, TX</strong> · volunteering on a TypeScript codebase at
   <a href="https://github.com/Ameza-Smart-Retail-Solutions">Ameza Solutions</a>
 </p>
 
