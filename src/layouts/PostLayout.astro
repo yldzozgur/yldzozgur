@@ -86,9 +86,26 @@ const articleLd = {
       <div class="share-actions">
         <a href={linkedinShare} target="_blank" rel="noopener" class="share-btn">Share on LinkedIn ↗</a>
         <a href={xShare} target="_blank" rel="noopener" class="share-btn">Share on X ↗</a>
+        <button type="button" class="share-btn copy-btn" data-url={postUrl}>Copy link</button>
         <a href="/rss.xml" class="share-btn">Subscribe via RSS</a>
       </div>
     </div>
+
+    <script is:inline>
+      document.querySelectorAll('.copy-btn').forEach((btn) => {
+        btn.addEventListener('click', async () => {
+          const url = btn.getAttribute('data-url');
+          try {
+            await navigator.clipboard.writeText(url);
+            const original = btn.textContent;
+            btn.textContent = 'Copied ✓';
+            setTimeout(() => { btn.textContent = original; }, 1500);
+          } catch (e) {
+            btn.textContent = 'Copy failed';
+          }
+        });
+      });
+    </script>
 
     {(prev || next) && (
       <nav class="container post-nav" aria-label="Post navigation">
@@ -193,6 +210,8 @@ const articleLd = {
     color: var(--ink);
     font-size: 0.8125rem;
     font-family: var(--font-mono);
+    background: transparent;
+    cursor: pointer;
     border-bottom: 1px solid var(--border-strong);
     transition: border-color 0.2s ease, color 0.2s ease;
   }
