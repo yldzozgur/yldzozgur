@@ -1,7 +1,7 @@
 <h1 align="center">Hi, I'm Ozgur 👋</h1>
 
 <p align="center">
-  Software engineer · curious about modern web tech · eager to learn.
+  Junior full-stack developer working with TypeScript, Node.js, and React.
 </p>
 
 <p align="center">
@@ -14,7 +14,7 @@
 
 ### About
 
-Curious about how software gets built. Computer engineering background; lately working with TypeScript, Node, and React — and writing about what I learn along the way.
+Computer engineering background. Lately I work mostly with TypeScript, Node, and React, and write about what I learn along the way.
 
 For roles & full career history → [LinkedIn](https://linkedin.com/in/yldzozgur) or email.
 
@@ -39,6 +39,5 @@ Testing      Cypress (E2E)
 | [Rent-A-Car API](https://github.com/yldzozgur/rent-a-car-api) | Express · MongoDB · JWT | [api ↗](https://ozguryildiz-rentacar-api.vercel.app) |
 | [Recipe App](https://github.com/yldzozgur/recipe-app) | React 19 · Vite · Tailwind | [live ↗](https://yldzozgur.github.io/recipe-app/) |
 | [React Movie App](https://github.com/yldzozgur/react-movieapp) | React · Firebase · TMDB | [live ↗](https://yldzozgur.github.io/react-movieapp/) |
-| [DraftLift Scheduler](https://github.com/yldzozgur/draftlift-scheduler) | Node · Express · Cron | self-hosted |
 
 More projects + writing → [**yldzozgur.com**](https://yldzozgur.com)
