@@ -15,7 +15,7 @@ const tags = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeComp
 ---
 
 <BaseLayout
-  title="Tags — Ozgur Yildiz"
+  title="Tags | Ozgur Yildiz"
   description="All topics covered on the Ozgur Yildiz writing archive."
 >
   <section class="page-header container">
@@ -28,7 +28,7 @@ const tags = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeComp
 
   <section class="container">
     {tags.length === 0 ? (
-      <p class="mono dim empty">No tags yet — first posts incoming Tuesday and Thursday.</p>
+      <p class="mono dim empty">No tags yet. First posts incoming Tuesday and Thursday.</p>
     ) : (
       <ul class="tag-list">
         {tags.map(([tag, count]) => (

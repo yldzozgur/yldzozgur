@@ -1,11 +1,11 @@
 /* ===========================================================
-   yldzozgur.com — modern light theme (bento)
+   yldzozgur.com - modern light theme (bento)
    =========================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Onest:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  /* Palette — warm light */
+  /* Palette - warm light */
   --bg: #fafaf6;
   --bg-soft: #f4f3ed;
   --bg-card: #ffffff;
@@ -130,7 +130,7 @@ pre code {
   color: inherit;
 }
 
-/* Mono utility — for tags, dates, metadata */
+/* Mono utility - for tags, dates, metadata */
 .mono {
   font-family: var(--font-mono);
   font-size: 0.75rem;

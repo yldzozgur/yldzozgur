@@ -109,7 +109,7 @@
               <a href="https://www.inoreader.com" target="_blank">Inoreader</a>,
               <a href="https://reederapp.com" target="_blank">Reeder</a>,
               <a href="https://netnewswire.com" target="_blank">NetNewsWire</a>, etc.</li>
-            <li>New posts appear automatically — no email signup needed.</li>
+            <li>New posts appear automatically, no email signup needed.</li>
           </ol>
         </div>
 

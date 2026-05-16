@@ -208,4 +208,4 @@ Both languages catch bugs before they run. They just charge for it differently.
 
 Java asks for more code upfront (sealed interface, record, exception declarations) and gives you compile-time and runtime guarantees in return. TypeScript asks for less code upfront (one union, one helper) and gives you compile-time guarantees only. The runtime layer is your job, but it's explicit, and the schema doubles as the type.
 
-The bigger lesson is portable. When you cross between languages, look for the pattern, not the syntax. A sealed interface and a discriminated union are the same idea in different uniforms. Once you start seeing that, every new language stops feeling like a fresh start.
+The useful part is that this carries over. When you move between languages, it helps to look for the pattern instead of the syntax. A sealed interface and a discriminated union are the same idea written two ways, and once you notice that, the next language is easier to pick up.

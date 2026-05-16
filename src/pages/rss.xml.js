@@ -5,7 +5,7 @@ export async function GET(context) {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
 
   return rss({
-    title: 'Ozgur Yildiz — Writing',
+    title: 'Ozgur Yildiz | Writing',
     description: 'Notes on TypeScript, Node.js, React, and shipping real software.',
     site: context.site,
     items: posts

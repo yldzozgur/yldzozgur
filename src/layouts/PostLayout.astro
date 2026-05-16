@@ -24,7 +24,7 @@ const formatDate = (date: Date) =>
   date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
 const postUrl = `https://yldzozgur.com/writing/${slug}`;
-const shareText = `${title} — by Ozgur Yildiz`;
+const shareText = `${title} by Ozgur Yildiz`;
 const linkedinShare = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}`;
 const xShare = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(postUrl)}`;
 
@@ -51,7 +51,7 @@ const articleLd = {
 };
 ---
 
-<BaseLayout title={`${title} — Ozgur Yildiz`} description={description} type="article" jsonLd={articleLd}>
+<BaseLayout title={`${title} | Ozgur Yildiz`} description={description} type="article" jsonLd={articleLd}>
   <article class="post">
     <header class="post-header container">
       <div class="post-meta">

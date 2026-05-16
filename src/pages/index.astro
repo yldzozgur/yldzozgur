@@ -8,22 +8,6 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
-
-const tsSnippet = `<span class="code-c">// domain error code as discriminated union</span>
-<span class="code-k">type</span> <span class="code-t">ApiError</span> =
-  | &#123; kind: <span class="code-s">'validation'</span>; field: <span class="code-t">string</span>; message: <span class="code-t">string</span> &#125;
-  | &#123; kind: <span class="code-s">'not-found'</span>; resource: <span class="code-t">string</span> &#125;
-  | &#123; kind: <span class="code-s">'unauthorized'</span> &#125;
-  | &#123; kind: <span class="code-s">'server'</span>; trace: <span class="code-t">string</span> &#125;;
-
-<span class="code-k">function</span> <span class="code-f">handle</span>(err: <span class="code-t">ApiError</span>) &#123;
-  <span class="code-k">switch</span> (err.kind) &#123;
-    <span class="code-k">case</span> <span class="code-s">'validation'</span>: <span class="code-k">return</span> <span class="code-f">badRequest</span>(err);
-    <span class="code-k">case</span> <span class="code-s">'not-found'</span>:  <span class="code-k">return</span> <span class="code-f">notFound</span>(err.resource);
-    <span class="code-k">case</span> <span class="code-s">'unauthorized'</span>: <span class="code-k">return</span> <span class="code-f">unauth</span>();
-    <span class="code-k">case</span> <span class="code-s">'server'</span>: <span class="code-k">return</span> <span class="code-f">serverError</span>(err.trace);
-  &#125;
-&#125;`;
 ---
 
 <BaseLayout>
@@ -43,8 +27,8 @@ const tsSnippet = `<span class="code-c">// domain error code as discriminated un
           I build &amp; write.
         </h1>
         <p class="hero-lede">
-          Welcome in. Projects live in <a href="/work" class="link">/work</a>, essays go up in
-          <a href="/writing" class="link">/writing</a>, and the kettle is always on for an email.
+          Full-stack developer in Austin. I build with React and Node, and I
+          write about what I learn in <a href="/writing" class="link">/writing</a>.
         </p>
         <div class="hero-cta">
           <a href="/work" class="btn btn-primary">
@@ -64,7 +48,7 @@ const tsSnippet = `<span class="code-c">// domain error code as discriminated un
             <span class="t-dot dr"></span>
             <span class="t-dot dy"></span>
             <span class="t-dot dg"></span>
-            <span class="t-name">ozgur@portfolio — zsh</span>
+            <span class="t-name">ozgur@portfolio - zsh</span>
           </div>
           <pre class="t-body"><code><span class="t-c">~ </span><span class="t-prompt">$</span> uname -a
 <span class="t-out">ozgur · software engineer · v∞</span>
@@ -88,23 +72,18 @@ const tsSnippet = `<span class="code-c">// domain error code as discriminated un
   <section id="about" class="home-section">
     <div class="container">
       <div class="home-section-head">
-        <h2 class="home-section-title">Some facts.</h2>
-        <p class="home-section-sub">A bento of who I am and what I'm up to.</p>
+        <h2 class="home-section-title">About.</h2>
+        <p class="home-section-sub">A quick snapshot of who I am and what I work with.</p>
       </div>
 
       <div class="bento">
         <div class="bcard bcard-greeting bcard-span-2">
-          <p class="bcard-eyebrow">/ greeting</p>
+          <p class="bcard-eyebrow">/ intro</p>
           <p class="bcard-greeting-text">
-            Hey 👋 I read more code than I write — and write more code than I commit.
-            <strong>Computer engineering</strong> by training; full-stack by habit.
+            I'm a <strong>computer engineering</strong> graduate working
+            full-stack. I care about readable code and finishing what I start,
+            including the unglamorous parts.
           </p>
-        </div>
-
-        <div class="bcard bcard-now">
-          <p class="bcard-eyebrow">/ rhythm</p>
-          <p class="bcard-big">Tue · Thu</p>
-          <p class="bcard-small">I show up twice a week with a new essay.</p>
         </div>
 
         <div class="bcard bcard-span-2">
@@ -113,8 +92,15 @@ const tsSnippet = `<span class="code-c">// domain error code as discriminated un
             <li>TypeScript</li><li>React</li><li>Node.js</li><li>Express</li>
             <li>PostgreSQL</li><li>MongoDB</li><li>Redux Toolkit</li><li>Tailwind</li>
             <li>Swagger</li><li>JWT</li><li>Docker</li><li>Vercel</li>
-            <li>Claude Code</li><li>Cypress</li>
+            <li>Claude Code</li><li>Codex</li><li>Cypress</li>
           </ul>
+          <a href="/about" class="stack-link">Full stack on /about →</a>
+        </div>
+
+        <div class="bcard bcard-now">
+          <p class="bcard-eyebrow">/ status</p>
+          <p class="bcard-big">Open to work</p>
+          <p class="bcard-small">Looking for a junior full-stack role.</p>
         </div>
 
         <div class="bcard">
@@ -123,17 +109,17 @@ const tsSnippet = `<span class="code-c">// domain error code as discriminated un
           <p class="bcard-small">Computer Engineering</p>
         </div>
 
-        <a href="https://github.com/yldzozgur" target="_blank" rel="noopener" class="bcard bcard-link">
-          <p class="bcard-eyebrow">/ github</p>
-          <p class="bcard-big-link">@yldzozgur</p>
-          <p class="bcard-small">repositories, commits, contributions ↗</p>
-        </a>
+        <div class="bcard">
+          <p class="bcard-eyebrow">/ location</p>
+          <p class="bcard-big">Austin, TX</p>
+          <p class="bcard-small">Open to remote or on-site.</p>
+        </div>
 
-        <a href="https://linkedin.com/in/yldzozgur" target="_blank" rel="noopener" class="bcard bcard-link">
-          <p class="bcard-eyebrow">/ linkedin</p>
-          <p class="bcard-big-link">/yldzozgur</p>
-          <p class="bcard-small">history, posts, recommendations ↗</p>
-        </a>
+        <div class="bcard">
+          <p class="bcard-eyebrow">/ learning</p>
+          <p class="bcard-big">Testing &amp; performance</p>
+          <p class="bcard-small">Writing tests I trust and debugging production issues.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -209,7 +195,7 @@ const tsSnippet = `<span class="code-c">// domain error code as discriminated un
 
       <div class="work-cta-row">
         <a href="/work" class="link-arrow">
-          See all projects (7)
+          See all projects (6)
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
       </div>
@@ -220,17 +206,17 @@ const tsSnippet = `<span class="code-c">// domain error code as discriminated un
   <section id="writing" class="home-section">
     <div class="container">
       <div class="home-section-head">
-        <h2 class="home-section-title">From the desk.</h2>
+        <h2 class="home-section-title">Writing.</h2>
         <p class="home-section-sub">
-          Latest essays. <a href="/writing">Browse all →</a> · <a href="/rss.xml">RSS</a>
+          Recent posts. <a href="/writing">Browse all →</a> · <a href="/rss.xml">RSS</a>
         </p>
       </div>
 
       {posts.length === 0 ? (
         <div class="writing-empty">
-          <p class="we-headline">📬 Stand by — the first post is on its way.</p>
+          <p class="we-headline">📬 More posts coming soon.</p>
           <p class="we-body">
-            A few drafts are simmering. Hook into the RSS so you don't miss the first one out of the kitchen.
+            More posts are on the way. Subscribe via RSS to catch the next one.
           </p>
           <div class="we-cta">
             <a href="/rss.xml" class="link-arrow">Subscribe via RSS</a>
@@ -261,11 +247,11 @@ const tsSnippet = `<span class="code-c">// domain error code as discriminated un
   <section class="cta-section">
     <div class="container">
       <div class="cta-card">
-        <p class="bcard-eyebrow">/ door's open</p>
-        <h2 class="cta-title">Drop a line.</h2>
+        <p class="bcard-eyebrow">/ contact</p>
+        <h2 class="cta-title">Get in touch.</h2>
         <p class="cta-text">
-          Whichever channel works for you — email lands fastest. LinkedIn has the
-          long-form career story, GitHub has the receipts.
+          Email is the fastest way to reach me. LinkedIn has my full career
+          history, and GitHub has the code.
         </p>
         <div class="cta-actions">
           <a href="mailto:ozguryildiz0@outlook.com" class="btn btn-primary">
@@ -500,6 +486,21 @@ const tsSnippet = `<span class="code-c">// domain error code as discriminated un
     text-transform: uppercase;
     letter-spacing: 0.04em;
     margin-bottom: 0.65rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .stack-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--primary);
+    border-bottom: none;
+  }
+  .stack-link:hover {
+    color: var(--ink);
+    border-bottom: none;
   }
   .bcard-big {
     font-family: var(--font-display);
@@ -510,14 +511,6 @@ const tsSnippet = `<span class="code-c">// domain error code as discriminated un
     margin-bottom: 0.5rem;
     color: var(--ink);
   }
-  .bcard-big-link {
-    font-family: var(--font-mono);
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: var(--primary);
-    margin-bottom: 0.25rem;
-  }
-  .bcard-link:hover .bcard-big-link { color: var(--ink); }
   .bcard-small {
     color: var(--ink-muted);
     font-size: 0.8125rem;
@@ -573,7 +566,6 @@ const tsSnippet = `<span class="code-c">// domain error code as discriminated un
     background-clip: text;
     color: transparent;
   }
-  .bcard-link { display: block; }
 
   /* work */
   .work-bento { display: grid; gap: 1rem; }

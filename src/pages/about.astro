@@ -6,15 +6,15 @@ const skills = {
   Frontend: ['React', 'Redux Toolkit', 'React Router', 'Vite', 'Tailwind CSS', 'MUI'],
   Backend: ['Node.js', 'Express', 'REST APIs', 'JWT', 'Mongoose', 'Swagger / OpenAPI'],
   Databases: ['PostgreSQL', 'MongoDB', 'MySQL'],
-  'Cloud & DevOps': ['Vercel', 'Docker', 'GitHub Actions'],
+  'Cloud & DevOps': ['Vercel', 'Docker', 'GitHub Actions', 'CI/CD'],
   Testing: ['Cypress (E2E)'],
-  'AI-Assisted Workflow': ['Claude Code', 'Cursor', 'GitHub Copilot'],
+  'AI-Assisted Workflow': ['Claude Code', 'Codex'],
 };
 ---
 
 <BaseLayout
-  title="About — Ozgur Yildiz"
-  description="An engineer's notes on reading code, writing small PRs, and the slow parts of software."
+  title="About | Ozgur Yildiz"
+  description="A bit about Ozgur Yildiz, a full-stack developer in Austin, and the tools he works with."
 >
   <section class="page-header container">
     <span class="mono dim">/ about</span>
@@ -24,32 +24,34 @@ const skills = {
   <section class="container">
     <div class="prose about-prose">
       <p class="lead">
-        I like the slow parts of software.
+        Hi, I'm Ozgur. I'm a full-stack developer in Austin, looking for my
+        first developer role.
       </p>
 
       <p>
-        Reading the code that's already there before writing new code. Asking
-        <em>why</em> before <em>how</em>. Finishing things — including the boring
-        bits, the docs, the error messages no one reads until they need them.
+        Most of what I build is React on the front end and Node/Express on the
+        back. I've put together a few full apps with auth, a database, and a
+        REST API, so I'm comfortable taking a feature from nothing to working
+        software. There's still a lot I'm learning, mostly around performance
+        and the kind of bugs that only show up once something is live.
       </p>
 
       <p>
-        What I value in engineering: small pull requests you can review in ten
-        minutes, error messages that point at the cause and not the symptom, and
-        tests that fail loudly when they should. I'd rather understand a system
-        slowly than ship something I can't defend in code review.
+        I came to software later than a lot of people. I ran a small business
+        for a few years before this, which taught me to ship things instead of
+        polishing them forever. I'm not precious about my code. I read what's
+        already there before I change it, and I ask questions when something
+        doesn't make sense instead of guessing my way through it.
       </p>
 
       <p>
-        I write here mostly to think out loud — explaining something forces me
-        to actually understand it. This site itself was built in an afternoon
-        with Astro and Cloudflare Workers; the unglamorous parts of that are
-        already in <a href="/writing">/writing</a>'s backlog.
+        This site is where I write things down, partly for myself and partly
+        so there's something to point at.
       </p>
 
       <p>
-        For role conversations and full career history →
-        <a href="https://linkedin.com/in/yldzozgur">LinkedIn</a> or
+        Want to talk? Find me on
+        <a href="https://linkedin.com/in/yldzozgur">LinkedIn</a> or send me an
         <a href="mailto:ozguryildiz0@outlook.com">email</a>.
       </p>
     </div>
@@ -71,32 +73,6 @@ const skills = {
         </div>
       ))}
     </dl>
-  </section>
-
-  <section class="container section-block">
-    <h2 class="section-heading">Find me</h2>
-    <div class="activity-grid">
-      <a href="https://github.com/yldzozgur" target="_blank" rel="noopener" class="activity-card">
-        <span class="mono activity-label">GitHub</span>
-        <span class="activity-title">github.com/yldzozgur ↗</span>
-        <span class="activity-note">Where the code lives.</span>
-      </a>
-      <a href="https://linkedin.com/in/yldzozgur" target="_blank" rel="noopener" class="activity-card">
-        <span class="mono activity-label">LinkedIn</span>
-        <span class="activity-title">linkedin.com/in/yldzozgur ↗</span>
-        <span class="activity-note">The long-form career story.</span>
-      </a>
-      <a href="/writing" class="activity-card">
-        <span class="mono activity-label">Writing</span>
-        <span class="activity-title">/writing →</span>
-        <span class="activity-note">Words I've left lying around.</span>
-      </a>
-      <a href="/work" class="activity-card">
-        <span class="mono activity-label">Work</span>
-        <span class="activity-title">/work →</span>
-        <span class="activity-note">Things I've shipped, mostly live.</span>
-      </a>
-    </div>
   </section>
 
 </BaseLayout>
