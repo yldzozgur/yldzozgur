@@ -25,7 +25,7 @@ Languages    TypeScript · JavaScript (ES6+) · SQL
 Frontend     React · Redux Toolkit · Vite · Tailwind · MUI
 Backend      Node.js · Express · REST · JWT · Mongoose · Swagger
 Databases    PostgreSQL · MongoDB · MySQL
-Cloud        Vercel · Cloudflare Workers · Docker · GitHub Actions
+Cloud        Vercel · Cloudflare Workers · Docker · CI/CD (GitHub Actions)
 AI-assisted  Claude Code · Cursor · GitHub Copilot
 Testing      Cypress (E2E)
 ```
