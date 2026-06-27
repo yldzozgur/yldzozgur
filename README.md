@@ -10,15 +10,13 @@
   <a href="mailto:ozgur@yldzozgur.com"><img alt="ozgur@yldzozgur.com" src="https://img.shields.io/badge/ozgur%40yldzozgur.com-ea4335?style=flat-square&logo=gmail&logoColor=white"></a>
 </p>
 
-<p align="center">📧 ozgur@yldzozgur.com</p>
-
 ---
 
 ### About
 
 Computer engineering background. Lately I work mostly with TypeScript, Node, and React, and write about what I learn along the way.
 
-For roles & full career history → [LinkedIn](https://linkedin.com/in/yldzozgur) or email.
+For roles & full career history → [LinkedIn](https://linkedin.com/in/yldzozgur) or [email](mailto:ozgur@yldzozgur.com).
 
 ### Stack
 
