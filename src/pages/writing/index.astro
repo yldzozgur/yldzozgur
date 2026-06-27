@@ -8,15 +8,23 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 const formatDate = (date: Date) =>
   date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 
-// Group by year
-const postsByYear = posts.reduce<Record<string, typeof posts>>((acc, post) => {
-  const year = post.data.pubDate.getFullYear().toString();
-  if (!acc[year]) acc[year] = [];
-  acc[year].push(post);
-  return acc;
-}, {});
+const allYears = [...new Set(posts.map(p => p.data.pubDate.getFullYear()))].sort((a,b) => b - a);
+const allMonths = [
+  'January','February','March','April','May','June',
+  'July','August','September','October','November','December'
+];
+const allTags = [...new Set(posts.flatMap(p => p.data.tags))].sort();
 
-const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
+const postsData = posts.map(p => ({
+  id: p.id,
+  title: p.data.title,
+  description: p.data.description,
+  tags: p.data.tags,
+  date: formatDate(p.data.pubDate),
+  iso: p.data.pubDate.toISOString(),
+  year: p.data.pubDate.getFullYear(),
+  month: p.data.pubDate.getMonth(),
+}));
 ---
 
 <BaseLayout
@@ -27,52 +35,96 @@ const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
     <span class="mono dim">/ writing</span>
     <h1>Writing</h1>
     <p class="page-lede">
-      Notes on things I've worked through and wanted to write down. Browse by
-      tag or by year.
+      Notes on things I've worked through and wanted to write down.
     </p>
-    <p class="page-meta mono"><a href="/writing/tags">→ Browse by tag</a> · <a href="/rss.xml">RSS feed</a></p>
+    <p class="page-meta mono"><a href="/rss.xml">RSS feed</a></p>
   </section>
 
   <section class="container">
-    {posts.length === 0 ? (
-      <div class="empty-state">
-        <p class="mono dim">Queue loaded. First post drops soon.</p>
-        <p class="empty-note">
-          Catch the first via <a href="/rss.xml">RSS</a> or on
-          <a href="https://linkedin.com/in/yldzozgur" target="_blank" rel="noopener">LinkedIn ↗</a>.
-        </p>
-      </div>
-    ) : (
-      years.map((year) => (
-        <div class="year-group">
-          <h2 class="year-heading mono">{year}</h2>
-          <ul class="post-list">
-            {postsByYear[year].map((post) => (
-              <li class="post-row">
-                <a href={`/writing/${post.id}`} class="post-row-link">
-                  <time class="mono post-row-date" datetime={post.data.pubDate.toISOString()}>
-                    {formatDate(post.data.pubDate)}
-                  </time>
-                  <div class="post-row-body">
-                    <h3 class="post-row-title">{post.data.title}</h3>
-                    <p class="post-row-desc">{post.data.description}</p>
-                    {post.data.tags.length > 0 && (
-                      <div class="post-row-tags">
-                        {post.data.tags.map((tag) => (
-                          <span class="mono tag">#{tag}</span>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))
-    )}
+    <div class="filters">
+      <select id="filter-year" class="mono filter-select">
+        <option value="">All years</option>
+        {allYears.map(y => <option value={y}>{y}</option>)}
+      </select>
+      <select id="filter-month" class="mono filter-select">
+        <option value="">All months</option>
+        {allMonths.map((m, i) => <option value={i}>{m}</option>)}
+      </select>
+      <select id="filter-tag" class="mono filter-select">
+        <option value="">All topics</option>
+        {allTags.map(t => <option value={t}>{t}</option>)}
+      </select>
+      <button id="filter-reset" class="mono filter-reset">Reset</button>
+      <span id="filter-count" class="mono filter-count"></span>
+    </div>
+
+    <ul class="post-list" id="post-list">
+      {postsData.map((post) => (
+        <li
+          class="post-row"
+          data-year={post.year}
+          data-month={post.month}
+          data-tags={post.tags.join(',')}
+        >
+          <a href={`/writing/${post.id}`} class="post-row-link">
+            <time class="mono post-row-date" datetime={post.iso}>
+              {post.date}
+            </time>
+            <div class="post-row-body">
+              <h3 class="post-row-title">{post.title}</h3>
+              <p class="post-row-desc">{post.description}</p>
+              {post.tags.length > 0 && (
+                <div class="post-row-tags">
+                  {post.tags.map((tag) => (
+                    <span class="mono tag">#{tag}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <p id="no-results" class="mono dim no-results" style="display:none">No posts match this filter.</p>
   </section>
 </BaseLayout>
+
+<script>
+  const yearSel = document.getElementById('filter-year') as HTMLSelectElement;
+  const monthSel = document.getElementById('filter-month') as HTMLSelectElement;
+  const tagSel = document.getElementById('filter-tag') as HTMLSelectElement;
+  const resetBtn = document.getElementById('filter-reset') as HTMLButtonElement;
+  const countEl = document.getElementById('filter-count') as HTMLSpanElement;
+  const noResults = document.getElementById('no-results') as HTMLParagraphElement;
+  const rows = Array.from(document.querySelectorAll<HTMLLIElement>('#post-list .post-row'));
+
+  function applyFilters() {
+    const year = yearSel.value;
+    const month = monthSel.value;
+    const tag = tagSel.value;
+    let visible = 0;
+    for (const row of rows) {
+      const matchYear = !year || row.dataset.year === year;
+      const matchMonth = !month || row.dataset.month === month;
+      const matchTag = !tag || (row.dataset.tags || '').split(',').includes(tag);
+      const show = matchYear && matchMonth && matchTag;
+      row.style.display = show ? '' : 'none';
+      if (show) visible++;
+    }
+    countEl.textContent = visible < rows.length ? `${visible} of ${rows.length}` : '';
+    noResults.style.display = visible === 0 ? '' : 'none';
+  }
+
+  yearSel.addEventListener('change', applyFilters);
+  monthSel.addEventListener('change', applyFilters);
+  tagSel.addEventListener('change', applyFilters);
+  resetBtn.addEventListener('click', () => {
+    yearSel.value = '';
+    monthSel.value = '';
+    tagSel.value = '';
+    applyFilters();
+  });
+</script>
 
 <style>
   .page-header {
@@ -80,12 +132,8 @@ const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
     padding-bottom: 3rem;
     max-width: 48rem;
   }
-  .page-header .dim {
-    color: var(--ink-faint);
-  }
-  .page-header h1 {
-    margin: 0.5rem 0 1.25rem;
-  }
+  .page-header .dim { color: var(--ink-faint); }
+  .page-header h1 { margin: 0.5rem 0 1.25rem; }
   .page-lede {
     font-family: var(--font-display);
     font-size: 1.3125rem;
@@ -98,44 +146,54 @@ const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
     color: var(--ink-faint);
     font-size: 0.8125rem;
   }
-  .page-meta a {
+  .page-meta a { color: var(--ink-muted); border-bottom: none; }
+  .page-meta a:hover { color: var(--accent); }
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
+    padding: 1rem 0 1.75rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 0;
+  }
+  .filter-select {
+    appearance: none;
+    background: var(--bg-subtle);
+    border: 1px solid var(--border);
     color: var(--ink-muted);
-    border-bottom: none;
+    padding: 0.4rem 2rem 0.4rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.8125rem;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23888'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.6rem center;
+    transition: border-color 0.2s ease, color 0.2s ease;
   }
-  .page-meta a:hover {
-    color: var(--accent);
-  }
-  .empty-state {
-    padding: 3rem 0;
-    max-width: 36rem;
-  }
-  .empty-state .dim {
+  .filter-select:focus { outline: none; border-color: var(--accent); color: var(--ink); }
+  .filter-select:hover { border-color: var(--accent-dim); }
+  .filter-reset {
+    background: none;
+    border: 1px solid var(--border);
     color: var(--ink-faint);
-    margin-bottom: 0.75rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.8125rem;
+    cursor: pointer;
+    transition: border-color 0.2s ease, color 0.2s ease;
   }
-  .empty-note {
-    color: var(--ink-muted);
+  .filter-reset:hover { border-color: var(--accent-dim); color: var(--ink-muted); }
+  .filter-count {
+    color: var(--ink-faint);
+    font-size: 0.75rem;
+    margin-left: 0.25rem;
   }
 
-  .year-group {
-    margin-bottom: 3rem;
-  }
-  .year-heading {
-    font-size: 0.9375rem;
-    color: var(--accent);
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 1rem;
-  }
-  .post-list {
-    list-style: none;
-  }
-  .post-row {
-    border-bottom: 1px solid var(--border);
-  }
-  .post-row:last-child {
-    border-bottom: none;
-  }
+  .post-list { list-style: none; }
+  .post-row { border-bottom: 1px solid var(--border); }
+  .post-row:last-child { border-bottom: none; }
   .post-row-link {
     display: grid;
     grid-template-columns: 7rem 1fr;
@@ -145,17 +203,9 @@ const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
     border-bottom: none;
     transition: padding 0.2s ease;
   }
-  .post-row-link:hover {
-    border-bottom: none;
-    padding-left: 0.5rem;
-  }
-  .post-row-link:hover .post-row-title {
-    color: var(--accent);
-  }
-  .post-row-date {
-    color: var(--ink-faint);
-    padding-top: 0.3rem;
-  }
+  .post-row-link:hover { border-bottom: none; padding-left: 0.5rem; }
+  .post-row-link:hover .post-row-title { color: var(--accent); }
+  .post-row-date { color: var(--ink-faint); padding-top: 0.3rem; }
   .post-row-title {
     font-family: var(--font-display);
     font-size: 1.375rem;
@@ -163,27 +213,15 @@ const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
     margin-bottom: 0.5rem;
     transition: color 0.2s ease;
   }
-  .post-row-desc {
-    color: var(--ink-muted);
-    font-size: 0.9375rem;
-    margin-bottom: 0.75rem;
-  }
-  .post-row-tags {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
-  .tag {
-    color: var(--accent-dim);
-  }
+  .post-row-desc { color: var(--ink-muted); font-size: 0.9375rem; margin-bottom: 0.75rem; }
+  .post-row-tags { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .tag { color: var(--accent-dim); }
+  .no-results { padding: 2rem 0; color: var(--ink-faint); }
 
   @media (max-width: 640px) {
-    .post-row-link {
-      grid-template-columns: 1fr;
-      gap: 0.5rem;
-    }
-    .post-row-date {
-      padding-top: 0;
-    }
+    .filters { gap: 0.5rem; }
+    .filter-select, .filter-reset { font-size: 0.75rem; }
+    .post-row-link { grid-template-columns: 1fr; gap: 0.5rem; }
+    .post-row-date { padding-top: 0; }
   }
 </style>
