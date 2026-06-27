@@ -1,8 +1,8 @@
----
+﻿---
 title: "React Native is not React for mobile. Here's what actually changes."
 description: "React Native shares React's component model but runs in a fundamentally different environment. The differences that trip up web developers most often."
 pubDate: 2025-01-27
-tags: ["React Native", "Mobile"]
+tags: ["React-Native", "Mobile"]
 draft: false
 ---
 
@@ -109,3 +109,4 @@ iOS and Android behave differently in ways that matter for UI. Date pickers look
 ## The actual learning curve
 
 For an experienced React developer, the learning curve in React Native is not React -- it's the platform. Learning how iOS handles the keyboard, how the native navigation gesture interactors work, how permissions are requested, how to deal with safe areas and notches. That's the new territory, not the component model.
+

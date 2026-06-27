@@ -1,8 +1,8 @@
----
+﻿---
 title: "Offset pagination breaks at scale. Here's how cursor pagination fixes it."
 description: "OFFSET-based pagination is easy to implement but produces inconsistent results as data changes. Cursor pagination is stable, performant, and the right default for most APIs."
 pubDate: 2024-06-13
-tags: ["REST API", "PostgreSQL"]
+tags: ["REST-API", "PostgreSQL"]
 draft: false
 ---
 
@@ -41,7 +41,7 @@ app.get('/posts', async (req, res) => {
 
 **Problem 1: Inconsistent results**
 
-Suppose a user loads page 1 (posts 1-20). While they're reading, someone creates a new post. It goes to the top of the list. The user clicks "next page" to load page 2 (offset 20). The new post shifted everything down — what was post 20 is now post 21. They see post 20 twice. Or if posts are deleted, they skip items entirely.
+Suppose a user loads page 1 (posts 1-20). While they're reading, someone creates a new post. It goes to the top of the list. The user clicks "next page" to load page 2 (offset 20). The new post shifted everything down â€” what was post 20 is now post 21. They see post 20 twice. Or if posts are deleted, they skip items entirely.
 
 **Problem 2: Performance**
 
@@ -51,7 +51,7 @@ Suppose a user loads page 1 (posts 1-20). While they're reading, someone creates
 
 Instead of "give me page 3," the client says "give me the next 20 items after item X."
 
-"Item X" is the cursor — an opaque pointer to a position in the sorted result set. Typically it's the ID or timestamp of the last item on the previous page.
+"Item X" is the cursor â€” an opaque pointer to a position in the sorted result set. Typically it's the ID or timestamp of the last item on the previous page.
 
 ```sql
 SELECT * FROM posts
@@ -119,7 +119,7 @@ Key details:
 - Fetch `limit + 1` items. If you get more than `limit`, there's a next page. Slice off the extra item.
 - Encode the cursor as base64 so clients treat it as opaque and don't try to parse or construct it.
 - Use both `created_at` and `id` in the cursor to handle rows with identical timestamps.
-- The `WHERE (created_at, id) < ($1, $2)` syntax is a row comparison — it compares the tuple, which is exactly what you want.
+- The `WHERE (created_at, id) < ($1, $2)` syntax is a row comparison â€” it compares the tuple, which is exactly what you want.
 
 ## The client experience
 
@@ -141,8 +141,9 @@ If `nextCursor` is null, the client has reached the end.
 
 ## Trade-offs
 
-Cursor pagination doesn't support jumping to an arbitrary page — you can't load page 47 without loading pages 1 through 46 first. For most use cases (infinite scroll, chronological feeds, API consumers processing data in sequence), this is fine.
+Cursor pagination doesn't support jumping to an arbitrary page â€” you can't load page 47 without loading pages 1 through 46 first. For most use cases (infinite scroll, chronological feeds, API consumers processing data in sequence), this is fine.
 
 If you need arbitrary page jumping (search results, admin tables where users jump to specific pages), offset pagination with a capped maximum page is the pragmatic choice. At those page numbers, the performance issue is smaller than on truly large datasets.
 
 For anything with real volume, cursor-based is the default.
+

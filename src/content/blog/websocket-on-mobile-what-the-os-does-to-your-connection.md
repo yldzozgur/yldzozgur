@@ -1,8 +1,8 @@
----
+﻿---
 title: "WebSocket on mobile: what the OS does to your connection in the background."
 description: "Mobile operating systems aggressively manage connections when an app is backgrounded. What iOS and Android do to your WebSocket and how to handle it."
 pubDate: 2025-04-03
-tags: ["WebSocket", "React Native", "Mobile", "iOS"]
+tags: ["WebSocket", "React-Native", "Mobile", "iOS"]
 draft: false
 ---
 
@@ -125,3 +125,4 @@ On the iOS Simulator:
 6. Check if the WebSocket reconnected correctly
 
 A bug here is usually the WebSocket `readyState` being `CLOSED` but the UI not knowing to reconnect.
+

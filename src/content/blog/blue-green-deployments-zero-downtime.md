@@ -1,8 +1,8 @@
----
+﻿---
 title: "Blue-green deployments: zero-downtime releases."
 description: "How blue-green deployments eliminate downtime during releases, how to implement them, and what to watch out for."
 pubDate: 2025-12-01
-tags: ["DevOps", "CI/CD"]
+tags: ["DevOps", "CI-CD"]
 draft: false
 ---
 
@@ -14,24 +14,24 @@ You maintain two identical production environments: Blue (currently live) and Gr
 
 ```
 Current state: Blue is live
-Users → Load Balancer → Blue (v1.0, 100% traffic)
-                      → Green (v0.9, 0% traffic, idle)
+Users â†’ Load Balancer â†’ Blue (v1.0, 100% traffic)
+                      â†’ Green (v0.9, 0% traffic, idle)
 ```
 
 Deploy the new version to Green:
 
 ```
 Deploying: Green gets the new code
-Users → Load Balancer → Blue (v1.0, 100% traffic)
-                      → Green (v1.1, 0% traffic, warming up)
+Users â†’ Load Balancer â†’ Blue (v1.0, 100% traffic)
+                      â†’ Green (v1.1, 0% traffic, warming up)
 ```
 
 Run smoke tests against Green's URL directly, without real user traffic. When ready, switch the load balancer:
 
 ```
 Switched: Green is now live
-Users → Load Balancer → Blue (v1.0, 0% traffic, standby)
-                      → Green (v1.1, 100% traffic)
+Users â†’ Load Balancer â†’ Blue (v1.0, 0% traffic, standby)
+                      â†’ Green (v1.1, 100% traffic)
 ```
 
 If something goes wrong, switch the load balancer back. Rollback takes seconds, not the minutes required to redeploy the old version.
@@ -106,8 +106,8 @@ This allows gradual traffic shifting (10% to green, validate, then 50%, 100%) in
 Canary releases are a variant: send a small percentage of traffic to the new version before committing to a full switch.
 
 ```
-Users → Load Balancer → Blue (v1.0, 95% traffic)
-                      → Green (v1.1, 5% traffic)
+Users â†’ Load Balancer â†’ Blue (v1.0, 95% traffic)
+                      â†’ Green (v1.1, 5% traffic)
 ```
 
 Monitor error rates, latency, and business metrics for the canary group. If the metrics look good, increase the percentage. If not, send all traffic back to blue.
@@ -134,3 +134,4 @@ spec:
 ```
 
 The goal in all cases is the same: never have a moment where no healthy version of your application is running.
+

@@ -1,8 +1,8 @@
----
+﻿---
 title: "OpenAPI spec: the minimum you need to write and what it unlocks."
 description: "OpenAPI specs enable auto-generated docs, client SDK generation, and request validation. Here's the minimum viable spec and what you get from writing it."
 pubDate: 2024-06-24
-tags: ["REST API", "Swagger"]
+tags: ["REST-API", "Swagger"]
 draft: false
 ---
 
@@ -10,10 +10,10 @@ OpenAPI (formerly Swagger) is a specification format for describing REST APIs. A
 
 ## What you get from a spec
 
-- **Interactive documentation** via Swagger UI or Redoc — users can try endpoints from the browser
-- **Client SDK generation** — tools can generate typed clients in TypeScript, Python, Go, etc.
-- **Server-side validation** — middleware can validate incoming requests against the spec automatically
-- **Contract testing** — verify that your API matches its spec in CI
+- **Interactive documentation** via Swagger UI or Redoc â€” users can try endpoints from the browser
+- **Client SDK generation** â€” tools can generate typed clients in TypeScript, Python, Go, etc.
+- **Server-side validation** â€” middleware can validate incoming requests against the spec automatically
+- **Contract testing** â€” verify that your API matches its spec in CI
 
 None of these require changing your application code. The spec is a separate description of what your API does.
 
@@ -214,3 +214,4 @@ This produces a typed TypeScript client from your spec. The same tool generates 
 Start with the spec for your most-used or most-documented endpoint. Fill in request/response schemas completely. Add the Swagger UI in the next step (covered in the next post). Once you see the interactive docs generated from the spec, the incentive to keep it up to date becomes self-reinforcing.
 
 The spec is also a forcing function for consistent API design. Describing your API formally makes inconsistencies obvious in ways that reading the code doesn't.
+

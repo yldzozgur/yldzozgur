@@ -1,12 +1,12 @@
----
+﻿---
 title: "Cursor-based pagination: the implementation that doesn't break under load."
 description: "Offset pagination skips rows, which breaks when data changes between pages. Cursor-based pagination uses a stable position marker that stays correct regardless of concurrent writes."
 pubDate: 2026-05-28
-tags: ["REST API", "Databases"]
+tags: ["REST-API", "Databases"]
 draft: false
 ---
 
-Offset pagination (`LIMIT 20 OFFSET 40`) is easy to implement and intuitive to use. It breaks in ways that matter when data changes between page requests — items get skipped, items get shown twice — and its performance degrades as the offset grows. Cursor-based pagination avoids both problems.
+Offset pagination (`LIMIT 20 OFFSET 40`) is easy to implement and intuitive to use. It breaks in ways that matter when data changes between page requests â€” items get skipped, items get shown twice â€” and its performance degrades as the offset grows. Cursor-based pagination avoids both problems.
 
 ## The problem with offset pagination
 
@@ -18,7 +18,7 @@ SELECT * FROM posts ORDER BY created_at DESC LIMIT 20 OFFSET 0;
 
 -- Page 2: fetch items 21-40
 SELECT * FROM posts ORDER BY created_at DESC LIMIT 20 OFFSET 20;
--- The new post shifted everything — item 20 from page 1 now appears at position 21
+-- The new post shifted everything â€” item 20 from page 1 now appears at position 21
 -- It shows up again on page 2
 ```
 
@@ -26,7 +26,7 @@ At high offsets, the database has to read and discard all prior rows to find the
 
 ## Cursor-based pagination
 
-Instead of "skip N rows," cursor pagination says "give me records after this specific record." The cursor encodes a position in the dataset — typically the sort column value (and a tiebreaker) of the last item on the previous page.
+Instead of "skip N rows," cursor pagination says "give me records after this specific record." The cursor encodes a position in the dataset â€” typically the sort column value (and a tiebreaker) of the last item on the previous page.
 
 ```sql
 -- Instead of OFFSET, use WHERE to filter by position
@@ -121,7 +121,7 @@ app.get('/api/posts', async (req, res) => {
 });
 ```
 
-The cursor is opaque to clients. They store it and pass it back on the next request without parsing it. Encoding it in base64 reinforces this — it looks like a token, not a parseable value.
+The cursor is opaque to clients. They store it and pass it back on the next request without parsing it. Encoding it in base64 reinforces this â€” it looks like a token, not a parseable value.
 
 ## Index requirement
 
@@ -147,4 +147,5 @@ LIMIT $3;
 -- Then reverse the result set in application code
 ```
 
-Most APIs only need forward pagination. If you need bidirectional navigation (like a virtualized list), implement both cursors from the start — it's harder to add later once clients are using the single-direction API.
+Most APIs only need forward pagination. If you need bidirectional navigation (like a virtualized list), implement both cursors from the start â€” it's harder to add later once clients are using the single-direction API.
+

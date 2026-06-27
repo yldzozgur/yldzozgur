@@ -1,8 +1,8 @@
----
+﻿---
 title: "tRPC: end-to-end type safety without writing an API spec."
-description: "tRPC lets your frontend call backend procedures with full TypeScript types — no REST spec, no codegen, no type drift between client and server."
+description: "tRPC lets your frontend call backend procedures with full TypeScript types â€” no REST spec, no codegen, no type drift between client and server."
 pubDate: 2026-04-20
-tags: ["TypeScript", "REST API"]
+tags: ["TypeScript", "REST-API"]
 draft: false
 ---
 
@@ -10,7 +10,7 @@ The typical TypeScript API setup has a gap: your backend has types, your fronten
 
 ## How it works
 
-tRPC is built around a router that defines procedures — either queries (reads) or mutations (writes). The router's type is exported and imported by the client, which uses it to know exactly what procedures exist and what types they accept and return.
+tRPC is built around a router that defines procedures â€” either queries (reads) or mutations (writes). The router's type is exported and imported by the client, which uses it to know exactly what procedures exist and what types they accept and return.
 
 ```typescript
 // server/router.ts
@@ -40,7 +40,7 @@ export const appRouter = t.router({
   }),
 });
 
-// Export only the type — no runtime code crosses the boundary
+// Export only the type â€” no runtime code crosses the boundary
 export type AppRouter = typeof appRouter;
 ```
 
@@ -84,7 +84,7 @@ If you rename a field on the server, TypeScript immediately shows errors everywh
 
 ## Context and middleware
 
-Procedures can use context — data that's passed to every procedure, typically containing the authenticated user.
+Procedures can use context â€” data that's passed to every procedure, typically containing the authenticated user.
 
 ```typescript
 // Context is built per-request
@@ -122,7 +122,7 @@ const userRouter = t.router({
 
 ## Adapters for different runtimes
 
-tRPC procedures aren't tied to HTTP — they're just functions. Adapters connect them to a request handler.
+tRPC procedures aren't tied to HTTP â€” they're just functions. Adapters connect them to a request handler.
 
 ```typescript
 // Next.js App Router
@@ -144,6 +144,7 @@ It's less appropriate when:
 
 - Your API is consumed by clients you don't control (mobile apps built by another team, third-party integrations). Those consumers need a documented, language-agnostic interface.
 - Your team includes developers who aren't working in TypeScript.
-- You need fine-grained HTTP control — specific status codes, headers, caching semantics.
+- You need fine-grained HTTP control â€” specific status codes, headers, caching semantics.
 
-For internal TypeScript full-stack apps, tRPC removes an entire category of bugs — the ones where the frontend and backend have quietly drifted apart.
+For internal TypeScript full-stack apps, tRPC removes an entire category of bugs â€” the ones where the frontend and backend have quietly drifted apart.
+

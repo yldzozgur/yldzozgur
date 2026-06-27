@@ -1,8 +1,8 @@
----
+﻿---
 title: "Background vs foreground on iOS: what happens to your WebSocket."
 description: "iOS aggressively suspends background apps to save battery. What that means for WebSocket connections and the strategies for handling the transition."
 pubDate: 2025-03-03
-tags: ["React Native", "Mobile", "iOS", "WebSocket"]
+tags: ["React-Native", "Mobile", "iOS", "WebSocket"]
 draft: false
 ---
 
@@ -117,3 +117,4 @@ AppState.addEventListener('change', state => {
 ```
 
 The WebSocket readyState values are 0 (CONNECTING), 1 (OPEN), 2 (CLOSING), 3 (CLOSED).
+

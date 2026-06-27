@@ -1,8 +1,8 @@
----
+﻿---
 title: "GitHub Actions: the workflow file that runs your tests on every push."
 description: "How to write a GitHub Actions workflow that runs your test suite on every push and pull request."
 pubDate: 2025-06-02
-tags: ["CI/CD", "GitHub"]
+tags: ["CI-CD", "GitHub"]
 draft: false
 ---
 
@@ -145,3 +145,4 @@ With this configured, a pull request cannot be merged until the test workflow pa
 Workflow runs appear in the Actions tab of your repository. Each run shows the trigger event, the jobs, and the output of each step. Failed steps show the exact error output. Workflow run logs are retained for 90 days by default.
 
 For pull requests, the workflow status appears directly in the PR, with a link to the full logs when something fails. This is the feedback loop that makes CI useful day to day.
+

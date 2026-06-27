@@ -1,8 +1,8 @@
----
+﻿---
 title: "React Native performance: the FlatList settings that stop jank."
 description: "FlatList is the standard way to render large lists in React Native, but its default settings aren't optimal for all cases. The props that make the biggest performance difference."
 pubDate: 2025-03-06
-tags: ["React Native", "Mobile", "Performance"]
+tags: ["React-Native", "Mobile", "Performance"]
 draft: false
 ---
 
@@ -150,3 +150,4 @@ For a typical social feed with fixed-height cards:
 ```
 
 Profile before optimizing -- React DevTools' profiler shows exactly which components are rendering and how long they take.
+

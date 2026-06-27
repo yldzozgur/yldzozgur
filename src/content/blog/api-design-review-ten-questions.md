@@ -1,8 +1,8 @@
----
+﻿---
 title: "API design review: 10 questions before you call an endpoint done."
 description: "A checklist of design decisions that are easy to skip when building an endpoint and painful to change after consumers depend on it."
 pubDate: 2026-05-21
-tags: ["REST API", "Architecture"]
+tags: ["REST-API", "Architecture"]
 draft: false
 ---
 
@@ -13,12 +13,12 @@ API design decisions are hard to reverse. Consumers build against your contracts
 REST URLs identify resources. Actions are expressed through HTTP methods.
 
 ```
-// Wrong — verbs in URLs
+// Wrong â€” verbs in URLs
 POST /api/createUser
 GET  /api/getUserById?id=123
 POST /api/deleteUser
 
-// Correct — resources + methods
+// Correct â€” resources + methods
 POST   /api/users
 GET    /api/users/123
 DELETE /api/users/123
@@ -31,17 +31,17 @@ Exceptions exist (batch operations, complex searches, non-resource actions) but 
 Status codes are part of the contract. Using them inconsistently makes clients handle errors incorrectly.
 
 ```
-200 OK              — successful read, update, or delete
-201 Created         — resource was created (include Location header)
-204 No Content      — successful action with no response body
-400 Bad Request     — client sent invalid data (include error details)
-401 Unauthorized    — not authenticated
-403 Forbidden       — authenticated but not authorized
-404 Not Found       — resource doesn't exist
-409 Conflict        — state conflict (duplicate, version mismatch)
-422 Unprocessable   — valid syntax but failed business validation
-429 Too Many Requests — rate limit exceeded
-500 Internal Server Error — unexpected server failure
+200 OK              â€” successful read, update, or delete
+201 Created         â€” resource was created (include Location header)
+204 No Content      â€” successful action with no response body
+400 Bad Request     â€” client sent invalid data (include error details)
+401 Unauthorized    â€” not authenticated
+403 Forbidden       â€” authenticated but not authorized
+404 Not Found       â€” resource doesn't exist
+409 Conflict        â€” state conflict (duplicate, version mismatch)
+422 Unprocessable   â€” valid syntax but failed business validation
+429 Too Many Requests â€” rate limit exceeded
+500 Internal Server Error â€” unexpected server failure
 ```
 
 Returning `200` with `{"success": false}` in the body forces clients to parse the body to detect errors, defeating the purpose of status codes.
@@ -138,7 +138,7 @@ One unindexed query that takes 200ms at 100 rows will take 2 seconds at 10,000 r
 
 ## 10. Is the endpoint idempotent when it should be?
 
-`GET`, `PUT`, and `DELETE` should be idempotent — calling them multiple times should produce the same result as calling once. For `POST` endpoints, consider whether clients need an idempotency key to safely retry on network failures.
+`GET`, `PUT`, and `DELETE` should be idempotent â€” calling them multiple times should produce the same result as calling once. For `POST` endpoints, consider whether clients need an idempotency key to safely retry on network failures.
 
 ```
 // Idempotency key in header
@@ -149,3 +149,4 @@ Idempotency-Key: a8f9e21b-4c3d-4b1a-8e2f-9d6c7b5a3e1f
 The server stores the key and returns the same response for duplicate requests, preventing double-charges or duplicate record creation on retried requests.
 
 Running through these ten questions before a PR merges catches the design issues that are straightforward to fix now and expensive to fix after clients have integrated.
+

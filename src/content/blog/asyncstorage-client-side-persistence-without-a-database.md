@@ -1,8 +1,8 @@
----
+﻿---
 title: "AsyncStorage: client-side persistence without a database."
 description: "AsyncStorage is React Native's equivalent of localStorage -- a simple key-value store for persisting data on the device. How it works and when to use it."
 pubDate: 2025-02-13
-tags: ["React Native", "Mobile"]
+tags: ["React-Native", "Mobile"]
 draft: false
 ---
 
@@ -154,3 +154,4 @@ async function safeGet(key) {
 ```
 
 For small amounts of non-critical data -- auth tokens, preferences, onboarding state, recent searches -- AsyncStorage is the right choice. Simple, fast, zero configuration.
+

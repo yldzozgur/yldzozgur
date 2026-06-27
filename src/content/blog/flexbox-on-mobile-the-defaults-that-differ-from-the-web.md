@@ -1,8 +1,8 @@
----
+﻿---
 title: "Flexbox on mobile: the defaults that differ from the web."
 description: "React Native uses Flexbox for layout, but the defaults are different from the web. The key differences that cause layout confusion and how to work with them."
 pubDate: 2025-01-30
-tags: ["React Native", "Mobile", "CSS"]
+tags: ["React-Native", "Mobile", "CSS"]
 draft: false
 ---
 
@@ -137,3 +137,4 @@ const styles = StyleSheet.create({
 ```
 
 Once the column-first default is internalized, React Native Flexbox becomes intuitive. The mental model is building a vertical stack of blocks, with rows as an explicit override.
+

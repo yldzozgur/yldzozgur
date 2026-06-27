@@ -1,8 +1,8 @@
----
+﻿---
 title: "GraphQL vs REST: the actual tradeoff, not the hype."
 description: "A realistic comparison of GraphQL and REST covering over-fetching, type safety, tooling, caching, and when each approach wins."
 pubDate: 2025-11-06
-tags: ["REST API", "GraphQL"]
+tags: ["REST-API", "GraphQL"]
 draft: false
 ---
 
@@ -126,3 +126,4 @@ REST with OpenAPI provides type safety through codegen and works well for most A
 Add GraphQL when you have a specific pain point it solves: complex data graphs, multiple client types, or frontends that need flexible data composition.
 
 The worst outcome is choosing GraphQL to be modern and spending three months fighting N+1 queries and caching problems on an app where REST with three endpoints would have worked fine.
+

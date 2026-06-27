@@ -1,8 +1,8 @@
----
+﻿---
 title: "Networking in React Native: the fetch quirks nobody documents."
 description: "React Native supports fetch and XMLHttpRequest, but there are platform-specific quirks around SSL, timeouts, and iOS App Transport Security that catch developers off guard."
 pubDate: 2025-02-17
-tags: ["React Native", "Mobile", "Networking"]
+tags: ["React-Native", "Mobile", "Networking"]
 draft: false
 ---
 
@@ -131,3 +131,4 @@ For high-security applications, certificate pinning ensures the app only communi
 ## Debugging network requests
 
 Flipper's Network plugin shows all outgoing requests and responses in development. React Native Debugger also intercepts network calls. For production debugging, integrating an error tracking service that logs failed requests is essential.
+

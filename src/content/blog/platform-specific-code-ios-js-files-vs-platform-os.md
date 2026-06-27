@@ -1,8 +1,8 @@
----
+﻿---
 title: "Platform-specific code: .ios.js files vs Platform.OS."
 description: "React Native offers two ways to write platform-specific code: file extensions that the bundler resolves automatically, and the Platform API for inline branching."
 pubDate: 2025-02-20
-tags: ["React Native", "Mobile", "iOS"]
+tags: ["React-Native", "Mobile", "iOS"]
 draft: false
 ---
 
@@ -138,3 +138,4 @@ Use platform-specific files when:
 - You want to isolate testing -- test each platform file independently
 
 A good heuristic: if you find yourself writing more than three `Platform.OS` checks in a single component, the component probably wants to be split.
+

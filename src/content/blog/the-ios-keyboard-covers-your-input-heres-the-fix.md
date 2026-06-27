@@ -1,8 +1,8 @@
----
+﻿---
 title: "The iOS keyboard covers your input. Here's the fix."
 description: "When the iOS keyboard opens, it can cover the TextInput the user is typing into. The correct fix depends on your layout, and there are several approaches."
 pubDate: 2025-02-06
-tags: ["React Native", "Mobile", "iOS"]
+tags: ["React-Native", "Mobile", "iOS"]
 draft: false
 ---
 
@@ -151,3 +151,4 @@ Or use the `ScrollView` `keyboardDismissMode` prop:
 `on-drag` dismisses the keyboard when the user starts scrolling -- natural mobile behavior.
 
 The keyboard problem has no single universal solution. For simple screens, the built-in `KeyboardAvoidingView` with `padding` behavior and a `keyboardVerticalOffset` for headers covers most cases.
+

@@ -1,14 +1,14 @@
----
+﻿---
 title: "Idempotency: why your PUT endpoint should be safe to call twice."
 description: "Idempotency is a property of HTTP methods that makes distributed systems more reliable. Here's what it means, which methods must have it, and how to implement it for POST."
 pubDate: 2024-06-17
-tags: ["REST API"]
+tags: ["REST-API"]
 draft: false
 ---
 
 Idempotency means that calling an operation multiple times produces the same result as calling it once. In the context of APIs, it means a client can safely retry a request without worrying about duplicate side effects.
 
-This matters because networks are unreliable. A request can fail after the server processes it but before the response reaches the client. Without idempotency, a client retry creates a duplicate — two orders, two charges, two records.
+This matters because networks are unreliable. A request can fail after the server processes it but before the response reaches the client. Without idempotency, a client retry creates a duplicate â€” two orders, two charges, two records.
 
 ## Which HTTP methods are idempotent
 
@@ -23,14 +23,14 @@ The HTTP spec defines idempotency requirements for each method:
 | PATCH  | No         | No                   |
 | POST   | No         | No                   |
 
-GET and HEAD must never change server state. PUT and DELETE must be idempotent — calling them multiple times must produce the same result as calling once. POST has no idempotency guarantee.
+GET and HEAD must never change server state. PUT and DELETE must be idempotent â€” calling them multiple times must produce the same result as calling once. POST has no idempotency guarantee.
 
 ## PUT idempotency in practice
 
 PUT replaces a resource entirely with the request body. If you call it twice with the same body, the second call should produce the same result as the first:
 
 ```js
-// This is idempotent — replacing the resource twice has the same end state
+// This is idempotent â€” replacing the resource twice has the same end state
 app.put('/users/:id', async (req, res, next) => {
   try {
     const user = await db.query(
@@ -54,7 +54,7 @@ Calling this twice with the same body sets `name` and `email` to the same values
 **What breaks PUT idempotency:**
 
 ```js
-// NOT idempotent — each call increments the counter
+// NOT idempotent â€” each call increments the counter
 app.put('/posts/:id', async (req, res, next) => {
   await db.query(
     `UPDATE posts SET title = $1, view_count = view_count + 1 WHERE id = $2`,
@@ -80,7 +80,7 @@ app.delete('/users/:id', async (req, res, next) => {
 });
 ```
 
-This is debatable — returning 404 when the resource doesn't exist is also valid and more informative. The important thing is that calling DELETE twice doesn't double-delete or corrupt related data.
+This is debatable â€” returning 404 when the resource doesn't exist is also valid and more informative. The important thing is that calling DELETE twice doesn't double-delete or corrupt related data.
 
 ## Making POST idempotent with idempotency keys
 
@@ -123,10 +123,11 @@ app.post('/orders', async (req, res, next) => {
 });
 ```
 
-The client can retry on network failure and always get back the same response — the original order, not a duplicate.
+The client can retry on network failure and always get back the same response â€” the original order, not a duplicate.
 
 This is how Stripe handles payment idempotency. The key is stored with a TTL; after expiration, the same key could create a new order, so clients should use keys that are unique per intended action.
 
 ## Why it matters
 
 Idempotency makes your API resilient in the face of real network conditions. Clients that implement retry logic (all robust clients should) need to know which requests are safe to retry automatically and which require user confirmation. Following HTTP's defined idempotency semantics gives clients that signal without needing extra documentation.
+

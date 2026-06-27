@@ -1,8 +1,8 @@
----
+﻿---
 title: "Microphone permission on iOS: the request flow and the edge cases."
 description: "How iOS microphone permissions work, when the system dialog appears, what happens when users deny it, and how to handle all the states in a React Native app."
 pubDate: 2025-02-10
-tags: ["React Native", "Mobile", "iOS"]
+tags: ["React-Native", "Mobile", "iOS"]
 draft: false
 ---
 
@@ -135,3 +135,4 @@ This re-runs the permission check when the user returns from the Settings app, s
 ## Testing permission states
 
 The iOS Simulator lets you reset permissions via Device menu > Reset Location & Privacy. This brings the permission back to `undetermined` so you can test the dialog flow again. For testing the `blocked` state, deny the permission and try to access it again.
+

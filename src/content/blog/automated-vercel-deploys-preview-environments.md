@@ -1,8 +1,8 @@
----
+﻿---
 title: "Automated Vercel deploys: preview environments without any manual step."
 description: "How Vercel's Git integration creates preview deployments automatically, and how to configure and control them."
 pubDate: 2025-06-09
-tags: ["CI/CD", "Vercel"]
+tags: ["CI-CD", "Vercel"]
 draft: false
 ---
 
@@ -51,8 +51,8 @@ vercel env add DATABASE_URL preview
 
 A common pattern is to use a read-only database replica for preview environments and the primary for production:
 
-- `DATABASE_URL` (production) → points to primary
-- `DATABASE_URL` (preview) → points to read replica or a separate preview database
+- `DATABASE_URL` (production) â†’ points to primary
+- `DATABASE_URL` (preview) â†’ points to read replica or a separate preview database
 
 Pull environment variables to your local `.env.local`:
 
@@ -155,3 +155,4 @@ If you have additional CI steps that should run after a Vercel deployment, use t
 ```
 
 This pattern runs end-to-end tests against the actual deployed preview URL, catching issues that only appear in a deployed environment.
+

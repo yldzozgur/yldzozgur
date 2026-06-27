@@ -1,12 +1,12 @@
----
+﻿---
 title: "API error responses: the format that makes frontend error handling not miserable."
 description: "Inconsistent error responses force frontend developers to write brittle parsing code. A predictable error format makes client-side error handling straightforward."
 pubDate: 2024-06-20
-tags: ["REST API"]
+tags: ["REST-API"]
 draft: false
 ---
 
-Error handling in a frontend app is only as easy as the API makes it. When every endpoint returns errors in a different format — some with `message`, some with `error`, some with arrays, some with strings — the client code becomes a pile of conditional checks. A consistent error format eliminates that.
+Error handling in a frontend app is only as easy as the API makes it. When every endpoint returns errors in a different format â€” some with `message`, some with `error`, some with arrays, some with strings â€” the client code becomes a pile of conditional checks. A consistent error format eliminates that.
 
 ## What's wrong with ad-hoc errors
 
@@ -117,7 +117,7 @@ function errorHandler(err, req, res, next) {
     });
   }
 
-  // Unknown error — log it, don't expose internals
+  // Unknown error â€” log it, don't expose internals
   console.error({
     message: err.message,
     stack: err.stack,
@@ -235,3 +235,4 @@ Publish a list of error codes your API can return. Clients shouldn't have to dis
 | INTERNAL_ERROR | 500 | Unexpected server error |
 
 The format itself is simple. The discipline is applying it consistently across every endpoint.
+

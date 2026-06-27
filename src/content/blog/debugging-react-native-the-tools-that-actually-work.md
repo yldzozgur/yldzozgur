@@ -1,8 +1,8 @@
----
+﻿---
 title: "Debugging React Native: the tools that actually tell you what's wrong."
 description: "A practical overview of the debugging tools available in React Native -- the built-in debugger, Flipper, React DevTools, and logging strategies that work in production."
 pubDate: 2025-02-27
-tags: ["React Native", "Mobile", "Debugging"]
+tags: ["React-Native", "Mobile", "Debugging"]
 draft: false
 ---
 
@@ -110,3 +110,4 @@ try {
 **Network request returns wrong data**: use Flipper Network or log `response.json()` before returning it.
 
 **App crash (no error screen)**: check native logs in Xcode or `adb logcat`.
+

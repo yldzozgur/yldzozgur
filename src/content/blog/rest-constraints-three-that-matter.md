@@ -1,12 +1,12 @@
----
+﻿---
 title: "REST constraints: the 3 that actually change how you write code."
 description: "REST has six architectural constraints. Three of them directly shape how you design endpoints and handle state. Here's what they mean in practice."
 pubDate: 2024-05-30
-tags: ["REST API"]
+tags: ["REST-API"]
 draft: false
 ---
 
-REST (Representational State Transfer) is an architectural style defined by a set of constraints. Roy Fielding defined six of them in his 2000 dissertation. Most discussions stop at the surface level — "use nouns in URLs" and "return JSON" — without explaining the constraints that actually change how you design and implement an API.
+REST (Representational State Transfer) is an architectural style defined by a set of constraints. Roy Fielding defined six of them in his 2000 dissertation. Most discussions stop at the surface level â€” "use nouns in URLs" and "return JSON" â€” without explaining the constraints that actually change how you design and implement an API.
 
 Three constraints have real, practical consequences for how you write code.
 
@@ -19,8 +19,8 @@ What this means in practice: you can't rely on the server remembering who the us
 **What violates this:**
 
 ```
-POST /login       → server creates session, stores in memory
-GET /profile      → server looks up session to know who's asking
+POST /login       â†’ server creates session, stores in memory
+GET /profile      â†’ server looks up session to know who's asking
 ```
 
 If the session lives in server memory and you add a second server instance, the second server has no session. The client is sticky to the first server or breaks.
@@ -28,13 +28,13 @@ If the session lives in server memory and you add a second server instance, the 
 **What conforms:**
 
 ```
-POST /auth/token  → server returns a signed JWT
-GET /profile      → client sends JWT in every request header
+POST /auth/token  â†’ server returns a signed JWT
+GET /profile      â†’ client sends JWT in every request header
 ```
 
 The JWT contains the user identity. Any server can verify it without shared state. You can scale horizontally, restart instances, or add servers without affecting active sessions.
 
-This constraint is why JWT and token-based auth exist in their current form. It's not just a pattern choice — it's a consequence of building a stateless API.
+This constraint is why JWT and token-based auth exist in their current form. It's not just a pattern choice â€” it's a consequence of building a stateless API.
 
 **Practical implication:** Never store user context in server-side sessions tied to a specific process. Put it in the token, or look it up from the database on each request using an ID in the token.
 
@@ -53,22 +53,22 @@ GET  /deleteUser?id=5
 POST /user_update
 ```
 
-Inconsistent naming, using GET for mutations, verbs in URLs — these make every endpoint a new thing to learn.
+Inconsistent naming, using GET for mutations, verbs in URLs â€” these make every endpoint a new thing to learn.
 
 **What conforms:**
 
 ```
-GET    /users          → list users
-POST   /users          → create user
-GET    /users/:id      → get one user
-PUT    /users/:id      → replace user
-PATCH  /users/:id      → update user fields
-DELETE /users/:id      → delete user
+GET    /users          â†’ list users
+POST   /users          â†’ create user
+GET    /users/:id      â†’ get one user
+PUT    /users/:id      â†’ replace user
+PATCH  /users/:id      â†’ update user fields
+DELETE /users/:id      â†’ delete user
 ```
 
 The resource is `users`. The operation is expressed by the HTTP method. Any developer familiar with REST can guess this structure.
 
-**Practical implication:** Use HTTP methods for what they mean. GET must be safe (no side effects). PUT must be idempotent (same result if called multiple times). POST is not idempotent. These aren't suggestions — clients, proxies, and caching layers rely on these semantics.
+**Practical implication:** Use HTTP methods for what they mean. GET must be safe (no side effects). PUT must be idempotent (same result if called multiple times). POST is not idempotent. These aren't suggestions â€” clients, proxies, and caching layers rely on these semantics.
 
 ## 3. Layered system
 
@@ -90,4 +90,5 @@ Respecting `X-Forwarded-For`, `X-Forwarded-Proto`, and other proxy headers. Sett
 
 These three constraints reinforce each other. Stateless auth (JWTs) is compatible with a layered system because any server in the cluster can verify the same token. A uniform interface is compatible with caching (the fourth constraint, worth reading about separately) because GET requests are predictable and safe to cache at any layer.
 
-Most API design debates — "should this be POST or PUT?", "where do I store user state?" — resolve cleanly once you understand which constraint applies.
+Most API design debates â€” "should this be POST or PUT?", "where do I store user state?" â€” resolve cleanly once you understand which constraint applies.
+

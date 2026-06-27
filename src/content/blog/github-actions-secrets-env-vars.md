@@ -1,8 +1,8 @@
----
+﻿---
 title: "GitHub Actions secrets: env variables that don't end up in your logs."
 description: "How GitHub Actions secrets work, how to use them safely in workflows, and common patterns for managing sensitive configuration in CI."
 pubDate: 2025-06-12
-tags: ["CI/CD", "GitHub"]
+tags: ["CI-CD", "GitHub"]
 draft: false
 ---
 
@@ -166,3 +166,4 @@ Secrets don't expire automatically. Build rotation into your process:
 4. Revoke the old credential
 
 If a secret is exposed, revoke it at the source immediately, then update GitHub. Treat any exposure as a full rotation event, not just an update.
+

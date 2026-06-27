@@ -1,8 +1,8 @@
----
+﻿---
 title: "API versioning: 3 strategies, 1 that doesn't create maintenance debt."
 description: "API versioning is how you change your API without breaking existing clients. Here are three common strategies, their trade-offs, and the one that scales without accumulating maintenance burden."
 pubDate: 2024-06-10
-tags: ["REST API"]
+tags: ["REST-API"]
 draft: false
 ---
 
@@ -71,7 +71,7 @@ Instead of maintaining multiple versions, only add new things. Never remove or r
   "name": "Jane Smith"
 }
 
-// After change — both fields present
+// After change â€” both fields present
 {
   "name": "Jane Smith",        // deprecated
   "firstName": "Jane",
@@ -89,7 +89,7 @@ Link: <https://docs.example.com/migration>; rel="deprecation"
 
 Clients have time to migrate. Once the sunset date passes, you remove the deprecated field.
 
-**Advantage:** One codebase. No parallel versions to maintain. No routing complexity. Every client is always on the "current" version — they're just using different fields.
+**Advantage:** One codebase. No parallel versions to maintain. No routing complexity. Every client is always on the "current" version â€” they're just using different fields.
 
 **Problem:** You can't actually remove things until every client has migrated, which requires tracking usage or trusting clients to self-report. Some breaking changes can't be handled additively (changing authentication mechanisms, restructuring nested resources). And the response payload can grow bloated during the deprecation window.
 
@@ -104,3 +104,4 @@ For teams that find themselves adding `/v2` to every endpoint: add versioning pe
 ## Starting with versioning
 
 Even if you think you won't need versioning, add `/api/v1` to your URL structure from the start. It costs nothing and avoids a forced migration later when you inevitably need to make a breaking change. The worst time to add versioning is after clients already depend on non-versioned URLs.
+

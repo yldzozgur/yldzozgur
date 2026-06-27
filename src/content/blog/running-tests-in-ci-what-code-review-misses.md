@@ -1,8 +1,8 @@
----
+﻿---
 title: "Running tests in CI: the job that catches what code review misses."
 description: "Why automated tests in CI catch bugs that code review doesn't, and how to structure a test job that provides real signal."
 pubDate: 2025-06-05
-tags: ["CI/CD", "Testing"]
+tags: ["CI-CD", "Testing"]
 draft: false
 ---
 
@@ -173,3 +173,4 @@ A CI failure is useful only if you can quickly diagnose it. Keep these principle
 - Test output includes the actual vs expected values
 
 A test suite that runs in 3 minutes, tests realistic scenarios, and produces readable failure messages is worth more than a suite with 90% coverage that takes 20 minutes and produces cryptic assertion errors.
+

@@ -1,8 +1,8 @@
----
+﻿---
 title: "React Navigation: Stack, Tab, Drawer and when each one fits."
 description: "The three core navigators in React Navigation, what each one renders natively, and the patterns that work well for real mobile apps."
 pubDate: 2025-02-03
-tags: ["React Native", "Mobile", "Navigation"]
+tags: ["React-Native", "Mobile", "Navigation"]
 draft: false
 ---
 
@@ -127,3 +127,4 @@ Each tab gets its own stack, and the tab bar persists across all stack screens w
 - **Drawer**: many destinations, or destinations that are secondary to the main content
 
 Most apps use all three: a drawer or tabs at the top level, stacks inside. The choice depends on the information architecture, not the technology.
+

@@ -1,8 +1,8 @@
----
+﻿---
 title: "Reanimated: why React Native animations need a different model."
 description: "React Native's built-in Animated API has limitations that Reanimated solves by running animations on the UI thread. The core concepts and when the difference matters."
 pubDate: 2025-02-24
-tags: ["React Native", "Mobile", "Animation"]
+tags: ["React-Native", "Mobile", "Animation"]
 draft: false
 ---
 
@@ -109,3 +109,4 @@ The built-in `Animated` with `useNativeDriver: true` is still fine for:
 - Cases where you want to minimize dependencies
 
 Reanimated has a learning curve -- worklets have restrictions (no closures over non-worklet values, limited JavaScript APIs). But for gesture-driven UI, it's the only option that reliably performs well.
+

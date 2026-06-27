@@ -1,8 +1,8 @@
----
+﻿---
 title: "Swagger UI without polluting your app: CDN-hosted docs in 10 lines."
 description: "Swagger UI can be served from a CDN with a single HTML file and no npm packages. Here's how to wire it to your OpenAPI spec without adding dependencies to your app."
 pubDate: 2024-06-27
-tags: ["REST API", "Swagger"]
+tags: ["REST-API", "Swagger"]
 draft: false
 ---
 
@@ -44,7 +44,7 @@ Swagger maintains an official CDN build of Swagger UI. A single HTML file that r
 </html>
 ```
 
-Save this as `public/docs/index.html`. Your Express app serves it as a static file — no extra middleware, no npm package.
+Save this as `public/docs/index.html`. Your Express app serves it as a static file â€” no extra middleware, no npm package.
 
 ## Wiring it in Express
 
@@ -163,3 +163,4 @@ The `requestInterceptor` is useful for authentication: users log in once, store 
 The CDN approach has one real downside: the docs depend on CDN availability. If `unpkg.com` is down, the docs UI won't load (though your API still works). For internal tools where reliability matters more than avoiding a dependency, pin and serve the npm package. For public-facing docs or early-stage projects, the CDN build is significantly less setup.
 
 Either way, the spec is the valuable artifact. The UI is just a reader for it.
+

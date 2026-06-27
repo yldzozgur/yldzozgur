@@ -1,8 +1,8 @@
----
+﻿---
 title: "ESLint + Prettier in CI: enforcing style without arguments."
 description: "How to configure ESLint and Prettier to work together, and how to run them in CI so style violations block merges."
 pubDate: 2025-06-16
-tags: ["CI/CD", "Tooling"]
+tags: ["CI-CD", "Tooling"]
 draft: false
 ---
 
@@ -180,3 +180,4 @@ This catches type errors without compiling output, and is much faster than a ful
 The real benefit of automated style enforcement is not catching bugs. It's eliminating a category of comment from code review entirely. Reviewers stop leaving comments like "should be double quotes" or "missing semicolon" and focus on logic, architecture, and correctness.
 
 It also means every file in the codebase looks like the same person wrote it, which makes reading unfamiliar code faster.
+
