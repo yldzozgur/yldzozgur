@@ -22,7 +22,7 @@ For roles & full career history → [LinkedIn](https://linkedin.com/in/yldzozgur
 
 ```
 Languages    TypeScript · JavaScript (ES6+) · SQL
-Frontend     React · Redux Toolkit · Vite · Tailwind · MUI
+Frontend     React · React Native · Redux Toolkit · Vite · Tailwind · MUI
 Backend      Node.js · Express · REST · JWT · Mongoose · Swagger
 Databases    PostgreSQL · MongoDB · MySQL
 Cloud        Vercel · Cloudflare Workers · Docker · CI/CD (GitHub Actions)
