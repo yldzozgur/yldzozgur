@@ -1,13 +1,13 @@
 <h1 align="center">Hi, I'm Ozgur 👋</h1>
 
 <p align="center">
-  Junior full-stack developer working with TypeScript, Node.js, and React.
+  Full-stack developer working with TypeScript, Node.js, and React.
 </p>
 
 <p align="center">
   <a href="https://yldzozgur.com"><img alt="Website" src="https://img.shields.io/badge/yldzozgur.com-18181b?style=flat-square&logo=safari&logoColor=white"></a>
   <a href="https://linkedin.com/in/yldzozgur"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0a66c2?style=flat-square&logo=linkedin&logoColor=white"></a>
-  <a href="mailto:ozguryildiz0@outlook.com"><img alt="Email" src="https://img.shields.io/badge/Email-ea4335?style=flat-square&logo=gmail&logoColor=white"></a>
+  <a href="mailto:ozgur@yldzozgur.com"><img alt="ozgur@yldzozgur.com" src="https://img.shields.io/badge/ozgur%40yldzozgur.com-ea4335?style=flat-square&logo=gmail&logoColor=white"></a>
 </p>
 
 ---
