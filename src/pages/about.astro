@@ -3,12 +3,13 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 
 const skills = {
   Languages: ['JavaScript (ES6+)', 'TypeScript', 'SQL', 'HTML5', 'CSS3'],
-  Frontend: ['React', 'Redux Toolkit', 'React Router', 'Vite', 'Tailwind CSS', 'MUI'],
-  Backend: ['Node.js', 'Express', 'REST APIs', 'JWT', 'Mongoose', 'Swagger / OpenAPI'],
-  Databases: ['PostgreSQL', 'MongoDB', 'MySQL'],
-  'Cloud & DevOps': ['Vercel', 'Docker', 'GitHub Actions', 'CI/CD'],
+  'Frontend / Mobile': ['React', 'React Native (iOS)', 'Redux Toolkit', 'Vite', 'Tailwind CSS', 'MUI', 'Formik/Yup'],
+  Backend: ['Node.js', 'Express', 'REST APIs', 'JWT', 'Mongoose', 'Swagger / OpenAPI', 'Multer', 'Nodemailer'],
+  Databases: ['PostgreSQL', 'MongoDB'],
+  'AI / Speech': ['OpenAI API', 'Gemini API', 'Speech-to-Text', 'Speaker Diarization', 'Text-to-Speech', 'WebSocket'],
+  'Cloud & Auth': ['Vercel', 'MongoDB Atlas', 'Firebase Auth'],
+  'Tools & DevOps': ['Docker', 'Git / GitHub', 'CI/CD (GitHub Actions)', 'GitHub Pages', 'Postman', 'npm', 'Linux / Bash'],
   Testing: ['Cypress (E2E)'],
-  'AI-Assisted Workflow': ['Claude Code', 'Codex'],
 };
 ---
 
@@ -24,36 +25,92 @@ const skills = {
   <section class="container">
     <div class="prose about-prose">
       <p class="lead">
-        Hi, I'm Ozgur. I'm a full-stack developer in Austin, looking for my
-        first developer role.
+        Hi, I'm Ozgur. Full-Stack Developer based in Austin, TX.
       </p>
 
       <p>
-        Most of what I build is React on the front end and Node/Express on the
-        back. I've put together a few full apps with auth, a database, and a
-        REST API, so I'm comfortable taking a feature from nothing to working
-        software. There's still a lot I'm learning, mostly around performance
-        and the kind of bugs that only show up once something is live.
+        Currently building a React Native iOS app that streams live audio over WebSocket and renders real-time STT transcripts, speaker-attributed diarization output, and AI-generated suggestions at Guinn Partners. I also manage a Node.js server on embedded Linux handling concurrent I/O from microphone, camera, and speaker peripherals.
       </p>
 
       <p>
-        I came to software later than a lot of people. I ran a small business
-        for a few years before this, which taught me to ship things instead of
-        polishing them forever. I'm not precious about my code. I read what's
-        already there before I change it, and I ask questions when something
-        doesn't make sense instead of guessing my way through it.
+        Previously contributed 100+ merged PRs to a production multi-tenant POS platform at Ameza Solutions across a React + TypeScript frontend and Node / Express + PostgreSQL backend. Built employee and store dashboards, role-catalog APIs with typed DTOs, and automated Swagger snapshot sync.
       </p>
 
       <p>
-        This site is where I write things down, partly for myself and partly
-        so there's something to point at.
+        Completed a full-stack bootcamp (Clarusway, 2024) covering Node.js, Express, React, TypeScript, PostgreSQL, MongoDB, and Docker. Live portfolio includes a full-stack MERN dashboard, two REST APIs with Swagger UI, and a Firebase-authenticated SPA.
+      </p>
+
+      <p>
+        Work Authorization: Authorized to work in the U.S. No sponsorship required, now or in the future.
+        Available for Full-Stack and Backend roles — Remote (US-wide), Hybrid, or On-site (Greater Austin).
       </p>
 
       <p>
         Want to talk? Find me on
         <a href="https://linkedin.com/in/yldzozgur">LinkedIn</a> or send me an
-        <a href="mailto:ozguryildiz0@outlook.com">email</a>.
+        <a href="mailto:ozgur@yldzozgur.com">email</a>.
       </p>
+    </div>
+  </section>
+
+  <section class="container section-block">
+    <h2 class="section-heading">Experience</h2>
+    <div class="exp-list">
+      <div class="exp-entry">
+        <div class="exp-header">
+          <div>
+            <h3 class="exp-company">Guinn Partners</h3>
+            <p class="exp-title">Full-Stack Developer &mdash; On-site, Austin, TX</p>
+          </div>
+          <span class="mono exp-period">Feb 2025 &ndash; Present</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Developing a React Native iOS app that streams live audio over WebSocket and renders STT transcripts, speaker-attributed diarization output, and AI-generated suggestions in real time.</li>
+          <li>Building a Node.js server on embedded Linux managing concurrent I/O from microphone, camera, and speaker peripherals while maintaining a persistent WebSocket tunnel to a cloud backend.</li>
+          <li>Integrating OpenAI and Gemini APIs into a multi-stage AI pipeline (STT &rarr; speaker diarization &rarr; LLM inference &rarr; TTS), optimizing end-to-end response latency across network and inference hops.</li>
+          <li>Designing the full-stack session architecture: audio capture, cloud routing, AI orchestration, and mobile playback, spanning hardware layer to UI.</li>
+        </ul>
+      </div>
+      <div class="exp-entry">
+        <div class="exp-header">
+          <div>
+            <h3 class="exp-company">Ameza Solutions</h3>
+            <p class="exp-title">Full-Stack Developer &mdash; Remote, Austin, TX</p>
+          </div>
+          <span class="mono exp-period">Oct 2024 &ndash; Feb 2025</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Contributed 100+ merged PRs to a production multi-tenant POS platform across a React + TypeScript frontend and Node / Express + PostgreSQL backend in a fast-moving feature-branch workflow.</li>
+          <li>Built and iterated on employee and store dashboards, role-catalog APIs with typed DTOs, input validation utilities, and automated Swagger snapshot sync to keep API contracts in lockstep with implementation.</li>
+          <li>Participated in structured code review cycles, catching type safety issues and API contract drift before merge in a small distributed team.</li>
+          <li>Leveraged AI-assisted tooling to accelerate delivery without sacrificing code ownership or review quality.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section-block">
+    <h2 class="section-heading">Education</h2>
+    <div class="edu-list">
+      <div class="edu-entry">
+        <span class="mono exp-period">Feb 2024 &ndash; Oct 2024</span>
+        <div>
+          <p class="edu-degree">Full Stack Development Bootcamp &mdash; Clarusway</p>
+          <p class="edu-note">Node, Express, React, TypeScript, MongoDB, PostgreSQL, Docker, JWT, Cypress</p>
+        </div>
+      </div>
+      <div class="edu-entry">
+        <span class="mono exp-period">2023 &ndash; 2025</span>
+        <div>
+          <p class="edu-degree">M.B.A. &mdash; Marmara University</p>
+        </div>
+      </div>
+      <div class="edu-entry">
+        <span class="mono exp-period">2020 &ndash; 2023</span>
+        <div>
+          <p class="edu-degree">B.S. Computer Engineering &mdash; Cumhuriyet University, Turkey</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -203,6 +260,67 @@ const skills = {
       grid-template-columns: 1fr;
       gap: 0.4rem;
     }
+  }
+
+  .exp-list, .edu-list {
+    max-width: var(--reading-width);
+    margin: 0 auto;
+  }
+  .exp-entry {
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .exp-entry:last-child { border-bottom: none; }
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  .exp-company {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin: 0 0 0.2rem;
+    color: var(--ink);
+  }
+  .exp-title {
+    color: var(--ink-muted);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  .exp-period {
+    color: var(--ink-faint);
+    font-size: 0.8rem;
+    white-space: nowrap;
+    padding-top: 0.15rem;
+  }
+  .exp-bullets {
+    color: var(--ink-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding-left: 1.25rem;
+  }
+  .exp-bullets li { margin-bottom: 0.4rem; }
+  .edu-entry {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+    align-items: flex-start;
+  }
+  .edu-entry:last-child { border-bottom: none; }
+  .edu-degree {
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0 0 0.2rem;
+    font-size: 0.9375rem;
+  }
+  .edu-note {
+    color: var(--ink-muted);
+    font-size: 0.8125rem;
+    margin: 0;
   }
 
   .contact {
