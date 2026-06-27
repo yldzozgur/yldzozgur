@@ -5,7 +5,6 @@ const projects = [
   {
     name: 'Stock Management App',
     type: 'Full-Stack · MERN',
-    period: 'Aug – Sep 2024',
     stack: ['React', 'Redux Toolkit', 'Vite', 'Express', 'MongoDB', 'JWT', 'Tailwind', 'MUI', 'Recharts'],
     summary: 'Full-stack inventory + sales platform: JWT auth, role-based permissions, image upload, email verification, Swagger / Redoc docs. Backend: Express + Mongoose REST API with a layered middleware suite covering auth, error handling, logging, permissions, and file upload. Frontend: Vite + React + Redux Toolkit dashboard with KPI cards, Recharts, custom hooks, Tailwind + MUI styling.',
     thumb: '/projects/stock-management.webp',
@@ -18,7 +17,6 @@ const projects = [
   {
     name: 'React Movie App',
     type: 'Frontend · Firebase Auth SPA',
-    period: 'Jun – Jul 2024',
     stack: ['React', 'Firebase Auth', 'TMDB API'],
     summary: 'Movie discovery SPA with email/password and Google OAuth sign-in via Firebase; consumes the TMDB REST API for live movie data. Implemented protected routes, persistent auth state, and search + genre filtering with a responsive UI.',
     thumb: '/projects/react-movieapp.webp',
@@ -30,7 +28,6 @@ const projects = [
   {
     name: 'Pizza API',
     type: 'Backend · REST + Swagger',
-    period: 'Apr – May 2024',
     stack: ['Express', 'MongoDB', 'JWT', 'Multer', 'Swagger', 'Vercel'],
     summary: 'REST API focused on file handling and API infrastructure: Multer-based image upload, email verification, and CDN-hosted Swagger UI with full OpenAPI documentation. Pagination / sorting / filtering middleware and centralized error handling; deployed on Vercel serverless with MongoDB Atlas.',
     thumb: '/projects/pizza-api.webp',
@@ -43,7 +40,6 @@ const projects = [
   {
     name: 'Rent-A-Car API',
     type: 'Backend · REST + Swagger',
-    period: 'Feb – Mar 2024',
     stack: ['Express', 'MongoDB', 'JWT', 'Nodemailer', 'Swagger', 'Vercel'],
     summary: 'REST API focused on business logic: date-overlap detection to prevent double bookings, automatic rental amount calculation, and unique-field validation. JWT auth, email notifications, and Swagger docs; deployed on Vercel serverless with MongoDB Atlas.',
     thumb: '/projects/rentacar-api.webp',
@@ -79,7 +75,6 @@ const demoNote = 'Demo credentials for all live API / full-stack demos: demo@dem
           <div class="project-body">
             <header class="project-header">
               <h2 class="project-name">{p.name}</h2>
-              <span class="mono project-period">{p.period}</span>
             </header>
             <p class="mono project-type">{p.type}</p>
             <ul class="stack">
