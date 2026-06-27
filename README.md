@@ -10,6 +10,8 @@
   <a href="mailto:ozgur@yldzozgur.com"><img alt="ozgur@yldzozgur.com" src="https://img.shields.io/badge/ozgur%40yldzozgur.com-ea4335?style=flat-square&logo=gmail&logoColor=white"></a>
 </p>
 
+<p align="center">📧 ozgur@yldzozgur.com</p>
+
 ---
 
 ### About
