@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=1E3A5F&height=170&section=header&text=Ozgur%20Yildiz&fontSize=46&fontColor=ffffff&fontAlignY=34&desc=Full-stack%20developer%20·%20TypeScript,%20Node.js,%20React&descSize=15&descAlignY=54" width="100%" alt="Ozgur Yildiz"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=1D4ED8&height=170&section=header&text=Ozgur%20Yildiz&fontSize=46&fontColor=ffffff&fontAlignY=34&desc=Full-stack%20developer%20·%20TypeScript,%20Node.js,%20React&descSize=15&descAlignY=54" width="100%" alt="Ozgur Yildiz"/>
 
-<a href="https://yldzozgur.com"><img alt="Website" src="https://img.shields.io/badge/yldzozgur.com-1E3A5F?style=flat-square"></a>
-<a href="https://linkedin.com/in/yldzozgur"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-2B4C7E?style=flat-square"></a>
-<a href="mailto:ozgur@yldzozgur.com"><img alt="Email" src="https://img.shields.io/badge/ozgur@yldzozgur.com-3A6EA5?style=flat-square"></a>
+<a href="https://yldzozgur.com"><img alt="Website" src="https://img.shields.io/badge/yldzozgur.com-1D4ED8?style=flat-square"></a>
+<a href="https://linkedin.com/in/yldzozgur"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-2563EB?style=flat-square"></a>
+<a href="mailto:ozgur@yldzozgur.com"><img alt="Email" src="https://img.shields.io/badge/ozgur@yldzozgur.com-3B82F6?style=flat-square"></a>
 
 </div>
 
@@ -42,6 +42,6 @@ More projects + writing → [**yldzozgur.com**](https://yldzozgur.com)
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=1E3A5F&height=90&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=1D4ED8&height=90&section=footer" width="100%"/>
 
 </div>
