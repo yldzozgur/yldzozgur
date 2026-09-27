@@ -1,14 +1,12 @@
-<h1 align="center">Hi, I'm Ozgur 👋</h1>
+<div align="center">
 
-<p align="center">
-  Full-stack developer working with TypeScript, Node.js, and React.
-</p>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=1D4ED8&height=170&section=header&text=Ozgur%20Yildiz&fontSize=46&fontColor=ffffff&fontAlignY=34&desc=Full-stack%20developer%20·%20TypeScript,%20Node.js,%20React&descSize=15&descAlignY=54" width="100%" alt="Ozgur Yildiz"/>
 
-<p align="center">
-  <a href="https://yldzozgur.com"><img alt="Website" src="https://img.shields.io/badge/yldzozgur.com-18181b?style=flat-square&logo=safari&logoColor=white"></a>
-  <a href="https://linkedin.com/in/yldzozgur"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0a66c2?style=flat-square&logo=linkedin&logoColor=white"></a>
-  <a href="mailto:ozgur@yldzozgur.com"><img alt="ozgur@yldzozgur.com" src="https://img.shields.io/badge/ozgur%40yldzozgur.com-ea4335?style=flat-square&logo=gmail&logoColor=white"></a>
-</p>
+<a href="https://yldzozgur.com"><img alt="Website" src="https://img.shields.io/badge/yldzozgur.com-1D4ED8?style=flat-square"></a>
+<a href="https://linkedin.com/in/yldzozgur"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-2563EB?style=flat-square"></a>
+<a href="mailto:ozgur@yldzozgur.com"><img alt="Email" src="https://img.shields.io/badge/ozgur@yldzozgur.com-3B82F6?style=flat-square"></a>
+
+</div>
 
 ---
 
@@ -41,3 +39,9 @@ Testing      Cypress (E2E)
 | [React Movie App](https://github.com/yldzozgur/react-movieapp) | React · Firebase · TMDB | [live ↗](https://yldzozgur.github.io/react-movieapp/) |
 
 More projects + writing → [**yldzozgur.com**](https://yldzozgur.com)
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=1D4ED8&height=90&section=footer" width="100%"/>
+
+</div>
