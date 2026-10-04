@@ -50,24 +50,27 @@ The company website for an American drone engineering and manufacturing firm, wi
 </tr>
 <tr>
 <td width="50%" valign="top">
+
 ### Wave Drone live-tracking dashboard
 A live-tracking dashboard for an autonomous surface vessel. A Python pipeline decodes ArduPilot telemetry (43.1M values, 64 message types) into position, speed, heading, battery and GNSS panels on a satellite map, synced with the onboard camera.
 
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/> <img src="https://img.shields.io/badge/pymavlink-0B1120?style=flat-square"/> <img src="https://img.shields.io/badge/ArduPilot-1E3A8A?style=flat-square"/>
-</td>
-<td width="50%" valign="top">
-
-### Mission telemetry monitor
-An Electron desktop app that reads probe telemetry from a serial port, charts it live and flags faulty sensors, plus a Python fault simulator for testing without hardware. 377 automated tests.
-
-<img src="https://img.shields.io/badge/Electron-47848F?style=flat-square&logo=electron&logoColor=white"/> <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB"/> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"/>
 
 ### Dashboard builder
 Users build their own dashboards from any MongoDB data with no hard-coded schema: a drag-and-drop grid of up to 32 widgets on a Node.js and Express API that reads the database structure live.
 
 <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB"/> <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white"/> <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white"/>
 
-<sub>Company work in private repositories.</sub>
+</td>
+<td width="50%" valign="top">
+
+### Mission telemetry monitor
+An Electron desktop app that reads probe telemetry from a serial port, charts it live and flags faulty sensors and dropped links, plus a Python fault simulator for testing without hardware. Backed by 377 automated tests.
+
+<img src="https://img.shields.io/badge/Electron-47848F?style=flat-square&logo=electron&logoColor=white"/> <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB"/> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"/> <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
+
+<sub>These three are company projects in private repositories, so there is no public link.</sub>
+
 </td>
 </tr>
 </table>
