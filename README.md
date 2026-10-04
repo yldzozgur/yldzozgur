@@ -69,7 +69,12 @@ An Electron desktop app that reads probe telemetry from a serial port, charts it
 
 <img src="https://img.shields.io/badge/Electron-47848F?style=flat-square&logo=electron&logoColor=white"/> <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB"/> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"/> <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
 
-<sub>These three are company projects in private repositories, so there is no public link.</sub>
+### Academy operations panel
+Attendance, teacher-hours and course-fee tracking for a nonprofit academy, built as 5 custom WordPress plugins in PHP and covered by 71 PHPUnit tests.
+
+<img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white"/> <img src="https://img.shields.io/badge/WordPress-21759B?style=flat-square&logo=wordpress&logoColor=white"/> <img src="https://img.shields.io/badge/PHPUnit-3C9CD7?style=flat-square"/> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
+
+<sub>Wave Drone, the telemetry monitor and the dashboard builder are company projects in private repositories, so there is no public link.</sub>
 
 </td>
 </tr>
