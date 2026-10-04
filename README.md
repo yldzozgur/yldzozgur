@@ -23,7 +23,7 @@
 
 ## About me
 
-Full-Stack Software Engineer with 2 years of professional experience and a B.S. in Computer Engineering. At **Guinn Partners** I deliver what each product needs across web, mobile, desktop and hardware, from a Raspberry Pi device and its iOS app to a company website with an AI assistant and real-time telemetry tools. Before that I built REST APIs and dashboards for a production POS platform at **Ameza Solutions**.
+Full-Stack Software Engineer with 2 years of professional experience and a B.S. in Computer Engineering. At **Guinn Partners** I deliver what each product needs across web, mobile, desktop and hardware, from a Raspberry Pi device and its iOS app to a company website with an AI assistant, a desktop telemetry app and a live vessel-tracking dashboard. Before that I built REST APIs and dashboards for a production POS platform at **Ameza Solutions**.
 
 <br/>
 
@@ -50,10 +50,8 @@ The company website for an American drone engineering and manufacturing firm, wi
 </tr>
 <tr>
 <td width="50%" valign="top">
-<img src="assets/wavedrone.jpg" alt="Wave Drone mission replay" width="100%"/>
-
-### Wave Drone mission replay
-A 38-minute autonomous mission (43.1M logged values) replayed on an always-on office display. A Python pipeline turns ArduPilot logs into a satellite-map replay synced with the onboard camera.
+### Wave Drone live-tracking dashboard
+A live-tracking dashboard for an autonomous surface vessel. A Python pipeline decodes ArduPilot telemetry (43.1M values, 64 message types) into position, speed, heading, battery and GNSS panels on a satellite map, synced with the onboard camera.
 
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/> <img src="https://img.shields.io/badge/pymavlink-0B1120?style=flat-square"/> <img src="https://img.shields.io/badge/ArduPilot-1E3A8A?style=flat-square"/>
 </td>
