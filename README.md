@@ -98,14 +98,14 @@ Attendance, teacher-hours and course-fee tracking for a nonprofit academy, built
 
 | Project | What it is | Stack |
 |---|---|---|
-| [Stock Management App](https://github.com/yldzozgur/stock-management-app) · [live](https://ozguryildiz-stock.vercel.app) | Inventory and sales platform with role-based permissions | React · Redux Toolkit · Express · MongoDB |
-| [React Movie App](https://github.com/yldzozgur/react-movieapp) · [live](https://yldzozgur.github.io/react-movieapp/) | Movie discovery app with Firebase sign-in | React · Firebase · TMDB API |
+| [Stock&nbsp;Management&nbsp;App](https://github.com/yldzozgur/stock-management-app) | Inventory and sales platform with roles. [Live&nbsp;demo](https://ozguryildiz-stock.vercel.app) | React · Redux · Express · MongoDB |
+| [React&nbsp;Movie&nbsp;App](https://github.com/yldzozgur/react-movieapp) | Movie discovery app with Firebase sign-in. [Live&nbsp;demo](https://yldzozgur.github.io/react-movieapp/) | React · Firebase · TMDB API |
 
 <br/>
 
 <div align="center">
 
-**Open to full-stack and backend roles in Austin, hybrid or remote.**
+**Open to full-stack and backend roles in Austin, hybrid or remote.**<br/>
 Authorized to work in the U.S., no sponsorship required.
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563EB,45:1E3A8A,100:0B1120&height=110&section=footer" width="100%" alt=""/>
