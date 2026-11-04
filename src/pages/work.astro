@@ -3,6 +3,56 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 
 const projects = [
   {
+    name: 'Ascendant AI',
+    type: 'Company website · Next.js',
+    stack: ['Next.js', 'TypeScript', 'Claude API', 'Leaflet', 'Vitest', 'Playwright'],
+    summary: 'The company website for an American drone engineering and manufacturing firm, with an AI assistant built on the Anthropic Claude API, an enquiry flow and Leaflet maps. Covered by 155 automated tests.',
+    thumb: '/projects/ascendant.webp',
+    links: [
+      { label: 'Live →', href: 'https://ascndx.ai' },
+    ],
+  },
+  {
+    name: 'HarmonyLens',
+    type: 'Hardware + iOS app · React Native',
+    stack: ['React Native', 'Node.js', 'WebSocket', 'Raspberry Pi'],
+    summary: 'A hardware device plus iOS app, now in TestFlight beta. I built the Raspberry Pi unit (camera, microphone, speaker), a Node.js server that streams RTSP video and live audio over WebSocket, and the React Native app with live transcription, speaker diarization, Claude replies and ElevenLabs voice.',
+    thumb: '/projects/harmonylens.webp',
+    links: [
+      { label: 'Live →', href: 'https://harmonylens.app' },
+    ],
+  },
+  {
+    name: 'Zero2One Space',
+    type: 'Company website',
+    stack: ['Web design', 'Responsive', 'Product pages', 'Email sign-up'],
+    summary: 'The company website for Zero2One Space, a space technology company that turns ambitious space ideas into working capability. Product pages, a proof section with partner logos, and an email sign-up for updates.',
+    thumb: '/projects/zero2one.webp',
+    links: [
+      { label: 'Live →', href: 'https://zero2onespace.com' },
+    ],
+  },
+  {
+    name: 'Akademiya Cizîrî',
+    type: 'Volunteer · Nonprofit · WordPress',
+    stack: ['WordPress', 'PHP', 'PHPUnit', 'Multilingual'],
+    summary: 'Volunteer project. Website for an online Kurdish academy for children around the world, in Kurdish, English and Turkish, with online class registration. Also built its operations panel for attendance, teacher hours and course fees as 5 custom WordPress plugins in PHP, covered by 71 PHPUnit tests.',
+    thumb: '/projects/akademiya-ciziri.webp',
+    links: [
+      { label: 'Live →', href: 'https://akademiyaciziri.com' },
+    ],
+  },
+  {
+    name: 'KASA (Kurdish American Solidarity Association)',
+    type: 'Volunteer · Nonprofit · WordPress',
+    stack: ['WordPress', 'Donations', 'Blog', 'Volunteer sign-up'],
+    summary: 'Volunteer project. Website for a nonprofit that preserves Kurdish culture, supports families and connects generations across the United States. Programs, donation page, blog and volunteer sign-up.',
+    thumb: '/projects/kasa.webp',
+    links: [
+      { label: 'Live →', href: 'https://kasaus.org' },
+    ],
+  },
+  {
     name: 'Stock Management App',
     type: 'Full-Stack · MERN',
     stack: ['React', 'Redux Toolkit', 'Vite', 'Express', 'MongoDB', 'JWT', 'Tailwind', 'MUI', 'Recharts'],
